@@ -34,3 +34,8 @@
 ### Git/Git-Hub
 - [20210702] [Git & Git-Hub Basic 정리](https://github.com/ym1085/TIL/issues/1#issue-935338413)
 - [20210702] [Intellij & Git-Hub Repository 연동](https://github.com/ym1085/TIL/issues/2#issue-935431866)    
+
+<br>
+
+### ETC
+- [20210702] [아키텍처와 객체지향 간단 정리](https://github.com/ym1085/TIL/issues/17#issue-935794265)
