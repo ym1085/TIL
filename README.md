@@ -23,6 +23,7 @@
     - [HTTP 메서드 분석](https://github.com/ym1085/TIL/issues/14#issue-935635866)
     - [HTTP 기반 클라이언트 - 서버 데이터 전송](https://github.com/ym1085/TIL/issues/15#issue-935639017)
     - [HTTP API 설계 원칙 및 예시](https://github.com/ym1085/TIL/issues/16#issue-935642023)
+    - [HTTP 상태코드 (2xx ~ 5xx)](https://github.com/ym1085/TIL/issues/22#issue-936594219)
 
 ### Algorithm
 - [20210701] [HashTable 개념 정리](https://github.com/ym1085/java-oop-test-code/blob/fa9ee0123f70bda670f706dcd013929c41b45a52/src/com/oop/algorithm/algorithm/hash/README.md)
