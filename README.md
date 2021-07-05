@@ -25,15 +25,15 @@
     - [HTTP API 설계 원칙 및 예시](https://github.com/ym1085/TIL/issues/16#issue-935642023)
     - [HTTP 상태코드 (2xx ~ 5xx)](https://github.com/ym1085/TIL/issues/22#issue-936594219)
 
-### Algorithm
+### Data structure
 - [20210701] [HashTable 개념 정리](https://github.com/ym1085/java-oop-test-code/blob/fa9ee0123f70bda670f706dcd013929c41b45a52/src/com/oop/algorithm/algorithm/hash/README.md)
 - [20210701] [Queue 개념 정리](https://github.com/ym1085/java-oop-test-code/blob/c9399704c5392745b657481bdbde591d6cdcb575/src/com/oop/algorithm/algorithm/queue/README.md)
 - [20210701] [Stack 개념 정리](https://github.com/ym1085/java-oop-test-code/blob/c9399704c5392745b657481bdbde591d6cdcb575/src/com/oop/algorithm/algorithm/stack/README.md)
 
 <br>
 
-### Git/Git-Hub
-- [20210703 🚀~ ing] [지옥에서 온 Git 수업](https://github.com/ym1085/TIL/issues/19#issue-936213113)
+### Git & Git-Hub
+- [20210703 ~ ing] [지옥에서 온 Git 수업](https://github.com/ym1085/TIL/issues/19#issue-936213113)
   - [20210703] [Git 수업 소개](https://github.com/ym1085/TIL/issues/19#issue-936213113)
   - [20210703] [Git init, add, commit, stage area](https://github.com/ym1085/TIL/issues/20#issue-936222971)
   - [20210703] [Git log, diff](https://github.com/ym1085/TIL/issues/21#issue-936227619)
@@ -43,5 +43,5 @@
 
 <br>
 
-### ETC / 세미나 영상
+### ETC & 세미나 영상
 - [20210702] [아키텍처와 객체지향 간단 정리](https://github.com/ym1085/TIL/issues/17#issue-935794265)
