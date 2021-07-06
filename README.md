@@ -4,20 +4,23 @@
 - `과도하지 않게 매일매일 정리하는것을 지향`
 - `정리도 중요하지만 이해를 하고 개념을 정리하는 방향으로 진행`
 
-## [전체 이슈 탭 이동](https://github.com/ym1085/TIL/issues)
+## [이슈 탭 이동](https://github.com/ym1085/TIL/issues)
 - `카테고리 별로 Git-issue를 사용하여 정리`
+  - `HTTP`
+  - `Git & Git-hub`
 
 ## Contents
 ### Spring
-- [`Spring Boot JPA ORM Basic`](https://github.com/ym1085/jpa-basic/blob/304106447f5ef3e40598e58d8ea7bc6f97f5241d/README.md)
-  - [`SQL 개발 중심적인 개발의 문제점`](https://github.com/ym1085/jpa-basic/blob/53644dd2dc5215c05e4fb59cac278cea6abe0850/2021.07.05(JPA%EC%86%8C%EA%B0%9C-SQL%20%EA%B0%9C%EB%B0%9C%20%EC%A4%91%EC%8B%AC%EC%A0%81%EC%9D%B8%20%EA%B0%9C%EB%B0%9C%EC%9D%98%20%EB%AC%B8%EC%A0%9C%EC%A0%90)/README.md)
-  - [`JPA 소개`](https://github.com/ym1085/jpa-basic/blob/304106447f5ef3e40598e58d8ea7bc6f97f5241d/2021.07.05(JPA%20%EC%86%8C%EA%B0%9C-JPA%EC%9D%98%20%ED%83%84%EC%83%9D%20%EB%B0%B0%EA%B2%BD)/README.md)
-  - [`프로젝트 생성`](https://github.com/ym1085/jpa-basic/blob/53644dd2dc5215c05e4fb59cac278cea6abe0850/2021.07.05(JPA%EC%8B%9C%EC%9E%91-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EA%B0%9C%EB%B0%9C)/README.md)
-  - [`JPA 애플리케이션 구축`](https://github.com/ym1085/jpa-basic/blob/df38a0842334fd7b25f27b26265e160857dd566a/2021.07.06(Hello%20JPA%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EA%B0%9C%EB%B0%9C)/README.md)
-  - [`영속성 컨텍스트 1/2`](https://github.com/ym1085/jpa-basic/blob/df38a0842334fd7b25f27b26265e160857dd566a/2021.07.06(%EC%98%81%EC%86%8D%EC%84%B1%20%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B81,%202)/README.md)
-  - [`객체와 테이블 매핑`](https://github.com/ym1085/jpa-basic/blob/df38a0842334fd7b25f27b26265e160857dd566a/2021.07.07(%EA%B0%9D%EC%B2%B4%EC%99%80%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%A7%A4%ED%95%91)/README.md)
-  - [`데이터베이스 스키마 자동 생성`](https://github.com/ym1085/jpa-basic/blob/df38a0842334fd7b25f27b26265e160857dd566a/2021.07.07(%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8A%A4%ED%82%A4%EB%A7%88%20%EC%9E%90%EB%8F%99%20%EC%83%9D%EC%84%B1)/README.md)
-  - [`필드와 컬럼 매핑`](https://github.com/ym1085/jpa-basic/blob/df38a0842334fd7b25f27b26265e160857dd566a/2021.07.07(%ED%95%84%EB%93%9C%EC%99%80%20%EC%BB%AC%EB%9F%BC%20%EB%A7%A4%ED%95%91)/README.md)
+- `Spring Boot JPA ORM Basic`
+  - [`SQL 개발 중심적인 개발의 문제점`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.05(JPA%EC%86%8C%EA%B0%9C-SQL%20%EA%B0%9C%EB%B0%9C%20%EC%A4%91%EC%8B%AC%EC%A0%81%EC%9D%B8%20%EA%B0%9C%EB%B0%9C%EC%9D%98%20%EB%AC%B8%EC%A0%9C%EC%A0%90)/README.md)
+  - [`JPA 소개`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.05(JPA%20%EC%86%8C%EA%B0%9C-JPA%EC%9D%98%20%ED%83%84%EC%83%9D%20%EB%B0%B0%EA%B2%BD)/README.md)
+  - [`프로젝트 생성`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.05(%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1)/README.md)
+  - [`Hello JPA 애플리케이션 개발`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.06(Hello%20JPA%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EA%B0%9C%EB%B0%9C)/README.md)
+  - [`영속성 컨텍스트 1/2`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.06(%EC%98%81%EC%86%8D%EC%84%B1%20%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B81,%202)/README.md)
+  - [`객체와 테이블 매핑`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.07(%EA%B0%9D%EC%B2%B4%EC%99%80%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%A7%A4%ED%95%91)/README.md)
+  - [`데이터베이스 스키마 자동 생성`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.07(%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8A%A4%ED%82%A4%EB%A7%88%20%EC%9E%90%EB%8F%99%20%EC%83%9D%EC%84%B1)/README.md)
+  - [`필드와 컬럼 매핑`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.07(%ED%95%84%EB%93%9C%EC%99%80%20%EC%BB%AC%EB%9F%BC%20%EB%A7%A4%ED%95%91)/README.md)
+
 ### NetWork
 - `HTTP(인터넷 통신)`
     - [`IP란?`](https://github.com/ym1085/TIL/issues/3#issue-935574481)
@@ -42,7 +45,7 @@
 - [`Stack 개념 정리`](https://github.com/ym1085/java-oop-test-code/blob/c9399704c5392745b657481bdbde591d6cdcb575/src/com/oop/algorithm/algorithm/stack/README.md)
 
 ### Git & Git-Hub
-- [`지옥에서 온 Git 수업`](https://github.com/ym1085/TIL/issues/19#issue-936213113)
+- `지옥에서 온 Git 수업`
   - [`Git 수업 소개`](https://github.com/ym1085/TIL/issues/19#issue-936213113)
   - [`Git init, add, commit, stage area`](https://github.com/ym1085/TIL/issues/20#issue-936222971)
   - [`Git log, diff`](https://github.com/ym1085/TIL/issues/21#issue-936227619)
