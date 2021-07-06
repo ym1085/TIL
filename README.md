@@ -48,6 +48,7 @@
   - [`Git log, diff`](https://github.com/ym1085/TIL/issues/21#issue-936227619)
   - [`Git reset, revert`](https://github.com/ym1085/TIL/issues/23#issue-936819304)
   - [`Git 브랜치 총 정리`](https://github.com/ym1085/TIL/issues/24#issue-936859586)
+  - [`Git 브랜치 생성 및 정보 확인`](https://github.com/ym1085/TIL/issues/26#issue-937622452)
 - [`Git Command 사용 및 Git Flow 정리`](https://github.com/ym1085/TIL/issues/18#issue-936180479)
 - [`Git & Git-Hub 기본 정리`](https://github.com/ym1085/TIL/issues/1#issue-935338413)
 - [`Intellij & Git-Hub Repository 연동`](https://github.com/ym1085/TIL/issues/2#issue-935431866)
