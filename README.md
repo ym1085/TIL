@@ -59,7 +59,7 @@
 ## ETC & 개발 관련 영상
 ### 개발 관련 영상
 - [`우아한 Tech - 아키텍처와 객체지향 간단 정리`](https://github.com/ym1085/TIL/issues/17#issue-935794265)
-- [`백기선님 - 더 나은 개발자로 성장하는 팁, 모르는 문제를 해결하는 방법`](https://www.youtube.com/watch?v=ZoIFKT4fXkw)
+- [`백기선님 - 더 나은 개발자로 성장하는 팁, 모르는 문제를 해결하는 방법`](https://github.com/ym1085/TIL/issues/30#issue-940072841)
 
 ### ETC(Daily Develop Issue)
 - [`TODO`]()
