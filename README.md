@@ -62,7 +62,6 @@
 - [`백기선님 - 더 나은 개발자로 성장하는 팁, 모르는 문제를 해결하는 방법`](https://github.com/ym1085/TIL/issues/30#issue-940072841)
 
 ### ETC(Daily 피드백 정리)
-- [`피드백`][`어떤 개발자가 될 것인가? 어떤 인식과 사고를 하여야 하는가?`](https://github.com/ym1085/TIL/issues/29#issue-939996157)
-- [`영상`][`개발자 램프업 과정`](https://github.com/ym1085/TIL/issues/30#issue-940072841)
+- [`피드백`][`어떤 개발자가 될 것인가? 어떤 인식과 사고를 해야 할까?`](https://github.com/ym1085/TIL/issues/29#issue-939996157)
 
 
