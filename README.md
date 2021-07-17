@@ -1,4 +1,4 @@
-# TIL-Today I Learned
+# [TIL-Today I Learned](https://github.com/ym1085/TIL/wiki)
 - `사소한 지식도 날짜별로 정리`
 - `기존에 알고 있던 지식은 복기`
 - `과도하지 않게 매일매일 정리하는것을 지향`
@@ -62,6 +62,6 @@
 - [`백기선님 - 더 나은 개발자로 성장하는 팁, 모르는 문제를 해결하는 방법`](https://github.com/ym1085/TIL/issues/30#issue-940072841)
 
 ### ETC(Daily 피드백 정리)
-- [`피드백`][`어떤 개발자가 될 것인가? 어떤 인식과 사고를 해야 할까?`](https://github.com/ym1085/TIL/issues/29#issue-939996157)
+- [`어떤 개발자가 될 것인가? 어떤 인식과 사고를 해야 할까?`](https://github.com/ym1085/TIL/issues/29#issue-939996157)
 
 
