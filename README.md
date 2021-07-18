@@ -1,9 +1,3 @@
-# [TIL-Today I Learned](https://github.com/ym1085/TIL/wiki)
-- `사소한 지식도 날짜별로 정리`
-- `기존에 알고 있던 지식은 복기`
-- `과도하지 않게 매일매일 정리하는것을 지향`
-- `정리도 중요하지만 이해를 하고 개념을 정리하는 방향으로 진행`
-
 ## [이슈 탭 이동](https://github.com/ym1085/TIL/issues)
 - `카테고리 별로 Git-issue를 사용하여 정리`
   - `HTTP`
