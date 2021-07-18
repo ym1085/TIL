@@ -1,67 +1,31 @@
-# [TIL-Today I Learned](https://github.com/ym1085/TIL/wiki)
-- `사소한 지식도 날짜별로 정리`
-- `기존에 알고 있던 지식은 복기`
-- `과도하지 않게 매일매일 정리하는것을 지향`
-- `정리도 중요하지만 이해를 하고 개념을 정리하는 방향으로 진행`
+## TIL Today I Learned
 
-## [이슈 탭 이동](https://github.com/ym1085/TIL/issues)
-- `카테고리 별로 Git-issue를 사용하여 정리`
-  - `HTTP`
-  - `Git & Git-hub`
+```yaml
+가지고 가야할 자세 또는 마음가짐:
+1. 현 상태에서 나의 Blocker를 정확히 파악한 후 해당 Blocker를 제거한다는 자세
+2. 단순히 이것저것 해보는것이 정확한 단기목표를 설정한 후 하나씩 해결해나가는 자세
+3. 학습 진행 중 막히는 부분이 있을 시 적당한 고민(30~60분)을 거친 후 빠르게 피드백을 요청하는 자세
+```
 
-## Contents
-### Spring
-- `Spring Boot JPA ORM Basic`
-  - [`SQL 개발 중심적인 개발의 문제점`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.05(JPA%EC%86%8C%EA%B0%9C-SQL%20%EA%B0%9C%EB%B0%9C%20%EC%A4%91%EC%8B%AC%EC%A0%81%EC%9D%B8%20%EA%B0%9C%EB%B0%9C%EC%9D%98%20%EB%AC%B8%EC%A0%9C%EC%A0%90)/README.md)
-  - [`JPA 소개`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.05(JPA%20%EC%86%8C%EA%B0%9C-JPA%EC%9D%98%20%ED%83%84%EC%83%9D%20%EB%B0%B0%EA%B2%BD)/README.md)
-  - [`프로젝트 생성`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.05(%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1)/README.md)
-  - [`Hello JPA 애플리케이션 개발`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.06(Hello%20JPA%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EA%B0%9C%EB%B0%9C)/README.md)
-  - [`영속성 컨텍스트 1/2`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.06(%EC%98%81%EC%86%8D%EC%84%B1%20%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B81,%202)/README.md)
-  - [`객체와 테이블 매핑`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.07(%EA%B0%9D%EC%B2%B4%EC%99%80%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%A7%A4%ED%95%91)/README.md)
-  - [`데이터베이스 스키마 자동 생성`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.07(%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8A%A4%ED%82%A4%EB%A7%88%20%EC%9E%90%EB%8F%99%20%EC%83%9D%EC%84%B1)/README.md)
-  - [`필드와 컬럼 매핑`](https://github.com/ym1085/jpa-basic/blob/3bc1b629f56185d506f547e3e408770568c540c4/readme/2021.07.07(%ED%95%84%EB%93%9C%EC%99%80%20%EC%BB%AC%EB%9F%BC%20%EB%A7%A4%ED%95%91)/README.md)
+## [Wiki Home](https://github.com/ym1085/TIL/wiki)
 
-### NetWork
-- `HTTP(인터넷 통신)`
-    - [`IP란?`](https://github.com/ym1085/TIL/issues/3#issue-935574481)
-    - [`TCP, UDP란?`](https://github.com/ym1085/TIL/issues/4#issue-935583268)
-    - [`PORT란?`](https://github.com/ym1085/TIL/issues/5#issue-935587171)
-    - [`DNS란?`](https://github.com/ym1085/TIL/issues/6#issue-935599012)
-    - [`URI/URL`](https://github.com/ym1085/TIL/issues/7#issue-935609742)
-    - [`웹 브라우저 요청 흐름(Client-Server)`](https://github.com/ym1085/TIL/issues/8#issue-935615984)
-    - [`HTTP란?`](https://github.com/ym1085/TIL/issues/9#issue-935617910)
-    - [`클라이언트 - 서버 구조?`](https://github.com/ym1085/TIL/issues/10#issue-935619969)
-    - [`무상태 프로토콜(Stateful, Stateless)`](https://github.com/ym1085/TIL/issues/11#issue-935621747)
-    - [`비연결성`](https://github.com/ym1085/TIL/issues/12#issue-935624886)
-    - [`HTTP 메시지 분석`](https://github.com/ym1085/TIL/issues/13#issue-935630436)
-    - [`HTTP 메서드 분석`](https://github.com/ym1085/TIL/issues/14#issue-935635866)
-    - [`HTTP 기반 클라이언트 - 서버 데이터 전송`](https://github.com/ym1085/TIL/issues/15#issue-935639017)
-    - [`HTTP API 설계 원칙 및 예시`](https://github.com/ym1085/TIL/issues/16#issue-935642023)
-    - [`HTTP 상태코드 (2xx ~ 5xx)`](https://github.com/ym1085/TIL/issues/22#issue-936594219)
-    - [`HTTP Header RFC2616 - RFC723x의 변환`](https://github.com/ym1085/TIL/issues/25#issue-937458486)
-### Data structure
-- [`HashTable 개념 정리`](https://github.com/ym1085/java-oop-test-code/blob/fa9ee0123f70bda670f706dcd013929c41b45a52/src/com/oop/algorithm/algorithm/hash/README.md)
-- [`Queue 개념 정리`](https://github.com/ym1085/java-oop-test-code/blob/c9399704c5392745b657481bdbde591d6cdcb575/src/com/oop/algorithm/algorithm/queue/README.md)
-- [`Stack 개념 정리`](https://github.com/ym1085/java-oop-test-code/blob/c9399704c5392745b657481bdbde591d6cdcb575/src/com/oop/algorithm/algorithm/stack/README.md)
+### Contents
 
-### Git & Git-Hub
-- `지옥에서 온 Git 수업`
-  - [`Git 수업 소개`](https://github.com/ym1085/TIL/issues/19#issue-936213113)
-  - [`Git init, add, commit, stage area`](https://github.com/ym1085/TIL/issues/20#issue-936222971)
-  - [`Git log, diff`](https://github.com/ym1085/TIL/issues/21#issue-936227619)
-  - [`Git reset, revert`](https://github.com/ym1085/TIL/issues/23#issue-936819304)
-  - [`Git 브랜치 총 정리`](https://github.com/ym1085/TIL/issues/24#issue-936859586)
-  - [`Git 브랜치 생성 및 정보 확인`](https://github.com/ym1085/TIL/issues/26#issue-937622452)
-- [`Git Command 사용 및 Git Flow 정리`](https://github.com/ym1085/TIL/issues/18#issue-936180479)
-- [`Git & Git-Hub 기본 정리`](https://github.com/ym1085/TIL/issues/1#issue-935338413)
-- [`Intellij & Git-Hub Repository 연동`](https://github.com/ym1085/TIL/issues/2#issue-935431866)
+- Topic 01. [HTTP](https://github.com/ym1085/TIL/wiki#web)
+- Topic 02. [Data Structure](https://github.com/ym1085/TIL/wiki#java)
+- Topic 03. [Git and GitHub](https://github.com/ym1085/TIL/wiki#git--git-hub)
+- Topic 04. [Spring](https://github.com/ym1085/TIL/wiki#spring)
 
-## ETC & 개발 관련 영상
-### 개발 관련 영상
-- [`우아한 Tech - 아키텍처와 객체지향 간단 정리`](https://github.com/ym1085/TIL/issues/17#issue-935794265)
-- [`백기선님 - 더 나은 개발자로 성장하는 팁, 모르는 문제를 해결하는 방법`](https://github.com/ym1085/TIL/issues/30#issue-940072841)
+### [TIL Second Phase Project](https://github.com/ym1085/TIL/projects?query=is%3Aopen%2Cis%3Aclosed+)
+```yaml
+Second Phase Sprint:
+- 1주차마다 진행되는 Sprint Project Contents
+```
 
-### ETC(Daily 피드백 정리)
-- [`어떤 개발자가 될 것인가? 어떤 인식과 사고를 해야 할까?`](https://github.com/ym1085/TIL/issues/29#issue-939996157)
+### Contact Info.
+
+- 📩 **Email** : youngmin1085@gmail.com
+- 💾 **Linkedin** : www.linkedin.com/in/ym1085
+- 🌐 **Blog** : [https://velog.io/@ym1085](https://velog.io/@ym1085) 
 
 
