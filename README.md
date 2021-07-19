@@ -17,4 +17,10 @@
 
 - 📩 **Email** : youngmin1085@gmail.com
 - 💾 **Linkedin** : www.linkedin.com/in/ym1085
-- 🌐 **Blog** : [https://velog.io/@ym1085](https://velog.io/@ym1085) 
+- 🌐 **Blog** : [https://github.com/ym1085/TIL/wiki](https://github.com/ym1085/TIL/wiki) 
+
+
+
+
+
+
