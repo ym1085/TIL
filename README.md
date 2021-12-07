@@ -5,7 +5,7 @@
 1. [HTTP](https://github.com/ym1085/TIL/wiki#-http)
 2. [Spring Boot JPA](https://github.com/ym1085/TIL/wiki#-jpa)
 3. [Java](https://github.com/ym1085/TIL/wiki#-java-summary)
-4. [TDD](https://github.com/ym1085/TIL/wiki#-test-driven-development)
+4. [TDD](https://github.com/ym1085/TIL/wiki#-junit)
 5. [Git](https://github.com/ym1085/TIL/wiki#-git)
 6. [Algorithm](https://github.com/ym1085/TIL/wiki#-data-structure)
 7. [Etc](https://github.com/ym1085/TIL/wiki#-other-information)
