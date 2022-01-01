@@ -22,6 +22,6 @@
 - 📃 **Resume** : [KimYoungMin(Tech-Profile)](https://www.notion.so/Kim-YoungMin-Tech-Profile-e685e286aa6a4f559c5564351725f271)
 - 📩 **Email** : youngmin1085@gmail.com
 - 💾 **Linkedin** : www.linkedin.com/in/ym1085
-- 🌐 **Blog** : [https://github.com/ym1085/TIL/wiki](https://github.com/ym1085/TIL/wiki)
+- 🌐 **Blog** : https://ym1085.github.io
 
 
