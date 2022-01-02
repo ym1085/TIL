@@ -1,6 +1,6 @@
 ## [Wiki Home](https://github.com/ym1085/TIL/wiki)
 
-> 👋 Wiki 내용은 github.io로 모두 이관 하였습니다.
+> 👋 Wiki 내용은 github.io로 모두 이관 하였습니다.    
 > 🚀 https://ym1085.github.io
 
 ### Topics
