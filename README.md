@@ -1,18 +1,7 @@
 ## [Wiki Home](https://github.com/ym1085/TIL/wiki)
 
-> 👋 Wiki 내용은 github.io로 모두 이관 하였습니다.    
-> 🚀 https://ym1085.github.io
-
-### Topics
-
-1. HTTP
-2. Spring Boot JPA
-3. Java
-4. TDD
-5. Git
-6. Algorithm
-7. ELK
-8. Etc
+> 🚀 개인적인 스터디 및 이슈 내용은 깃헙 블로그에서 확인하실 수 있습니다  
+> :octocat: [YM's Git blog](ym1085.github.io)
 
 ### [TIL Sprint](https://github.com/ym1085/TIL/projects)
 
