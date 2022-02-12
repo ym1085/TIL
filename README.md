@@ -1,8 +1,8 @@
-## [Wiki Home](https://github.com/ym1085/TIL/wiki)
+## TIL - Today I Learned
 
-개인적으로 배운 기술이나 이슈를 정리하는 공간입니다.
+기존에 기록중인 내용은 [깃 블로그](https://ym1085.github.io)로 이관하였습니다.
 
-### [TIL Sprint](https://github.com/ym1085/TIL/projects)
+## Contact Info
 
-- [Sprints](https://github.com/ym1085/TIL/projects?query=is%3Aopen)
-- [all](https://github.com/ym1085/TIL/projects?query=is%3Aclosed+is%3Aall)
+- **Email** : youngmin1085@gmail.com
+- **Linkedin** : https://www.linkedin.com/in/ym1085
