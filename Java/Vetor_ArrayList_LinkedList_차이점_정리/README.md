@@ -10,21 +10,21 @@
 
 ```java
 public class VectorTest {
-		
+  
 	public String [] Array = new String[10];
-	public Vector<String> vector = new Vector<Strign>();
+ 	public Vector<String> vector = new Vector<Strign>();
 
-	@Test
-	public void collectionTest() {
-			System.out.println("Array = " + array.length);
-			System.out.println("Vector = " + vector.capacity());
-	}
+ 	@Test
+ 	public void collectionTest() {
+   		System.out.println("Array = " + array.length);
+   		System.out.println("Vector = " + vector.capacity());
+ 	}
 }
 ```
 
 - **Java 1.0** 부터 지원되며, **Java 1.2** 이상부터는 **이전 버전**과의 **호환**을 위해서 주로 사용된다
 - Vetor는 다수의 Thread에 대한 동기화 처리를 보장하기에, 한 번에 하나의 스레드만 작업이 가능하여 안정성이 보장됩니다.
-    - 모든 메서드에 **synchronized** 가 붙어있음
+  - 모든 메서드에 **synchronized** 가 붙어있음
 - Vector의 경우 공간이 모자를 때는 모자른 공간의 **2배 공간을 확보**하기 때문에, **메모리를 많이 잡아먹는다**는 단점 역시 존재
 
 ## 02. ArrayList
