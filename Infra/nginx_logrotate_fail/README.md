@@ -1,7 +1,7 @@
 # 01. 문제 상황 정의
 
-> 상용 배포 운영 중에 갑자기 logrotate가 정상적으로 동작하지 않는 현상 발생
-> 해당  이슈로 인해 수동 logrotate 커멘드를 사용하여 디버깅 한 결과 아래와 같은 ERROR 로그가 남아있는 부분을 확인
+> 상용 배포 운영 중에 갑자기 logrotate가 정상적으로 동작하지 않는 현상 발생  
+> 해당 이슈로 인해 수동 logrotate 커멘드를 사용하여 디버깅 한 결과 아래와 같은 ERROR 로그가 남아있는 부분을 확인
 
 ```shell
 xxx@ip-172-xx-xx-xx:/var/log/nginx# logrotate -f /etc/logrotate.d/nginx
