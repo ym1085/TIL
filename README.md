@@ -97,7 +97,13 @@
 | [[Git] gitignore가 동작하지 않는 경우 해소](./Git/gitignore가_동작하지_않는_경우_해소/README.md) | ✅ |
 | [[Git] Git Flow란?](./Git/Git_Flow/README.md) | ❌ |
 
-## 009. 🔧 ETC
+## 009. ⭐️ Infra & Data
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
+
+## 010. 🔧 ETC
 
 | 키워드 | 완료 여부 |
 | --- | --- |
