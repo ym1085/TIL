@@ -120,7 +120,8 @@ logrotate -v /etc/logrotate.conf
 logrotate -vd /etc/logrotate.conf
 ```
 
-- logroate 디버깅 command
+- `v:` verbose 옵션으로 실제 rotate가 처리된 파일 등에 대한 상세 정보 출력
+- `d:` dry-run 옵션으로 file을 실제 지우지 않고 작동 과정만 출력하는 옵션
 
 ```shell
 # logrotate force rotate -> 상용에서는 아래 명령어 절대 하면 안됨, 하더라도 논의 후 진행
@@ -128,7 +129,7 @@ logrotate -f /etc/logrotate.d/nginx
 logrotate -f /etc/logrotate.conf
 ```
 
-- logroate force rotate command
+- `-f:` logrotate 옵션에 상관없이 강제 force rotate를 수행
 - 상용에서 위 명령어는 사용하지 말자, rotate가 진행 되면서 서비스 부하로 이어질 수 있음
 
 ## 01-4. 결과
