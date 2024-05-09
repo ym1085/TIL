@@ -1,9 +1,10 @@
 # 01. Stream - isPresent() vs ifPresent()
 
-> Java에서의 Stream은 Optional 안의 값이 존재하는지 판단하는 2개의 메서드를 제공한다.  
-> isPresent() vs ifPresent() 2가지 메서드를 통해 Optional 안의 값의 존재 여부 판단 후 특정 행위를 수행 할 수 있다.  
+> Java Optional isPresent, ifPresent 함수는 Optional 안의 값이 존재 혹은 존재하지 않는지 확인하는 함수다.  
+> 이러한 isPresent() vs ifPresent() 2가지 메서드를 통해 Optional 안의 값의 존재 여부 판단 후 특정 행위를 수행 할 수 있다.  
 >   
-> Optional isPresent ifPresent를 사용하면 NullPointerException을 미연에 방지할 수 있으며 보다 안전한 코드 작성이 가능해진다. 우선 isPresent부터 시작해보자 😃
+> Optional isPresent ifPresent를 사용하면 NullPointerException을 미연에 방지할 수 있으며 보다 안전한 코드 작성이 가능해진다.  
+> 우선 isPresent부터 시작해보자 😃
 
 ## 왜 사용 해야 하는가?
 
