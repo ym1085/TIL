@@ -114,7 +114,7 @@ void is_optional_if_present_test() {
 - isPresent() 통해 값이 있는지 확인 -> get() 을 통해 값을 꺼낸다
   - ifPresent()는 위와 같은 과정없이 바로 값을 꺼낼 수 있는 함수형 스타일의 작성법으로, 코드가 간결해진다
 
-## 정리: Optional 클래스 메소드 비교
+## 01-3. 정리: Optional 클래스 메소드 비교
 
 > (핵심) isPresent() : 값의 존재 여부에 따라 분기 처리가 필요한 경우  
 > (핵심) ifPresent() : 객체가 값을 포함할때 단일 동작으로 축약되는 경우 사용
@@ -123,3 +123,10 @@ void is_optional_if_present_test() {
 |--------------|----------|----------------------------------------------|
 | `isPresent()` | `boolean` | `Optional` 객체에 값이 존재하면 `true`를 반환하고, 값이 없으면 `false`를 반환합니다. 주로 값의 존재 여부만을 확인할 때 사용 |
 | `ifPresent()` | `void`    | `Optional` 객체에 값이 존재하면 주어진 람다 표현식을 실행하여 값을 사용합니다. 값의 존재 여부와 동시에 특정 동작을 실행할 수 있는 함수형 프로그래밍 방식을 제공 |
+
+## 99. 참고 자료
+
+- [Optional isPresent/ifPresent](https://message0412.tistory.com/entry/JAVA-Optional-isPresentifPresent)
+- [Optional<T> isPresent(), ifPresent() 사용하기](https://sin0824.tistory.com/25)
+- [Java8 Optional 의 ifPresent 활용](https://ykh6242.tistory.com/entry/Java8-Optional-%EC%9D%98-ifPresent-%ED%99%9C%EC%9A%A9)
+- [Java Optional 사용법](https://www.daddyprogrammer.org/post/1988/java-optional/)
