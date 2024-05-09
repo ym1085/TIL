@@ -17,6 +17,7 @@
 | [[Java] Custom TypeHandler를 통한 Enum 활용](./Java/Custom_TypeHandler_enum_활용/README.md) | ✅ |
 | [[Java] String vs StringBuffer vs StringBuilder 차이점 정리](./Java/String_StringBuffer_StringBuilder_차이점_정리/README.md) |✅ |
 | [[Java] Stream - findAny() vs findFirst() 차이점](./Java/findany_findfirst/README.md) | ✅ |
+| [[Java] Stream - ifPresent() vs isPresent() 차이점](./Java/is_present_if_present/README.md) | ✅ |
 | [[Java] Vetor vs ArrayList vs LinkedList 차이점 정리](./Java/Vetor_ArrayList_LinkedList_차이점_정리/README.md) | ✅ |
 | [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | ❌ |
 | [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
