@@ -137,7 +137,7 @@ logrotate -f /etc/logrotate.conf
 
 ## 99. 참고
 
-- [Linux logrotate의 log 및 작동하지 않을 때 test 방법](https://github.com/ym1085/TIL-Category.git)
+- [Linux logrotate의 log 및 작동하지 않을 때 test 방법](https://jason-heo.github.io/sys/admin/2016/08/30/logrotate-test.html)
 - [[logrotate] 정상적으로 rotate되는지 debugging하기](https://blog.leocat.kr/notes/2018/01/30/logrotate-debugging)
 - [Permissions of ./fs_overlay/**](https://github.com/SteveLTN/https-portal/issues/265)
 - [Wrong permissions for /etc/logrotate.d/roundcubemail](https://github.com/remicollet/remirepo/issues/145)
