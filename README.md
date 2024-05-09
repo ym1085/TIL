@@ -61,11 +61,14 @@
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
 | [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
+| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
+| [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
+| [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
+| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ❌ |
 | [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 | [[AWS] Prometheus란?](./AWS/Prometheus란/README.md) | ❌ |
-| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ❌ |
 
 ## 006. ⛁ DB(DataBase)
 
