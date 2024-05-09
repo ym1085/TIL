@@ -3,13 +3,13 @@
 > Java Optional isPresent, ifPresent 함수는 Optional 안의 값이 존재 혹은 존재하지 않는지 확인하는 함수다.  
 > 이러한 isPresent() vs ifPresent() 2가지 메서드를 통해 Optional 안의 값의 존재 여부 판단 후 특정 행위를 수행 할 수 있다.  
 >   
-> Optional isPresent ifPresent를 사용하면 NullPointerException을 미연에 방지할 수 있으며 보다 안전한 코드 작성이 가능해진다.  
+> Optional isPresent, ifPresent를 사용하면 NullPointerException을 미연에 방지할 수 있으며 보다 안전한 코드 작성이 가능해진다.  
 > 우선 isPresent부터 시작해보자 😃
 
 ## 왜 사용 해야 하는가?
 
-Optional의 isPresent ifPresent 함수는 Optional 내부에 있는 값의 NULL 체크를 불필요한 로직 없이  
-처리 할수 있다는 장점이 있다. 만약 아래와 같은 코드가 있다고 가정을 해보자.
+Optional의 isPresent ifPresent 함수는 Optional 내부에 있는 값의 NULL 체크를 불필요한 로직 없이 처리 할수 있다는 장점이 있다.  
+만약 아래와 같은 코드가 있다고 가정을 해보자.
 
 ```java
 @Test
