@@ -103,6 +103,7 @@
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
+| [[Nginx & Apache] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
 
 ## 010. 🔧 ETC
 
