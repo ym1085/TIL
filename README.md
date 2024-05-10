@@ -47,6 +47,7 @@
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
+| [[Docker] Linux 상에서 docker 디스크 차지](./Docker/Linux_상에서_docker_디스크_차지/README.md) | ✅ |
 
 ## 004. ☸ Kubernetes
 
