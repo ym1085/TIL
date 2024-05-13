@@ -16,22 +16,19 @@
 
 ## 01-2. EBS와 EC2간의 연결 특징
 
-- `EBS`의 `EC2가 종료 되어도 별개로 작동`하여 `유지`가 가능하다
-- 보통은 컴퓨터가 꺼지면 HDD도 꺼지기 때문에 이용이 불가능
-  - 하지만 `EBS`는 `EC2와 네트워크로 연결된 서비스`이기에 사용이 가능
-- `EC2 인스턴스`를 `정지` 시켜도 `EBS`는 `독립적`으로 살아있기에 인스턴스 추가 비용 나가지 않음
+- `EBS`는 `EC2가 종료 되어도 별개로 작동`하여 `유지`가 가능하다
+- 보통은 `컴퓨터가 꺼지면 HDD도 꺼지기 때문에 이용이 불가능`
+  - 하지만 `EBS`는 `EC2와 네트워크로 연결된 서비스`이기에 `사용 가능`
 - `EC2 인스턴스`에 여러개의 `EBS`를 `부착`하거나 한개의 EBS를 여러개의 EC2 인스턴스에 부착 가능
   - `1개의 EC2`에 `여러개의 EBS 볼륨 마운팅`
-    - 하나의 컴퓨터에 여러개의 HDD, SDD 부착이 가능하지 않은가?
-    - (물리적 컴퓨터에서는 불가능한 부분)
+    - 하나의 컴퓨터에 여러개의 HDD, SDD 부착이 가능하지 않은가?(물리적 컴퓨터에서는 불가능한 부분)
   - `1개의 EBS`를 `여러개의 EC2에 부착` 가능
-    - 공용 저장소처럼 사용하는 경우
-    - (물리적 컴퓨터에서는 불가능한 부분)
+    - 공용 저장소처럼 사용하는 경우(물리적 컴퓨터에서는 불가능한 부분)
 
 ## 01-3. EBS는 같은 가용영역(AZ)에 존재?
 
-- `EBS`(Elastic Block Storage)는 `EC2와 같은 가용영역`에 `존재`한다
-- EC2와 `같은 가용영역에 존재`해야 `연결 및 통신이 빠름`
+- `EBS`(Elastic Block Storage)는 `EC2와 같은 가용영역`에 `존재`해야 한다
+- `EC2`와 `같은 가용영역에 존재`해야 `연결 및 통신이 빠름`
 - 만약 다른 AZ로 생성해서 EC2에 붙히려고 하면 에러 발생한다, 아래 예를 참고하자
   - EC2 -> ap-northeast-2a -> 생성
   - EBS -> ap-northeast-2c -> 생성 -> EC2 부착 -> 에러 발생
@@ -39,16 +36,16 @@
 > 다음 예시를 통해 네트워크로 연결되어 있는 EBS <--> EC2 의 장점에 대해 알아보자  
 > 네트워크를 통해 HDD를 관리하는 이점은 아래와 같다.
 
-## 집 컴퓨터의 CPU 업그레이드
+### 집 컴퓨터의 CPU 업그레이드
 
 1. 집 컴퓨터 같은 경우 CPU를 i9로 UPGRADE
 2. CPU 업그레이드를 위해서 컴퓨터 본체를 뜯고 CPU 칩 교체를 해줘야 한다
 
-## 사내 서버 컴퓨터의 HDD 교체
+### 사내 서버 컴퓨터의 HDD 교체
 
 1. 예를 들어 회사에 데이터를 저장하는 서버 컴퓨터가 존재
 2. 해당 서버의 디스크 저장 공간이 부족해 졌다고 가정
-3. 온프라미스 환겨에서는 추가 저장 공간 확보를 위해 서버 HDD를 물리적으로 교체 or 새로운 HDD 설치 필요
+3. 온프라미스 환경에서는 추가 저장 공간 확보를 위해 서버 HDD를 물리적으로 교체 or 새로운 HDD 설치
 4. 위 과정에서 서버를 일시적으로 중지 시키고, HDD 설치 혹은 교체 진행 중 서버 사용 불가능
 
 > 이렇듯 AWS EBS는 위와 같은 불편한 부분을 네트워크 연결만으로 해결이 가능하도록  
@@ -59,9 +56,9 @@
 
 > EBS 볼륨이란 EBS로 생성한 디스크 하나하나의 저장 단위를 의미한다.  
 > EBS(Elastic Block Storage)는 AWS에서 제공하는 블록 레벨 스토리지 서비스를 의미하고  
-> ⭐️ "EBS Volume은 EBS 서비스를 기반으로 하여 실제 생성된 스토리지 블록을 의미한다"
+> ⭐️ "EBS Volume은 EBS 서비스를 기반으로 하여 실제 생성된 '스토리지 블록'을 의미한다"
 
-- `EBS 볼륨`을 `인스턴스`에 `연결하겠다는 말`은 EC2에서 EBS를 물리적 HDD처럼 사용하겠다는 의미다
+- `EBS 볼륨`을 `인스턴스`에 `연결하겠다는 말`은 EC2에서 <u>EBS를 물리적 HDD처럼 사용하겠다는 의미</u>다
 - 쉽게 말하자면 `Window`에서 볼 수 있는 `C:드라이브`, `D:드라이브`는 각각 `디스크`이며 `볼륨`이라고 할 수 있다
 
 ## 02-1. EBS 볼륨 유형 타입
@@ -74,15 +71,24 @@
 - EBS는 총 `5가지` 타입으로 구분 된다
   - 범용(General Purpose of GP3) : `SSD`
   - 프로비저닝 된 IOPS(Provisioned IOPS or io2) : `SSD`
-  - 쓰루풋 최적화 (Throughput Optimized HDD or st1)
-  - 콜드 HDD(SC1)
-  - 마그네틱(Standard)
+  - 쓰루풋 최적화 (Throughput Optimized HDD or st1) : `SSD`
+  - 콜드 HDD(SC1) : `HDD`
+  - 마그네틱(Standard) : `HDD`
 
 ![ebs_type_iops.png](./img/ebs_type_iops.png)
 
 - 각 `HDD`의 `성능`은 <u>`용량`</u> 과 <u>`Max IOPS`</u> 수치를 확인하면 된다
   - <u>`IOPS 성능이 높을수록` `데이터 통신이 빠르다고` 보면 됨</u>
 - 일반적으로는 범용 타입인 `GP3 볼륨`을 주로 사용
+
+## 02-2. Snapshot
+
+- 특정 시간의 EBS 상태 저장본
+  - EBS 사진을 찍어둔 개념
+- 필요시 `스냅샷`을 통해 `EBS 복구 가능`
+- S3에 보관
+  - `증분식 저장`
+  - 기존에서 변화된 부분만 저장
 
 # 03. EC2의 EBS 그리고 Instance Storage 저장 방식
 
@@ -266,6 +272,7 @@ echo "hello" > /xvdb/hello.txt
 
 ## 99. 참고 자료
 
+- [쉽게 설명하는 AWS 기초 강좌 10: EC2(4)-EBS,Snapshot,AMI-](https://www.youtube.com/watch?v=N8TB_6AbaM4&t=649s)
 - [[AWS] 📚 EBS 개념 & 사용법 💯 정리 (EBS Volume 추가하기)](https://inpa.tistory.com/entry/AWS-%F0%9F%93%9A-EBS-%EA%B0%9C%EB%85%90-%EC%82%AC%EC%9A%A9%EB%B2%95-%F0%9F%92%AF-%EC%A0%95%EB%A6%AC-EBS-Volume-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0#ebs_%EB%B3%BC%EB%A5%A8_%ED%99%95%EC%9E%A5%ED%95%98%EA%B8%B0)
 - [리눅스 기초 - 기본 스토리지 관리 2 (파일시스템생성, 마운트, mkfs, mount)](https://www.youtube.com/watch?v=Nx74uvkuAyU)
 - [마운트(mount) 란?](https://blog.naver.com/PostView.naver?blogId=ssoofeel&logNo=222496193311&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
