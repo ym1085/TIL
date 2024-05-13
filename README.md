@@ -4,7 +4,7 @@
 > 🔥 공부 및 기록을 위한 목적으로 잘못 된 내용이 존재할 수 있으니 참고 부탁드립니다.
 
 😃 해당 리포지토리의 모든 내용은 [기록하고, 복기하고](https://sw-ym.tistory.com) 블로그에 함께 기재됩니다.  
-추가적인 질문 혹은 연락은 youngmin1085@gmail.com 로 연락 부탁드리겠습니다.
+추가적인 질문 혹은 연락은 <youngmin1085@gmail.com> 로 연락 부탁드리겠습니다.
 
 ## 001. ☕ Java
 
@@ -20,7 +20,7 @@
 | [[Java] Stream - findAny() vs findFirst() 차이점](./Java/findany_findfirst/README.md) | ✅ |
 | [[Java] Stream - ifPresent() vs isPresent() 차이점](./Java/is_present_if_present/README.md) | ✅ |
 | [[Java] Vetor vs ArrayList vs LinkedList 차이점 정리](./Java/Vetor_ArrayList_LinkedList_차이점_정리/README.md) | ✅ |
-| [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | ❌ |
+| [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | 🔥 |
 | [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
 | [[Java] List vs Set vs Map 차이점 정리](./Java/List_Set_Map_차이점_정리/README.md) | ❌ |
 | [[Java] JVM 총정리](./Java/JVM_총정리/README.md) | ❌ |
@@ -63,10 +63,10 @@
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
 | [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
-| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
+| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ✅ |
+| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | 🔥 |
 | [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
-| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ❌ |
 | [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
@@ -74,7 +74,7 @@
 
 ## 006. ⛁ DB(DataBase)
 
-| 키워드 | 완료 여부 | 
+| 키워드 | 완료 여부 |
 | --- | --- |
 | [[DB] WITH 구문이란?](./DB/WITH/README.md) | ✅ |
 | [[DB] UNION vs UNION ALL?](./DB/UNION_UNION_ALL/README.md) | ✅ |
@@ -108,9 +108,9 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
 | [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
-| [[Nginx & Apache] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
+| [[Nginx & Apache] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | 🔥 |
+| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
 
 ## 010. 🔧 ETC
 
