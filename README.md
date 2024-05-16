@@ -20,10 +20,10 @@
 | [[Java] Stream - findAny() vs findFirst() 차이점](./Java/findany_findfirst/README.md) | ✅ |
 | [[Java] Stream - ifPresent() vs isPresent() 차이점](./Java/is_present_if_present/README.md) | ✅ |
 | [[Java] Vetor vs ArrayList vs LinkedList 차이점 정리](./Java/Vetor_ArrayList_LinkedList_차이점_정리/README.md) | ✅ |
-| [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | 🔥 |
+| [[Java] List vs Set vs Map 차이점 정리](./Java/List_Set_Map_차이점_정리/README.md) | 🔥 |
 | [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | 🔥 |
-| [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
-| [[Java] List vs Set vs Map 차이점 정리](./Java/List_Set_Map_차이점_정리/README.md) | ❌ |
+| [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | 🔥 |
+| [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
 | [[Java] JVM 총정리](./Java/JVM_총정리/README.md) | ❌ |
 | [[Java] 리플렉션(Reflaction)란?](./Java/리플렉션이란/README.md) | ❌ |
 | [[Java] synchronized란?](./Java/synchronized란/README.md) | ❌ |
