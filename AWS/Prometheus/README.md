@@ -288,6 +288,8 @@ fi
 ## 02-5. ECS IP 유동적 변경에 따른 대처 방안
 
 - ECS의 경우 배포(deploy)를 진행하게 되면 사설 IP가 변하게 된다
-  - 사설 IP가 변하는 이유는 현재 ECS의 Task가 Private Subnet에 위치하기 때문이다
+  - 사설 IP인 이유는 현재 ECS의 Task가 Private Subnet에 위치하기 때문이다
 - 그렇기에 이렇게 동적으로 변화되는 ECS의 IP를 Prometheus의 Service Discovery를 사용해 처리해야 할 것으로 보인다
   - 위 내용은 서비스 구성이 완료되면, 추후 기재하도록 하겠다
+    - 방안 1: Event Bridge + Lambda 활용
+    - 방안 2: Private EC2 서버에 ecs endpoint 추가 + aws ecs cli 활용
