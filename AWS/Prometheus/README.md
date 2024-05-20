@@ -146,7 +146,7 @@ scrape_configs:
       scrape_interval: 10s
       file_sd_configs:
         - files:
-        - /home/ec2-user/prometheus/targets-stg.json
+          - /home/ec2-user/prometheus/targets-stg.json
 ```
 
 - global.scrape_interval
