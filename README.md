@@ -71,7 +71,7 @@
 | [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
-| [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus란/README.md) | ❌ |
+| [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus/README.md) | 🔥 |
 
 ## 006. ⛁ DB(DataBase)
 
