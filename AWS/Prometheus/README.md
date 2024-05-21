@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # 01. Spring Boot Actuator
 
 > Spring Actuator, Prometheus, Grafana 사용하여 ECS의 메트릭을 수집하기 위해 이번 글을 작성하게 되었다  
@@ -296,4 +293,3 @@ fi
   - 위 내용은 서비스 구성이 완료되면, 추후 기재하도록 하겠다
     - 방안 1: Event Bridge + Lambda 활용
     - 방안 2: Private EC2 서버에 ecs endpoint 추가 + aws ecs cli 활용
->>>>>>> fe193d950764010dd72f046588b110b9717e5c39
