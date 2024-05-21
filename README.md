@@ -71,7 +71,7 @@
 | [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
-| [[AWS] Prometheus란?](./AWS/Prometheus란/README.md) | ❌ |
+| [[AWS] Prometheus와 Spring Actuator를 통한 JVM 모니터링 구성](./AWS/Prometheus란/README.md) | ❌ |
 
 ## 006. ⛁ DB(DataBase)
 
@@ -92,6 +92,7 @@
 | --- | --- |
 | [[ES] Elasticsearch에서 reindex 방법](./Elasticsearch/Elasticsearch에서_reindex_방법/README.md) | ✅ |
 | [[ES] 인덱스와 샤드 Index & Shards](./Elasticsearch/인덱스와_샤드/README.md) | ✅ |
+| [[ES] 인덱스 데이터 노드 무중단 재기동](./Elasticsearch/무중단_재기동/README.md) | 🔥 |
 
 ## 008. 😺 Git
 
