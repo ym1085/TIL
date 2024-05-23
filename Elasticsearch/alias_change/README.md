@@ -27,8 +27,8 @@
 - 실 서비스에서 적용 해보았는데 Grafana, Cloudwatch 등 모니터링에 발생한 에러도 없었다(다행)
   - 하지만 해당 명령어 치기 전에 STG, DEV에서 1번은 테스트 진행하고 하는걸 권장한다
 
-```json
-// 2024-05-22로 alias 설정
+```shell
+# 2024-05-22로 alias 설정
 POST /_aliases
 {
   "actions": [
@@ -47,7 +47,7 @@ POST /_aliases
   ]
 }
 
-// 2024-05-21로 alias 원복
+# 2024-05-21로 alias 원복
 POST /_aliases
 {
   "actions": [
