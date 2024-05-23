@@ -92,7 +92,7 @@
 | --- | --- |
 | [[ES] Elasticsearch에서 reindex 방법](./Elasticsearch/Elasticsearch에서_reindex_방법/README.md) | ✅ |
 | [[ES] 인덱스와 샤드 Index & Shards](./Elasticsearch/인덱스와_샤드/README.md) | ✅ |
-| [[ES] 인덱스 데이터 노드 무중단 재기동](./Elasticsearch/무중단_재기동/README.md) | 🔥 |
+| [[ES] ES 클러스터 운영 중 노드 순차적 재시작(Rolling Restart)](./Elasticsearch/무중단_재기동/README.md) | ✅ |
 
 ## 008. 😺 Git
 
