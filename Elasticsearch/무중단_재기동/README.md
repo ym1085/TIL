@@ -1,6 +1,6 @@
 # 01. ES 클러스터 운영 중 노드 순차적 재시작(Rolling Restart)
 
-> 상용 ES를 운연하던 도중 데이터 노드의 CPU가 90%를 넘겨서 재기동을 진행해야 했다  
+> 상용 ES를 운영하던 도중 데이터 노드의 CPU가 90%를 넘겨서 재기동을 진행해야 했다  
 > 또한 Thread 상태를 확인해본 결과 rejected 된 결과가 1,414,844개가 쌓여 있었다  
 > 
 > ❌ 하지만 데이터 노드를 그냥 재기동해버리면 해당 노드의 데이터에 문제가 발생할 수 있다  
@@ -16,6 +16,7 @@
 # 현재 ES thread_pool에서 rejected 된 thread 상태 및 원인 내용 확인
 GET _cat/thread_pool?v&s=rejected:desc
 
+# Kibana 상에서 _thread_pool 명령어를 통해 확인한 결과
 node_name name                active queue rejected
 es-za-dxx search                  13     0  1414844
 es-za-dxx search                   9     0  1190554
@@ -25,14 +26,13 @@ es-za-dxx search                  11     0    56111
 es-zb-dxx search                   9     0    48202
 ```
 
-- 현재 Kibana 상에서 _thread_pool 명령어를 통해 확인한 결과
 - 검색이 밀리면서 search(검색) Thread가 reject되는 현상이 발생
   - 물론 Grafana 상에서 검색도 밀리기 시작
   - Slack 알람, Cloudwatch 알람 등등... 계속해서 메시지가 발송됨
 - 이러한 이슈로 인해 문제가 되고 있는 data node를 순차적으로 재기동 해야 했다
 - 하지만 data node를 특정 작업 없이 그대로 재기동 하면 문제가 커진다
-  - 샤드 할당(Shard Allocation) 발생 -> 데이터 노드이기에 다른 노드로 데이터 옮기기 시작하면 시간이 오래 걸리는 현상 발생
-  - 빨리 해소가 되어야 하는데 시간이 오래 걸리면 서비스 장애로 이어짐
+  - 문제1) 샤드 할당(Shard Allocation) 발생 -> 데이터 노드이기에 다른 노드로 데이터 옮기기 시작하면 시간이 오래 걸리는 현상 발생
+  - 문제2) 빨리 해소가 되어야 하는데 시간이 오래 걸리면 서비스 장애로 이어짐
 
 ## 01-2. 왜 문제가 커지는가?
 
@@ -97,11 +97,11 @@ GET _cluster/settings
 > persistent, transient update 방식 존재  
 > transient > persistent, elasticsearch.yml 순서
 
-```json
-// 필자는 persistent 명령어를 사용하였다
-// persistent는 영구 적용 옵션이다
-// none 옵션 주면 클러스터 상태 -> red -> 필자는 괜찮았음
-// primary 옵션 주면 클러스터 상태 -> yellow
+```shell
+# 필자는 persistent 명령어를 사용하였다
+# persistent는 영구 적용 옵션이다
+# none 옵션 주면 클러스터 상태 -> red -> 필자는 괜찮았음
+# primary 옵션 주면 클러스터 상태 -> yellow
 PUT /_cluster/settings
 {
     "persistent" : {
@@ -109,7 +109,7 @@ PUT /_cluster/settings
     }
 }
 
-// 특정 블로그에서는 아래 명령어도 제안을 한다
+# 특정 블로그에서는 아래 명령어도 제안을 한다
 PUT /_cluster/settings
 {
     "transient" : {
@@ -125,18 +125,18 @@ PUT /_cluster/settings
 
 ## 01-5. 프라이머리 샤드 리플리카 샤드 데이터 동기화
 
-```json
-// 실제 명령어
+```shell
+# 실제 명령어
 POST _flush/synced
 
-//curl -XPOST 'localhost:9200/_flush/synced?pretty'
+# curl -XPOST 'localhost:9200/_flush/synced?pretty'
 ```
 
 > node 재시작 후에 샤드 데이터를 다시 색인할 필요가 없음을 sync_id로 빠르게 확인하기 때문에 복구 시간이 단축됨
 
 - 엘라스틱서치에서 `데이터의 안정성`을 높히고 `복구 시간 단축`을 위해 사용
 - 해당 명령은 `동기화된 플러시`(`synced flush`)를 수행
-- <u>Synced flush 수행`하면 `flush 수행 후` 존재하는 `모든 샤드`마다 `유니크한 sync-id 발급</u>
+- <u>Synced flush 수행하면 flush 수행 후 존재하는 모든 샤드마다 유니크한 sync-id 발급</u>
 - <u>Primary shard, replica shard 데이터 동기화</u>
 - 8버전부터는 삭제됨
 
@@ -158,16 +158,16 @@ es 재기동 후에는 반드시 kibana 내에서 해당 node가 클러스터에
 
 ## 01-7. 클러스터 셋팅 및 헬스 체크
 
-```json
+```shell
 GET _cluster/settings
 GET _cluster/health
 ```
 
 - 변경 된 클러스터 셋팅 및 헬스 체크 확인
 
-## 01-8. 
+## 01-8. 마지막으로 샤드 할당 활성화
 
-```json
+```shell
 PUT _cluster/settings
 {
   "persistent": {
@@ -177,6 +177,7 @@ PUT _cluster/settings
 ```
 
 - 샤드 할당 기능 옵션을 다시 null(기본 값)로 셋팅
+  - 이제 샤드 할당 해도 되니까 샤드 할당 하도록 해! 라고 설정
 - `null`은 실제 `all` 옵션과 동일하다
   - `all`: 모든 샤드 할당 활성화
   - `primaries`: 기본(primary) 샤드 할당만 활성화
