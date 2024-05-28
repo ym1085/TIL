@@ -75,7 +75,7 @@ fruits: [apple, banana, kiwi, kiwi, kiwi, null]
     - 입력 순서 보장
     - NULL 값 허용
   - TreeSet
-    - `이진 탐색 트리`(Reg-Black Tree) 기반
+    - `이진 탐색 트리`(Red-Black Tree) 기반
     - NULL 값 허용 안함
     - 데이터 `오름차순` 정렬
     - 데이터 `삽입`, `삭제` 시간 `오래걸리지만` `검색 및 정렬 빠름`
