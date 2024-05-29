@@ -152,7 +152,9 @@ public class MapExample {
   - HashMap
     - key에 중복 허용 안함, value 중복 허용
     - 순서 보장하지 않음
-    - `동기화 보장 안함` -> ConcurrentHashMap(성능 + 동기화 제공)
+    - `동기화 보장 안함`
+      - ConcurrentHashMap(성능 + 동기화 제공)
+      - Collections.synchronizedMap(new HashMap<>()); 사용
     - `key, value NULL 허용`
   - HashTable
     - key에 중복 허용 안함, value 중복 허용
@@ -162,11 +164,13 @@ public class MapExample {
   - LinkedHashMap
     - 입력 순서 보장
     - `key, value NULL 허용`
+    - 동기화 보장 안함
   - TreeMap
     - 이진 탐색 트리(Red-Black Tree) 기반 key,value 저장
     - key 값 기준 오름차순 정렬, 빠른 검색 가능
     - 저장 시 정렬하기에 시간 다소 걸림
     - `key는 NULL 허용 안함`
+    - 동기화 보장 안함
 
 ## 03-2. Map 자료구조 만들어보기
 
