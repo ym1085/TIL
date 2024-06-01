@@ -21,6 +21,7 @@
 | [[Java] Stream - ifPresent() vs isPresent() 차이점](./Java/is_present_if_present/README.md) | ✅ |
 | [[Java] Vetor vs ArrayList vs LinkedList 차이점 정리](./Java/Vetor_ArrayList_LinkedList_차이점_정리/README.md) | ✅ |
 | [[Java] List vs Set vs Map 차이점 정리](./Java/List_Set_Map_차이점_정리/README.md) | ✅ |
+| [[Java] Collection.forEach vs Stream.forEach 차이점 정리](./Java/collection_stream_foreach/README.md) | 🔥 |
 | [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | 🔥 |
 | [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
 | [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
@@ -38,6 +39,7 @@
 | [[Spring] Test 경로가 다른 패키지 테스트 시 오류 발생 해소](./Spring/Test_경로가_다른_패키지_테스트시_오류_발생_해소/README.md) | ✅ |
 | [[Spring] Spring에서의 Logging 방식](./Spring/Spring에서의_Logging_방식/README.md) | ✅ |
 | [[Spring] Cookie & Session](./Spring/Cookie_Session/README.md) | ✅ |
+| [[Spring] Spring Cache 사용](./Spring/Spring_Cache/README.md) | ✅ |
 | [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md) | ❌ |
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC란/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
@@ -73,7 +75,6 @@
 | [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
-
 
 ## 006. ⛁ DB(DataBase)
 
