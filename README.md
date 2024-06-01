@@ -40,6 +40,7 @@
 | [[Spring] Spring에서의 Logging 방식](./Spring/Spring에서의_Logging_방식/README.md) | ✅ |
 | [[Spring] Cookie & Session](./Spring/Cookie_Session/README.md) | ✅ |
 | [[Spring] Spring Cache 사용](./Spring/Spring_Cache/README.md) | ✅ |
+| [[Spring] Spring @Bean vs @Component](./Spring/Bean_component/README.md) | ✅ |
 | [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md) | ❌ |
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC란/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
