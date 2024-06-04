@@ -184,6 +184,29 @@ MyClass myclass = new MyClass(); -> heap에 존재
 - 메서드 실행 -> 스택 프레임 생성 -> Stack 영역 안의 메서드 호출
 - 메서드 호출 -> 메모리 할당 -> 메서드 종료 -> 메모리에서 소멸
 
+## 02-4. (번외) 클래스 변수는 왜 인스턴스 변수에 접근할 수 없는가?
+
+> 클래스 변수는 인스턴스 사용 불가능
+
+```java
+public static void main(String[] args) {
+    VariableDemo variableDemo = new VariableDemo(); // 이 시점에 클래스도 생성됨
+}
+```
+
+- 인스턴스 생성 시점에 항상 클래스가 Mem에 로드되어 있음
+- 인스턴스 변수가 클래스 변수 사용 가능
+
+```java
+public static void main(String[] args) {
+    VariableDemo.classMethod(); // 이 시점에 인스턴스 존재하지 않음
+}
+```
+
+- 클래스 생성 시점에 인스턴스의 존재 보장 안함
+- 클래스 변수는 인스턴스 맴버 사용 불가
+- 클래스 메서드도 인스턴스 맴버 사용 불가
+
 ## 99. 참고 자료
 
 - [[Java] static변수와 static 메소드](https://mangkyu.tistory.com/47)
@@ -191,3 +214,4 @@ MyClass myclass = new MyClass(); -> heap에 존재
 - [[JAVA] Static Keyword 와 Method Area (메소드 영역)](https://ict-nroo.tistory.com/19)
 - [[Java] JVM 구조와 메모리 영역 - Method, Heap, Stack Area](https://tape22.tistory.com/28)
 - [[Java] JVM 메모리 구조 파헤쳐 보기 (Static, Stack, Heap)](https://hstory0208.tistory.com/entry/Java-JVM-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0-%ED%8C%8C%ED%97%A4%EC%B3%90-%EB%B3%B4%EA%B8%B0-Static-Stack-Heap)
+- [[Java] 클래스 멤버는 왜 인스턴스 멤버를 참조할 수 없을까?](https://wisdom-and-record.tistory.com/35)
