@@ -242,6 +242,42 @@ public Spliterator<E> spliterator() {
 즉, `동기화된(synchronized)` `Collection.forEach`는 `락`이 걸려있기에 `멀티쓰레드에 안전`하고, `Stream.forEach`는 `멀티스레드`에서 `안전하지 않다고 한다`.  
 결론은 일반적인 반복의 경우에는 thread-safe 한 Collection.forEach를 사용하자.
 
+## 01-5. Concurrent Modification Exception 방지
+
+```java
+// Bad Practice
+List<String> words = new ArrayList<String>();
+words.add("A");
+words.add("B");
+words.add("C");
+
+for (String word : words) {
+    if (word.equals("A")) {
+        words.remove(word);
+    }
+}
+```
+
+```java
+// Best Practice
+List<String> words = new ArrayList<String>();
+words.add("A");
+words.add("B");
+words.add("C");
+
+Iterator<String> iterator = words.iterator();
+while (iterator.hasNext()) {
+    String word = iterator.next();
+    if (word.equals("A")) {
+        iterator.remove(); // Use iterator's remove method to safely remove elements
+    }
+}
+
+System.out.println(words); // Output: [B, C]
+```
+
+- ConcurrentModificationException 방지 예시
+
 ## 99. 참고 자료
 
 - [[Java] SynchronizedCollections vs ConcurrentCollections](https://deepblue28.tistory.com/entry/Java-SynchronizedCollections-vs-ConcurrentCollections)
