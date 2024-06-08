@@ -239,7 +239,8 @@ public Spliterator<E> spliterator() {
 `Collections.java`를 보면 아래 코드처럼 `Collection.forEach`에는 `synchronized 키워드`가 붙어있고, `Stream.forEach`를 위해 필요한 `spliterator`  
 메서드는 안 붙어있는 것을 확인할 수 있다고 한다.
 
-즉, `동기화된(synchronized)` `Collection.forEach`는 `락`이 걸려있기에 `멀티쓰레드에 안전`하고, `Stream.forEach`는 `멀티스레드`에서 `안전하지 않다고 한다`.
+즉, `동기화된(synchronized)` `Collection.forEach`는 `락`이 걸려있기에 `멀티쓰레드에 안전`하고, `Stream.forEach`는 `멀티스레드`에서 `안전하지 않다고 한다`.  
+결론은 일반적인 반복의 경우에는 thread-safe 한 Collection.forEach를 사용하자.
 
 ## 99. 참고 자료
 
