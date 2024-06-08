@@ -22,7 +22,7 @@
 | [[Java] Vetor vs ArrayList vs LinkedList 차이점 정리](./Java/Vetor_ArrayList_LinkedList_차이점_정리/README.md) | ✅ |
 | [[Java] List vs Set vs Map 차이점 정리](./Java/List_Set_Map_차이점_정리/README.md) | ✅ |
 | [[Java] static 변수, 메서드의 차이와 자바 메모리 영역 간단 정리](./Java/static/README.md) | ✅ |
-| [[Java] Collection.forEach vs Stream.forEach 차이점 정리](./Java/collection_stream_foreach/README.md) | 🔥 |
+| [[Java] Collection.forEach vs Stream.forEach 차이점 정리](./Java/collection_stream_foreach/README.md) | ✅ |
 | [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | 🔥 |
 | [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
 | [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
