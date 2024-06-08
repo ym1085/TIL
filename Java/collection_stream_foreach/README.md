@@ -158,7 +158,7 @@ forEach를 수행하면 `실행 순서가 매번 달라지며` `예측 불가능
 > 😃 동시성 문제에 대해서는 추후 정리를 이어나갈 예정
 
 Collection.forEach의 경우 수정을 감지하는 경우 `ConcurrentModificationException`이 발생한다.  
-여기서 `ConcurrentModificationException` 예외의 경우 `하나의 오브젝트에 대해 허가되지 않은 변경이 동시`에 이루어질 때 발샌한다고 한다.  
+여기서 `ConcurrentModificationException` 예외의 경우 `하나의 오브젝트에 대해 허가되지 않은 변경이 동시`에 이루어질 때 발생한다고 한다.  
 대표적으로는 `Collection 순회` 중 해당 `Collection`을 `수정`할 때 `발생`한다.
 
 ```java
