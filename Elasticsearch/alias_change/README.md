@@ -73,6 +73,9 @@ POST /_aliases
 > ChatGPT한테 물어보면 알려주겠지만 혹시 급한 경우 사용
 
 ```shell
+# reject count 확인
+GET _cat/thread_pool?v&s=rejected:desc
+
 # 클러스터의 샤드 할당 상태 설명 요청
 curl -X GET "http://172.21.70.xx:9200/_cluster/allocation/explain?pretty"
 
