@@ -224,13 +224,110 @@ AAA
 
 - 메모리 주소가 서로 다르며, 데이터도 다름
 
-### ✅ Clonable 인터페이스 구현하여 clone() 함수 오버라이딩 후 복사
+### ✅ Clonable 인터페이스 구현하여 clone() 함수 오버라이딩 후 깊은  복사
 
-- TODO
-- TODO
+```java
+// Object.java
+// Java Doc... 주석 중략
+@HotSpotIntrinsicCandidate
+protected native Object clone() throws CloneNotSupportedException;
+```
+
+```java
+// Cloneable.java
+// Java Doc... 주석 중략
+public interface Cloneable {
+}
+```
+
+> clone은 Object에 정의되어 있다, 쓰고 싶은면 'Cloneable 인터페이스 구현' 후 쓰라고 한다? 🤔  
+> 근데 Cloneable 인터페이스를 열어보면 본문이 비어있는 인터페이스이다(실제로는 마커 인터페이스)  
+> 참고 : [Java: Cloneable에 대한 고찰](https://velog.io/@suky/Java-Cloneable%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EC%B0%B0)
+
+실제 `Object 클래스`에 들어가보면 위와 같이 `clone()` 메서드가 `protected native` 로 선언되어 있는걸 확인 할 수 있다.  
+`clone()` 메서드를 호출하려면 `Cloneable 인터페이스를 구현`해야 하며, 만약 구현하지 않으면 `CloneNotSupportedException`이 발생하게 된다. 
+
+> native 키워드?
+
+`native 키워드`는 `자바가 아닌 언어`(C, C++)로 구`현 후 자바에서 사용하려고 할 때 이용하는 키워드`이다.  
+자바로 구현하기 까다로운 것을 다른 언어로 구현 후 자바에서 사용한다. 구현할때 JNI(Java Native Interface)를 사용한다.
+
+```java
+package com.test;
+
+class CloneableObject implements Cloneable {
+    private String name; // 이름
+    private int age; // 나이
+
+    // Constructor
+    public CloneableObject(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Object 클래스의 clone 메서드를 오버라이딩
+    @Override
+    public CloneableObject clone() {
+        try {
+            return (CloneableObject) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+    }
+}
+
+public class Clone {
+
+    public static void main(String[] args) {
+        // 신규 객체 생성
+        CloneableObject cloneableObject1 = new CloneableObject("KKK", 13);
+        
+        // 다른 객체에 깊은 복사(Deep Copy 수행)
+        CloneableObject cloneableObject2 = cloneableObject1.clone();
+
+        // 결과 출력
+        System.out.println(cloneableObject1);
+        System.out.println(cloneableObject2);
+        System.out.println(cloneableObject1.hashCode());
+        System.out.println(cloneableObject2.hashCode());
+        System.out.println(cloneableObject1.getName());
+        System.out.println(cloneableObject2.getName());
+    }
+}
+```
+
+복사를 하고자 하는 Obj(CloneableObject)에서 Cloneable 인터페이스를 구현하고 Object.clone() 메서드를 오버라이딩한다.  
+후에 해당 객체의 clone() 메서드를 실행하기 되면 아래와 같은 결과가 출력이 된다.
+
+```java
+// 출력 결과
+cloneableObject1 => com.test.CloneableObject@7e0ea639
+cloneableObject2 => com.test.CloneableObject@3d24753a
+cloneableObject1.hashCode() => 2114889273
+cloneableObject2.hashCode() => 1025799482
+cloneableObject1.getName => KKK
+cloneableObject2.getName() => KKK
+```
 
 ## 99. 참고 자료
 
 - [최블랙의 개발로그 - Java shallow copy와 Deep Copy](https://choiblack.tistory.com/41)
 - [java :) 얕은복사와 깊은복사, Arrays.copyOf()와](https://kimeuncheol.tistory.com/98)
 - [Java - 깊은 복사(Deep Copy) vs 얕은 복사(Shallow Copy)](https://zzang9ha.tistory.com/372)
+- [Java-Cloneable에-대한-고찰](https://velog.io/@suky/Java-Cloneable%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EC%B0%B0)
