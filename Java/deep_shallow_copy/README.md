@@ -249,8 +249,9 @@ public interface Cloneable {
 
 > native 키워드?
 
-`native 키워드`는 `자바가 아닌 언어`(C, C++)로 구`현 후 자바에서 사용하려고 할 때 이용하는 키워드`이다.  
-자바로 구현하기 까다로운 것을 다른 언어로 구현 후 자바에서 사용한다. 구현할때 JNI(Java Native Interface)를 사용한다.
+`native 키워드`는 `자바가 아닌 언어`(C, C++)로 `구현 후 자바에서 사용하려고 할 때 이용하는 키워드`이다.  
+자바로 구현하기 까다로운 것을 다른 언어로 구현 후 자바에서 사용한다. 구현할때 JNI(Java Native Interface)를 사용한다.  
+실제로 Cloneable을 구현했는지 판단하는 부분은 [jvm.cpp 소스](https://github.com/openjdk/jdk/blob/3f41fdecdb6d131a5afe6e0a39d7414c222fe4fb/src/hotspot/share/prims/jvm.cpp#L636) 안에서 확인이 가능하다고 한다.
 
 ```java
 package com.test;
