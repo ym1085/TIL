@@ -25,7 +25,7 @@
 | [[Java] Collection.forEach vs Stream.forEach 차이점 정리](./Java/collection_stream_foreach/README.md) | ✅ |
 | [[Java] new ArrayList<>()와 Arrays.asList()와 List.of() 차이](./Java/new_arraylist_as_list/README.md) | ✅ |
 | [[Java] 깊은 복사 vs 얕은 복사](./Java/deep_shallow_copy/README.md) | ✅ |
-| [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | ❌ |
+| [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | 🔥 |
 | [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
 | [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
 | [[Java] JVM 총정리](./Java/JVM_총정리/README.md) | ❌ |
@@ -76,7 +76,7 @@
 | [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ✅ |
 | [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus/README.md) | ✅ |
 | [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md) | ✅ |
-| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | 🔥 |
+| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
 | [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
