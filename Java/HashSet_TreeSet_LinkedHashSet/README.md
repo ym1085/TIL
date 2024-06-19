@@ -1,15 +1,12 @@
 # 01. HashSet vs TreeSet vs LinkedHashSet
 
-> 기본적으로 Set은 중복 요소를 허용하지 않고 순서도 보장하지 않는다.  
+> 기본적으로 Set은 중복을 허용하지 않고 순서도 보장하지 않는다.  
 > 이번에는 Set 인터페이스의 구현 클래스인 HashSet, TreeSet, LinkedHashSet에 특징에 대해 알아보자.
 
 ## 01-1. HashSet
 
 ```java
-public class HashSet<E>
-    extends AbstractSet<E>
-    implements Set<E>, Cloneable, java.io.Serializable
-{
+public class HashSet<E> extends AbstractSet<E> implements Set<E>, Cloneable, java.io.Serializable {
     static final long serialVersionUID = -5024744406713321676L;
 
     private transient HashMap<E,Object> map;
@@ -37,7 +34,7 @@ import java.util.Set;
 public class SetTest {
 
     public static void main(String[] args) {
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new HashSet<>(); // new HashSet<>() 하는 순간 내부적으로 map 변수에 new HashMap<>() 을 저장한다
         set.add(3);
         set.add(2);
         set.add(1);
@@ -59,9 +56,8 @@ public class SetTest {
 }
 ```
 
-- `HashSet`의 `기본 구조`는 `HashTable`
-  - Java에서 `HashMap`은 `HashTable`을 구현한 클래스이다
-- 내부적으로 `HashMap`을 `사용`한다
+- `HashSet`의 `기본 구조`는 `HashTable` 기반이다
+- HashSet은 내부적으로 `HashMap`을 `사용`한다
   - `Key`에는 `hashSet.add('값1')`을 저장하고, `Value`에는 `PRESENT` 값을 항상 저장
   - `PRESENT`는 `DUMMY 객체`
     - HashSet 요소의 고유성을 보장하기 위해 HashMap을 기본적으로 사용하면서 불필요 값 저장을 피하기 위함
@@ -73,9 +69,7 @@ public class SetTest {
 ## 01-2. TreeSet
 
 ```java
-public class TreeSet<E> extends AbstractSet<E>
-    implements NavigableSet<E>, Cloneable, java.io.Serializable
-{
+public class TreeSet<E> extends AbstractSet<E> implements NavigableSet<E>, Cloneable, java.io.Serializable {
     /**
      * The backing map.
      */
@@ -155,9 +149,7 @@ public class SetTest {
 
 ```java
 // LinkedHashSet.java
-public class LinkedHashSet<E>
-    extends HashSet<E>
-    implements Set<E>, Cloneable, java.io.Serializable {
+public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, java.io.Serializable {
 
     //..중략
 
@@ -175,10 +167,7 @@ public class LinkedHashSet<E>
 
 ```java
 // HashSet.java
-public class HashSet<E>
-    extends AbstractSet<E>
-    implements Set<E>, Cloneable, java.io.Serializable
-{
+public class HashSet<E> extends AbstractSet<E> implements Set<E>, Cloneable, java.io.Serializable {
     //..중략
 
     /**
@@ -211,3 +200,4 @@ public class HashSet<E>
 
 - [[Data Structure] HashSet, LinkedHashSet, TreeSet](https://developyo.tistory.com/166)
 - [Set ->hashset, treeset, linkedhashset, sortedset](https://shyvana.tistory.com/14)
+- [HashSet과 TreeSet의 차이점은 무엇인가요?](https://github.com/Today-I-Learn/backend-study/blob/develop/JAVA/Collection/%5B%2345%5D%20HashSet%EA%B3%BC%20TreeSet%EC%9D%98%20%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94.md)
