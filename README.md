@@ -28,7 +28,6 @@
 | [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | 🔥 |
 | [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
 | [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
-| [[Java] JVM 총정리](./Java/JVM_총정리/README.md) | ❌ |
 | [[Java] 리플렉션(Reflaction)란?](./Java/리플렉션이란/README.md) | ❌ |
 | [[Java] synchronized란?](./Java/synchronized란/README.md) | ❌ |
 | [[Java] Unchecked vs Checked Exception 차이는?](./Java/Unchecked_Checked_Exception_차이는/README.md) | ❌ |
