@@ -104,6 +104,7 @@
 | [[ES] ES 클러스터 운영 중 노드 순차적 재시작(Rolling Restart)](./Elasticsearch/무중단_재기동/README.md) | ✅ |
 | [[ES] ES 운영중인 Live 서비스의 alias 교체 방법](./Elasticsearch/alias_change/README.md) | ✅ |
 | [[ES] Elastciearch 클러터에서 특정 Node 제외 시키기](./Elasticsearch/exclude_node/README.md) | ✅ |
+| [[ES] ES 색인 속도 증대를 위한 EC2 인스턴스 타입 변경, 그리고 iostat 명령어로 디스크 I/O 확인하기](./Elasticsearch/iostat/README.md) | 🔥 |
 
 ## 008. 😺 Git
 
@@ -117,12 +118,15 @@
 | [[Git] gitignore가 동작하지 않는 경우 해소](./Git/gitignore가_동작하지_않는_경우_해소/README.md) | ✅ |
 | [[Git] Git Flow란?](./Git/Git_Flow/README.md) | ❌ |
 
-## 009. ⭐️ Infra & Data
+## 009. ⭐️ Web Server
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
-| [[Nginx & Apache] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | 🔥 |
+| [[Web Server] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
+| [[Web Server] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
+
+## 010. 🛜 Network
+
 | [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
 
 ## 999. 🔧 ETC
