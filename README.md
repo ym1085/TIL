@@ -25,8 +25,8 @@
 | [[Java] Collection.forEach vs Stream.forEach 차이점 정리](./Java/collection_stream_foreach/README.md) | ✅ |
 | [[Java] new ArrayList<>()와 Arrays.asList()와 List.of() 차이](./Java/new_arraylist_as_list/README.md) | ✅ |
 | [[Java] 깊은 복사 vs 얕은 복사](./Java/deep_shallow_copy/README.md) | ✅ |
-| [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | 🔥 |
-| [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
+| [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | ✅ |
+| [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | 🔥 |
 | [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
 | [[Java] 리플렉션(Reflaction)란?](./Java/리플렉션이란/README.md) | ❌ |
 | [[Java] synchronized란?](./Java/synchronized란/README.md) | ❌ |
@@ -45,7 +45,7 @@
 | [[Spring] Spring @Bean vs @Component](./Spring/Bean_component/README.md) | ✅ |
 | [[Spring] Gradle bootJar vs Jar](./Spring/boot_jar/README.md) | ✅ |
 | [[Spring] @Scheduled 스케줄러 간단히 사용 해보기](./Spring/scheduled/README.md) | ✅ |
-| [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md) | ❌ |
+| [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md) | 🔥 |
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC란/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
 
@@ -53,11 +53,11 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | ❌ |
+| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | 🔥 |
+| [[Docker] Linux 상에서 docker 디스크 차지](./Docker/Linux_상에서_docker_디스크_차지/README.md) | ❌ |
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
-| [[Docker] Linux 상에서 docker 디스크 차지](./Docker/Linux_상에서_docker_디스크_차지/README.md) | ✅ |
 
 ## 004. ☸ Kubernetes
 
