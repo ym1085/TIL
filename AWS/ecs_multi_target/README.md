@@ -54,3 +54,11 @@ aws ecs create-service --no-cli-pager \
 --network-configuration "awsvpcConfiguration={subnets=[subnet-xxxxxx],securityGroups=[sg-xxxxxx],assignPublicIp=DISABLED}" \
 --load-balancers '[{"targetGroupArn": "arn:aws:elasticloadbalancing:ap-northeast-2:xxxxxx:targetgroup/xx-tg-stg/xxxxxx", "containerName": "nginx", "containerPort": 80}]'
 ```
+
+## 01-5. SSM Container exec 실패 시
+
+```shell
+aws ecs update-service --cluster <클러스터명> --no-cli-pager \
+--service <서비스명> \
+--enable-execute-command
+```
