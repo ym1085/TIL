@@ -27,12 +27,12 @@
 | [[Java] 깊은 복사 vs 얕은 복사](./Java/deep_shallow_copy/README.md) | ✅ |
 | [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | ✅ |
 | [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | 🔥 |
+| [[Java] Unchecked vs Checked Exception 차이는?](./Java/Unchecked_Checked_Exception_차이는/README.md) | 🔥 |
+| [[Java] 내부 클래스를 static으로 선언해야 하는 이유?](./Java/내부클래스를_static으로_선언해야_하는_이유/README.md) | ❌ |
+| [[Java] Optional?](./Java/Optional/README.md) | ❌ |
 | [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
 | [[Java] 리플렉션(Reflaction)란?](./Java/리플렉션이란/README.md) | ❌ |
 | [[Java] synchronized란?](./Java/synchronized란/README.md) | ❌ |
-| [[Java] Unchecked vs Checked Exception 차이는?](./Java/Unchecked_Checked_Exception_차이는/README.md) | ❌ |
-| [[Java] 내부 클래스를 static으로 선언해야 하는 이유?](./Java/내부클래스를_static으로_선언해야_하는_이유/README.md) | ❌ |
-| [[Java] Optional?](./Java/Optional/README.md) | ❌ |
 
 ## 002. 🌱 Spring
 
@@ -47,17 +47,18 @@
 | [[Spring] @Scheduled 스케줄러 간단히 사용 해보기](./Spring/scheduled/README.md) | ✅ |
 | [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md) | 🔥 |
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC란/README.md) | ❌ |
+| [[Spring] DI(Dependency Injection)란?](./Spring/IoC란/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
 
 ## 003. 🐳 Docker
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | 🔥 |
-| [[Docker] Linux 상에서 docker 디스크 차지](./Docker/Linux_상에서_docker_디스크_차지/README.md) | ❌ |
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
+| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | 🔥 |
+| [[Docker] Linux 상에서 docker 디스크 차지 해소](./Docker/Linux_상에서_docker_디스크_차지/README.md) | 🔥 |
 
 ## 004. ☸ Kubernetes
 
@@ -137,3 +138,8 @@
 | --- | --- |
 | [[ETC] curl 명령어 SSL 검증 없이 요청하는 방법?](./ETC/cure_명령어_SSL_없이_사용/README.md) | ✅ |
 | [[ETC] 자주 사용하는 Linux 명령어 정리](./ETC/linux_command/README.md) | 🔥 |
+
+## 참고 자료
+
+- [[AWS] AWS 강의실 기초 강의](https://www.youtube.com/watch?v=JjiYqBl2328&list=PLfth0bK2MgIan-SzGpHIbfnCnjj583K2m)
+- [[AWS] 왜 AWS Cloud 무료 강의를 안보는지 모르겠습니다! 세상이 변하고 있습니다 제발 시청해주세요 여러분들을 위해서요!](https://www.youtube.com/watch?v=g9RojcQ3AXU)
