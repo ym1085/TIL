@@ -266,17 +266,15 @@ rm -f /mnt/tmp/app_logs/2024-*
 
 ## 01-7. 테스트 진행
 
-![파일이슈.png](./img/파일이슈.png)
-
 - lsof -p <logstash pid> 명령어를 통해 현재 참조하고 있는 파일 목록 확인
-- 자세히 보면 (deleted)로 표시된 부분이 보인다
+- (deleted)로 표시된 부분이 보일 것이다
 
 ![10분전로그.png](./img/10분전로그.png)
 
 - 로그스테쉬 중지 후 config파일 수정 및 재기동 진행
 - S3 Upload를 수행하는 shell script의 crontab 중단 후 수정 (10분 단위로 10분 전 로그를 s3에 업로드)
 
-![파일해소.png](./img/파일해소.png)
+> 여기서 다시 한번 lsof -p 명령어를 통해 확인하면 (deleted)가 없어지고 디스크 용량도 해소가 된다
 
 - lsof -p <logstash pid> 명령어로 파일 참조 관련 모니터링
 - (deleted) 부분 해소 + df -h 를 통해 디스크 점유율도 해소된 부분 확인
