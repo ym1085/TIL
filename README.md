@@ -128,6 +128,7 @@
 | [[Web Server] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
 
 ## 010. 🛜 Network
+
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
