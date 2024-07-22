@@ -50,23 +50,7 @@
 | [[Spring] DI(Dependency Injection)란?](./Spring/DI/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
 
-## 003. 🐳 Docker
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
-| [[Docker] Docker MySQL 포트가 중복되는 이슈 해소](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
-| [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
-| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | 🔥 |
-| [[Docker] Linux 상에서 docker 디스크 차지 해소](./Docker/Linux_상에서_docker_디스크_차지/README.md) | 🔥 |
-
-## 004. ☸ Kubernetes
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[Kubernetes] Continue.. 👍](./Kubernetes/) | ❌ |
-
-## 005. ☁️ AWS(Amzon Web Service)
+## 003. ☁️ AWS(Amzon Web Service)
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -76,12 +60,30 @@
 | [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ✅ |
 | [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus/README.md) | ✅ |
 | [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md) | ✅ |
+| [[AWS] ECS Task Role vs Execution Role 차이 및 AWSServiceRoleForECS](./AWS/ecs_task_role/README.md) | ✅ |
+| [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ❌ |
 | [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
 | [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
+
+## 004. 🐳 Docker
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
+| [[Docker] Docker MySQL 포트가 중복되는 이슈 해소](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
+| [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
+| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | 🔥 |
+| [[Docker] Linux 상에서 docker 디스크 차지 해소](./Docker/Linux_상에서_docker_디스크_차지/README.md) | 🔥 |
+
+## 005. ☸ Kubernetes
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Kubernetes] Continue.. 👍](./Kubernetes/) | ❌ |
 
 ## 006. ⛁ DB(DataBase)
 
