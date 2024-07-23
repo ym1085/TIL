@@ -55,7 +55,7 @@
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md) | ✅ |
-| [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md) | 🔥 |
+| [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md) | ✅ |
 | [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md) | 🔥 |
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
