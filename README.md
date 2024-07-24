@@ -110,7 +110,7 @@
 | [[ES] 인덱스와 샤드 Index & Shards](./ELK/인덱스와_샤드/README.md) | ✅ |
 | [[ES] ES 클러스터 운영 중 노드 순차적 재시작(Rolling Restart)](./ELK/무중단_재기동/README.md) | ✅ |
 | [[ES] ES 운영중인 Live 서비스의 alias 교체 방법](./ELK/alias_change/README.md) | ✅ |
-| [[ES] Elastciearch 클러터에서 특정 Node 제외 시키기](./ELK/exclude_node/README.md) | ✅ |
+| [[ES] Elastciearch 클러스터에서 특정 Node 제외 시키기](./ELK/exclude_node/README.md) | ✅ |
 | [[ES] ES 색인 속도 증대를 위한 EC2 인스턴스 타입 변경, 그리고 iostat 명령어로 디스크 I/O 확인하기](./ELK/iostat/README.md) | ✅ |
 
 ## 008. 😺 Git
