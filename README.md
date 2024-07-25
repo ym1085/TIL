@@ -26,8 +26,8 @@
 | [[Java] new ArrayList<>()와 Arrays.asList()와 List.of() 차이](./Java/new_arraylist_as_list/README.md) | ✅ |
 | [[Java] 깊은 복사 vs 얕은 복사](./Java/deep_shallow_copy/README.md) | ✅ |
 | [[Java] HashSet vs TreeSet vs LinkedHashSet](./Java/HashSet_TreeSet_LinkedHashSet/README.md) | ✅ |
-| [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | 🔥 |
-| [[Java] Unchecked vs Checked Exception 차이는?](./Java/Unchecked_Checked_Exception_차이는/README.md) | 🔥 |
+| [[Java] HashMap vs SortedMap vs HashTable](./Java/HashMap_SortedMap_HashTable/README.md) | ❌ |
+| [[Java] Unchecked vs Checked Exception 차이는?](./Java/Unchecked_Checked_Exception_차이는/README.md) | ❌ |
 | [[Java] 내부 클래스를 static으로 선언해야 하는 이유?](./Java/내부클래스를_static으로_선언해야_하는_이유/README.md) | ❌ |
 | [[Java] Optional?](./Java/Optional/README.md) | ❌ |
 | [[Java] JVM과 자바 메모리 영역 Static, Stack, Heap](./Java//README.md) | ❌ |
@@ -57,6 +57,7 @@
 | [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md) | ✅ |
 | [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md) | ✅ |
 | [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md) | 🔥 |
+| [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | 🔥 |
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
 | [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
