@@ -45,7 +45,7 @@
 | [[Spring] Spring @Bean vs @Component](./Spring/Bean_component/README.md) | ✅ |
 | [[Spring] Gradle bootJar vs Jar](./Spring/boot_jar/README.md) | ✅ |
 | [[Spring] @Scheduled 스케줄러 간단히 사용 해보기](./Spring/scheduled/README.md) | ✅ |
-| [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md) | 🔥 |
+| [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md) | ❌ |
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC/README.md) | ❌ |
 | [[Spring] DI(Dependency Injection)란?](./Spring/DI/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
@@ -56,8 +56,8 @@
 | --- | --- |
 | [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md) | ✅ |
 | [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md) | ✅ |
-| [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md) | 🔥 |
-| [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | 🔥 |
+| [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md) | ✅ |
+| [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | ❌ |
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
 | [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
@@ -80,8 +80,8 @@
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
-| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | 🔥 |
-| [[Docker] Linux 상에서 docker 디스크 차지 해소](./Docker/Linux_상에서_docker_디스크_차지/README.md) | 🔥 |
+| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | ❌ |
+| [[Docker] Linux 상에서 docker 디스크 차지 해소](./Docker/Linux_상에서_docker_디스크_차지/README.md) | ❌ |
 
 ## 005. ☸ Kubernetes
 
@@ -144,7 +144,7 @@
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[ETC] curl 명령어 SSL 검증 없이 요청하는 방법?](./ETC/cure_명령어_SSL_없이_사용/README.md) | ✅ |
-| [[ETC] 자주 사용하는 Linux 명령어 정리](./ETC/linux_command/README.md) | 🔥 |
+| [[ETC] 자주 사용하는 Linux 명령어 정리](./ETC/linux_command/README.md) | ❌ |
 
 ## 참고 자료
 
