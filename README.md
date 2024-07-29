@@ -57,7 +57,7 @@
 | [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md) | ✅ |
 | [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md) | ✅ |
 | [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md) | ✅ |
-| [[AWS] IAM 기초](./AWS/iam_basic/README.md) | ❌ |
+| [[AWS] IAM 기초](./AWS/iam_basic/README.md) | ✅ |
 | [[AWS] 가상화란?](./AWS/virtualization/README.md) | ❌ |
 | [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | ❌ |
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
