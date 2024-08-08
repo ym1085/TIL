@@ -62,6 +62,7 @@
 | [[AWS] EC2 소개](./AWS/ec2_desc/README.md) | ❌ |
 | [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ✅ |
 | [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
+| [[AWS] EC2에 Attatched 된 보안 그룹 확인 시 사용하는 명령어](./AWS/ec2_security_group/README.md) | ✅ |
 | [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | ✅ |
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
