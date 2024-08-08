@@ -13,7 +13,7 @@ aws ec2 describe-instances --filters Name=instance.group-id,Values=sg-0xxxxxxxxx
 ## 특정 보안그룹을 사용하는 EC2 목록 이름만 확인하는 경우 사용
 
 ```shell
-aws ec2 describe-instances --filters Name=instance.group-id,Values=sg-0516ade7bcfbddb57 --query 'Reservations[*].Instances[*].Tags[?Key==`Name`].Value' --output text
+aws ec2 describe-instances --filters Name=instance.group-id,Values=sg-0xxxxxxxxx --query 'Reservations[*].Instances[*].Tags[?Key==`Name`].Value' --output text
 ```
 
 - 위 명령어 사용 시 해당 SG를 사용하는 EC2 이름 확인 가능
