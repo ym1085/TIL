@@ -33,6 +33,8 @@
 
 `하이퍼바이저`는 `아래 2가지 타입`으로 구분한다.
 
+![20240809_type.png](./img/20240809_type.png)
+
 ### 1. 베어 메탈 방식(Type-1 or Bare Metal or Native)
 
 - 하드웨어(서버 or 컴퓨터) 위에 하이퍼바이저(Hypervisor) 설치
