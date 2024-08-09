@@ -37,8 +37,8 @@
 
 ### 1. 베어 메탈 방식(Type-1 or Bare Metal or Native)
 
-- 하드웨어(서버 or 컴퓨터) 위에 하이퍼바이저(Hypervisor) 설치
-- 호스트 OS == 하이퍼바이저 이기에 가상화 목적으로만 사용 가능
+- `하드웨어`(서버 or 컴퓨터) `위에 하이퍼바이저`(Hypervisor) `설치`
+- 호스트 OS == 하이퍼바이저 이기에 `가상화 목적`으로만 사용 가능
 - Type-2에 비해 레이어가 적어 오버헤드 발생 적음
 - 종류
   - Microsoft Hyper-V
@@ -65,7 +65,7 @@
 
 ### 2. 호스트형 방식(Type-2 or Hosted)
 
-- 하드웨어(서버 or 컴퓨터) 위에 호스트 OS 설치 후 하이퍼바이저 설치
+- `하드웨어`(서버 or 컴퓨터) `위에 호스트 OS 설치 후 하이퍼바이저 설치`
 - Type-1 or Bare Metal에 비해 속도는 느림
 - 종류
   - VirtualBox, VMware Workstation
