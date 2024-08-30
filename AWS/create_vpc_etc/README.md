@@ -25,14 +25,14 @@
 
 > 구성할 환경은 아래와 같음
 
-- VPC 생성(172.21.0.0/16) 진행
-- 서브넷 3개 생성(public, private)
-- 각 서브넷에 Routing Table 연결
-- Public 서브넷에 IGW 연결 + 인터넷 경로 구성
+- VPC 생성(`172.21.0.0/16`) 진행
+- 서브넷 `3개` 생성(public, private)
+- 각 서브넷에 `Routing Table` 연결
+- Public 서브넷에 `IGW` 연결 + `인터넷 경로` 구성
 - Public 서브넷에 EC2 프로비전
 - Private 서브넷에 EC2 프로비전
   - Bastion Host
-- Private 서브넷에 NAT Gateway 연결
+- Private 서브넷에 `NAT Gateway` 연결
 
 ### VPC 생성
 
