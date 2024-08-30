@@ -23,7 +23,7 @@
 
 ## VPC 생성 및 AWS 환경 구성
 
-### VPC 생성
+> 구성할 환경은 아래와 같음
 
 - VPC 생성(172.21.0.0/16) 진행
 - 서브넷 3개 생성(public, private)
@@ -32,6 +32,10 @@
 - Public 서브넷에 EC2 프로비전
 - Private 서브넷에 EC2 프로비전
   - Bastion Host
+- Private 서브넷에 NAT Gateway 연결
+
+### VPC 생성
+
 - VPC > VPC > VPC 생성
   - 생성할 리소스: VPC만
   - 이름 태그: test-vpc-prod-172.21.0.0/16
@@ -52,7 +56,7 @@
 - VPC > 서브넷 > 서브넷 생성
   - VPC ID: 위에서 생성한 VPC 지정
   - 서브넷 설정
-    - public subnet
+    - `public subnet`
       - 서브넷 이름: test-subnet-pub-01
         - 가용영역: A zone
         - IPv4 CIDR 블록: 172.21.0.0/16
@@ -65,7 +69,7 @@
         - 가용영역: C zone
         - IPv4 CIDR 블록: 172.21.0.0/16
         - IPv4 서브넷 CIDR 블록: 172.21.30.0/24 -> 172.21.30.1 ~ 172.21.30.254 IP 주소 사용
-    - private subnet
+    - `private subnet`
       - 서브넷 이름: test-subnet-pri-01
         - 가용영역: A zone
         - IPv4 CIDR 블록: 172.21.0.0/16
@@ -82,7 +86,7 @@
   - 해당 서브넷을 -> NACL에 자동으로 붙혀준다
   - 해당 서브넷을 -> Routing Table에 자동으로 연결해준다 ( 명시적 연결이 없는 서브넷에 나옴 )
 
-### TODO 라우팅 테이블 연결 이미지
+### 라우팅 테이블 생성
 
 - 라우팅 테이블 > 작업 > 서브넷 연결 편집 > private subnet 연결
   - 실제로는 Routing Table을 하나 더 만들어서 연결해야 할듯
@@ -92,7 +96,7 @@
   - 라우팅 테이블 생성
   - public subnet을 위 라우팅 테이블에 연결
 
-### TODO 인터넷 게이트웨이 생성 이미지
+### 인터넷 게이트웨이 생성
 
 - VPC > 인터넷 게이트웨이 > 인터넷 게이트웨이 생성
   - 이름 태그: test-internet-gateway
@@ -101,7 +105,7 @@
     - 사용 가능한 VPC: test-vpc-prod-172.21.0.0/16
     - 인터넷 게이트웨이 연결
 
-### TODO 라우팅 테이블 탭 이동
+### 라우팅 테이블 탭
 
 - VPC > 라우팅 테이블 > 퍼블릭 라우팅 테이블 선택 > 라우팅 편집
   - 라우팅 추가
@@ -110,7 +114,7 @@
   - 172.0.0.0/16 -> local (VPC 내에서 트래픽 전달 -> Local로 간다)
   - 0.0.0.0/16 -> Igw (VPC 내부 트래픽이 아니면 -> 인터넷 게이트웨이 이동)
 
-### TODO: public EC2 생성 화면
+### public EC2 생성
 
 - EC2 > 인스턴스 > Launch instance
   - 이름: demo-ec2-public
@@ -136,7 +140,7 @@
   - ping 8.8.8.8
   - curl -v naver.com
 
-### TODO: private EC2 생성 화면
+### private EC2 생성
 
 - EC2 > 인스턴스 > Launch instance
   - 이름: demo-ec2-private
@@ -160,7 +164,7 @@
   - 현재 private subnet에 위치한 EC2는 외부 연결이 되어 있지 않기에 통신 불가
   - NAT Gateway를 생성 후 Routing Table에서 해당 NAT Gateway 연결 후 통신 시켜야 함
 
-### TODO: Private EC2의 외부 통신을 위해 NAT 생성
+### Private EC2의 외부 통신을 위해 NAT 생성
 
 - VPC > NAT 게이트웨이 > NAT 게이트웨이 생성
   - 이름: test-nat-gateway-01
