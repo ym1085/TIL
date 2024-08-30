@@ -69,6 +69,7 @@
 | [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus/README.md) | ✅ |
 | [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md) | ✅ |
 | [[AWS] ECS Task Role vs Execution Role 차이 및 AWSServiceRoleForECS](./AWS/ecs_task_role/README.md) | ✅ |
+| [[AWS] VPC, Subnet, Routing Table, NAT 생성 정리](./AWS/create_vpc_etc/README.md) | ✅ |
 | [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ❌ |
 | [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
