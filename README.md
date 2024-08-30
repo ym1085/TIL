@@ -150,8 +150,3 @@
 | --- | --- |
 | [[ETC] curl 명령어 SSL 검증 없이 요청하는 방법?](./ETC/cure_명령어_SSL_없이_사용/README.md) | ✅ |
 | [[ETC] 자주 사용하는 Linux 명령어 정리](./ETC/linux_command/README.md) | ❌ |
-
-## 참고 자료
-
-- [[AWS] AWS 강의실 기초 강의](https://www.youtube.com/watch?v=JjiYqBl2328&list=PLfth0bK2MgIan-SzGpHIbfnCnjj583K2m)
-- [[AWS] 왜 AWS Cloud 무료 강의를 안보는지 모르겠습니다! 세상이 변하고 있습니다 제발 시청해주세요 여러분들을 위해서요!](https://www.youtube.com/watch?v=g9RojcQ3AXU)
