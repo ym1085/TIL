@@ -229,6 +229,39 @@ aws ecs list-clusters \
 --debug
 ```
 
+### 실제 VPC Endpoint 생성 요청 시 사용
+
+- VPC 엔드포인트 이름: xxx-ecs
+- 서비스 범주: AWS 서비스
+- 서비스: com.amazonaws.ap-northeast-2.ecs // interface
+- VPC: xxx-vpc-172.21.0.0/16
+- 서브넷
+  - ap-northeast-2a // xxx_sub-pri-01
+  - ap-northeast-2b // xxx_sub-pri-02
+  - ap-northeast-2c // xxx_sub-pri-03
+- IP 주소 유형: IPv4
+- 보안그룹: xxx-sg // sg-00xxxxxxx
+- 정책: 전체 엑세스
+- 엔드포인트 생성
+
+추가적으로 vpc endpoint 통신을 위하여, 해당 보안그룹(xxx-sg)의 inbound/outbound 수정 요청 드립니다.
+
+◌ 보안그룹 수정 내용
+
+인바운드 규칙:
+
+- 유형: HTTPS
+- 프로토콜: TCP
+- 포트 범위: 443
+- 대상: 172.21.0.0/16  ( VPC 대역 설정 )
+
+아웃바운드 규칙:
+
+- 유형: HTTPS
+- 프로토콜: TCP
+- 포트 범위: 443
+- 대상: 172.21.0.0/16  ( VPC 대역 설정 )
+
 ## 99. 참고 자료
 
 - [[AWS] VPC 생성 강의](https://www.youtube.com/watch?v=hi6S3DUJBBk&t=77s)
