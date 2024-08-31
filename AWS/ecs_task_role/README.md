@@ -4,6 +4,36 @@
 
 ## 01-1. ECS Task Role
 
+```shell
+# ECS Task가 S3, DynamoDB에 접근하기 위한 정책을 IAM Task Role에 부여
+# 아래는 우선 S3만 기재 하였다 -> ecsTaskRole
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action": "s3:ListAllMyBuckets",
+         "Resource":"*"
+      },
+      {
+         "Effect":"Allow",
+         "Action":[
+         	"s3:ListBucket",
+         ],
+         "Resource":"arn:aws:s3:::<bucketName>"
+      },
+      {
+         "Effect":"Allow",
+         "Action":[
+            "s3:PutObject",
+            "s3:GetObject",
+         ],
+         "Resource":"arn:aws:s3:::<bucketName>/*"
+      }
+   ]
+}
+```
+
 ![20240722_ecs_task_role.png](./img/20240722_ecs_task_role.png)
 
 ![ecs_role.png](./img/ecs_role.png)
@@ -29,6 +59,28 @@ Task Role은 Task Definition에 정의된 IAM Role로써, ECS Task 내의 컨테
 > 무분별하게 Task Role의 Attatch된 역할에 권한을 부여하지 말자, 잘못하면 서비스 전체에 영향을 미친다.
 
 ## 01-2. ECS Task Execution Role
+
+```shell
+# AmazonECSTaskExecutionRolePolicy
+# ECS Task Execution Role에 붙히면 되는 IAM Role
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecr:GetAuthorizationToken",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
 
 ![20240722_ecs_task_exec_role.png](./img/20240722_ecs_task_exec_role.png)
 
