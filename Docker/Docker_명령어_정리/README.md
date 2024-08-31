@@ -1,4 +1,6 @@
-# 01. Docker 실행
+# Docker 명령어 정리
+
+## Docker 실행
 
 ```bash
 # docker status 확인
@@ -10,7 +12,7 @@ sudo /etc/init.d/docker start
 
 - 실행 방식은 환경에 따라 상이할 수 있으니 공식 문서를 참고 할 것
 
-# 02. Docker image 관련 명령어
+## Docker image 관련 명령어
 
 ```bash
 # 이미지 빌드
@@ -57,7 +59,7 @@ docker image pull {이미지명:태그}
 docker container dommit {컨테이너 이름} {커밋 내용}
 ```
 
-# 03. Docker container 관련 명령어
+## Docker container 관련 명령어
 
 ```bash
 # 도커 컨테이너 생성 후 실행
@@ -123,7 +125,7 @@ docker exec -it {컨테이너 ID 또는 컨테이너 이름} /bin/bash
 exit 또는 Ctrl + D
 ```
 
-# 04. Docker compose 관련 명령어
+## Docker compose 관련 명령어
 
 ```bash
 # 컴포즈 파일에 정의된 컨테이너들을 빌드 후 포그라운드 실행
@@ -167,7 +169,7 @@ docker-compose build
 docker-compose build {컨테이너 이름 또는 ID}
 ```
 
-# 99. 참고 자료
+## 99. 참고 자료
 
 - [[Docker] 도커 명령어 총모음집 (image, container, compose)](https://hstory0208.tistory.com/entry/Docker-도커-명령어-총모음집-image-container-compose)
 - [Use the Docker command line](https://docs.docker.com/engine/reference/commandline/cli/)
