@@ -83,10 +83,9 @@
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
-| [[Docker] Docker MySQL 포트가 중복되는 이슈 해소](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
+| [[Docker] Docker MySQL 포트가 중복되는 이슈 해소 관련 참고 링크](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
-| [[Docker] Docker란 무엇이고 왜 사용해야 하는가?](./Docker/why_docker/README.md) | ❌ |
-| [[Docker] Linux 상에서 docker 디스크 차지 해소](./Docker/Linux_상에서_docker_디스크_차지/README.md) | ❌ |
+| [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
 
 ## 005. ☸ Kubernetes
 
@@ -135,8 +134,8 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Web Server] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
 | [[Web Server] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
+| [[Web Server] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
 
 ## 010. 🛜 Network
 
