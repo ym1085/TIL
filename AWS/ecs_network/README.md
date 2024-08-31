@@ -59,15 +59,7 @@
 
 <img src="./img/20240831_awsvpc.png" alt="awsvpc.png" height="330px" width="550px">
 
-> Task 당 고유한 ENI(Elastic Network Interface)와 IPv4 private IP를 할당  
-> Container들은 각자가 아예 독립된 집에 살고 있으며, 서로 분리되어 있음  
-> 네트워크적으로 완전히 격리되어 있어 서로 간섭하지 않음  
-> 
-> ⭐️ 쉽게 이해해보자면 하나의 서버(Fargate 환경)에 여러개의 가상 랜카드(ENI)가 있다고 봐도 될것 같다.  
-> 이 가상 랜카드(ENI)를 통해 Task가 서로 다른 네트워크 환경에서 동작 가능한 것이다  
->
-> 또한 ENI(Elastic Network Interface)는 동일한 가용영역 내에서 N개의 ENI를 1개의 EC2 인스턴스에 Attach 하는것이 가능하다.  
-> 하여 고유한 네트워크 환경 구성이 가능한것으로 보인다.
+> Task 당 고유한 ENI(Elastic Network Interface)와 IPv4 private IP를 할당
 
 - `Task`에 `고유한 ENI`와 `Private IPv4 주소 할당`
 - AWS EC2 인스턴스와 동일한 네트워크 속성 적용
@@ -90,8 +82,7 @@
 
 <img src="./img/20240831_bridge.png" alt="bridge.png" height="330px" width="550px">
 
-> Host(ex. EC2)와 Container 사이의 가상 네트워크 인터페이스 docker0를 통해 통신  
-> 동일한 집에 살지만 방이 다른 느낌, 어느정도 프라이버시가 있지만 집 내부에서 네트워크 공유 필요
+> Host(ex. EC2)와 Container 사이의 가상 네트워크 인터페이스 docker0를 통해 통신
 
 - Host <--> Container 사이에서 <ins>`가상 네트워크 브릿지`</ins>(virtual ethernet bridge) `docker0` 제공
 - `정적` 또는 `동적` `포트`(Port) `매핑`을 사용
@@ -110,8 +101,7 @@
 
 <img src="./img/20240831_hosts.png" alt="hosts.png" height="330px" width="550px">
 
-> Container는 Host의 네트워크 네임스페이스 및 Port를 공유  
-> 모든 사람들이 방 없음 동일한 집에서 생활하는 느낌, 프라이버시 전혀 없고 네트워크 자원 서로 공유 + 서로 간섭
+> Container는 Host의 네트워크 네임스페이스 및 Port를 공유
 
 - 컨테이너가 호스트(ex. EC2)의 `네트워크 네임스페이스`를 공유
   - 즉, `컨테이너`는 `호스트`와 `동일한 IP 주소` + `Port`도 직접 공유
