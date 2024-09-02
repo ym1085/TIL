@@ -1,4 +1,4 @@
-# ECS란 그리고 EC2 vs Fargate 차이는?
+# ECS란?
 
 ![20240902_ecs.png](./img/20240902_ecs.png)
 
@@ -77,8 +77,6 @@
   - 데몬(Daemon)
     - 클러스터 내 모든 ECS 인스턴스에 무조건 하나씩 실행하는 방식
     - 작업 수 == 서버 대수
-
-### Container & Image
 
 ## 99. 참고 자료
 
