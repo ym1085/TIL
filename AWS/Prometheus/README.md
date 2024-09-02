@@ -1,17 +1,18 @@
-# 01. Spring Boot Actuator
+# Spring Actuator와 프로메테우스를 사용한 대시보드 구성
 
 > Spring Actuator, Prometheus, Grafana 사용하여 ECS의 메트릭을 수집하기 위해 이번 글을 작성하게 되었다  
 > 메트릭을 수집하는 과정은 아래와 같이 진행이 된다
 
 - Spring Boot Actuator ← (Pulling) Prometheus측에서 메트릭 수집 ← Grafana 해당 메트릭 시각화
-- Spring Boot Actuator는 스프링부트의 서브 프로젝트
+- `Spring Boot Actuator`는 `스프링부트`의 `서브 프로젝트`
   - 애플리케이션 모니터링 + 관리 가능
-  - 메트릭 수집에 Micrometer라는 라이브러리 사용
+  - `메트릭 수집`에 `Micrometer`라는 `라이브러리` 사용
 - 우선 필요한 라이브러리를 아래와 같이 build.gradle에 추가해야 한다
 
-## 01-1. Spring Boot Actuator, Prometheus 의존성 추가
+## Spring Boot Actuator, Prometheus 의존성 추가
 
 ```groovy
+# build.gradle
 implementation 'org.springframework.boot:spring-boot-starter-actuator'
 implementation 'io.micrometer:micrometer-registry-prometheus'
 //runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
@@ -26,21 +27,32 @@ implementation 'io.micrometer:micrometer-registry-prometheus'
 
 management:
   server:
-    port: 10901 # Actuator 엔드포인트 접근 시 사용하는 서버 포트 지정, 서버 포트 10091과 분리
+    port: 10901 # 관리용 엔드포인트가 노출될 포트
   endpoints:
-    web:
-      base-path: "/management" # Actuator 엔드포인트 기본 경로 지정
+    jmx:
       exposure:
-        include: prometheus, health, metrics # 노출하고자 하는 Actuator 엔드포인트 옵션
-    enabled-by-default: true #
+        exclude: "*" # JMX 설정의 경우 중요 정보로, 노출 비활성화
+    web:
+      base-path: "/management" # 관리 엔드포인트의 기본 경로
+      exposure:
+        include:
+          - prometheus
+          - health
+          - metrics
+        exclude:
+          - shutdown # default false 이지만 명시
+    enabled-by-default: false # 기본적으로 모든 엔드포인트는 비활성화
 
-  endpoint: # 엔드포인트별 개별 설정 지정
+  endpoint: # 개별 엔드포인트에 대한 세부 설정입니다
+    prometheus:
+      enabled: true
     health:
       enabled: true
-      show-details: always
+      #show-details: always
     metrics:
       enabled: true
-
+    shutdown:
+      enabled: false
 ```
 
 - `endpoints`
@@ -67,7 +79,7 @@ management:
     - `enabled: true` → 엔드포인트 활성화
 - 현재 필요한 엔드포인트는 `prometheus` 엔드포인트
 
-## 01-2. Spring Actuator의 엔드포인트 경로
+## Spring Actuator의 엔드포인트 경로
 
 > Actuator의 엔드포인트 경로는 아래와 같습니다.  
 > 자세한 옵션은 공식 문서나 블로그를 참고해주세요 😀
@@ -89,13 +101,14 @@ management:
 | /sessions | Spring Session을 사용하는 경우 HTTP 세션을 나열 |
 | /shutdown | 어플리케이션의 Graceful shudown 수행 |
 
-# 02. Prometheus
+## Prometheus
 
 - `Prometheus`는 `SoundCloud`에서 개발한 `오픈소스`
-  - `메트릭`을 `수집`하고 `저장`
+  - `메트릭` `수집` 하고 `저장`
   - 모니터링 하거나 경고(alert) 할 수 있게 도와줌
 - `prometheus`의 `기본 포트`(default port)는 `9090`이다
-  - 내부 Private IP 접근만 SG에 등록할거기에, 굳이 다른 포트로 변경하지 않아도 될 듯
+  - 기본 포트 말고 다른 포트 사용을 권장
+  - 필자는 VPN 환경에서, 내부 Private IP의 접근만 SG(보안그룹)에 등록할거기에, 굳이 다른 포트를 사용하지는 않음
 
 > AWS EC2 서버에 현재 Grafana는 설치되어 있는 상황, 이번에는 Prometheus 설치를 위한 설정을 잡아보자
 
@@ -218,7 +231,7 @@ scrape_configs:
 ]
 ```
 
-## 02-1. prometheus foreground 실행
+## prometheus foreground 실행
 
 ```bash
 # 프로메테우스 설치 경로 이동
@@ -230,7 +243,7 @@ $ ./prometheus
 
 - 백그라운드 없이 prometheus 실행하는 경우 위와 같이 실행 하면 된다
 
-## 02-2. prometheus background 실행
+## prometheus background 실행
 
 ```bash
 nohup ./prometheus --config.file=prometheus.yml > ./logs/prometheus.log 2>&1 &
@@ -240,7 +253,7 @@ nohup ./prometheus --config.file=prometheus.yml > ./logs/prometheus.log 2>&1 &
 - 로그의 경우 ./logs/prometheus.log 경로에 로그 저장
 - 필자는 백그라운드 실행을 위한 shell script를 아래와 같이 작성 하였다
 
-## 02-3. start-prometheus.sh
+## start-prometheus.sh 스크립트 생성
 
 ```bash
 #!/bin/bash
@@ -265,7 +278,7 @@ nohup $PROMETHEUS_DIR/prometheus --config.file=$PROMETHEUS_DIR/$CONFIG_FILE > $P
 echo "Prometheus is running in the background."
 ```
 
-## 02-4. stop-prometheus.sh
+## stop-prometheus.sh 스크립트 생성
 
 ```bash
 #/bin/bash
