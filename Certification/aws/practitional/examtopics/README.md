@@ -1,21 +1,21 @@
 # AWS Practitional examtopics 문제 풀이
 
-> 출처 : [[AWS] examtopics](https://www.examtopics.com/exams/amazon/aws-certified-cloud-practitioner)
+> AWS Practitional 자격증 취득을 위한 덤프 문제 풀이
 
 ## Question 01
 
 A company is planning to run a global marketing application in the AWS Cloud. The application will feature videos that can be viewed by users. The company must ensure that all users can view these videos with low latency. Which AWS service should the company use to meet this requirement?
 
-A. AWS Auto Scaling
-B. Amazon Kinesis Video Streams
-C. Elastic Load Balancing
+A. AWS Auto Scaling  
+B. Amazon Kinesis Video Streams  
+C. Elastic Load Balancing  
 D. Amazon CloudFront
 
 [번역] 회사에서 AWS 클라우드에서 글로벌 마케팅 애플리케이션을 실행할 계획입니다. 응용 프로그램은 사용자가 볼 수 있는 비디오를 제공합니다. 회사는 모든 사용자가 이러한 비디오를 짧은 대기 시간으로 볼 수 있도록 해야 합니다. 회사는 이 요구 사항을 충족하기 위해 어떤 AWS 서비스를 사용해야 합니까?
 
-A. AWS Auto Scaling
-B. Amazon Kinesis 비디오 스트림
-C. 탄력적 로드 밸런싱
+A. AWS Auto Scaling  
+B. Amazon Kinesis 비디오 스트림  
+C. 탄력적 로드 밸런싱  
 D. Amazon CloudFront
 
 > ✅
@@ -33,16 +33,16 @@ AWS CloudFront 기능은 AWS에서 제공하는 CDN 서버라고 봐도 된다.
 
 Which pillar of the AWS Well-Architected Framework refers to the ability of a system to recover from infrastructure or service disruptions and dynamically acquire computing resources to meet demand?
 
-A. Security
-B. Reliability
-C. Performance efficiency
+A. Security  
+B. Reliability  
+C. Performance efficiency  
 D. Cost optimization
 
 [번역] AWS Well-Architected 프레임워크의 다음 중 인프라 또는 서비스 중단으로부터 복구하고 수요를 충족하기 위해 컴퓨팅 리소스를 동적으로 확보하는 시스템의 기능을 나타내는 요소는 무엇입니까?
 
-A. 보안
-B. 신뢰성
-C. 성능 효율성
+A. 보안  
+B. 신뢰성  
+C. 성능 효율성  
 D. 비용 최적화
 
 > ✅
@@ -60,18 +60,18 @@ D. 비용 최적화
 
 Which of the following are benefits of migrating to the AWS Cloud? (Choose two.)
 
-A. Operational resilience
-B. Discounts for products on Amazon.com
-C. Business agility
-D. Business excellence
+A. Operational resilience  
+B. Discounts for products on Amazon.com  
+C. Business agility  
+D. Business excellence  
 E. Increased staff retention
 
 [번역] 다음 중 AWS 클라우드로 마이그레이션할 때의 이점은 무엇입니까? (2개를 선택하세요.)
 
-A. 운영 탄력성
-B. Amazon.com의 제품 할인
-C. 비즈니스 민첩성
-D. 비즈니스 우수성
+A. 운영 탄력성  
+B. Amazon.com의 제품 할인  
+C. 비즈니스 민첩성  
+D. 비즈니스 우수성  
 E. 직원 유지 증가
 
 > ✅
@@ -87,16 +87,16 @@ E. 직원 유지 증가
 
 A company is planning to replace its physical on-premises compute servers with AWS serverless compute services. The company wants to be able to take advantage of advanced technologies quickly after the migration. Which pillar of the AWS Well-Architected Framework does this plan represent?
 
-A. Security
-B. Performance efficiency
-C. Operational excellence
+A. Security  
+B. Performance efficiency  
+C. Operational excellence  
 D. Reliability
 
 [번역] 회사는 물리적 온프레미스 컴퓨팅 서버를 AWS 서버리스 컴퓨팅 서비스로 교체할 계획입니다. 이 회사는 마이그레이션 후 고급 기술을 신속하게 활용할 수 있기를 원합니다. 이 계획이 나타내는 AWS Well-Architected 프레임워크의 기둥은 무엇입니까?
 
-A. 보안
-B. 성능 효율성
-C. 운영 우수성
+A. 보안  
+B. 성능 효율성  
+C. 운영 우수성  
 D. 신뢰성
 
 > ❌
@@ -112,16 +112,16 @@ D. 신뢰성
 
 A large company has multiple departments. Each department has its own AWS account. Each department has purchased Amazon EC2 Reserved Instances. Some departments do not use all the Reserved Instances that they purchased, and other departments need more Reserved Instances than they purchased. The company needs to manage the AWS accounts for all the departments so that the departments can share the Reserved Instances. Which AWS service or tool should the company use to meet these requirements?
 
-A. AWS Systems Manager
-B. Cost Explorer
-C. AWS Trusted Advisor
+A. AWS Systems Manager  
+B. Cost Explorer  
+C. AWS Trusted Advisor  
 D. AWS Organizations
 
 [번역] 대기업에는 여러 부서가 있습니다. 각 부서에는 자체 AWS 계정이 있습니다. 각 부서는 Amazon EC2 예약 인스턴스를 구매했습니다. 일부 부서에서는 구매한 모든 예약 인스턴스를 사용하지 않고 다른 부서에서는 구매한 것보다 더 많은 예약 인스턴스가 필요합니다. 부서가 예약 인스턴스를 공유할 수 있도록 회사는 모든 부서의 AWS 계정을 관리해야 합니다. 이러한 요구 사항을 충족하기 위해 회사는 어떤 AWS 서비스 또는 도구를 사용해야 합니까?
 
-A. AWS 시스템 관리자
-B. 비용 탐색기
-C. AWS Trusted Advisor
+A. AWS 시스템 관리자  
+B. 비용 탐색기  
+C. AWS Trusted Advisor  
 D. AWS 조직
 
 > ✅
@@ -137,16 +137,16 @@ Most Voted: D, 정답은: B
 
 Which component of the AWS global infrastructure is made up of one or more discrete data centers that have redundant  power, networking, and connectivity?
 
-A. AWS Region
-B. Availability Zone
-C. Edge location
+A. AWS Region  
+B. Availability Zone  
+C. Edge location  
 D. AWS Outposts
 
 [번역] AWS 글로벌 인프라의 어떤 구성 요소가 중복 전원, 네트워킹 및 연결이 있는 하나 이상의 개별 데이터 센터로 구성되어 있습니까?
 
-A. AWS 리전
-B. 가용 영역
-C. 엣지 로케이션
+A. AWS 리전  
+B. 가용 영역  
+C. 엣지 로케이션  
 D. AWS 전초기지
 
 > ✅
@@ -165,18 +165,18 @@ D. AWS 전초기지
 
 Which duties are the responsibility of a company that is using AWS Lambda? (Choose two.)
 
-A. Security inside of code
-B. Selection of CPU resources
-C. Patching of operating system
-D. Writing and updating of code
+A. Security inside of code  
+B. Selection of CPU resources  
+C. Patching of operating system  
+D. Writing and updating of code  
 E. Security of underlying infrastructure
 
 [번역] AWS Lambda를 사용하는 회사의 책임은 무엇입니까? (2개를 선택하세요.)
 
-A. 코드 내부 보안
-B. CPU 자원의 선택
-C. 운영체제 패치
-D. 코드 작성 및 업데이트
+A. 코드 내부 보안  
+B. CPU 자원의 선택  
+C. 운영체제 패치  
+D. 코드 작성 및 업데이트  
 E. 기반 인프라의 보안
 
 > ❌
@@ -196,18 +196,18 @@ Lmbda의 코드를 작성하고 수정하는 작업은 개발자에게 책임이
 
 Which AWS services or features provide disaster recovery solutions for Amazon EC2 instances? (Choose two.)
 
-A. Reserved Instances
-B. EC2 Amazon Machine Images (AMIs)
-C. Amazon Elastic Block Store (Amazon EBS) snapshots
-D. AWS Shield
+A. Reserved Instances  
+B. EC2 Amazon Machine Images (AMIs)  
+C. Amazon Elastic Block Store (Amazon EBS) snapshots  
+D. AWS Shield  
 E. Amazon GuardDuty
 
 [번역] Amazon EC2 인스턴스에 재해 복구 솔루션을 제공하는 AWS 서비스 또는 기능은 무엇입니까? (2개를 선택하세요.)
 
-A. 예약 인스턴스
-B. EC2 Amazon 머신 이미지(AMI)
-C. Amazon Elastic Block Store(Amazon EBS) 스냅샷
-D. AWS 쉴드
+A. 예약 인스턴스  
+B. EC2 Amazon 머신 이미지(AMI)  
+C. Amazon Elastic Block Store(Amazon EBS) 스냅샷  
+D. AWS 쉴드  
 E. Amazon GuardDuty
 
 > ❌
@@ -226,18 +226,18 @@ EBS 스냅샷 역시 특정 EBS 볼륨의 상태를 캡처하여 저장하는 �
 
 A company is migrating to the AWS Cloud instead of running its infrastructure on premises. Which of the following are advantages of this migration? (Choose two.)
 
-A. Elimination of the need to perform security auditing
-B. Increased global reach and agility
-C. Ability to deploy globally in minutes
-D. Elimination of the cost of IT staff members
+A. Elimination of the need to perform security auditing  
+B. Increased global reach and agility  
+C. Ability to deploy globally in minutes  
+D. Elimination of the cost of IT staff members  
 E. Redundancy by default for all compute services
 
 [번역] 회사는 온프레미스에서 인프라를 실행하는 대신 AWS 클라우드로 마이그레이션하고 있습니다. 다음 중 이 마이그레이션의 장점은 무엇입니까? (2개를 선택하세요.)
 
-A. 보안 감사 수행의 필요성 제거
-B. 글로벌 범위 및 민첩성 증가
-C. 몇 분 안에 전 세계적으로 배포할 수 있는 기능
-D. IT 직원 비용 제거
+A. 보안 감사 수행의 필요성 제거  
+B. 글로벌 범위 및 민첩성 증가  
+C. 몇 분 안에 전 세계적으로 배포할 수 있는 기능  
+D. IT 직원 비용 제거  
 E. 기본적으로 모든 컴퓨팅 서비스에 대한 중복성
 
 > ✅
@@ -256,16 +256,16 @@ D를 정답이라고 하는 경우도 있는데, 직원이 줄어들수도 있�
 
 A user is comparing purchase options for an application that runs on Amazon EC2 and Amazon RDS. The application cannot sustain any interruption. The application experiences a predictable amount of usage, including some seasonal spikes that last only a few weeks at a time. It is not possible to modify the application. Which purchase option meets these requirements MOST cost-effectively?
 
-A. Review the AWS Marketplace and buy Partial Upfront Reserved Instances to cover the predicted and seasonal load.
-B. Buy Reserved Instances for the predicted amount of usage throughout the year. Allow any seasonal usage to run on Spot Instances.
-C. Buy Reserved Instances for the predicted amount of usage throughout the year. Allow any seasonal usage to run at an On-Demand rate.
+A. Review the AWS Marketplace and buy Partial Upfront Reserved Instances to cover the predicted and seasonal load.  
+B. Buy Reserved Instances for the predicted amount of usage throughout the year. Allow any seasonal usage to run on Spot Instances.  
+C. Buy Reserved Instances for the predicted amount of usage throughout the year. Allow any seasonal usage to run at an On-Demand rate.  
 D. Buy Reserved Instances to cover all potential usage that results from the seasonal usage.
 
 [번역] 사용자가 Amazon EC2와 Amazon RDS에서 실행되는 애플리케이션의 구매 옵션을 비교하고 있습니다. 응용 프로그램은 중단을 유지할 수 없습니다. 애플리케이션은 한 번에 몇 주만 지속되는 일부 계절 스파이크를 포함하여 예측 가능한 사용량을 경험합니다. 응용 프로그램을 수정할 수 없습니다. 어떤 구매 옵션이 이러한 요구 사항을 가장 비용 효율적으로 충족합니까?
 
-A. AWS Marketplace를 검토하고 부분 선결제 예약 인스턴스를 구입하여 예측 및 계절적 로드를 처리합니다.
-B. 연중 예상 사용량에 대해 예약 인스턴스를 구매합니다. 모든 계절적 사용량이 스팟 인스턴스에서 실행되도록 허용합니다.
-C. 연중 예상 사용량에 대해 예약 인스턴스를 구매합니다. 계절별 사용량이 온디맨드 요금으로 실행되도록 허용합니다.
+A. AWS Marketplace를 검토하고 부분 선결제 예약 인스턴스를 구입하여 예측 및 계절적 로드를 처리합니다.  
+B. 연중 예상 사용량에 대해 예약 인스턴스를 구매합니다. 모든 계절적 사용량이 스팟 인스턴스에서 실행되도록 허용합니다.  
+C. 연중 예상 사용량에 대해 예약 인스턴스를 구매합니다. 계절별 사용량이 온디맨드 요금으로 실행되도록 허용합니다.  
 D. 예약 인스턴스를 구매하여 계절적 사용량으로 인한 모든 잠재적 사용량을 처리합니다.
 
 > ❌
@@ -277,8 +277,8 @@ D. 예약 인스턴스를 구매하여 계절적 사용량으로 인한 모든 �
 
 중단 없이 비용 효율 + 예측 가능한 일년 내내 사용량에 대해 비용 효율 가능
 
-A. AWS Marketplace 애플리케이션 S/W 구매에 관련된 서비스, 해당 시나리오와 맞지 않음
-B. 스팟 인스턴스는 저렴, 언제든 종료 가능 + 애플리케이션 중단 됨
+A. AWS Marketplace 애플리케이션 S/W 구매에 관련된 서비스, 해당 시나리오와 맞지 않음  
+B. 스팟 인스턴스는 저렴, 언제든 종료 가능 + 애플리케이션 중단 됨  
 D. 모든 사용량을 예약 인스턴스 -> 불필요한 비용 발생
 </div>
 </details>
@@ -287,16 +287,16 @@ D. 모든 사용량을 예약 인스턴스 -> 불필요한 비용 발생
 
 A company wants to review its monthly costs of using Amazon EC2 and Amazon RDS for the past year. Which AWS service or tool provides this information?
 
-A. AWS Trusted Advisor
-B. Cost Explorer
-C. Amazon Forecast
+A. AWS Trusted Advisor  
+B. Cost Explorer  
+C. Amazon Forecast  
 D. Amazon CloudWatch
 
 [번역] 한 회사에서 지난 1년 동안 Amazon EC2 및 Amazon RDS를 사용한 월별 비용을 검토하려고 합니다. 이 정보를 제공하는 AWS 서비스 또는 도구는 무엇입니까?
 
-A. AWS Trusted Advisor
-B. 비용 탐색기
-C. 아마존 예측
+A. AWS Trusted Advisor  
+B. 비용 탐색기  
+C. 아마존 예측  
 D. 아마존 클라우드워치
 
 > ✅
@@ -308,8 +308,8 @@ D. 아마존 클라우드워치
 
 비용 관련은 Cost Explorer
 
-AWS Trusted Advisor는 비용 최적화, 성능 개선, 보안 격차 해소 관련 서비스
-Amazon Forecase는 `기계학습 기반 수요 예측 서비스`
+AWS Trusted Advisor는 비용 최적화, 성능 개선, 보안 격차 해소 관련 서비스  
+Amazon Forecase는 `기계학습 기반 수요 예측 서비스`  
 AWS Cloudwatch는 메트릭 수집 및 로그 추적 및 대시보드 구성을 위한 서비스
 </div>
 </details>
@@ -318,16 +318,16 @@ AWS Cloudwatch는 메트릭 수집 및 로그 추적 및 대시보드 구성을 
 
 A company wants to migrate a critical application to AWS. The application has a short runtime. The application is invoked by changes in data or by shifts in system state. The company needs a compute solution that maximizes operational efficiency and minimizes the cost of running the application. Which AWS solution should the company use to meet these requirements?
 
-A. Amazon EC2 On-Demand Instances
-B. AWS Lambda
-C. Amazon EC2 Reserved Instances
+A. Amazon EC2 On-Demand Instances  
+B. AWS Lambda  
+C. Amazon EC2 Reserved Instances  
 D. Amazon EC2 Spot Instances
 
 [번역] 회사에서 중요한 애플리케이션을 AWS로 마이그레이션하려고 합니다. 애플리케이션의 런타임이 짧습니다. 응용 프로그램은 데이터 변경 또는 시스템 상태 변경에 의해 호출됩니다. 이 회사는 운영 효율성을 극대화하고 애플리케이션 실행 비용을 최소화하는 컴퓨팅 솔루션이 필요합니다. 이러한 요구 사항을 충족하기 위해 회사는 어떤 AWS 솔루션을 사용해야 합니까?
 
-A. Amazon EC2 온디맨드 인스턴스
-B. AWS 람다
-C. Amazon EC2 예약 인스턴스
+A. Amazon EC2 온디맨드 인스턴스  
+B. AWS 람다  
+C. Amazon EC2 예약 인스턴스  
 D. Amazon EC2 스팟 인스턴스
 
 > ✅
@@ -346,16 +346,16 @@ D. Amazon EC2 스팟 인스턴스
 
 Which AWS service or feature allows users to connect with and deploy AWS services programmatically?
 
-A. AWS Management Console
-B. AWS Cloud9
-C. AWS CodePipeline
+A. AWS Management Console  
+B. AWS Cloud9  
+C. AWS CodePipeline  
 D. AWS software development kits (SDKs)
 
 [번역] 사용자가 프로그래밍 방식으로 AWS 서비스에 연결하고 배포할 수 있는 AWS 서비스 또는 기능은 무엇입니까?
 
-A. AWS 관리 콘솔
-B. AWS 클라우드9
-C. AWS 코드 파이프라인
+A. AWS 관리 콘솔  
+B. AWS 클라우드9  
+C. AWS 코드 파이프라인  
 D. AWS 소프트웨어 개발 키트(SDKs)
 
 > ✅
@@ -367,8 +367,8 @@ D. AWS 소프트웨어 개발 키트(SDKs)
 
 SDK: AWS 서비스와 프로그래밍 방식으로 상호작용 할 수 있는 유일한 옵션
 
-AWS Management Console: UI 기반 제어
-AWS Cloud9: 클라우드 기반 IDE 제공, AWS 서비스와 상호작용하는 코드 작성 가능하지만 여튼 아님
+AWS Management Console: UI 기반 제어  
+AWS Cloud9: 클라우드 기반 IDE 제공, AWS 서비스와 상호작용하는 코드 작성 가능하지만 여튼 아님  
 AWS CodePipeline: CI/CD 파이프라인 자동화, 프로그래밍 방식은 아닌듯
 </div>
 </details>
@@ -377,16 +377,16 @@ AWS CodePipeline: CI/CD 파이프라인 자동화, 프로그래밍 방식은 아
 
 A company plans to create a data lake that uses Amazon S3. Which factor will have the MOST effect on cost?
 
-A. The selection of S3 storage tiers
-B. Charges to transfer existing data into Amazon S3
-C. The addition of S3 bucket policies
+A. The selection of S3 storage tiers  
+B. Charges to transfer existing data into Amazon S3  
+C. The addition of S3 bucket policies  
 D. S3 ingest fees for each request
 
 [번역] 회사는 Amazon S3를 사용하는 데이터 레이크를 만들 계획입니다. 비용에 가장 큰 영향을 미치는 요소는 무엇입니까?
 
-A. S3 스토리지 계층 선택
-B. 기존 데이터를 Amazon S3로 전송하기 위한 요금
-C. S3 버킷 정책 추가
+A. S3 스토리지 계층 선택  
+B. 기존 데이터를 Amazon S3로 전송하기 위한 요금  
+C. S3 버킷 정책 추가  
 D. 각 요청에 대한 S3 수집 수수료
 
 > ❌
@@ -398,13 +398,13 @@ D. 각 요청에 대한 S3 수집 수수료
 
 S3는 스토리지 티어(S3 Standard, S3 Intelligence-tiering, S3 Glacier 등)에 따라 비용에 가장 큰 영향을 미침.
 
-B. Charges to transfer existing data into Amazon S3
+B. Charges to transfer existing data into Amazon S3  
 기존 데이터를 Amazon S3로 전송하는 비용은 초기 데이터 전송시에만 발생하는 일회성 비용
 
-C. The addition of S3 bucket policies
+C. The addition of S3 bucket policies  
 버킷 정책 자체는 비용 없음, 비용에 미치는 직접적인 영향도 없음
 
-D. S3 ingest fees for each request
+D. S3 ingest fees for each request  
 S3에 데이터를 업로드 하는 비용(ingest fee)은 Amazon S3에서 매우 미미하거나 없을 수 있음.  
 S3는 데이터 업로드에 비용 부과 안함, 읽거나 전송하는 비용이 더 중요함
 </div>
@@ -414,9 +414,9 @@ S3는 데이터 업로드에 비용 부과 안함, 읽거나 전송하는 비용
 
 A company is launching an ecommerce application that must always be available. The application will run on Amazon EC2 instances continuously for the next 12 months. What is the MOST cost-effective instance purchasing option that meets these requirements?
 
-A. Spot Instances
-B. Savings Plans
-C. Dedicated Hosts
+A. Spot Instances  
+B. Savings Plans  
+C. Dedicated Hosts  
 D. On-Demand Instances
 
 [번역] 회사는 항상 사용할 수 있어야 하는 전자 상거래 응용 프로그램을 시작합니다. 애플리케이션은 향후 12개월 동안 계속해서 Amazon EC2 인스턴스에서 실행됩니다. 이러한 요구 사항을 충족하는 가장 비용 효율적인 인스턴스 구매 옵션은 무엇입니까?
@@ -447,16 +447,16 @@ On-Demand Instances는 유연성 있음, 장기 사용 비효율적 비용에 �
 
 Which AWS service or feature can a company use to determine which business unit is using specific AWS resources?
 
-A. Cost allocation tags
-B. Key pairs
-C. Amazon Inspector
+A. Cost allocation tags  
+B. Key pairs  
+C. Amazon Inspector  
 D. AWS Trusted Advisor
 
 [번역] 회사가 특정 AWS 리소스를 사용하는 사업부를 결정하기 위해 어떤 AWS 서비스 또는 기능을 사용할 수 있습니까?
 
-A. 비용 할당 태그
-B. 키 쌍
-C. 아마존 인스펙터
+A. 비용 할당 태그  
+B. 키 쌍  
+C. 아마존 인스펙터  
 D. AWS Trusted Advisor
 
 > ✅
@@ -483,17 +483,17 @@ A company wants to migrate its workloads to AWS, but it lacks expertise in AWS C
 
 Which AWS service or feature will help the company with its migration?
 
-A. AWS Trusted Advisor
-B. AWS Consulting Partners
-C. AWS Artifacts
+A. AWS Trusted Advisor  
+B. AWS Consulting Partners  
+C. AWS Artifacts  
 D. AWS Managed Services
 
-[번역] 회사에서 워크로드를 AWS로 마이그레이션하고 싶지만 AWS 클라우드 컴퓨팅에 대한 전문 지식이 부족합니다.
+[번역] 회사에서 워크로드를 AWS로 마이그레이션하고 싶지만 AWS 클라우드 컴퓨팅에 대한 전문 지식이 부족합니다.  
 회사의 마이그레이션에 도움이 되는 AWS 서비스 또는 기능은 무엇입니까?
 
-A. AWS Trusted Advisor
-B. AWS 컨설팅 파트너
-C. AWS 아티팩트
+A. AWS Trusted Advisor  
+B. AWS 컨설팅 파트너  
+C. AWS 아티팩트  
 D. AWS 관리형 서비스
 
 > 💡 애매함
@@ -512,16 +512,16 @@ D. AWS 관리형 서비스
 
 Which AWS service or tool should a company use to centrally request and track service limit increases?
 
-A. AWS Config
-B. Service Quotas
-C. AWS Service Catalog
+A. AWS Config  
+B. Service Quotas  
+C. AWS Service Catalog  
 D. AWS Budgets
 
 [번역] 회사에서 서비스 한도 증가를 중앙에서 요청하고 추적하기 위해 어떤 AWS 서비스 또는 도구를 사용해야 합니까?
 
-A. AWS 구성
-B. 서비스 할당량
-C. AWS 서비스 카탈로그
+A. AWS 구성  
+B. 서비스 할당량  
+C. AWS 서비스 카탈로그  
 D. AWS 예산
 
 > ❌
@@ -543,16 +543,16 @@ AWS Budgets는 예산 관련 경고를 날리거나 하는거지, 한도랑은 �
 
 Which documentation does AWS Artifact provide?
 
-A. Amazon EC2 terms and conditions
-B. AWS ISO certifications
-C. A history of a company's AWS spending
+A. Amazon EC2 terms and conditions  
+B. AWS ISO certifications  
+C. A history of a company's AWS spending  
 D. A list of previous-generation Amazon EC2 instance types
 
 [번역] AWS Artifact는 어떤 문서를 제공합니까?
 
-A. Amazon EC2 이용약관
-B. AWS ISO 인증
-C. 회사의 AWS 지출 내역
+A. Amazon EC2 이용약관  
+B. AWS ISO 인증  
+C. 회사의 AWS 지출 내역  
 D. 이전 세대 Amazon EC2 인스턴스 유형 목록
 
 > ❌
@@ -578,16 +578,16 @@ EC2 이용약관(terms and conditions)는 공식문서 참고
 
 Which task requires using AWS account root user credentials?
 
-A. Viewing billing information
-B. Changing the AWS Support plan
-C. Starting and stopping Amazon EC2 instances
+A. Viewing billing information  
+B. Changing the AWS Support plan  
+C. Starting and stopping Amazon EC2 instances  
 D. Opening an AWS Support case
 
 [번역] AWS 계정 루트 사용자 자격 증명을 사용해야 하는 작업은 무엇입니까?
 
-A. 결제 정보 보기
-B. AWS Support 플랜 변경
-C. Amazon EC2 인스턴스 시작 및 중지
+A. 결제 정보 보기  
+B. AWS Support 플랜 변경  
+C. Amazon EC2 인스턴스 시작 및 중지  
 D. AWS Support 사례 열기
 
 > ❌
@@ -606,6 +606,7 @@ Amazon EC2 인스턴스 시작 및 중지는 IAM 유저도 가능
 AWS Support 사례 열기 이것도 IAM 유저가 권한만 있으면 가능
 </div>
 </details>
+
 
 ## Question 21
 
