@@ -6,7 +6,7 @@
 😃 해당 리포지토리의 모든 내용은 [기록하고, 복기하고](https://sw-ym.tistory.com) 블로그에 함께 기재됩니다.  
 추가적인 질문 혹은 연락은 <youngmin1085@gmail.com> 로 연락 부탁드리겠습니다.
 
-## 001. ☕ Java
+## ☕ Java
 
 > 정리 완료 : ✅  
 > 정리 필요 : ❌  
@@ -34,7 +34,7 @@
 | [[Java] 리플렉션(Reflaction)란?](./Java/리플렉션이란/README.md) | ❌ |
 | [[Java] synchronized란?](./Java/synchronized란/README.md) | ❌ |
 
-## 002. 🌱 Spring
+## 🌱 Spring
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -51,7 +51,7 @@
 | [[Spring] DI(Dependency Injection)란?](./Spring/DI/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
 
-## 003. ☁️ AWS(Amzon Web Service)
+## ☁️ AWS(Amzon Web Service)
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -79,7 +79,13 @@
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 
-## 004. 🐳 Docker
+## 🌫️ AWS Practitional 자격증
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[AWS] todo](./AWSCert/module_01/README.md) | ❌ |
+
+## 🐳 Docker
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -88,13 +94,13 @@
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
 | [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
 
-## 005. ☸ Kubernetes
+## ☸ Kubernetes
 
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Kubernetes] Continue.. 👍](./Kubernetes/) | ❌ |
 
-## 006. ⛁ DB(DataBase)
+## ⛁ DB(DataBase)
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -107,7 +113,7 @@
 | [[DB] Mac에서 MySQL 비밀번호 초기화 방법](./DB/Mac에서_MySQL_비밀번호_초기화_방법/README.md) | ✅ |
 | [[DB] 페이징 시 쿼리 LIMIT, OFFSET 그리고 페이징 성능 개선](./DB/페이징시_쿼리_LIMIT_OFFSET_그리고_페이징_성능개선/README.md) | ❌ |
 
-## 007. 📕 ELK Stack
+## 📕 ELK Stack
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -119,7 +125,7 @@
 | [[ES] Elastciearch 클러스터에서 특정 Node 제외 시키기](./ELK/exclude_node/README.md) | ✅ |
 | [[ES] ES 색인 속도 증대를 위한 EC2 인스턴스 타입 변경, 그리고 iostat 명령어로 디스크 I/O 확인하기](./ELK/iostat/README.md) | ✅ |
 
-## 008. 😺 Git
+## 😺 Git
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -131,20 +137,20 @@
 | [[Git] gitignore가 동작하지 않는 경우 해소](./Git/gitignore가_동작하지_않는_경우_해소/README.md) | ✅ |
 | [[Git] Git Flow란?](./Git/Git_Flow/README.md) | ❌ |
 
-## 009. ⭐️ Web Server
+## ⭐️ Web Server
 
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Web Server] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
 | [[Web Server] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
 
-## 010. 🛜 Network
+## 🛜 Network
 
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
 
-## 999. 🔧 ETC
+## 🔧 ETC
 
 | 키워드 | 완료 여부 |
 | --- | --- |
