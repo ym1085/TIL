@@ -71,7 +71,7 @@
 | [[AWS] ECS Task Role vs Execution Role 차이 및 AWSServiceRoleForECS](./AWS/ecs_task_role/README.md) | ✅ |
 | [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 방법 정리](./AWS/create_vpc_etc/README.md) | ✅ |
 | [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ✅ |
-| [[AWS] ECS란 그리고 EC2 vs Fargate 차이는?](./AWS/ecs_ec2_fargate/README.md) | ❌ |
+| [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md) | ✅ |
 | [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
