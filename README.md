@@ -83,7 +83,9 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[AWS] todo](./AWSCert/module_01/README.md) | ❌ |
+| [[AWS] examtopics 덤프 문제 풀이 및 해설](./Certification/aws/practitional/examtopics/README.md) | 🔥 |
+| [[AWS] 모듈1: AMAZON WEB SERVICES 소개](./Certification/aws/practitional/module_01/README.md) | 🔥 |
+| [[AWS] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | 🔥 |
 
 ## 🐳 Docker
 
