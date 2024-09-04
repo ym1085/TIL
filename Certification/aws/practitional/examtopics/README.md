@@ -607,14 +607,180 @@ AWS Support 사례 열기 이것도 IAM 유저가 권한만 있으면 가능
 </div>
 </details>
 
-
 ## Question 21
+
+A company needs to simultaneously process hundreds of requests from different users. Which combination of AWS services should the company use to build an operationally efficient solution?
+
+A. Amazon Simple Queue Service (Amazon SQS) and AWS Lambda
+B. AWS Data Pipeline and Amazon EC2
+C. Amazon Kinesis and Amazon Athena
+D. AWS Amplify and AWS AppSync
+
+[번역] 회사는 서로 다른 사용자의 수백 가지 요청을 동시에 처리해야 합니다. 기업이 운영상 효율적인 솔루션을 구축하기 위해 어떤 AWS 서비스 조합을 사용해야 합니까?
+
+A. Amazon Simple Queue Service(Amazon SQS) 및 AWS Lambda
+B. AWS 데이터 파이프라인 및 Amazon EC2
+C. Amazon Kinesis 및 Amazon Athena
+D. AWS Amplify 및 AWS AppSync
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: A
+
+`AWS Data Pipeline`은 주로 `데이터` `이동`, `변환`, `백업` 작업에 사용한다.  
+실시간 요청 처리보다는 배치 작업 or 정기적인 데이터 처리에 적합.
+
+`Amazon Kinesis`, `Athena`는 `실시간 데이터 분석`에 중점을 둔 서비스.  
+사용자 요청을 처리하는 작업과는 거리가 멀다.
+
+`AWS Amplify`는 주로 빠른 풀스택 개발 + 서버리스 백엔드 등등 제공하는 서비스.
+
+Amazon SQS(Simple Queue Service)는 완전 관리형 `메시지 대기열 서비스`이다.  
+여러 시스템 간에 `비동기`적으로 `데이터 전달`이 가능하며, `메시지 기반 애플리케이션 통신`.
+</div>
+</details>
 
 ## Question 22
 
+What is the scope of a VPC within the AWS network?
+
+A. A VPC can span all Availability Zones globally.
+B. A VPC must span at least two subnets in each AWS Region.
+C. A VPC must span at least two edge locations in each AWS Region.
+D. A VPC can span all Availability Zones within an AWS Region.
+
+[번역] AWS 네트워크 내 VPC의 범위는 무엇입니까?
+
+A. VPC는 전 세계의 모든 가용 영역에 걸쳐 있을 수 있습니다.
+B. VPC는 각 AWS 리전에서 최소 2개의 서브넷에 걸쳐 있어야 합니다.
+C. VPC는 각 AWS 리전에서 2개 이상의 엣지 로케이션에 걸쳐 있어야 합니다.
+D. VPC는 AWS 리전 내의 모든 가용 영역에 걸쳐 있을 수 있습니다.
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: D
+
+`VPC`는 `AWS의 특정 리전 내에서만 동작`, 해당 리전의 모든 가용 영역에 걸쳐 사용 가능.  
+VPC는 리전 내에 여러 가용 영역에 걸쳐 구성 가능하고, 리전 밖으로는 확장 불가.
+
+VPC는 전 세계 가용 영역에 걸칠 수 없음, 각 리전의 가용 영역 내에만 가능.
+
+VPC는 반드시 2개 이상의 서브넷을 포함해야 하는건 아님, 한개여도 상관 없음.
+
+엣지 로케이션은 VPC와 상관 없음, CloudFront와 관련 있음.  
+엣지 로케이션은 데이터 캐싱 및 지연 없는 컨텐츠 전송을 위해 사용.
+</div>
+</details>
+
 ## Question 23
 
+Which of the following are components of an AWS Site-to-Site VPN connection? (Choose two.)
+
+A. AWS Storage Gateway
+B. Virtual private gateway
+C. NAT gateway
+D. Customer gateway
+E. Internet gateway
+
+[번역] 다음 중 AWS Site-to-Site VPN 연결의 구성 요소는 무엇입니까? (2개를 선택하세요.)
+
+A. AWS 스토리지 게이트웨이
+B. 가상 사설 게이트웨이
+C. NAT 게이트웨이
+D. 고객 게이트웨이
+E. 인터넷 게이트웨이
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B, D
+
+![20240904_vpn.png](./img/20240904_vpn.png)
+
+- [VPN 관련 참고 링크](https://btcd.tistory.com/46)
+
+VPN의 구성 요소로는 AWS의 `Virtual Private Gateway`, `VPN Connection`, `Customer Gateway`가 존재.
+
+A. AWS Storage Gateway
+
+- 온프레미스와 AWS 클라우드 스토리지 간 통합 지원
+
+B. Virtual private gateway
+
+`Virtual private gateway`란 `AWS VPC`와 `온프레미스`를 `연결`하는 `VPN 게이트웨이`이다.  
+
+- `VPN 터널`을 통해 `보안 트래픽`을 `전송`
+- `Direct Connect` 지원
+- `VPC로의 진입점`(게이트웨이)
+- `하이브리드 클라우드 환경 구축`
+- `VPC 대역에 바로 붙어 있는 것으로 보임`
+
+C. NAT gateway
+NAT gateway는 private subnet에 위치한 리소스가 routing table의 rule에 의해  
+외부 통신이 가능하도록 설정하기 위해 사용하는 서비스. routing table에 내부 소스 IP를 입력 후  
+해당 IP의 목적지는 NAT로 설정하면 private subnet에서 외부 통신이 가능해진다.
+
+D. Customer gateway
+
+Customer gateway은 온프레미스(고객)측 네트워크의 엔드포인트 의미.  
+정리하면 VPN 터널을 통해 외부 네트워크와 안전하게 통신하기 위한 장치 및 소프트웨어.
+
+E. Internet gateway
+Internet gateway는 public subnet에 위치한 리소스가 AWS 외부 통신을 위해 사용하는 게이트웨이.
+</div>
+</details>
+
 ## Question 24
+
+A company needs to establish a connection between two VPCs. The VPCs are located in two different AWS Regions. The company wants to use the existing infrastructure of the VPCs for this connection. Which AWS service or feature can be used to establish this connection?
+
+A. AWS Client VPN
+B. VPC peering
+C. AWS Direct Connect
+D. VPC endpoints
+
+[번역] 회사는 두 VPC 간에 연결을 설정해야 합니다. VPC는 두 개의 서로 다른 AWS 리전에 있습니다. 회사는 이 연결을 위해 VPC의 기존 인프라를 사용하려고 합니다. 이 연결을 설정하는 데 사용할 수 있는 AWS 서비스 또는 기능은 무엇입니까?
+
+A. AWS 클라이언트 VPN
+B. VPC 피어링
+C. AWS 다이렉트 커넥트
+D. VPC 엔드포인트
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+A. AWS 클라이언트 VPN
+VPN Client Gateway 역할을 하며, 온프레미스의 장비와 AWS VPC를 연동하기 위한 네트워크 엔드포인트.  
+
+B. VPC 피어링
+두 VPC간 프라이빗 네트워크를 연결하는 AWS 서비스.  
+두 VPC가 동일 혹은 다른 계정에 있거나, 서로 다른 리전에 있어도 연결 가능.  
+
+VPC 피어링은 1:1 VPC 연결, 복잡해질 수 있음.  
+이를 보완하기 위해 Transit Gateway(중앙 허브)로 관리하는 서비스 존재.
+VPC == VPC 통신 가능
+VPC == 온프레미스 통신 가능
+
+C. AWS 다이렉트 커넥트
+VPN virtual private gateway와 customer gateway를 중간에서 연결하는 커넥트
+
+D. VPC 엔드포인트
+Private Subnet에서 AWS 네트워크를 사용하여 AWS 서비스에 접근하기 위한 서비스
+
+</div>
+</details>
 
 ## Question 25
 
