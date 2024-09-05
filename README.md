@@ -72,7 +72,7 @@
 | [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 방법 정리](./AWS/create_vpc_etc/README.md) | ✅ |
 | [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ✅ |
 | [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md) | ✅ |
-| [[AWS] ECS CI/CD 파이프라인 구성기](./AWS/ecs_ec2_fargate/README.md) | ❌ |
+| [[AWS] ECS CI/CD 파이프라인 구성기](./AWS/ecs_cicd/README.md) | ❌ |
 | [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
