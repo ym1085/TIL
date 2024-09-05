@@ -234,13 +234,13 @@ AWS는 다양한 `서버리스` 컴퓨팅 옵션을 제공해준다.
 
 ### AWS Lambda
 
-<img src="./img/lambda_01.png " width="250px">
+<img src="./img/lambda_01.png" width="250px">
 
 > AWS Lambda는 이러한 서버리스 컴퓨팅 옵션 중 대표적인 서비스라 볼 수 있다.
 
-<img src="./img/lambda_02.png " width="250px">
+<img src="./img/lambda_02.png" width="250px">
 
-<img src="./img/lambda_03.png " width="250px">
+<img src="./img/lambda_03.png" width="250px">
 
 이 Lambda는 사용자가 코드를 Lambda Functions에 업로드 할 수 있게 도와주는 서비스이다.  
 먼저 트리거를 구성하면 Lambda 함수는 트리거를 기다린다. 트리거가 감지되면 Lambda 안의 코드가 자동으로 실행된다.
