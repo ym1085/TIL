@@ -92,7 +92,7 @@ AWS에는 목적에 따라 `다양한 유형의 EC2 인스턴스를 제공`한�
 
 > AWS의 확장성 및 탄력성에 대해 기술
 
-![scaling.png](./img/scaling.png)
+<img src="./img/scaling.png" width="400px">
 
 - 온프레미스 데이터 센테의 딜레마
   - `고객의 워크로드`는 `유동적`이다
@@ -127,7 +127,7 @@ AWS에는 목적에 따라 `다양한 유형의 EC2 인스턴스를 제공`한�
 
 ### ELB는 리전 수준에서 실행
 
-![elb.png](./img/elb.png)
+<img src="./img/elb.png" width="450px">
 
 - `ELB`는 `리전 수준` 구조이다
 - `리전 수준`에서 `실행`되므로 `자동`으로 `고가용성 서비스`가 된다
@@ -138,12 +138,12 @@ AWS에는 목적에 따라 `다양한 유형의 EC2 인스턴스를 제공`한�
 
 ### ELB는 외부 트래픽에만 사용하지 않는다
 
-![elb2.png](./img/elb2.png)
+<img src="./img/elb2.png" width="400px">
 
 - ELB는 외부 통신에만 사용이 되지 않고, 내부 통신에도 사용이 된다
 - 위와 같이 ELB가 없으면 내부 통신이 복잡해진다
 
-![elb3.png](./img/elb3.png)
+<img src="./img/elb3.png" width="400px">
 
 - 하지만 ELB를 중간에 둠으로써 네트워크가 간단해진다
 
@@ -168,11 +168,11 @@ AWS에는 목적에 따라 `다양한 유형의 EC2 인스턴스를 제공`한�
 애플리케이션이 직접 소통 한다면 `밀결합된 상태` 라고 할 수 있다. `밀겹한된 상태`의 아키텍처는 `구성 요소 중 1개`라도  
 `장애가 발생`하면 `나머지 서비스에도 영향`을 미칠 수 있다.
 
-![queue_error_01.png](./img/queue_error_01.png)
+<img src="./img/queue_error_01.png" width="250px">
 
-![queue_error_02.png](./img/queue_error_02.png)
+<img src="./img/queue_error_02.png" width="250px">
 
-![queue_error_03.png](./img/queue_error_03.png)
+<img src="./img/queue_error_03.png" width="250px">
 
 예를 들어 애플리케이션 A가 B에 메시지를 직접 보내는 경우, B에 오류가 발생하게 되면  
 A 애플리케이션도 장애가 발생하게 된다. `이렇듯 밀겹한된 상태보다는 소결합된 상태인 경우 연속적인 장애를 막을 수 있다`.
@@ -180,9 +180,9 @@ A 애플리케이션도 장애가 발생하게 된다. `이렇듯 밀겹한된 �
 > 소결합된 구조로 만들면 다음과 같은 구조가 된다  
 > 대표적인 서비스로는 SQS(Amazon Simple Queue Service), SNS(Amazon Simple Notification Service)가 존재한다
 
-![queue_ok_01.png](./img/queue_ok_01.png)
+<img src="./img/queue_ok_01.png" width="400px">
 
-![queue_ok_02.png](./img/queue_ok_02.png)
+<img src="./img/queue_ok_02.png" width="400px">
 
 우선 A 애플리케이션과 B 애플리케이션 사이에 메시지 대기열(Queue)을 구성한다.  
 이러한 경우 B 애플리케이션에 문제가 발생해도 장애로 이어지지 않고, 대기열에 메시지를 보관할 수 있다.
