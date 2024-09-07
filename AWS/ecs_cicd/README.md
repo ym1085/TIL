@@ -382,9 +382,9 @@ Assume-role을 통해 test-role을 assume받아야 ECR에 업로드가 가능하
 
 남은 부분은 추후에 Code Commit, Code Pipeline, Jenkins도 같이 해야 하기에 추후 기재 예정
 
-> AppSpec.json
+> AppSpec.yml
 
-```json
+```yml
 version: 0.0
 Resources:
   - TargetService:
