@@ -241,7 +241,7 @@ D. IT 직원 비용 제거
 E. 기본적으로 모든 컴퓨팅 서비스에 대한 중복성
 
 > ✅
- 
+
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
@@ -829,7 +829,7 @@ A. EC2 includes operating system patch management.
 B. EC2 integrates with Amazon VPC, AWS CloudTrail, and AWS Identity and Access Management (IAM).  
 C. EC2 has a 100% service level agreement (SLA).  
 D. EC2 has a flexible, pay-as-you-go pricing model.  
-E. EC2 has automatic storage cost optimization. 
+E. EC2 has automatic storage cost optimization.
 
 [번역] Amazon EC2 인스턴스를 사용하여 온프레미스가 아닌 AWS 클라우드에서 애플리케이션을 호스팅하면 어떤 이점이 있습니까? (2개를 선택하세요.)
 
@@ -976,7 +976,7 @@ ENI(Elastic Network Interface)로 랜카드(LAN CARD)를 의미, 네트워크 �
 
 C. Amazon VPC  
 Virtual Private Cloud의 약자로 가상 네트워크를 의미.  
-VPC는 네트워크 격리를 수행하지만, 방화벽은 NACL이나 SG에서 담당 
+VPC는 네트워크 격리를 수행하지만, 방화벽은 NACL이나 SG에서 담당
 
 D. 보안 그룹
 보안 그룹은 인바운드, 아웃바운드 IP/PORT 기반으로 트래픽을 제어하는 방화벽.
@@ -1414,6 +1414,39 @@ C. 트래픽을 허용하기 전에 모든 규칙을 평가합니다.
 D. 트래픽 허용 여부를 결정할 때 가장 낮은 번호의 규칙부터 순서대로 처리합니다.  
 E. 인스턴스 수준에서 작동합니다.  
 
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: A, D
+
+A. stateless 방식을 사용합니다.
+NACL(Network access control list)는 stateless(무상태)이다.  
+이것은 들어오고 나가는 트래픽을 각각 독립적으로 평가하며, 트래픽의 응답을 자동으로 허용하지 않는다.  
+따라서 수동으로 들어오고 나가는 트래픽에 대해 각각의 규칙을 정해야 한다.
+
+B. stateful 방식을 사용합니다.  
+NACL(Network access control list)는 Stateful(상태 기억)이 아니다.  
+보안그룹이 Staetful 방식이며, 보안그룹의 경우 들어오는 트래픽(인바운드)에 대해서  
+허용이 되면, 그에 대한 응답 트래픽이 자동으로 허용 된다.
+
+즉, 보안그룹은 들어온 트래픽과 나가는 트래픽을 각각 따로 정의할 필요없이  
+일치하는 세션에 대한 응답은 자동으로 허용. (인바운드 허용 시 아웃바운드 자동 허용)
+
+C. 트래픽을 허용하기 전에 모든 규칙을 평가합니다.  
+NACL은 모든 트래픽을 허용하기 전에 평가하는 것이 아니라, 낲은 번호 순서부터 평가하여  
+첫 번째 일치하는 규칙만 처리하고 평가한다.
+
+D. 트래픽 허용 여부를 결정할 때 가장 낮은 번호의 규칙부터 순서대로 처리합니다.  
+NACL에 설정된 규칙 번호 가장 낮은 순서부터, 규칙 평가.  
+한 개씩 평가하는데 없으면 Deny 시킨다.
+
+E. 인스턴스 수준에서 작동합니다.  
+인스턴스 수준에서 작동하는건 보안그룹
+</div>
+</details>
+
 ## Question #43
 
 A company has designed its AWS Cloud infrastructure to run its workloads effectively.  
@@ -1435,6 +1468,31 @@ B. 성능 효율성
 C. 비용 최적화  
 D. 운영 우수성  
 
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: D
+
+A. 보안  
+`보안`은 `시스템 보호`, `데이터 암호화`, `접근 제어` 등에 중점을 둔다.  
+시나리오에서 보안 관련 얘기가 나오지 않았음.
+
+B. 성능 효율성  
+`성능 효율성`은 `워크로드` `성능 최적화와` `리소스 활용`에 중점을 둔다.  
+시나리오에서 성능 최적화에 대한 내용이 없기에 적절하지 않음.
+
+C. 비용 최적화  
+비용 최적화는 `리소스를 효율적으로 사용하여 비용을 줄이는데 중점을 둔다`.  
+시나리오에서는 비용 관리보다 프로세스 개선에 관한 내용이 존재.
+
+D. 운영 우수성
+프로세스를 지속적으로 개선하기 위한 프로토콜을 보유하고 있으므로,  
+이는 운영 우수성에 해당한다
+</div>
+</details>
+
 ## Question #44
 
 Which AWS service or feature can be used to create a private connection between an on-premises workload and an AWS Cloud workload?  
@@ -1451,6 +1509,40 @@ A. Amazon Route 53
 B. Amazon Macie  
 C. AWS Direct Connect  
 D. AWS PrivateLink  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C (선택은 D로 나옴)
+
+A. Amazon Route 53  
+
+- DNS 관리 서비스
+- 네트워크와 상관 없음
+
+B. Amazon Macie  
+
+- 데이터 보안 및 개인정보 보호를 위해 사용
+- S3 버킷의 민감 데이터 및 보안 위험 모니터링
+- 네트워크와 무관
+
+C. AWS Direct Connect  
+
+> 온프레미스 <---> AWS 간의 private connect 사용
+
+**AWS Direct Connect**는 `AWS`와 `온프레미스` 간에 `전용 물리적 네트워크 회선`을 통해 `연결`을 제공하는 서비스.  
+이 서비스는 `인터넷`을 `우회`하여 `AWS`와의 `안정` + `고속`의 `Private 연결`을 `지원`해준다.  
+
+D. AWS PrivateLink  
+
+`AWS PrivateLink`는 `AWS 서비스` or `VPC 간`의 `Private 연결을 제공`한다.  
+AWS 서비스 `내부적`으로 안전하게 연결할 수 있도록 해주지만, `온프레미스와 AWS 간의 연결은 제공안함`.  
+이는 `주로 VPC 간 연결에 주로 사용`
+
+</div>
+</details>
 
 ## Question #45
 
@@ -1470,6 +1562,35 @@ B. 비용 탐색기
 C. AWS 비용 및 사용 보고서  
 D. AWS 예산  
 
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C
+
+A. AWS 청구서(AWS Bills)  
+
+- 월별 청구서 보여주지만 그래픽 시각화 기능 제공 안함
+- 청구 세부 사항을 텍스트 형식으로 확인 가능
+
+B. 비용 탐색기(Cost Explorer)  
+
+AWS 비용 탐색기(Cost Explorere)는 시간 변화에 따른 AWS 비용과 사용량을 그패프로 시각화 할 수 있음.  
+월별을 포함한 다양한 기간 동안의 사용량과 비용을 시각적으로 분석 가능하며, 필터링 기능 제공하여  
+어떤 부분에서 가격이 많이 나가는지 확인 가능.
+
+C. AWS 비용 및 사용 보고서(AWS Cost and Usage Report)
+
+CSV 형식으로 데이터를 내보내는 기능은 있으나 그래프랑은 안 맞음
+
+D. AWS 예산(AWS Budgets)  
+
+`AWS Budgets`은 설정한 예산과 비교하여 비용을 모니터링하는 도구로,  
+`비용 추적 알림 설정`이 가능한 서비스이다. 그래프랑은 안 맞음
+</div>
+</details>
+
 ## Question #46
 
 A company wants to run production workloads on AWS. The company needs concierge service, a designated AWS technical account manager (TAM), and technical support that is available 24 hours a day, 7 days a week.  
@@ -1488,6 +1609,16 @@ B. AWS 엔터프라이즈 지원
 C. AWS 비즈니스 지원  
 D. AWS 개발자 지원  
 
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+</div>
+</details>
+
 ## Question #47
 
 Which architecture design principle describes the need to isolate failures between dependent components in the AWS Cloud?  
@@ -1504,6 +1635,33 @@ A. 모놀리식 디자인을 사용합니다.
 B. 자동화를 위한 설계.  
 C. 단일 실패 지점을 위한 설계.  
 D. 느슨하게 결합된 구성 요소.  
+
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: D
+
+A. 모놀리식 디자인을 사용합니다.  
+
+`모놀리식 디자인`은 모든 구성 요소가 `하나로 결합된 설계`를 의미한다.  
+장애가 발생할 경우 전체 시스템에 영향을 끼치며, 장애 격리 불가능.
+
+B. 자동화를 위한 설계.  
+자동화는 반복 작업의 효율이지, 장애 격리와 상관 없음.
+
+C. 단일 실패 지점을 위한 설계.
+
+단일 실패 지점을 위한 설계는 시스템 한 지점에서 실패하는 겨우 전체가 중단되는 상황을 초래할 수 있기에, 장애를 격리하려는 목적과는 반대이다.
+
+D. 느슨하게 결합된 구성 요소.  
+
+`느슨하게 결합된 구성 요소`는 하나의 구성 요소에서 발생하는 장애가 다른 구성요소로 전파되지 않도록,  
+함으로 시스템 복원력 + 안정성 높히는 설계 원칙이다.
+
+</div>
+</details>
 
 ## Question #48
 
@@ -1525,6 +1683,15 @@ C. Amazon RDS
 D. Amazon Elastic File System (Amazon EFS)  
 E. Amazon DynamoDB  
 
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C, E
+</div>
+</details>
+
 ## Question #49
 
 A company is using the AWS Free Tier for several AWS services for an application. What will happen if the Free Tier usage period expires or if the application use exceeds the Free Tier usage limits?  
@@ -1542,9 +1709,19 @@ B. AWS Support에서 표준 서비스 요금을 설정하기 위해 회사에 �
 C. 회사는 프리 티어 기간 동안 사용한 서비스에 대해 요금을 부과하고 프리 티어 기간 이후 서비스 이용에 대해서는 추가 요금을 부과합니다.  
 D. 회사의 AWS 계정은 동결되며 결제 계획이 수립된 후 다시 시작할 수 있습니다.  
 
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: A
+</div>
+</details>
+
 ## Question #50
 
-A company recently deployed an Amazon RDS instance in its VPC. The company needs to implement a stateful firewall to limit traffic to the private corporate network.  
+A company recently deployed an Amazon RDS instance in its VPC.  
+The company needs to implement a stateful firewall to limit traffic to the private corporate network.  
 Which AWS service or feature should the company use to limit network traffic directly to its RDS instance?  
 
 A. Network ACLs  
@@ -1553,12 +1730,43 @@ C. AWS WAF
 D. Amazon GuardDuty  
 
 [번역]  
-회사는 최근 VPC에 Amazon RDS 인스턴스를 배포했습니다. 회사는 개인 회사 네트워크에 대한 트래픽을 제한하기 위해 상태 저장 방화벽을 구현해야 합니다. 회사에서 네트워크 트래픽을 RDS 인스턴스로 직접 제한하려면 어떤 AWS 서비스 또는 기능을 사용해야 합니까?  
+회사는 최근 VPC에 Amazon RDS 인스턴스를 배포했습니다.  
+회사는 개인 회사 네트워크에 대한 트래픽을 제한하기 위해 상태 저장 방화벽을 구현해야 합니다.  
+회사에서 네트워크 트래픽을 RDS 인스턴스로 직접 제한하려면 어떤 AWS 서비스 또는 기능을 사용해야 합니까?  
 
 A. Network ACLs  
 B. 보안 그룹  
 C. AWS WAF  
 D. Amazon GuardDuty  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+A. Network ACLs  
+
+- stateless로 인바운드, 아웃바운드 각가 제어
+- 서브넷 레벨에서의 보안 제어
+
+B. 보안 그룹  
+
+- stateful로 인바운드 허용 시 아웃바운드도 허용
+- 인스턴스 레벨에서의 보안 제어
+
+C. AWS WAF  
+
+- SQL Injection, XSS등의 보안 제어
+- 방화벽
+
+D. Amazon GuardDuty
+
+- 보안 이상 탐지
+
+</div>
+</details>
 
 ## Question #51
 
@@ -1576,6 +1784,39 @@ A. AWS Shield
 B. Amazon Macie  
 C. AWS Network Firewall  
 D. Amazon Cognito  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+A. AWS Shield  
+  
+- 방화벽(Firewall)
+- DDos 공격 방지
+  - standard: 기본 DDos 설정 가능
+  - advanced 옵션: 디테일 설정 가능
+
+B. Amazon Macie  
+
+- 기계 학습(Machine Learning)을 사용하여 Amazon S3 버킷에 저장된 민감 데이터를 `검색`, `모니터링`, `보호` 하는 서비스
+- 개인정보 식별와 같은 민감 데이터 감지, 이를 보호하기 위한 통찰 제공
+  - AWS access_key, secret_key
+  - 개인정보 등등
+
+C. AWS Network Firewall  
+
+- `VPC`에서 `네트워크 트래픽을 모니터링`하고 `네트워크 보안 정책`을 적용하는 서비스
+
+D. Amazon Cognito
+
+- `사용자 인증` 및 `엑세스 제어`를 위한 서비스
+  - 인증/인가 관리 서비스?
+
+</div>
+</details>
 
 ## Question #52
 
@@ -1596,6 +1837,34 @@ B. Amazon Lightsail
 C. AWS Global Accelerator  
 D. AWS Storage Gateway  
 
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C
+
+A. Amazon Connect  
+
+- 클라우드 기반 콜센터
+
+B. Amazon Lightsail  
+
+- `소규모 애플리케이션`을 쉽게 배포할 수 있는 `저비용 가상 서버`
+
+C. AWS Global Accelerator  
+
+- `AWS 글로벌 네트워크`를 통해 애플리케이션의 `가용성`과 `성능` 개선하는 서비스
+- `사용자 위치`에 따라 `가장 가까운 엣지 로케이션`을 통해 `트래픽 라우팅`
+- `정적 IP 주소` 사용하여 AWS 리전으로 트래픽 분산, 장애 발생 시 다른 리전으로 리다이렉션 가능
+
+D. AWS Storage Gateway
+
+- `온프라미스 스토리지`를 `AWS 클라우드에 통합`하는 `하이브리드 스토리지 서비스`
+
+</div>
+</details>
+
 ## Question #53
 
 Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?  
@@ -1613,9 +1882,40 @@ B. AWS Systems Manager
 C. AWS IAM Access Analyzer  
 D. AWS Organizations  
 
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C
+
+A. AWS Service Catalog  
+
+- `IT 서비스 카탈로그 관리`를 위한 서비스
+
+B. AWS Systems Manager  
+
+- `AWS 리소스` + `애플리케이션` `중앙 관리 서비스
+- 시스템 운영과 관련됨
+
+C. AWS IAM Access Analyzer  
+
+`IAM Access Analyzer`는 AWS `S3 버킷`, `IAM 역할`, `KMS 키`, `Lambda 함수`, `SQS 큐` 등이 `외부 엔티티와 공유`되었는지 `식별`할 수 있는 서비스.  
+Access Analyzer는 리소스 정책을 분석하여 `외부로의 공유 여부를 감지`, 이를 통해 `보안 상태 평가`에 도움을 준다.
+
+D. AWS Organizations  
+
+- `AWS 계정`을 `중앙`에서 `관리`하는 `서비스`
+- `계정 관리` 및 `관련 정책 설정`하는데 사용
+
+</div>
+</details>
+
 ## Question #54
 
-A company does not want to rely on elaborate forecasting to determine its usage of compute resources. Instead, the company wants to pay only for the resources that it uses. The company also needs the ability to increase or decrease its resource usage to meet business requirements.  
+A company does not want to rely on elaborate forecasting to determine its usage of compute resources.  
+Instead, the company wants to pay only for the resources that it uses.  
+The company also needs the ability to increase or decrease its resource usage to meet business requirements.  
 Which pillar of the AWS Well-Architected Framework aligns with these requirements?  
 
 A. Operational excellence  
@@ -1624,13 +1924,24 @@ C. Reliability
 D. Cost optimization  
 
 [번역]  
-회사는 컴퓨팅 리소스 사용량을 결정하기 위해 정교한 예측에 의존하기를 원하지 않습니다. 대신 회사는 사용하는 리소스에 대해서만 비용을 지불하기를 원합니다. 회사는 또한 비즈니스 요구 사항을 충족하기 위해 리소스 사용량을 늘리거나 줄일 수 있는 능력이 필요합니다.  
+회사는 컴퓨팅 리소스 사용량을 결정하기 위해 정교한 예측에 의존하기를 원하지 않습니다.  
+대신 회사는 사용하는 리소스에 대해서만 비용을 지불하기를 원합니다.  
+회사는 또한 비즈니스 요구 사항을 충족하기 위해 리소스 사용량을 늘리거나 줄일 수 있는 능력이 필요합니다.  
 AWS Well-Architected 프레임워크의 어떤 요소가 이러한 요구 사항에 부합합니까?  
 
 A. 운영 우수성  
 B. 보안  
 C. 신뢰성  
 D. 비용 최적화  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: D
+</div>
+</details>
 
 ## Question #55
 
@@ -1651,6 +1962,15 @@ B. 운영 우수성
 C. 성능 효율성  
 D. 신뢰성  
 
+> 
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: D
+</div>
+</details>
+
 ## Question #56
 
 A large enterprise with multiple VPCs in several AWS Regions around the world needs to connect and centrally manage network connectivity between its VPCs.  
@@ -1662,12 +1982,40 @@ C. AWS Site-to-Site VPN
 D. VPC endpoints  
 
 [번역]  
-전 세계 여러 AWS 리전에 여러 VPC가 있는 대기업은 VPC 간의 네트워크 연결을 연결하고 중앙에서 관리해야 합니다. 이러한 요구 사항을 충족하는 AWS 서비스 또는 기능은 무엇입니까?  
+전 세계 여러 AWS 리전에 여러 VPC가 있는 대기업은 VPC 간의 네트워크 연결을 연결하고 중앙에서 관리해야 합니다.  
+이러한 요구 사항을 충족하는 AWS 서비스 또는 기능은 무엇입니까?  
 
 A. AWS Direct Connect  
 B. AWS Transit Gateway  
 C. AWS Site-to-Site VPN  
 D. VPC endpoints  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+A. AWS Direct Connect  
+
+`AWS Direct Connect`은 온프레미스와 AWS간의 전용 물리적 네트워크 연결을 제공하는 서비스  
+
+B. AWS Transit Gateway  
+
+`AWS Transit Gateway`는 `VPC`와 `온프레미스` `네트워크 간의 연결`을 `중앙`에서 `관리`할 수 있는 서비스.  
+Transit Gateway를 사용하면 `여러 리전`, `여러 VPC`를 `하나의 중앙 허브`로 연결하여  
+네트워크 트래픽을 효율적으로 관리 할 수 있다.
+
+C. AWS Site-to-Site VPN  
+
+`Site-to-Site VPN`은 `온프레미스`와 `AWS` 간의 `암호화된 연결을 설정`하는 서비스
+
+D. VPC endpoints  
+
+`VPC endpoints`는 VPC private subnet 대역에서 AWS 제공하는 네트워크 통신을 통해 AWS 서비스에 접근하기 위한 엔드포인트.
+</div>
+</details>
 
 ## Question #57
 
@@ -1686,6 +2034,33 @@ B. Amazon QuickSight
 C. Amazon CloudWatch  
 D. AWS Organizations  
 
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+A. Amazon Athena  
+
+- S3에 저장된 데이터를 쿼리하기 위한 서비스
+- 비용 및 사용 데이터 분석 가능하지만 시각적 보고서 생성 기능은 없음
+
+B. Amazon QuickSight  
+
+- AWS 비용 및 사용 보고서 데이터를 사용하여 시각적 보고서 및 대시보드 생성 가능
+
+C. Amazon CloudWatch  
+
+- AWS 리소스 모니터링 및 로깅 서비스
+
+D. AWS Organizations  
+
+- 여러 계정을 중앙에서 관리하는 서비스
+
+</div>
+</details>
+
 ## Question #58
 
 Which AWS service should be used to monitor Amazon EC2 instances for CPU and network utilization?  
@@ -1702,6 +2077,34 @@ A. Amazon Inspector
 B. AWS CloudTrail  
 C. Amazon CloudWatch  
 D. AWS Config  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C
+
+A. Amazon Inspector  
+
+- EC2 인스턴스 보안 취약성을 분석하는 서비스
+
+B. AWS CloudTrail  
+
+> 직원이 나한테 한 말을 기억해보자, 선임님 CloudTrail 사용해서 API 호출 가능할까요?
+
+- AWS API 호출을 로깅하여, 누가 어떤 작업을 했는지 추적하는 서비스
+
+C. Amazon CloudWatch  
+
+- 리소스 모니터링
+
+D. AWS Config
+
+- 리소스 구성 상태 추적 및 변경 상태 모니터링
+
+</div>
+</details>
 
 ## Question #59
 
@@ -1721,6 +2124,36 @@ B. The designated AWS technical account manager(TAM)
 C. AWS infrastructure event management  
 D. AWS Professional Services  
 
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C(B도 정답에 가까움)
+
+A. AWS Abuse team  
+
+`AWS Abuse team`은 `악의적인 활동`이나 `보안 문제`에 관련된 사항을 처리하는 팀  
+아키텍처 확장과는 연관이 없는 팀임
+
+B. The designated AWS technical account manager(TAM)  
+
+`TAM`도 일상적인 기술적 조언을 제공하지만, 특정 이벤트에 대한 아키텍처 확장에 대한 구체적인 지원은  
+AWS Infrastructure Event Management가 더 적당하다
+
+C. AWS infrastructure event management  
+
+`AWS infrastructure event management`은 대규모 이벤트동안 AWS 리소스를 확장하고 관리하는데 컨설팅 제공해주는 서비스.  
+특히 고 트래픽이 예상되는 경우 AWS 리소스 최적화를 안정적으로 운영할 수 있게 도와줌.
+
+D. AWS Professional Services  
+
+`AWS Professional Services`는 장기적인 아키텍처 설계 및 마이그레이션을 위한 컨설팅 서비스로,  
+이벤트에 대한 즉각적인 지원보다는 장기 적인 지원이 맞음  
+
+</div>
+</details>
+
 ## Question #60
 
 A user wants to deploy a service to the AWS Cloud by using infrastructure-as-code (IaC) principles.  
@@ -1732,16 +2165,27 @@ C. AWS CodeCommit
 D. AWS Config  
 
 [번역]  
-사용자는 코드형 인프라(IaC) 원칙을 사용하여 AWS 클라우드에 서비스를 배포하려고 합니다. 이 요구 사항을 충족하는 데 사용할 수 있는 AWS 서비스는 무엇입니까?  
+사용자는 코드형 인프라(IaC) 원칙을 사용하여 AWS 클라우드에 서비스를 배포하려고 합니다.  
+이 요구 사항을 충족하는 데 사용할 수 있는 AWS 서비스는 무엇입니까?  
 
 A. AWS Systems Manager  
 B. AWS CloudFormation  
 C. AWS CodeCommit  
 D. AWS Config  
 
+> ✅
+
+<detail>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+</div>
+</detail>
+
 ## Question #61
 
-A company that has multiple business units wants to centrally manage and govern its AWS Cloud environments. The company wants to automate the creation of AWS accounts, apply service control policies (SCPs), and simplify billing processes.  
+A company that has multiple business units wants to centrally manage and govern its AWS Cloud environments.  
+The company wants to automate the creation of AWS accounts, apply service control policies (SCPs), and simplify billing processes.  
 Which AWS service or tool should the company use to meet these requirements?  
 
 A. AWS Organizations  
@@ -1750,12 +2194,23 @@ C. AWS Budgets
 D. AWS Trusted Advisor  
 
 [번역]  
-여러 사업부가 있는 회사는 AWS 클라우드 환경을 중앙에서 관리하고 통제하기를 원합니다. 이 회사는 AWS 계정 생성을 자동화하고 서비스 제어 정책(SCP)을 적용하고 청구 프로세스를 간소화하기를 원합니다. 회사에서 이러한 요구 사항을 충족하려면 어떤 AWS 서비스 또는 도구를 사용해야 합니까?  
+여러 사업부가 있는 회사는 AWS 클라우드 환경을 중앙에서 관리하고 통제하기를 원합니다.  
+이 회사는 AWS 계정 생성을 자동화하고 서비스 제어 정책(SCP)을 적용하고 청구 프로세스를 간소화하기를 원합니다.  
+회사에서 이러한 요구 사항을 충족하려면 어떤 AWS 서비스 또는 도구를 사용해야 합니까?  
 
 A. AWS 조직  
 B. 비용 탐색기  
 C. AWS 예산  
 D. AWS 신뢰할 수 있는 조언자  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: A
+</div>
+</details>
 
 ## Question #62
 
@@ -1777,9 +2232,21 @@ C. 클라우드 인식 및 교육
 D. 영역 보안  
 E. 애플리케이션 데이터 암호화  
 
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은:
+
+</div>
+</details>
+
 ## Question #63
 
-A company is launching an application in the AWS Cloud. The application will use Amazon S3 storage. A large team of researchers will have shared access to the data. The company must be able to recover data that is accidentally overwritten or deleted.  
+A company is launching an application in the AWS Cloud. The application will use Amazon S3 storage.  
+A large team of researchers will have shared access to the data.  
+The company must be able to recover data that is accidentally overwritten or deleted.  
 Which S3 feature should the company turn on to meet this requirement?  
 
 A. Server access logging  
@@ -1788,12 +2255,25 @@ C. S3 Lifecycle rules
 D. Encryption in transit and at rest  
 
 [번역]  
-회사가 AWS 클라우드에서 애플리케이션을 시작하고 있습니다. 애플리케이션은 Amazon S3 스토리지를 사용합니다. 대규모 연구원 팀이 데이터에 대한 공유 액세스 권한을 갖게 됩니다. 회사는 실수로 덮어쓰거나 삭제한 데이터를 복구할 수 있어야 합니다. 이 요구 사항을 충족하려면 회사에서 어떤 S3 기능을 켜야 합니까?  
+회사가 AWS 클라우드에서 애플리케이션을 시작하고 있습니다. 애플리케이션은 Amazon S3 스토리지를 사용합니다.  
+대규모 연구원 팀이 데이터에 대한 공유 액세스 권한을 갖게 됩니다.  
+회사는 실수로 덮어쓰거나 삭제한 데이터를 복구할 수 있어야 합니다.  
+이 요구 사항을 충족하려면 회사에서 어떤 S3 기능을 켜야 합니까?  
 
 A. 서버 접속 로깅  
 B. S3 버전 관리  
 C. S3 수명 주기 규칙  
 D. 전송 및 미사용 암호화  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은:
+
+</div>
+</details>
 
 ## Question #64
 
@@ -1813,6 +2293,16 @@ A. 가용 영역
 B. AWS 로컬 영역  
 C. AWS 파장  
 D. AWS 전초기지  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은:
+
+</div>
+</details>
 
 ## Question #65
 
@@ -1834,6 +2324,16 @@ B. 온프레미스 장치와 VPC의 가상 프라이빗 게이트웨이 간에 V
 C. Amazon CloudFront 배포를 사용하고 온프레미스 리소스에 가까운 콘텐츠 전송을 가속화하도록 구성합니다.  
 D. 온프레미스 데이터 센터와 AWS 간에 AWS Direct Connect 연결을 설정합니다.  
 E. Amazon CloudFront를 사용하여 온프레미스 웹 서버를 통해 제공되는 정적 웹 콘텐츠에 대한 액세스를 제한합니다.  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은:
+
+</div>
+</details>
 
 ## Question #66
 
