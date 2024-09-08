@@ -1962,7 +1962,7 @@ B. 운영 우수성
 C. 성능 효율성  
 D. 신뢰성  
 
-> 
+>
 
 <details>
 <summary>정답 보기</summary>
@@ -2237,8 +2237,25 @@ E. 애플리케이션 데이터 암호화
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은:
+정답은: B, C
 
+A. 물리적 및 환경적 통제  
+물리적  및 환경적 통제는 AWS의 단독 책임이다.  
+AWS는 자사 데이터 센터의 물리적 보안 및 온도, 습도, 전력 같은 환경 제어를 수행한다.
+
+B. 패치 관리  
+패치 관리는 공유 책임이다. AWS는 H/W와 관리형 서비스 같은 인프라를 패치하고 유지하는 책임을 지지만,  
+고객은 자신의 EC2 인스턴스에 배포한 운영체제나 애플리케이션을 패치하는 역할을 진다.
+
+C. 클라우드 인식 및 교육  
+클라우드 인식은 고객의 몫이고, 교육은 AWS의 몫 아닌가? 이건 좀 애매함
+
+D. 영역 보안
+AWS는 가용 영역에 보안을 책임 지지만, 고객은 그 영역 내에서 애플리케이션과 데이터를 보호할 책임이 있음.  
+하지만 "영역 보안" 이라는 용어는 AWS의 인프라 보안과 관련이 있음
+
+E. 애플리케이션 데이터 암호화  
+AWS가 KMS와 같은 도구를 제공하여 데이터 암호화를 지원하지만, 고객도 애플리케이션 데이터 암호화 해야함
 </div>
 </details>
 
@@ -2270,14 +2287,14 @@ D. 전송 및 미사용 암호화
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은:
-
+정답은: B
 </div>
 </details>
 
 ## Question #64
 
-A manufacturing company has a critical application that runs at a remote site that has a slow internet connection. The company wants to migrate the workload to AWS. The application is sensitive to latency and interruptions in connectivity.  
+A manufacturing company has a critical application that runs at a remote site that has a slow internet connection.  
+The company wants to migrate the workload to AWS. The application is sensitive to latency and interruptions in connectivity.  
 The company wants a solution that can host this application with minimum latency.  
 Which AWS service or feature should the company use to meet these requirements?  
 
@@ -2287,26 +2304,52 @@ C. AWS Wavelength
 D. AWS Outposts  
 
 [번역]  
-제조 회사에는 인터넷 연결 속도가 느린 원격 사이트에서 실행되는 중요한 응용 프로그램이 있습니다. 회사는 워크로드를 AWS로 마이그레이션하려고 합니다. 애플리케이션은 대기 시간과 연결 중단에 민감합니다. 회사는 대기 시간을 최소화하면서 이 애플리케이션을 호스팅할 수 있는 솔루션을 원합니다. 이러한 요구 사항을 충족하기 위해 회사에서 사용해야 하는 AWS 서비스 또는 기능은 무엇입니까?  
+제조 회사에는 인터넷 연결 속도가 느린 원격 사이트에서 실행되는 중요한 응용 프로그램이 있습니다.  
+회사는 워크로드를 AWS로 마이그레이션하려고 합니다. 애플리케이션은 대기 시간과 연결 중단에 민감합니다.  
+회사는 대기 시간을 최소화하면서 이 애플리케이션을 호스팅할 수 있는 솔루션을 원합니다.  
+이러한 요구 사항을 충족하기 위해 회사에서 사용해야 하는 AWS 서비스 또는 기능은 무엇입니까?  
 
 A. 가용 영역  
 B. AWS 로컬 영역  
 C. AWS 파장  
 D. AWS 전초기지  
 
-> ✅
+> ❌
 
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은:
+정답은: B(D가 41%)
+
+A. 가용 영역  
+
+가용 영역(Availibility zone)은 HA(가용성) 유지를 위한 서비스이지, 대기 시간 최소화를 위한 개념은 아니다.  
+또한 가용 영역은 물리적으로 떨어져있는 데이터센터의 위치를 의미하는 것으로, 원격 사이트에서 애플리케이션을 실행하려면  
+인터넷을 통해 연결해야 하기에 대기 시간 문제를 해소할 수 없다.
+
+B. AWS 로컬 영역  
+
+`AWS Local Zones`는 `AWS 리전`에서 `떨어진` `도시 근처에 배치된 인프라`로,  
+`특정 도시`에서 `낮은 대기 시간`의 `컴퓨팅 리소스를 제공`하기 위한 솔루션이다.  
+또한 OutPosts는 고객 사이트(`IDC`)에 직접 설치되는 반면, Local Zones는 특정 도시(`region 안의 특정 도시`)에 위치하는 차이가 존재.
+
+C. AWS 파장  
+
+- `AWS Wavelength`는 `5G 네트워크`에서 `매우 낮은 대기 시간`으로 APP 실행 가능한 서비스
+- `5G 네트워크에 의존`하며, `느린 인터넷 연결에는 적합하지 않음`
+
+D. AWS 전초기지
+
+- `AWS Outposts`는 AWS 인프라 자원을 고객의 IDC 센터내의 물리 장비에 설치하는 것
+- 인터넷 연결 속도에 의존하지 않고, AWS 서비스 사용을 위한 인터넷 연결도 따로 필요없음
 
 </div>
 </details>
 
 ## Question #65
 
-A company wants to migrate its applications from its on-premises data center to a VPC in the AWS Cloud. These applications will need to access on-premises resources.  
+A company wants to migrate its applications from its on-premises data center to a VPC in the AWS Cloud.  
+These applications will need to access on-premises resources.  
 Which actions will meet these requirements?  
 (Choose two.)  
 
@@ -2317,7 +2360,10 @@ D. Set up an AWS Direct Connect connection between the on-premises data center a
 E. Use Amazon CloudFront to restrict access to static web content provided through the on-premises web servers.  
 
 [번역]  
-회사는 온프레미스 데이터 센터에서 AWS 클라우드의 VPC로 애플리케이션을 마이그레이션하려고 합니다. 이러한 애플리케이션은 온프레미스 리소스에 액세스해야 합니다. 이러한 요구 사항을 충족하는 조치는 무엇입니까? (두 가지를 선택하세요.)  
+회사는 온프레미스 데이터 센터에서 AWS 클라우드의 VPC로 애플리케이션을 마이그레이션하려고 합니다.  
+이러한 애플리케이션은 온프레미스 리소스에 액세스해야 합니다.  
+이러한 요구 사항을 충족하는 조치는 무엇입니까?  
+(두 가지를 선택하세요.)  
 
 A. AWS Service Catalog를 사용하여 마이그레이션할 수 있는 온프레미스 리소스 목록을 식별합니다.  
 B. 온프레미스 장치와 VPC의 가상 프라이빗 게이트웨이 간에 VPN 연결을 생성합니다.  
@@ -2330,7 +2376,42 @@ E. Amazon CloudFront를 사용하여 온프레미스 웹 서버를 통해 제공
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은:
+정답은: B, D
+
+A. AWS Service Catalog를 사용하여 마이그레이션할 수 있는 온프레미스 리소스 목록을 식별합니다.  
+
+- AWS Service Catalog는 위 내용과 상관이 없음
+- AWS에서 `제품`을 `배포` 및 `관리`하는 `도구`
+
+B. 온프레미스 장치와 VPC의 가상 프라이빗 게이트웨이 간에 VPN 연결을 생성합니다.  
+
+![20240904_vpn.png](./img/20240904_vpn.png)
+
+> Site to Site VPN
+
+- `온프레미스`와 `AWS 네트워크`를 `연결`하기 위한 서비스
+- Virtual private gateway <--> VPN connection <--> Customer gateway
+- `AWS Site-to-Site VPN`은 네트워크와 VPC 또는 Transit Gateway 사이에 `암호화`된 `2개의 터널`을 `생성`
+- `암호화`된 `터널`을 생성하여 `트래픽`이 `인터넷`을 통해 `전송`됨
+- Virtual private gateway 대신 Transit Gateway 사용 가능
+
+C. Amazon CloudFront 배포를 사용하고 온프레미스 리소스에 가까운 콘텐츠 전송을 가속화하도록 구성합니다.  
+
+- CloudFront는 CDN로 마이그레이션이랑은 상관이 없음
+
+D. 온프레미스 데이터 센터와 AWS 간에 AWS Direct Connect 연결을 설정합니다.
+
+- `온프레미스`와 `AWS 네트워크`를 `연결`하기 위한 서비스
+- `온프레미스`와 `AWS`간의 `물리적인 전용 네트워크 연결`을 설정하는 서비스
+- Site-to-Site VPN 비교?
+  - 안정적이고 지연 시간 적음
+  - 데이터 전송 속도 더 빠름
+  - 구성 복잡함
+  - 비용도 더 비쌈
+
+E. Amazon CloudFront를 사용하여 온프레미스 웹 서버를 통해 제공되는 정적 웹 콘텐츠에 대한 액세스를 제한합니다.  
+
+- CloudFront는 CDN로 마이그레이션이랑은 상관이 없음
 
 </div>
 </details>
@@ -2346,12 +2427,42 @@ C. AWS AppSync
 D. AWS Outposts  
 
 [번역]  
-회사는 AWS 클라우드를 사용하여 완전히 관리되는 환경에서 실행되는 데스크톱 애플리케이션에 대한 보안 액세스를 제공하려고 합니다. 회사에서 이 요구 사항을 충족하려면 어떤 AWS 서비스를 사용해야 합니까?  
+회사는 AWS 클라우드를 사용하여 완전히 관리되는 환경에서 실행되는 데스크톱 애플리케이션에 대한 보안 액세스를 제공하려고 합니다.  
+회사에서 이 요구 사항을 충족하려면 어떤 AWS 서비스를 사용해야 합니까?  
 
 A. Amazon S3  
 B. Amazon AppStream 2.0  
 C. AWS AppSync  
 D. AWS Outposts  
+
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B(A가 정답으로 선택되어 있기는함?)
+
+A. Amazon S3
+
+- AWS S3는 데이터 저장 스토리지 서비스
+- 데스크톱 애플리케이션을 실행하거나 관리하는 데 필요한 기능 제공 안함
+
+B. Amazon AppStream 2.0  
+
+- `완전 관리형 애플리케이션 스트리밍 서비스`
+- 사용자는 클라우드에서 애플리케이션을 실행하고, 스트리밍을 통해 데스크톱 애플리케이션에 안전하게 엑세스 가능
+- 사용자는 어디서나 브라우저를 통해 데스크톱 어플리케이션에 접근 가능, 데이터는 클라우드에 안전하게 유지됨
+
+C. AWS AppSync  
+
+- `GraphQL API`를 `사용`하여 애플리케이션 `데이터`를 `동기화` 및 `실시간 업데이트` 하는 서비스
+
+D. AWS Outposts  
+
+- `AWS 인프라`를 `온프레미스 환경에 설치`하여 `로컬`에서 `클라우드 서비스를 사용`하는 서비스
+
+</div>
+</details>
 
 ## Question #67
 
@@ -2364,12 +2475,22 @@ C. Amazon GuardDuty
 D. AWS Direct Connect  
 
 [번역]  
-회사는 AWS 인프라에서 위협 탐지를 구현하려고 합니다. 그러나 회사는 추가 소프트웨어 배포를 원하지 않습니다. 회사에서 이러한 요구 사항을 충족하려면 어떤 AWS 서비스를 사용해야 합니까?  
+회사는 AWS 인프라에서 위협 탐지를 구현하려고 합니다. 그러나 회사는 추가 소프트웨어 배포를 원하지 않습니다.  
+회사에서 이러한 요구 사항을 충족하려면 어떤 AWS 서비스를 사용해야 합니까?  
 
 A. Amazon VPC  
 B. Amazon EC2  
 C. Amazon GuardDuty  
 D. AWS Direct Connect  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: C
+</div>
+</details>
 
 ## Question #68
 
@@ -2388,6 +2509,37 @@ B. AWS Global Accelerator
 C. Amazon Connect  
 D. AWS Outposts  
 
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+A. Amazon Aurora  
+
+- 데이터베이스 서비스(DB)
+- 엣지 로케이션이랑 상관 없음
+
+B. AWS Global Accelerator  
+
+- `AWS Global Accelerator`는 `엣지 로케이션`(edge location)을 통해 `사용자에게 가장 가까운 네트워크 경로`를 통해 `트래픽 라우팅`
+- `글로벌 사용자`에 대해서 `애플리케이션` `성능` 밎 `가용성` 개선 가능
+- `엣지 로케이션` 통해 `지연 시간 줄이고` `네트워크 속도 최적화`
+
+C. Amazon Connect  
+
+- `AWS 클라우드 기반 콜센터 서비스`
+- 음성 통화 서비스에 특화되어 있음
+
+D. AWS Outposts  
+
+- AWS 리소스를 온프레미스에 설치하여 인터넷 연결없이 AWS 리소스를 사용하는 서비스
+- 엣지 로케이션이랑 상관 없음
+
+</div>
+</details>
+
 ## Question #69
 
 A company needs to install an application in a Docker container.  
@@ -2399,12 +2551,25 @@ C. Amazon Elastic Container Service (Amazon ECS)
 D. Amazon EC2  
 
 [번역]  
-회사는 Docker 컨테이너에 애플리케이션을 설치해야 합니다. 컨테이너 호스트를 프로비저닝하고 관리할 필요가 없는 AWS 서비스는 무엇입니까?  
+회사는 Docker 컨테이너에 애플리케이션을 설치해야 합니다.  
+컨테이너 호스트를 프로비저닝하고 관리할 필요가 없는 AWS 서비스는 무엇입니까?  
 
 A. AWS Fargate  
 B. Amazon FSx for Windows File Server  
 C. Amazon Elastic Container Service (Amazon ECS)  
 D. Amazon EC2  
+
+> ✅
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: A
+
+AWS Fargate는 완전 관리형 컨테이너 오케스트레이션 서비스로,  
+인스턴스를 프로비저닝 하는 과정없이 컨테이너르 운영이 가능함.
+</div>
+</details>
 
 ## Question #70
 
@@ -2422,6 +2587,36 @@ A. AWS Systems Manager
 B. AWS IAM Access Analyzer  
 C. AWS Trusted Advisor  
 D. Amazon GuardDuty  
+
+> ❌
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+
+A. AWS Systems Manager  
+
+- `AWS System Manager`는 `인프라 관리를 위한 통합관리 도구`
+- EC2 인스턴스, 애플리케이션 관리 및 자동화에 중점
+
+B. AWS IAM Access Analyzer  
+
+- `엑세스 정책 분석`
+- 리소스가 외부 엔터티와 공유 될 수 있는지 여부 확인
+
+C. AWS Trusted Advisor  
+
+- AWS 계정에서 `비용 절감`, `성능 최적화`, `보안 문제` 등을 검사 및 권장 사항 제공
+- IAM 정책 분석에는 맞지 않음 
+
+D. Amazon GuardDuty  
+
+- 위협 탐지 서비스
+- 악의적인 활동 감지
+
+</div>
+</details>
 
 ## Question #71
 
