@@ -3,14 +3,53 @@
 > ⭐️ 업무 진행 or 평소에 정리해야 하는 개념을 정리하기 위한 리포지토리 입니다.  
 > 🔥 공부 및 기록을 위한 목적으로 잘못 된 내용이 존재할 수 있으니 참고 부탁드립니다.
 
-😃 해당 리포지토리의 모든 내용은 [기록하고, 복기하고](https://sw-ym.tistory.com) 블로그에 함께 기재됩니다.  
-추가적인 질문 혹은 연락은 <youngmin1085@gmail.com> 로 연락 부탁드리겠습니다.
-
-## ☕ Java
+😃 해당 리포지토리의 내용 중 오타 혹은 잘못된 내용이 존재할 수 있습니다.  
+잘못된 내용 or 추가적인 질문 관련 연락은 <youngmin1085@gmail.com>로 연락 부탁드립니다.
 
 > 정리 완료 : ✅  
 > 정리 필요 : ❌  
 > 정리 진행 : 🔥
+
+## ☁️ AWS(Amzon Web Service)
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md) | ✅ |
+| [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md) | ✅ |
+| [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md) | ✅ |
+| [[AWS] IAM 기초](./AWS/iam_basic/README.md) | ✅ |
+| [[AWS] 가상화란?](./AWS/virtualization/README.md) | ✅ |
+| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ✅ |
+| [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
+| [[AWS] EC2에 Attatched 된 보안 그룹 확인 시 사용하는 명령어](./AWS/ec2_security_group/README.md) | ✅ |
+| [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | ✅ |
+| [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
+| [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
+| [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus/README.md) | ✅ |
+| [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md) | ✅ |
+| [[AWS] ECS Task Role vs Execution Role 차이 및 AWSServiceRoleForECS](./AWS/ecs_task_role/README.md) | ✅ |
+| [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 방법 정리](./AWS/create_vpc_etc/README.md) | ✅ |
+| [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ✅ |
+| [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md) | ✅ |
+| [[AWS] ECS란?](./AWS/ecs_ec2_deploy_type/README.md) | 🔥 |
+| [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md) | 🔥 |
+| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
+| [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
+| [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
+| [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
+| [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
+| [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
+
+## 🌫️ AWS Practitional 자격증
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[AWS] examtopics 덤프 문제 풀이 및 해설](./Certification/aws/practitional/examtopics/README.md) | 🔥 |
+| [[AWS] 모듈1: AMAZON WEB SERVICES 소개](./Certification/aws/practitional/module_01/README.md) | ✅ |
+| [[AWS] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | ✅ |
+| [[AWS] 모듈3: 글로벌 인프라 및 신뢰성](./Certification/aws/practitional/module_03/README.md) | 🔥 |
+
+## ☕ Java
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -50,44 +89,6 @@
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC/README.md) | ❌ |
 | [[Spring] DI(Dependency Injection)란?](./Spring/DI/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
-
-## ☁️ AWS(Amzon Web Service)
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md) | ✅ |
-| [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md) | ✅ |
-| [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md) | ✅ |
-| [[AWS] IAM 기초](./AWS/iam_basic/README.md) | ✅ |
-| [[AWS] 가상화란?](./AWS/virtualization/README.md) | ✅ |
-| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md) | ✅ |
-| [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md) | ✅ |
-| [[AWS] EC2에 Attatched 된 보안 그룹 확인 시 사용하는 명령어](./AWS/ec2_security_group/README.md) | ✅ |
-| [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | ✅ |
-| [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
-| [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
-| [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus/README.md) | ✅ |
-| [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md) | ✅ |
-| [[AWS] ECS Task Role vs Execution Role 차이 및 AWSServiceRoleForECS](./AWS/ecs_task_role/README.md) | ✅ |
-| [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 방법 정리](./AWS/create_vpc_etc/README.md) | ✅ |
-| [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ✅ |
-| [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md) | ✅ |
-| [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md) | ✅ |
-| [[AWS] ECS CI/CD 파이프라인 구성기](./AWS/ecs_cicd/README.md) | ❌ |
-| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
-| [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
-| [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
-| [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
-| [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
-| [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
-
-## 🌫️ AWS Practitional 자격증
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[AWS] examtopics 덤프 문제 풀이 및 해설](./Certification/aws/practitional/examtopics/README.md) | 🔥 |
-| [[AWS] 모듈1: AMAZON WEB SERVICES 소개](./Certification/aws/practitional/module_01/README.md) | ✅ |
-| [[AWS] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | ✅ |
 
 ## 🐳 Docker
 
