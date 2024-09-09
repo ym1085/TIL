@@ -842,7 +842,7 @@ B. AWS IAM Access Analyzer
 C. AWS Trusted Advisor  
 
 - AWS 계정에서 `비용 절감`, `성능 최적화`, `보안 문제` 등을 검사 및 권장 사항 제공
-- IAM 정책 분석에는 맞지 않음 
+- IAM 정책 분석에는 맞지 않음
 
 D. Amazon GuardDuty  
 
@@ -881,22 +881,37 @@ D. AWS Snowball Edge
 정답은: D
 
 A. AWS IoT Core
-  
+
+- `IOT 장치 데이터`를 `실시간`으로 `처리`하는데 적합
+- `인터넷 없는 환경` -> 사용 못함
+
 B. Amazon Lightsail
+
+- `가상 서버`, 스토리지, 네트워크 등 웹 애플리케이션 구축을 위한 서비스
+- 데이터 전송과는 무관
 
 C. AWS Storage Gateway
   
+- `온프레미스`와 `AWS 클라우드 간` `데이터 전송`을 위한 스토리지 서비스
+- 로컬에서 데이터 처리 하는 기능은 제공 안함
+- `하이브리드 클라우드 환경`
+  - 클라우드 완전 이관 없이, 일부 데이터 온프라미스에 유지 + 필요 데이터 AWS 전송 가능
+- `데이터 전송 최적화`
+  - 데이터 압축 + 효율적으로 전송하여 비용을 줄이고 전송 시간 최소화
+
 D. AWS Snowball Edge  
 
-- 인터넷 연결이 없거나 제한된 환경에서 데이터를 수집, 처리 및 저장 하도록 설계된 물리적 장치
-- On-premise에서 
+- `인터넷 연결이 없거나` `제한된 환경`에서 `데이터`를 `수집`, `처리` 및 `저장` 하도록 설계된 `물리적 장치`
+- `On-premise`에서 `AWS`로 `대규모 데이터를 이관`할 때 사용되는 `Snowball`
+- `대규모 데이터`를 `전용선`이나, `VPN`로 옮길 경우 -> `비용`과 `시간`이 어마 무시하게 발생한다
 
 </div>
 </details>
 
 ## Question #72
 
-A retail company needs to build a highly available architecture for a new ecommerce platform. The company is using only AWS services that replicate data across multiple Availability Zones.  
+A retail company needs to build a highly available architecture for a new ecommerce platform.  
+The company is using only AWS services that replicate data across multiple Availability Zones.  
 Which AWS services should the company use to meet this requirement?  
 (Choose two.)  
 
@@ -907,7 +922,9 @@ D. Amazon DynamoDB
 E. Amazon Redshift  
 
 [번역]  
-소매 회사는 새로운 전자 상거래 플랫폼을 위한 고가용성 아키텍처를 구축해야 합니다. 이 회사는 여러 가용 영역에서 데이터를 복제하는 AWS 서비스만 사용하고 있습니다. 회사는 이 요구 사항을 충족하기 위해 어떤 AWS 서비스를 사용해야 합니까? (두 가지를 선택하세요.)  
+소매 회사는 새로운 전자 상거래 플랫폼을 위한 고가용성 아키텍처를 구축해야 합니다.  
+이 회사는 여러 가용 영역에서 데이터를 복제하는 AWS 서비스만 사용하고 있습니다.  
+회사는 이 요구 사항을 충족하기 위해 어떤 AWS 서비스를 사용해야 합니까? (두 가지를 선택하세요.)  
 
 A. Amazon EC2  
 B. Amazon Elastic Block Store (Amazon EBS)  
@@ -915,12 +932,38 @@ C. Amazon Aurora
 D. Amazon DynamoDB  
 E. Amazon Redshift  
 
-> 
+> ❌
 
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
+정답은: C, D
+
+A. Amazon EC2  
+
+- `EC2` 자체는 `고가용성`을 `제공하지 않음`
+- EC2를 여러 가용영역에 배치는 가능하나, EC2 자체가 데이터를 복사하지는 않음
+
+B. Amazon Elastic Block Store (Amazon EBS)  
+
+- `EBS`는 기본적으로 `단일 가용 영역`에서 `작동`
+- `EBS 스냅샷 사용`을 통해 `백업 가능`하나, 가용성이랑은 상관 없음
+
+C. Amazon Aurora  
+
+- `다중 가용 영역`(AZ)에 `데이터 자동 복제`하여 가용성 보장
+- DB 인스턴스의 AZ에 장애가 생겨도 다른 AZ에 복제된 데이터를 통해 가용성 보장
+- Aurora는 데이터 손실 없이 자동으로 장애 복구
+
+D. Amazon DynamoDB  
+
+- `다중 가용 영역`(AZ)에 `데이터 자동 복제`하는 `NoSQL DB`
+- DB 인스턴스의 AZ에 장애가 생겨도 다른 AZ에 복제된 데이터를 통해 가용성 보장
+
+E. Amazon Redshift
+
+- `데이터웨어하우스 서비스`로, 다중 AZ 복제 및 고가용성 기능 제공 안함
+- 고가용성 필요한 경우, 클러스터를 다중 노드로 구성 가능하나 위 내용과 맞지 않음
 
 </div>
 </details>
@@ -942,13 +985,12 @@ B. 신축성
 C. 신뢰성  
 D. 내구성  
 
-> 
+> ✅
 
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
-
+정답은: B
 </div>
 </details>
 
@@ -969,13 +1011,12 @@ B. AWS Regions
 C. AWS 조직  
 D. Edge locations  
 
-> 
+> ✅
 
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
-
+정답은: C
 </div>
 </details>
 
@@ -996,12 +1037,33 @@ B. AWS 쉴드
 C. AWS 보안 허브  
 D. AWS 키 관리 서비스(AWS KMS)  
 
-> 
+> ✅
 
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
+정답은: D
+
+A. Amazon GuardDuty  
+
+- 이상 동작 탐지
+
+B. AWS 쉴드  
+
+- DDOs 방지를 위해 사용
+
+C. AWS 보안 허브  
+
+- `AWS 계정` `전반`의 `보안 상태` `중앙 모니터링` 및 `분석` 서비스
+- AWS 보안 서비스를 통합하여 보안 상태 평가
+
+D. AWS 키 관리 서비스(AWS KMS)  
+
+> Key Management Service
+
+- `데이터`를 `암호화` 하고 `관리`하는 `완전 관리형 키 관리 서비스`
+- `미사용 데이터`를 `암호화` 하는데 `사용할 키`를 `생성`, `관리`, `제어` 할 수 있음
+- 즉, 데이터 암호화를 위해 사용
 
 </div>
 </details>
@@ -1021,15 +1083,15 @@ AWS 클라우드 사용의 장점은 무엇입니까? (두 가지를 선택하�
 A. 모든 AWS 서비스에 대한 100% 서비스 수준 계약(SLA)  
 B. 필요에 따라 조정되는 컴퓨팅 용량  
 C. 코드 개발을 위한 AWS 지원 가용성  
-D. 보안 강화 E. 비용 및 복잡성 증가
+D. 보안 강화
+E. 비용 및 복잡성 증가
 
-> 
+> ✅
 
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
-
+정답은: B, D
 </div>
 </details>
 
@@ -1043,15 +1105,34 @@ B. Tag the objects in the S3 bucket.
 C. Use security groups.  
 D. Use network ACLs.
 
-사용자가 Amazon S3에 개체를 저장하고 있습니다. 사용자는 규정 준수 의무를 충족하기 위해 개체에 대한 액세스를 제한해야 합니다.  
+사용자가 Amazon S3에 객체를 저장하고 있습니다. 사용자는 규정 준수 의무를 충족하기 위해 개체에 대한 액세스를 제한해야 합니다.  
 이 요구 사항을 충족하려면 어떻게 해야 하나요?  
 
-> 
+> ✅
 
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
+정답은: B
+
+A. Use AWS Secrets Manager.  
+
+- `비밀번호`, `API 키`, `DB 자격증명` 같은 내용을 `관리`하는 서비스
+- 객체 접근 권한 제한과 상관 없음
+
+B. Tag the objects in the S3 bucket.  
+
+- `S3 객체`에 `태그 지정` 후 `해당 태그 기반`으로 `정책 설정`하여 `엑세스 제어 가능`
+- IAM 정책이나 S3 버킷 정책에서 태그 활용해, 특정 객체 접근 제어 가능
+
+C. Use security groups.  
+
+- 상관 없음, EC2의 방화벽
+
+D. Use network ACLs.
+
+- Subnet 수준의 방화벽
+- 낮은 번호 순서대로, 규칙 평가
 
 </div>
 </details>
@@ -1066,14 +1147,6 @@ B. Amazon Comprehend
 C. AWS Glue  
 D. Amazon Rekognition
 
-<details>
-<summary>정답 보기</summary>
-<div markdown="1">
-정답은: 
-
-</div>
-</details>
-
 [번역]
 한 회사가 비디오 파일과 오디오 파일을 원본 형식에서 스마트폰, 태블릿 및 웹 브라우저에서 재생할 수 있는 형식으로 변환하려고 합니다.
 이 요구 사항을 충족할 AWS 서비스는 무엇입니까?
@@ -1083,10 +1156,32 @@ B. Amazon Comprehend
 C. AWS Glue  
 D. Amazon Rekognition
 
+> ✅
+
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
+정답은: A
+
+A. Amazon Elastic Transcoder  
+
+- 미디어 파일(비디오 or 오디오) -> 포맷 변환(스마트폰, 태블릿, web 실행 가능한) -> AWS 서비스
+- `미디어 파일` -> `다양한 출력 형식으로 자동 변환` -> `호환성 보장`
+
+B. Amazon Comprehend  
+
+- `자연어 처리 서비스`
+- 텍스트에서 의미를 분석하는데 사용
+
+C. AWS Glue  
+
+- `ETL 작업 자동화`하는 `데이터 통합 서비스`
+- 데이터 전/후처리에 사용
+
+D. Amazon Rekognition
+
+- `이미지` 및 `비디오` `분석 서비스`
+- 객체 인식, 얼굴 인식
 
 </div>
 </details>
@@ -1110,11 +1205,12 @@ C. 성능 및 비용 최적화
 D. 데이터의 자동화된 스냅샷  
 E. 교차 리전 복제
 
+> ✅
+
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: 
-
+정답은: A, C
 </div>
 </details>
 
@@ -1129,14 +1225,6 @@ B. Consolidated billing
 C. Savings Plans  
 D. AWS Budgets
 
-<details>
-<summary>정답 보기</summary>
-<div markdown="1">
-정답은: 
-
-</div>
-</details>
-
 [번역]
 한 회사에 여러 부서가 있습니다. 각 부서는 자체 애플리케이션에 대한 별도의 AWS 계정을 가지고 있습니다.  
 회사는 결제를 간소화하기 위해 모든 AWS 비용을 단일 청구서에 포함하길 원하지만, 각 부서에서 발생하는 비용을 알고 싶어 합니다.  
@@ -1146,6 +1234,13 @@ A. AWS 비용 및 사용 보고서
 B. 통합 청구  
 C. Savings Plans  
 D. AWS 예산
+
+<details>
+<summary>정답 보기</summary>
+<div markdown="1">
+정답은: B
+</div>
+</details>
 
 ## Question 81
 
@@ -1166,18 +1261,19 @@ B. AWS 예산
 C. AWS Trusted Advisor  
 D. 비용 탐색기  
 
->  
+> ✅  
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
 ## Question 82
 
-A company wants to eliminate the need to guess infrastructure capacity before deployments. The company also wants to spend its budget on cloud resources only as the company uses the resources.  
+A company wants to eliminate the need to guess infrastructure capacity before deployments.  
+The company also wants to spend its budget on cloud resources only as the company uses the resources.  
 Which advantage of the AWS Cloud matches the company's requirements?  
 
 A. Reliability  
@@ -1186,7 +1282,8 @@ C. Economies of scale
 D. Pay-as-you-go pricing  
 
 [번역]  
-한 회사는 배포 전에 인프라 용량을 추측할 필요성을 없애고 싶어 합니다. 또한 회사는 클라우드 리소스를 사용할 때만 비용을 지불하기 원합니다.  
+한 회사는 배포 전에 인프라 용량을 추측할 필요성을 없애고 싶어 합니다.  
+또한 회사는 클라우드 리소스를 사용할 때만 비용을 지불하기 원합니다.  
 이 회사의 요구 사항에 맞는 AWS 클라우드의 이점은 무엇입니까?  
 
 A. 신뢰성  
@@ -1194,18 +1291,19 @@ B. 글로벌 범위
 C. 규모의 경제  
 D. 사용한 만큼 지불하는 가격 책정  
 
->  
+> ✅  
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
 ## Question 83
 
-Which AWS service supports a hybrid architecture that gives users the ability to extend AWS infrastructure, AWS services, APIs, and tools to data centers, co-location environments, or on-premises facilities?  
+Which AWS service supports a hybrid architecture that gives users the ability to extend AWS infrastructure,  
+AWS services, APIs, and tools to data centers, co-location environments, or on-premises facilities?  
 
 A. AWS Snowmobile  
 B. AWS Local Zones  
@@ -1220,18 +1318,51 @@ B. AWS Local Zones
 C. AWS Outposts  
 D. AWS Fargate  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. AWS Snowmobile
+
+- 대용량 데이터 AWS 이관 시 사용
+- 전용 회선, VPN 사용하면 시간 + 비용 어마무시하게 걸림
+
+B. AWS Local Zones  
+
+- `특정 지역`에서 `AWS 서비스`를 `저지연`으로 `제공하기 위한 인프라`
+- 특정 도시나 지역에 있는 사용자를 위한 것으로, `온프레미스와의 직접 연결은 아님`
+- `실시간 온라인 게임`, `실시간 스트리밍 VR/AR`, `실시간 금융 거래 시스템`
+
+C. AWS Outposts  
+
+- `AWS 서비스`를 `온프레미스`에서 `Public 환경과 일관되게 제공`하기 위한 `인프라 환경`
+- `AWS`에서 `설치`, `모니터링`, `패치`, `업데이트` `지원`하는 완전 관리형 인프라
+- AWS 컴퓨팅, 스토리지, DB 등 서비스가 온프레미스에 있는 Outposts 로컬에서 실행
+  - Compute: EC2, ECS, EKS
+  - Storage: EBS, S3
+  - DB: RDS
+  - 분석: EMR
+- 초기 42U의 랙 형태로 제공(최대 96개 랙)
+  - 랙: 서버 장비를 수납하는 선반 같은 구조물
+  - 42U랙: 높이가 42U인 랙 의미
+- 21년에 제한된 장소에서 필요한 용량에 맞춰 제공 가능하도록 1U/2U 랙 마운트 가능한 서버(소형 폼팩터: 최대 6대)로도 제공 예정
+- 결론은 On-Premise에서 AWS 서비스를 사용하기 위해 OutPosts 랙 사용?
+
+D. AWS Fargate  
+
+- Serverless 컴퓨팅 서비스로, 사용자가 직접 프로비저닝 및 서버 관리 필요없음
+- Application에 좀 더 집중하고, 인프라의 관리는 AWS에 위임하는 경우 사용
+
 </div>  
 </details>
 
 ## Question 84
 
-A company has a physical tape library to store data backups. The tape library is running out of space. The company needs to extend the tape library's capacity to the AWS Cloud.  
+A company has a physical tape library to store data backups. The tape library is running out of space.  
+The company needs to extend the tape library's capacity to the AWS Cloud.  
 Which AWS service should the company use to meet this requirement?  
 
 A. Amazon Elastic Block Store (Amazon EBS)  
@@ -1240,7 +1371,8 @@ C. Amazon Elastic File System (Amazon EFS)
 D. AWS Storage Gateway  
 
 [번역]  
-한 회사가 데이터 백업을 저장하기 위해 물리적 테이프 라이브러리를 사용하고 있습니다. 테이프 라이브러리의 공간이 부족해졌습니다. 회사는 AWS 클라우드로 테이프 라이브러리의 용량을 확장해야 합니다.  
+한 회사가 데이터 백업을 저장하기 위해 물리적 테이프 라이브러리를 사용하고 있습니다.  
+테이프 라이브러리의 공간이 부족해졌습니다. 회사는 AWS 클라우드로 테이프 라이브러리의 용량을 확장해야 합니다.  
 이 요구 사항을 충족하기 위해 회사에서 사용해야 하는 AWS 서비스는 무엇입니까?  
 
 A. Amazon Elastic Block Store (Amazon EBS)  
@@ -1248,18 +1380,26 @@ B. Amazon S3
 C. Amazon Elastic File System (Amazon EFS)  
 D. AWS Storage Gateway  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+D. AWS Storage Gateway  
+
+- `온프레미스 스토리지`와 `AWS`의 `스토리지를 연동`하는 서비스
+- 특히 `테이프 라이브러리의 용량`을 `클라우드`로 `확장`하는 `기능 제공`
+- `테이프 가상화 기능`을 통해 `기존 온프레미스 테이프 백업`을 `AWS 클라우드 가상 테이프로 확장 가능`
+
 </div>  
 </details>
 
 ## Question 85
 
-An online retail company has seasonal sales spikes several times a year, primarily around holidays. Demand is lower at other times. The company finds it difficult to predict the increasing infrastructure demand for each season.  
+An online retail company has seasonal sales spikes several times a year, primarily around holidays.  
+Demand is lower at other times. The company finds it difficult to predict the increasing infrastructure demand for each season.  
 Which advantages of moving to the AWS Cloud would MOST benefit the company? (Choose two.)  
 
 A. Global footprint  
@@ -1269,7 +1409,8 @@ D. AWS shared responsibility model
 E. Pay-as-you-go pricing  
 
 [번역]  
-한 온라인 소매 회사는 1년에 여러 차례 주로 휴일에 계절별 판매 급증이 있습니다. 다른 시기에는 수요가 더 낮습니다. 회사는 각 시즌마다 증가하는 인프라 수요를 예측하는 것이 어렵다고 생각합니다.  
+한 온라인 소매 회사는 1년에 여러 차례 주로 휴일에 계절별 판매 급증이 있습니다. 다른 시기에는 수요가 더 낮습니다.  
+회사는 각 시즌마다 증가하는 인프라 수요를 예측하는 것이 어렵다고 생각합니다.  
 AWS 클라우드로 이동하는 것의 어떤 장점이 이 회사에 가장 큰 도움이 될까요? (두 개를 선택하세요.)  
 
 A. 글로벌 범위  
@@ -1278,12 +1419,28 @@ C. AWS 서비스 할당량
 D. AWS의 공동 책임 모델  
 E. 사용한 만큼 지불하는 가격 책정  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은:B, E
+
+A. Global footprint  
+
+- AWS 데이터 센터가 전세계에 분포해 있는 것을 의미
+- 계절별 인프라 수요 변동에는 영향이 없음
+
+C. AWS service quotas  
+
+- AWS에서 사용할 수 있는 리소스의 한계 정의
+- 계절별 인프라 수요 변동에는 영향이 없음
+
+D. AWS shared responsibility model  
+
+- AWS와 고객이 각각 보안과 규정 준수에 대한 책임 분담 의미
+- 계절별 인프라 수요 변동에는 영향이 없음
+
 </div>  
 </details>
 
@@ -1304,12 +1461,34 @@ B. Amazon Kendra
 C. Amazon Rekognition  
 D. Amazon Connect  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. Amazon Polly  
+
+- `Amazon Polly`는 `텍스트`를 `실감나는 음성으로 변환`해주는 서비스
+- `음성 합성 기능`인 TTS(Text-To-Speech)를 통해 `텍스트를 읽어주는 서비스` 만들 수 있음
+
+B. Amazon Kendra  
+
+- `엔터프라이즈 검색 엔진`
+- 문서 및 데이터 검색 가능
+- OpenSearch도 있고, Kendra도 있고
+
+C. Amazon Rekognition  
+
+- `이미지` 및 `비디오 분석 서비스`
+- `객체 인식`, `얼굴 인식`
+
+D. Amazon Connect  
+
+- `클라우드 기반 고객 센터` 서비스
+- 전화 통화 및 고객 지원 제공
+
 </div>  
 </details>
 
@@ -1323,19 +1502,30 @@ C. VPC endpoint services
 D. NAT gateway  
 
 [번역]  
-Amazon VPC에서 인바운드 및 아웃바운드 트래픽에 대한 정보를 캡처하는 데 사용할 수 있는 AWS 서비스 또는 도구는 무엇입니까?  
+Amazon VPC에서 인바운드 및 아웃바운드 트래픽에 대한 `정보를 캡처`하는 데 사용할 수 있는 AWS 서비스 또는 도구는 무엇입니까?  
 
 A. VPC 흐름 로그  
 B. Amazon Inspector  
 C. VPC 엔드포인트 서비스  
 D. NAT 게이트웨이  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. VPC 흐름 로그(VPC Flow Log)
+
+- `AWS VPC`의 `인바운드` 및 `아웃바운드` `트래픽`에 대한 `정보 캡처`
+- 이 로그는 VPC ENI(Elastic Network Interface)에 흐르는 트래픽의 메타 데이터 기록
+- 이를 통해 `보안 분석` 및 `문제 해소` 가능
+
+B. Amazon Inspector
+
+- AWS 리소스 `보안 취약점 분석` 및 `모범 사례 검토`
+
 </div>  
 </details>
 
@@ -1358,12 +1548,12 @@ B. 동일한 AWS 리전 내의 두 개의 별도 가용 영역에 EC2 인스턴�
 C. 하나의 EC2 인스턴스를 온프레미스에, 다른 하나를 AWS 리전에 배치한 후, AWS VPN 연결을 사용하여 연결합니다.  
 D. 두 EC2 인스턴스를 전용 대역폭을 위한 배치 그룹에 배치합니다.  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
@@ -1386,6 +1576,15 @@ C. AWS에 요청하는 모바일 폰에서 실행되는 애플리케이션을 �
 D. 회사가 사용자를 IAM 그룹에 추가해야 할 때  
 E. 사용자가 회사 네트워크에서 인증되고 두 번째로 로그인하지 않고 AWS를 사용하고 싶을 때
 
+> ✅
+
+<details>  
+<summary>정답 보기</summary>  
+<div markdown="1">  
+정답은: B, D
+</div>  
+</details>
+
 ## Question 90
 
 Which AWS services should a company use to read and write data that changes frequently? (Choose two.)  
@@ -1405,12 +1604,39 @@ C. AWS Snowball
 D. Amazon Redshift  
 E. Amazon Elastic File System (Amazon EFS)  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B, E
+
+A. Amazon S3 Glacier  
+
+- `장기 보관용 아카이브 스토리지`
+- 자주 접근하지 않는 데이터 저장에 적합
+
+B. Amazon RDS  
+
+- 자주 변경되는 데이터 읽고 쓰는 기능 제공
+
+C. AWS Snowball  
+
+- 온프레미스 대량 데이터 AWS 마이그레이션 시 사용
+- 데이터 빈번한 I/O와는 상관 없음
+
+D. Amazon Redshift  
+
+- `데이터 웨어하우스 서비스`
+- `대량 데이터` `분석` 및 `처리` 적합
+- 즉, 데이터 분석에 적합
+
+E. Amazon Elastic File System (Amazon EFS)  
+
+- 자주 변경되는 파일을 읽고 쓰는 기능 제공
+- 다중 EC2 동시 접근 가능
+- 자동 확장 및 고가용성 지원
+
 </div>  
 </details>
 
@@ -1431,12 +1657,30 @@ B. AWS Systems Manager
 C. AWS KMS  
 D. AWS Config  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. AWS Certificate Manager  
+
+- SSL/TLS 인증서 관리 및 배포 서비스
+
+B. AWS Systems Manager  
+
+- 리소스 관리 및 자동화 서비스
+
+C. AWS KMS  
+
+- 암호화 키를 생성 및 관리하는 서비스
+- 데이터를 암호화하기 위해 사용하는 서비스
+
+D. AWS Config  
+
+- `AWS 리소스 구성 변경 추적` 및 `평가`하는 서비스
+
 </div>  
 </details>
 
@@ -1459,18 +1703,19 @@ C. AWS Global Accelerator
 D. AWS Wavelength  
 E. Amazon VPC  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B, C
 </div>  
 </details>
 
 ## Question 93
 
-A company is operating several factories where it builds products. The company needs the ability to process data, store data, and run applications with local system interdependencies that require low latency.  
+A company is operating several factories where it builds products.  
+The company needs the ability to process data, store data, and run applications with local system interdependencies that require low latency.  
 Which AWS service should the company use to meet these requirements?  
 
 A. AWS IoT Greengrass  
@@ -1479,7 +1724,8 @@ C. AWS Outposts
 D. AWS Snowball Edge  
 
 [번역]  
-한 회사가 여러 공장에서 제품을 제작하고 있습니다. 회사는 데이터를 처리하고, 데이터를 저장하며, 낮은 지연 시간이 필요한 로컬 시스템 상호 의존성을 가진 애플리케이션을 실행할 수 있는 능력이 필요합니다.  
+한 회사가 여러 공장에서 제품을 제작하고 있습니다.  
+회사는 데이터를 처리하고, 데이터를 저장하며, 낮은 지연 시간이 필요한 로컬 시스템 상호 의존성을 가진 애플리케이션을 실행할 수 있는 능력이 필요합니다.  
 이 요구 사항을 충족하기 위해 회사에서 사용해야 하는 AWS 서비스는 무엇입니까?  
 
 A. AWS IoT Greengrass  
@@ -1487,12 +1733,12 @@ B. AWS Lambda
 C. AWS Outposts  
 D. AWS Snowball Edge  
 
->  
+> ❌ : snowball Edge인 줄 알았는데?
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -1513,12 +1759,12 @@ B. 모든 애플리케이션 기능을 처리할 수 있는 단일 애플리케�
 C. 실패 가능성을 줄이기 위해 적은 반복으로 큰 변화를 만듭니다.  
 D. 워크로드를 분할하여 단일체 아키텍처를 피합니다.  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
@@ -1541,12 +1787,16 @@ B. 성능 효율성
 C. 운영 우수성  
 D. 신뢰성  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+Operational excellence:
+운영 우수성은 지속적인 개선과 운영의 효율성을 강조합니다. 이 기둥은 구성 요소의 정기적 업데이트와 작고 되돌릴 수 있는 변경을 통해  
+운영 프로세스를 최적화하고, 위험을 줄이며, 운영 효율성을 향상시키는 것을 목표로 합니다. 이를 통해 문제 발생 시 신속한 복구와 지속적인 개선이 가능해집니다.
 </div>  
 </details>
 
@@ -1567,12 +1817,12 @@ B. 보안 그룹
 C. AWS Trusted Advisor  
 D. 가상 사설 게이트웨이  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
@@ -1595,12 +1845,34 @@ B. 선불 예약 인스턴스 일부
 C. 전용 인스턴스  
 D. 주문형 인스턴스  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. All Upfront Reserved Instances  
+
+- `예약 인스턴스`
+- 장기간 EC2 인스턴스 예약 + 비용 절감
+- 전체 예약 비용 선불 지불
+
+B. Partial Upfront Reserved Instances  
+
+- `부분 예약 인스턴스`
+- 일부 비용 선불 나머지 시간당 요금 지불
+- 전체 예약보다는 비용 비쌈
+
+C. Dedicated Instances  
+
+- 전용 호스트 인스턴스, 가상화 서버가 아닌 호스팅 서버 자체 대여
+- 상당히 비쌈
+
+D. On-Demand Instances  
+
+- 온디멘드, 사용한 만큼 비용 지불
+
 </div>  
 </details>
 
@@ -1621,12 +1893,12 @@ B. Amazon Inspector
 C. Amazon GuardDuty  
 D. Amazon Detective  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
@@ -1647,12 +1919,12 @@ B. 운영 우수성
 C. 성능 효율성  
 D. 비용 최적화  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
@@ -1673,12 +1945,12 @@ B. 네트워크 ACL
 C. 트래픽 미러링  
 D. 인터넷 게이트웨이  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
