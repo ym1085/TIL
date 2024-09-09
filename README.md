@@ -48,7 +48,7 @@
 | [[AWS] examtopics 51 - 100](./Certification/aws/practitional/examtopics/51-100/README.md) | 🔥 |
 | [[AWS] 모듈1: AMAZON WEB SERVICES 소개](./Certification/aws/practitional/module_01/README.md) | ✅ |
 | [[AWS] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | ✅ |
-| [[AWS] 모듈3: 글로벌 인프라 및 신뢰성](./Certification/aws/practitional/module_03/README.md) | 🔥 |
+| [[AWS] 모듈3: 글로벌 인프라 및 신뢰성](./Certification/aws/practitional/module_03/README.md) | ✅ |
 
 ## 📉 AWS basics explained in an easy to understand way
 
