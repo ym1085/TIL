@@ -3,6 +3,51 @@
 > AWS 테스트 계정에서 IAM, ECS, CI/CD 구성을 차례대로 구성해보자  
 > VPC 생성의 경우 [해당 링크](https://github.com/ym1085/TIL-Category/blob/master/AWS/create_vpc_etc/README.md)을 참고 하면된다, 이번에는 CI/CD 테스트이기에 default vpc 사용
 
+## 들어가기에 앞서 특이사항 검토
+
+### Blue/Green 배포를 위해 기존 ELB 설정?
+
+<img src="./img/ecs_nlb_alb.png" width="550px">
+
+```shell
+# 검토 내용 : NLB 사용 시 배포 타입 문의
+# 가능 여부 : NLB 사용시 CodeDeployDefault.ECSAllAtOnce 옵션만 지원, Canary, Linear를 위해 ALB 사용 필요
+# 참고 자료 : https://docs.aws.amazon.com/ko_kr/AmazonECS/latest/developerguide/deployment-type-bluegreen.html
+Q. CodeDeploy를 사용하여 ECS Fargate 배포 프로세스를 구성하는 중 문의 사항 존재  
+NLB를 사용하는 경우 'CodeDeployDefault.ECSAllAtOnce' 배포 구성만이 지원되는 것으로 파악을 하였는데,  
+NLB에서 Canary, Linear 배포 방식을 사용할 수 있는 방법이 존재하는지 검토 요청
+
+A. CodeDeploy서비스를 통해 배포를 진행할 때 NLB를 사용하여 서비스하는 경우  
+문서에서 확인하신 것처럼 'CodeDeployDefault.ECSAllAtOnce' 옵션만을 지원한다.  
+ECS서비스의 Canary, Linear 배포를 위해서는 ALB를 이용해야함.
+```
+
+```shell
+# 검토 내용 : 운영중인 ECS의 배포 전략 변경이 가능한지?
+# 가능 여부 : 운영중인 ECS의 배포 전략은 변경 불가능
+Q. ECS Fargate의 Deployment type 옵션 관련 문의 사항이 있어 문의 사항 존재  
+최초 ECS Fargate Service 생성 시 deployment type을 'Rolling Update'로 설정  
+한번 배포가 되어 운영중인 ECS Service의 Deployment type을 변경 하는것은 불가능한 것으로 알고 있는데,  
+새로운 ECS 서비스를 재생성 하지않고 해당 옵션을 Blue/Green로 변경 할 수 있는 방법이 존재 하는지 검토
+
+A. ECS에서 지원하는 deployment type은 Rolling update, Blue/Green deployment, External 이렇게 세 가지가 존재  
+하지만 기존에 생성되어 있는 Service의 deployment type을 변경하는 기능은 현재 ECS에 존재하지 않음.
+
+ECS의 Service를 생성하면 프로비저닝을 위해 AWS CloudFormation이 동작하며 스택이 생성됨  
+해당 스택에는 deployment controller가 존재하며 properties으로는 ECS, CODE_DEPLOY, EXTERNAL 이렇게 3개가 존재
+
+하지만 해당 값이 변경되게 되면 새로운 리소스가 기존 리소스를 참조하여 생성되고 기존 리소스는 삭제됨  
+이러한 스택의 업데이트 동작 작동 방식은 Replacement  
+
+따라서 ECS deployment controller가 변경되면 CloudFormation 스택 업데이트는 Replacement 방식을 따른다
+```
+
+- 현재 ECS A 클러스터는 2개의 ELB(ALB, NLB) 사용중이고, B + C 클러스터는 NLB만 사용중이다
+- `ECS Service 배포` 타입을 `Blue/Green`로 설정하는 경우 2개의 ELB 설정이 필요한가?
+  - A 클러스터: NLB + ALB 혼합 사용
+  - B 클러스터: NLB만 사용
+  - C 클러스터: NLB만 사용
+
 ## IAM 사용자 생성
 
 <img src="./img/user.png" width="650px">
