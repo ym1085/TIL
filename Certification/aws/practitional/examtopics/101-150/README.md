@@ -588,12 +588,32 @@ B. AWS Database Migration Service (AWS DMS)
 C. AWS Snowball  
 D. AWS Direct Connect  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. Amazon S3 Glacier  
+
+- 저장 비용이 저렴한 장기 아카이브를 위한 서비스
+
+B. AWS Database Migration Service (AWS DMS)  
+
+- `DB`를 `AWS`로 `마이그레이션` 하는 서비스
+
+C. AWS Snowball  
+
+- 대량의 데이터를 온프레미스에서 AWS로 전송하는 서비스
+- 물리적인 장치를 통해 빠르게 데이터 이관 가능
+- 60TB와 같은 대규모 데이터 전송에는 AWS Snowball이 적합
+
+D. AWS Direct Connect  
+
+- `온프레미스`와 `AWS`간의 `전용 네트워크 회선` 제공
+- 대량 데이터 전송에 사용할 수 있지만, 물리적인 장비가 아닌 네트워크 연결을 제공하는 서비스
+
 </div>  
 </details>
 
@@ -614,12 +634,34 @@ B. 관계형
 C. 키-값  
 D. 그래프  
 
->
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. In-memory
+
+- `In-memory` DB는 데이터를 `메모리`에 `저장`하는 DB
+- 메모리(주기억장치)에 저장하기에 `엑세스 속도 빠름`
+- DynamoDB는 메모리 + HDD에 저장
+
+B. Relational  
+
+- Relational는 `관계형 DB`를 의미
+- `DynamoDB`는 `비관계형`(NoSQL)로 관계형 모델 사용 안함
+
+C. Key-value  
+
+- DynamoDB는 Key-Value 형태의 DB
+- 데이터를 키와 값으로 저장하고, 빠른 읽기 쓰기 가능
+
+D. Graph  
+
+- 그래프 DB는 데이터 간의 관계를 그래프 구조로 저장
+- DynamoDB는 그래프 모델 사용 안함
+
 </div>  
 </details>
 
@@ -644,18 +686,20 @@ C. 별도의 AWS 계정에서 Amazon S3에서 Amazon S3 Glacier로 객체를 전
 D. 여러 계정을 사용하면 단일 계정을 대상으로 한 악의적인 활동과 관련된 위험이 줄어듭니다.  
 E. Amazon QuickSight는 여러 계정에서 실행되는 환경에 대한 애플리케이션별 권장 사항을 제공하는 비용 도구에 액세스할 수 있습니다.  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A, D
 </div>  
 </details>
 
 ## Question 120
 
-A retail company has recently migrated its website to AWS. The company wants to ensure that it is protected from SQL injection attacks. The website uses an Application Load Balancer to distribute traffic to multiple Amazon EC2 instances.  
+A retail company has recently migrated its website to AWS.  
+The company wants to ensure that it is protected from SQL injection attacks.  
+The website uses an Application Load Balancer to distribute traffic to multiple Amazon EC2 instances.  
 Which AWS service or feature can be used to create a custom rule that blocks SQL injection attacks?  
 
 A. Security groups  
@@ -664,7 +708,9 @@ C. Network ACLs
 D. AWS Shield  
 
 [번역]  
-한 소매 회사가 최근 자사의 웹사이트를 AWS로 마이그레이션했습니다. 회사는 SQL 삽입 공격으로부터 보호하고자 합니다. 웹사이트는 트래픽을 여러 Amazon EC2 인스턴스로 분산하는 Application Load Balancer를 사용합니다.  
+한 소매 회사가 최근 자사의 웹사이트를 AWS로 마이그레이션했습니다.  
+회사는 SQL 삽입 공격으로부터 보호하고자 합니다.  
+웹사이트는 트래픽을 여러 Amazon EC2 인스턴스로 분산하는 Application Load Balancer를 사용합니다.  
 SQL 삽입 공격을 차단하는 사용자 정의 규칙을 생성하는 데 사용할 수 있는 AWS 서비스 또는 기능은 무엇입니까?  
 
 A. 보안 그룹  
@@ -672,12 +718,33 @@ B. AWS WAF
 C. 네트워크 ACL  
 D. AWS Shield  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+A. 보안 그룹  
+
+- 인스턴스 레벨의 방화벽
+- 보안그룹은 Allow만 가능, Deny는 불가능
+- 인바운드, 아웃바운드를 통해 트래픽 제어
+
+B. AWS WAF  
+
+- SQL Injection, XSS와 같은 공격을 막기위한 방화벽
+
+C. 네트워크 ACL  
+
+- 서브넷 수준에서의 방화벽
+- 낮은 순서부터 규칙 평가하며, 규칙에 맞지 않으면 Deny
+- Allow, Deny 둘다 설정 가능
+
+D. AWS Shield  
+
+- DDos 공격을 막기 위한 방화벽 서비스
+
 </div>  
 </details>
 
@@ -698,12 +765,32 @@ B. AWS Personal Health Dashboard
 C. AWS Trusted Advisor  
 D. Amazon CloudWatch  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. AWS CloudTrail  
+
+- AWS API 호출과 관련된 로그 기록 및 추적하는 서비스
+- 리소스 서비스 할당량 모니터링 기능 없음
+
+B. AWS Personal Health Dashboard  
+
+- `AWS 서비스 상태`와 관련된 `개인 알림` 제공
+- `서비스 중단` + `문제`에 대한 `정보 제공`
+
+C. AWS Trusted Advisor  
+
+- AWS `리소스 사용` 및 `할당량`에 대한 `권장 사항 제공`하는 서비스
+- `서비스 할당량을 모니터링`하고, `리소스`가 `설정된 한도에 다다를때 경고 제공`
+
+D. Amazon CloudWatch  
+
+- AWS 서비스 메트릭 모니터링
+
 </div>  
 </details>
 
@@ -724,12 +811,12 @@ B. 하드웨어 제공업체와 동일한 가격 할인
 C. 모든 운영 제어를 AWS에 분산  
 D. 운영 비용 제거  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
@@ -750,12 +837,12 @@ B. 실패를 예측합니다.
 C. 성능 효율성을 보장합니다.  
 D. 비용을 최적화합니다.  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
@@ -783,7 +870,15 @@ E. Amazon DynamoDB
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D, E
+
+`S3`, `DynamoDB`가 `VPC Endpoint Gateway`를 지원한다. VPC 엔드포인트 사용 시 인터넷을 통해 트래픽을 보내지 않고도,  
+VPC 내에서 S3와 DynamoDB와 같은 리소스에 접근이 가능해진다.
+
+`SQS`, `SNS`는 VPC 엔드포인트가 존재하나 Gateway가 아닌 `Interface` 제공.  
+Interface의 경우 보안그룹 지정도 해야 하고 할게 많음.
+
+CodeBuild는 엔드포인트가 아니라 인터넷 연결을 통해 연결해야함.
 </div>  
 </details>
 
@@ -804,12 +899,33 @@ B. Amazon WorkSpaces 가상 Windows 데스크탑
 C. AWS Directory Service for Microsoft Active Directory  
 D. Amazon RDS for Microsoft SQL Server  
 
-> 
+> ❌ (맞추긴 했는데 좀 애매)
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+A. Amazon FSx for Windows File Server  
+
+`AWS FSx`는 `관리형 파일 시스템`으로, `AWS`가 `업데이트 및 패치`를 처리한다.  
+고객은 파일시스템 데이터의 접근 관리를 책임진다.
+
+B. Amazon WorkSpaces 가상 Windows 데스크탑  
+
+`AWS Workspace 가상 Windows 데스크탑`은 `사용자`가 직접 `운영체제`와 `애플리케이션`의 `업데이트` 및 `패치`를 관리해야 한다.  
+AWS는 H/W 및 기본 운영체제에 대한 패치를 처리하지만, 나머지는 사용자 몫.
+
+C. AWS Directory Service for Microsoft Active Directory  
+
+`AWS Directory service for Microsoft Active Directory`은 `관리형 디렉토리 서비스`로, `AWS`가 `업데이트 및 패치`를 처리한다.  
+고객은 `디렉토리 내의 사용자` 및 `그룹 관리`를 책임진다.
+
+D. Amazon RDS for Microsoft SQL Server  
+
+`AWS RDS`는 `AWS`가 `DB의 엔진 업데이트` 및 `패치`를 처리한다.  
+`고객`은 DB `구성`, `성능`, `보안 관리`.
+
 </div>  
 </details>
 
@@ -830,18 +946,21 @@ B. 고객만
 C. EC2 하드웨어 제조업체  
 D. AWS만  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+AWS가 `호스트 운영체제`의 `패치`를 `관리`하지만, EC2 인스턴스 내의 패치는 고객의 몫이다.
 </div>  
 </details>
 
 ## Question 127
 
-A company is using an Amazon RDS DB instance for an application that is deployed in the AWS Cloud. The company needs regular patching of the operating system of the server where the DB instance runs.  
+A company is using an Amazon RDS DB instance for an application that is deployed in the AWS Cloud.  
+The company needs regular patching of the operating system of the server where the DB instance runs.  
 What is the company's responsibility in this situation, according to the AWS shared responsibility model?  
 
 A. Open a support case to obtain administrative access to the server so that the company can patch the DB instance operating system.  
@@ -850,7 +969,8 @@ C. Use administrative access to the server, and apply the operating system patch
 D. Establish a regular maintenance window that tells AWS when to patch the DB instance operating system.  
 
 [번역]  
-AWS 클라우드에 배포된 애플리케이션에 Amazon RDS DB 인스턴스를 사용하고 있는 회사가 있습니다. 회사는 DB 인스턴스가 실행되는 서버의 운영 체제를 정기적으로 패치해야 합니다.  
+AWS 클라우드에 배포된 애플리케이션에 Amazon RDS DB 인스턴스를 사용하고 있는 회사가 있습니다.  
+회사는 DB 인스턴스가 실행되는 서버의 운영 체제를 정기적으로 패치해야 합니다.  
 AWS 공동 책임 모델에 따르면, 이 상황에서 회사의 책임은 무엇입니까?  
 
 A. 지원 케이스를 열어 서버에 대한 관리 액세스를 얻고 DB 인스턴스 운영 체제를 패치합니다.  
@@ -858,12 +978,30 @@ B. 지원 케이스를 열고 AWS에 DB 인스턴스 운영 체제를 패치하�
 C. 서버에 대한 관리 액세스를 사용하고, 정의된 정기 유지 관리 창 동안 운영 체제 패치를 적용합니다.  
 D. AWS에 DB 인스턴스 운영 체제를 언제 패치할지 알리는 정기 유지 관리 창을 설정합니다.  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+AWS RDS는 관리형 데이터베이스로, `RDB 운영체제의 패치 관련 작업은 AWS의 책임`이다.  
+
+A. 지원 케이스를 열어 서버에 대한 관리 액세스를 얻고 DB 인스턴스 운영 체제를 패치합니다.  
+
+고객은 RDB 운영체제에 대한 엑세스 권한 없음, 권한은 AWS에만 있음
+
+B. 지원 케이스를 열고 AWS에 DB 인스턴스 운영 체제를 패치하도록 요청합니다.  
+
+고객은 직접 패치 요청 할 수 없음, 패치 작업은 AWS가 관리
+
+C. 서버에 대한 관리 액세스를 사용하고, 정의된 정기 유지 관리 창 동안 운영 체제 패치를 적용합니다.  
+
+RDS 인스턴스의 운영체제의 간리 엑세스는 고객에게 없음
+
+D. AWS에 DB 인스턴스 운영 체제를 언제 패치할지 알리는 정기 유지 관리 창을 설정합니다.  
+
+정기 유지 관리 창을 설정, AWS가 이 기간 동안 패치를 수행하도록 할 수 잇음.
 </div>  
 </details>
 
@@ -884,18 +1022,19 @@ B. Well-Architected 리뷰는 설계 격차를 식별하고 설계 결정 및 �
 C. Well-Architected 리뷰는 서비스 수준 계약의 요구 사항에 대한 감사 메커니즘입니다.  
 D. Well-Architected 리뷰는 지속적인 감사 및 준수 테스트의 필요성을 없앱니다.  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
 ## Question 129
 
-A company implements an Amazon EC2 Auto Scaling policy along with an Application Load Balancer to automatically recover unhealthy applications that run on Amazon EC2 instances.  
+A company implements an Amazon EC2 Auto Scaling policy along with an Application Load Balancer to automatically,  
+recover unhealthy applications that run on Amazon EC2 instances.  
 Which pillar of the AWS Well-Architected Framework does this action cover?  
 
 A. Security  
@@ -904,7 +1043,8 @@ C. Operational excellence
 D. Reliability  
 
 [번역]  
-회사가 Amazon EC2 인스턴스에서 실행되는 비정상 애플리케이션을 자동으로 복구하기 위해 Application Load Balancer와 함께 Amazon EC2 Auto Scaling 정책을 구현했습니다.  
+회사가 Amazon EC2 인스턴스에서 실행되는 비정상 애플리케이션을 자동으로 복구하기 위해  
+Application Load Balancer와 함께 Amazon EC2 Auto Scaling 정책을 구현했습니다.  
 이 작업은 AWS Well-Architected Framework의 어떤 기둥에 해당합니까?  
 
 A. 보안  
@@ -912,12 +1052,12 @@ B. 성능 효율성
 C. 운영 우수성  
 D. 신뢰성  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
@@ -938,12 +1078,12 @@ B. 탄력성
 C. 확장성  
 D. 고가용성  
 
-> 
+> ✅ 
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
