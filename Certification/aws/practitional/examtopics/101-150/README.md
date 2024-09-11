@@ -56,7 +56,7 @@ D. 파일럿 라이트
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은: C 
+정답은: C
 
 A. Warm standby  
 
@@ -99,7 +99,7 @@ B. Amazon EC2 인스턴스 스토어
 C. Amazon Elastic File System (Amazon EFS)  
 D. Amazon S3  
 
-> ✅ 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
@@ -144,7 +144,7 @@ B. 루트 사용자는 AWS Management Console에 액세스할 수 있는 유일�
 C. 루트 사용자는 AWS 계정이 생성될 때 사용할 수 있는 첫 번째 로그인 아이덴티티입니다.  
 D. 루트 사용자는 암호를 변경할 수 없습니다.  
 
->  ✅
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
@@ -201,7 +201,7 @@ B. AWS 리전
 C. Amazon Lightsail  
 D. AWS Organizations  
 
-> ✅ 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
@@ -372,7 +372,7 @@ C. AWS Cost and Usage Report
 
 D. AWS Pricing Calculator  
 
-> https://calculator.aws/#/addService
+> <https://calculator.aws/#/addService>
 
 - AWS 서비스 비용을 사전에 추정하는 서비스
 - AWS 서비스의 대략적인 사용 견적 비용 추정 가능
@@ -456,7 +456,7 @@ D. Amazon GuardDuty
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은: B 
+정답은: B
 </div>  
 </details>
 
@@ -865,7 +865,7 @@ C. AWS CodeBuild
 D. Amazon S3  
 E. Amazon DynamoDB  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1078,7 +1078,7 @@ B. 탄력성
 C. 확장성  
 D. 고가용성  
 
-> ✅ 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1104,7 +1104,7 @@ B. 서버 및 운영 체제 유지 관리
 C. 수요에 따라 Lambda 리소스 확장  
 D. Lambda 런타임 환경 업데이트  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1130,7 +1130,7 @@ B. AWS 청구 및 지원에 대한 주요 연락 담당자
 C. 이벤트 출시에 대한 확장 지침을 제공하는 파트너  
 D. 사용자의 애플리케이션 아키텍처를 검토하는 AWS 전담 직원  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1158,7 +1158,7 @@ B. 절약 플랜 사용 보고서
 C. AWS 예산 보고서  
 D. AWS 비용 및 사용 보고서  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1186,7 +1186,7 @@ B. Amazon CloudWatch
 C. Amazon Inspector  
 D. AWS X-Ray  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1214,7 +1214,7 @@ B. Amazon RDS
 C. Amazon Redshift  
 D. Amazon ElastiCache  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1240,7 +1240,7 @@ B. AWS Identity and Access Management (IAM)
 C. Elastic Load Balancers  
 D. AWS WAF  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1268,7 +1268,7 @@ B. 한 AWS 리전 내의 여러 가용 영역에 아키텍처를 구성합니다
 C. 여러 AWS 리전에 걸쳐 아키텍처를 구성합니다.  
 D. 여러 엣지 로케이션에 아키텍처를 구성합니다.  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1294,7 +1294,7 @@ B. 컴퓨팅 비용은 AWS 청구 및 비용 관리 콘솔에서 확인할 수 �
 C. 사용자는 컴퓨팅 인스턴스에 대한 전체 관리자 액세스를 유지합니다.  
 D. 사용자는 최대 부하 시 영구적으로 충분한 인스턴스를 실행하여 비용을 최적화할 수 있습니다.  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1322,7 +1322,7 @@ C. AWS는 온프레미스 IT 직원의 필요성을 없앱니다.
 D. AWS는 규모의 경제를 활용하여 지속적으로 가격을 낮춥니다.  
 E. AWS는 Amazon EC2 인스턴스에 대한 단일 가격 모델을 제공합니다.  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1348,7 +1348,7 @@ B. AWS Secrets Manager
 C. Amazon Cognito  
 D. AWS Certificate Manager (ACM)  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1374,7 +1374,7 @@ B. AWS 기술 계정 관리자(TAM)의 지정된 지원
 C. AWS 엔지니어의 현장 지원  
 D. AWS Config를 통한 코드로 관리되는 규정 준수  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1400,7 +1400,7 @@ B. Amazon EC2 인스턴스를 패치합니다.
 C. 사용자 네트워크 트래픽을 암호화합니다.  
 D. 사용자의 웹사이트에 대한 TLS 인증서를 생성합니다.  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1426,7 +1426,7 @@ B. Amazon CloudWatch
 C. 비용 탐색기(Cost Explorer)  
 D. AWS 예산  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1454,7 +1454,7 @@ B. 가용 영역(Availability Zones)
 C. AWS 아웃포스트(Outposts)  
 D. AWS 웨이브렝스 존(Wavelength Zones)  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1482,7 +1482,7 @@ B. 리소스를 호스팅할 별도의 VPC 생성
 C. 리소스를 호스팅할 배치 그룹 생성  
 D. 회사와 AWS 간에 AWS Direct Connect 연결 생성  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1508,7 +1508,7 @@ B. Amazon CloudFront
 C. Amazon Route 53  
 D. Amazon Connect  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1534,7 +1534,7 @@ B. 루트 사용자에 대해 다단계 인증(MFA) 활성화
 C. 루트 사용자를 위한 액세스 키 생성  
 D. 규정 준수를 위해 루트 사용자 암호를 일관되게 유지  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1562,7 +1562,7 @@ B. AWS Systems Manager Session Manager
 C. AWS Identity and Access Management (IAM)  
 D. 네트워크 ACL  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1588,7 +1588,7 @@ B. 시간당 주문형 결제
 C. 부분 선불 결제  
 D. 전액 선불 결제  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1616,7 +1616,7 @@ B. 비용 할당
 C. 아키텍처 최적화  
 D. 태그 적용  
 
-> 
+>
 
 <details>  
 <summary>정답 보기</summary>  
