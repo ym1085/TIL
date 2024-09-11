@@ -1104,12 +1104,29 @@ B. 서버 및 운영 체제 유지 관리
 C. 수요에 따라 Lambda 리소스 확장  
 D. Lambda 런타임 환경 업데이트  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. Lambda 함수의 버전 생성  
+
+Lambda 함수 버전 생성은 고객의 책임
+
+B. 서버 및 운영 체제 유지 관리  
+
+Lambda는 서버리스로, 서버가 운영체제 유지 및 관리해야함
+
+C. 수요에 따라 Lambda 리소스 확장  
+
+Lambda는 수요에 따라 자동으로 리소스 확장, 고객 관리가 아님
+
+D. Lambda 런타임 환경 업데이트  
+
+AWS가 Lambda 런타임 환경 관리
+
 </div>  
 </details>
 
@@ -1130,12 +1147,29 @@ B. AWS 청구 및 지원에 대한 주요 연락 담당자
 C. 이벤트 출시에 대한 확장 지침을 제공하는 파트너  
 D. 사용자의 애플리케이션 아키텍처를 검토하는 AWS 전담 직원  
 
->
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+A. 사용자 전담 기술 전문가  
+
+기술 전문 지원은 AWS Support 팀이 담당
+
+B. AWS 청구 및 지원에 대한 주요 연락 담당자  
+
+AWS Concierge 팀은 `AWS 청구 관련 문제` 지원, 고객의 청구 문제 해결해주는 팀
+
+C. 이벤트 출시에 대한 확장 지침을 제공하는 파트너  
+
+AWS Solution Architecture 팀이 담당
+
+D. 사용자의 애플리케이션 아키텍처를 검토하는 AWS 전담 직원  
+
+AWS Solution Architecture 팀이 담당
+
 </div>  
 </details>
 
@@ -1158,12 +1192,30 @@ B. 절약 플랜 사용 보고서
 C. AWS 예산 보고서  
 D. AWS 비용 및 사용 보고서  
 
->
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+A. 예약 인스턴스 사용 및 적용 범위 보고서  
+
+예약 인스턴스 사용 관련 내용으로 해당 안함
+
+B. 절약 플랜 사용 보고서  
+
+Saving Plans 관련 내용으로 해당 안함
+
+C. AWS 예산 보고서(AWS Budgets reports)  
+
+상세한 비용 보고서 생성에는 제한이 있음
+
+D. AWS 비용 및 사용 보고서(AWS Cost and Usage Reports)
+
+클라우드 비용을 자세히 분석가능한 포괄적인 보고서 제공,  
+`제품 태그`, `시간별`, `일별`, `월별`로 `비용 세분화`하여 데이터 제공
+
 </div>  
 </details>
 
@@ -1186,12 +1238,27 @@ B. Amazon CloudWatch
 C. Amazon Inspector  
 D. AWS X-Ray  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+A. AWS CloudTrail  
+
+AWS 계정의 API 요청에 대한 추적
+
+B. Amazon CloudWatch
+
+메트릭 시각화
+
+C. Amazon Inspector  
+
+보안 취약점 평가 도구
+
+D. AWS X-Ray  
+
+API Gateway, Lambda, DynamoDB와 같은 서버리스 서비스에서 요청이 어떻게 처리되는지 시각화.
 </div>  
 </details>
 
@@ -1214,12 +1281,31 @@ B. Amazon RDS
 C. Amazon Redshift  
 D. Amazon ElastiCache  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. Amazon DynamoDB  
+
+고성능 `NoSQL` 서버로, `대규모 데이터 처리는 가능`하지만 `데이터 웨어하우스 기능`은 `제공 안함`.
+
+B. Amazon RDS  
+
+`RDS`는 관계형 DB로 `대규모 데이터`보다는 `중소 규모의 DB에 적합`
+
+C. Amazon Redshift  
+
+AWS `Redshift`는 `페타바이트 규모의 데이터` `웨어하우스`를 지원.  
+`고성능 쿼리` 및 `데이터 분석` 제공하며 `대규모 데이터 처리 가능`.
+
+D. Amazon ElastiCache  
+
+캐시 서비스로, 데이터웨어 하우스 용도와 맞지 않음.  
+DB 성능 향상시키기 위해 사용.
+
 </div>  
 </details>
 
@@ -1240,12 +1326,15 @@ B. AWS Identity and Access Management (IAM)
 C. Elastic Load Balancers  
 D. AWS WAF  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+S3, WAF, ELB 모두 비용이 발생하는것으로 알고 있음,  
+이에반해 IAM은 비용이 없으나 IAM을 사용하는 순간 비용이 나가는걸로 알고 있음.
 </div>  
 </details>
 
@@ -1268,12 +1357,30 @@ B. 한 AWS 리전 내의 여러 가용 영역에 아키텍처를 구성합니다
 C. 여러 AWS 리전에 걸쳐 아키텍처를 구성합니다.  
 D. 여러 엣지 로케이션에 아키텍처를 구성합니다.  
 
->
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. 여러 AWS 계정을 구성합니다.  
+
+`AWS 여러 계정`을 만드는것은 `보안`, `비용 관리`, `리소스 분리`를 위해 `유용`함,  
+하지만 지리적 재해에 대비하는건 아님.
+
+B. 한 AWS 리전 내의 여러 가용 영역에 아키텍처를 구성합니다.  
+
+여러 가용영역에 구성하면 리전에 문제 발생하면 복구 불가능.
+
+C. 여러 AWS 리전에 걸쳐 아키텍처를 구성합니다.  
+
+위에서 말한게 리전 단위이기에 리전에 걸쳐 아키를 구성해야함.
+
+D. 여러 엣지 로케이션에 아키텍처를 구성합니다.  
+
+엣지 로케이션은 각 리전별 캐싱 서버의 위치로, 재해와 상관없음
+
 </div>  
 </details>
 
@@ -1294,12 +1401,12 @@ B. 컴퓨팅 비용은 AWS 청구 및 비용 관리 콘솔에서 확인할 수 �
 C. 사용자는 컴퓨팅 인스턴스에 대한 전체 관리자 액세스를 유지합니다.  
 D. 사용자는 최대 부하 시 영구적으로 충분한 인스턴스를 실행하여 비용을 최적화할 수 있습니다.  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
@@ -1322,12 +1429,12 @@ C. AWS는 온프레미스 IT 직원의 필요성을 없앱니다.
 D. AWS는 규모의 경제를 활용하여 지속적으로 가격을 낮춥니다.  
 E. AWS는 Amazon EC2 인스턴스에 대한 단일 가격 모델을 제공합니다.  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A, D
 </div>  
 </details>
 
@@ -1348,12 +1455,29 @@ B. AWS Secrets Manager
 C. Amazon Cognito  
 D. AWS Certificate Manager (ACM)  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. Amazon GuardDuty  
+
+Application의 이상 행동 탐지
+
+B. AWS Secrets Manager  
+
+`비밀번호`, `API 키`, `기타 중요 정보` `저장` 및 `관리`하는 서비스
+
+C. Amazon Cognito  
+
+`애플리케이션`에 대한 `사용자 인증`과 `사용자 데이터 동기화`를 위한 서비스
+
+D. AWS Certificate Manager (ACM)  
+
+SSL/TLS와 같은 인증서를 생성 및 관리하는 서비스
+
 </div>  
 </details>
 
@@ -1374,12 +1498,30 @@ B. AWS 기술 계정 관리자(TAM)의 지정된 지원
 C. AWS 엔지니어의 현장 지원  
 D. AWS Config를 통한 코드로 관리되는 규정 준수  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+A. AWS 파트너 네트워크(APN) 지원을 무료로 제공  
+
+해당 안함
+
+B. AWS 기술 계정 관리자(TAM)의 지정된 지원  
+
+`AWS Enterprise Support Plan`에서는 `TAM`(technical account manager) 지원,  
+`기술적 문제에 대한 해결책 제공` + `아키텍처 검토`
+
+C. AWS 엔지니어의 현장 지원  
+
+AWS Enterprise Support는 원격 지원 제공, 현장 지원은 별도 서비스
+
+D. AWS Config를 통한 코드로 관리되는 규정 준수  
+
+규정 준수 및 자원 관리를 위한 서비스
+
 </div>  
 </details>
 
@@ -1400,12 +1542,30 @@ B. Amazon EC2 인스턴스를 패치합니다.
 C. 사용자 네트워크 트래픽을 암호화합니다.  
 D. 사용자의 웹사이트에 대한 TLS 인증서를 생성합니다.  
 
->
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A (C인 것 같은데)
+
+A. Amazon DynamoDB에 저장된 데이터를 암호화합니다.  
+
+AWS `DynamoDB`는 `데이터 저장 시 자동으로 암호화를 수행`.  
+하지만 `특정 암호화 옵션`은 `사용자가 설정`해야함.
+
+B. Amazon EC2 인스턴스를 패치합니다.  
+
+EC2 인스턴스 패치는 고객의 몫으로, Host 운영체제의 패치만 AWS에서 담당
+
+C. 사용자 네트워크 트래픽을 암호화합니다.  
+
+AWS는 기본적으로 네트워크 암호화를 통해 통신
+
+D. 사용자의 웹사이트에 대한 TLS 인증서를 생성합니다.
+
+사용자가 ACM 통해서 만들어야함
+
 </div>  
 </details>
 
@@ -1426,12 +1586,12 @@ B. Amazon CloudWatch
 C. 비용 탐색기(Cost Explorer)  
 D. AWS 예산  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -1454,12 +1614,15 @@ B. 가용 영역(Availability Zones)
 C. AWS 아웃포스트(Outposts)  
 D. AWS 웨이브렝스 존(Wavelength Zones)  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+AWS Local zone은 온프레미스에 구성하는 것이 아니라,  
+특정 영역에 위치하게 되기에 정답이랑 멀음.
 </div>  
 </details>
 
@@ -1482,12 +1645,19 @@ B. 리소스를 호스팅할 별도의 VPC 생성
 C. 리소스를 호스팅할 배치 그룹 생성  
 D. 회사와 AWS 간에 AWS Direct Connect 연결 생성  
 
->
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+VPC(Virtual Private Network)는 사용자가 정의한 가상 사설망 네트워크를 제공하는 서비스다.  
+이러한 VPC는 크게 공인 서브넷(public subnet)과 사설 서브넷(private subnet)로 구성이 되어 있으며,  
+IGW(Interney gateway)를 통해 공인 서브넷에서는 인터넷 통신이 가능하고, 사설 서브넷에서는 통신이 불가능하다.  
+
+또한 서브넷을 사용하는 이유는 게이트웨이에 대한 접근 제어 및 관리를 위해 사용이 된다.  
+어떠한 부분은 퍼블릭 인터넷으로 연결하고, 어떠한 부분은 사설 서브넷으로 구성하고.
 </div>  
 </details>
 
@@ -1508,12 +1678,12 @@ B. Amazon CloudFront
 C. Amazon Route 53  
 D. Amazon Connect  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -1534,12 +1704,12 @@ B. 루트 사용자에 대해 다단계 인증(MFA) 활성화
 C. 루트 사용자를 위한 액세스 키 생성  
 D. 규정 준수를 위해 루트 사용자 암호를 일관되게 유지  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
@@ -1562,12 +1732,12 @@ B. AWS Systems Manager Session Manager
 C. AWS Identity and Access Management (IAM)  
 D. 네트워크 ACL  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B 
 </div>  
 </details>
 
@@ -1588,12 +1758,29 @@ B. 시간당 주문형 결제
 C. 부분 선불 결제  
 D. 전액 선불 결제  
 
->
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+A. 선불 없는 결제  
+
+선불 없는 결제는 할인 혜택 없음
+
+B. 시간당 주문형 결제  
+
+할인 혜택 없음, 더 높은 비용 발생
+
+C. 부분 선불 결제  
+
+일부 할인 제공
+
+D. 전액 선불 결제  
+
+가장 큰 할인 제공
+
 </div>  
 </details>
 
