@@ -112,9 +112,9 @@
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소 관련 참고 링크](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
+| [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
 | [[Docker] Docker commit, save, load 차이점 정리](./Docker/commit_save_load/README.md) | ❌ |
 | [[Docker] Docker namespace, cgroup 정리](./Docker/cgroup_namespace/README.md) | ❌ |
-| [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
 
 ## ☸ Kubernetes
 
@@ -155,6 +155,14 @@
 | [[Linux] curl 명령어 SSL 검증 없이 요청하는 방법?](./Linux/cure_명령어_SSL_없이_사용/README.md) | ✅ |
 | [[Linux] cat <<EOF 와 사용법](./Linux/linux_command/README.md) | ❌ |
 
+## ⭐️ Network & HW
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
+| [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
+| [[Nginx] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
+
 ## 😺 Git
 
 | 키워드 | 완료 여부 |
@@ -166,11 +174,3 @@
 | [[Git] Git Stash 사용 방법](./Git/Git_Stash_사용방법/README.md) | ✅ |
 | [[Git] gitignore가 동작하지 않는 경우 해소](./Git/gitignore가_동작하지_않는_경우_해소/README.md) | ✅ |
 | [[Git] Git Flow란?](./Git/Git_Flow/README.md) | ❌ |
-
-## ⭐️ Network & HW
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
-| [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
-| [[Nginx] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
