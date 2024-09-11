@@ -112,6 +112,8 @@
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소 관련 참고 링크](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
+| [[Docker] Docker commit, save, load 차이점 정리](./Docker/commit_save_load/README.md) | ❌ |
+| [[Docker] Docker namespace, cgroup 정리](./Docker/cgroup_namespace/README.md) | ❌ |
 | [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
 
 ## ☸ Kubernetes
