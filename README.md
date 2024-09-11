@@ -148,6 +148,13 @@
 | [[ES] Elastciearch 클러스터에서 특정 Node 제외 시키기](./ELK/exclude_node/README.md) | ✅ |
 | [[ES] ES 색인 속도 증대를 위한 EC2 인스턴스 타입 변경, 그리고 iostat 명령어로 디스크 I/O 확인하기](./ELK/iostat/README.md) | ✅ |
 
+## 📒 Linux
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Linux] curl 명령어 SSL 검증 없이 요청하는 방법?](./Linux/cure_명령어_SSL_없이_사용/README.md) | ✅ |
+| [[Linux] cat <<EOF 와 사용법](./Linux/linux_command/README.md) | ❌ |
+
 ## 😺 Git
 
 | 키워드 | 완료 여부 |
@@ -160,22 +167,10 @@
 | [[Git] gitignore가 동작하지 않는 경우 해소](./Git/gitignore가_동작하지_않는_경우_해소/README.md) | ✅ |
 | [[Git] Git Flow란?](./Git/Git_Flow/README.md) | ❌ |
 
-## ⭐️ Web Server
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[Web Server] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
-| [[Web Server] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
-
-## 🛜 Network
+## ⭐️ Network & HW
 
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md) | ❌ |
-
-## 🔧 ETC
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[ETC] curl 명령어 SSL 검증 없이 요청하는 방법?](./ETC/cure_명령어_SSL_없이_사용/README.md) | ✅ |
-| [[ETC] 자주 사용하는 Linux 명령어 정리](./ETC/linux_command/README.md) | ❌ |
+| [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅ |
+| [[Nginx] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌ |
