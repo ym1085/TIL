@@ -21,12 +21,15 @@ B. Amazon EC2
 C. Amazon DynamoDB  
 D. Amazon Aurora  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+문제에서 말하듯이 운영체제, DB 설치 및 구성을 완전히 제어하려면 EC2를 사용해야 한다.  
+나머지 DB를 사용하게 되면 AWS에서 관리의 주체가 된다.
 </div>  
 </details>
 
@@ -47,12 +50,12 @@ B. AWS 인프라는 동일한 지리적 위치에 있는 여러 데이터 센터
 C. AWS는 사용자가 AWS 리전과 데이터 센터를 선택할 수 있도록 하여 서로 다른 리전에서 가장 가까운 데이터 센터를 선택할 수 있게 합니다.  
 D. AWS 인프라는 독립된 가용 영역을 갖춘 독립적인 AWS 리전으로 구성되며, 저지연 네트워크 및 이중 전원 공급 장치로 연결됩니다.  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
@@ -75,12 +78,12 @@ B. 탄력성
 C. 신뢰성  
 D. 글로벌 도달 범위  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
@@ -101,12 +104,31 @@ B. Amazon Simple Email Service (Amazon SES)
 C. Amazon CloudWatch 경고  
 D. Amazon Simple Queue Service (Amazon SQS)  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. Amazon Simple Notification Service (Amazon SNS)  
+
+`AWS SNS`는 `분산 애플리케이션 환경`에서 `텍스트`와 `이메일`을 포함한 `여러 유형의 알림을 전송하는데 사용`,  
+AWS SNS는 이벤트 기반 알림을 다양한 프로토콜로 전송할 수 있게 함.
+
+B. Amazon Simple Email Service (Amazon SES)  
+
+이메일 전송을 위한 서비스, 문자 메시지 전송은 불가능
+
+C. Amazon CloudWatch 경고  
+
+모니터링 기반 경고 알람 전송, 텍스트나 이메일 전송은 없음
+
+D. Amazon Simple Queue Service (Amazon SQS)  
+
+AWS SQS는 메시지 Queue 제공 서비스로, `비동기식`으로 `처리하는 메시징 서비스`이다.  
+텍스트, 이메일을 직접 보내는 기능은 없음. 
+
 </div>  
 </details>
 
@@ -128,12 +150,12 @@ B. Amazon Macie
 C. Amazon QuickSight  
 D. AWS Organizations  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
@@ -154,18 +176,19 @@ B. Amazon DynamoDB 인스턴스의 운영 체제 업데이트
 C. Amazon S3 인프라 유지 관리  
 D. Amazon EC2 인스턴스의 게스트 운영 체제 업데이트  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
 ## Question 157
 
-A company wants to migrate a small website and database quickly from on-premises infrastructure to the AWS Cloud. The company has limited operational knowledge to perform the migration.  
+A company wants to migrate a small website and database quickly from on-premises infrastructure to the AWS Cloud.  
+The company has limited operational knowledge to perform the migration.  
 Which AWS service supports this use case?  
 
 A. Amazon EC2  
@@ -183,12 +206,31 @@ B. Amazon Lightsail
 C. Amazon S3  
 D. AWS Lambda  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+A. Amazon EC2  
+
+유연하고 강력한 기능을 제공하지만 기술적 세부사항을 요구한다.  
+하여 제한된 운영 지식이 있는 경우 복잡할 수 있음.
+
+B. Amazon Lightsail  
+
+`간단하고 저렴한 VM`, `스토리지`, 네트워킹 솔류션 제공.  
+`간단한 웹` + `DB`를 `쉽게 호스팅`하기 위해 설계된 서비스.
+
+C. Amazon S3  
+
+스토리지 서비스로 DB 기능은 제공하지 않음, 호스팅하는 방법도 없음
+
+D. AWS Lambda  
+
+서버리스 컴퓨팅을 제공, 웹 + DB를 호스팅하기에는 적절하지 않음
+
 </div>  
 </details>
 
@@ -211,12 +253,32 @@ B. AWS Artifact 사용
 C. 비용 탐색기에서 예산 설정  
 D. 비용 할당 태그 생성  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+A. Set up invoiced billing  
+
+`청구서`는 `전체 계정`에 대한 `청구`를 `관리`.  
+개별 애플리케이션 비용 추적 불가능.
+
+B. Use AWS Artifact  
+
+`AWS` `규정 준수 문서`와 `보고서`를 `생성`하는 서비스.
+
+C. Set budgets in Cost Explorer(비용 탐색기에서 예산 설정)
+
+비용 탐색기에서 예산 설정 가능하지만, 예산 설정은 비용 추적의 일부로  
+개별 애플리케이션의 비용 추적 불가능.
+
+D. Create cost allocation tags  
+
+`비용 할당 태그`를 `사용`하면 AWS 리소스에 태그를 할당하여 각 `애플리케이션의 비용을 추적할 수 있다`.  
+이를 통해 애플리케이션의 비용을 명확히 파악 할 수 있음.
+
 </div>  
 </details>
 
@@ -237,12 +299,12 @@ B. 수동 장애 복구
 C. 복구 절차 테스트  
 D. 인프라 수동 변경  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -266,12 +328,12 @@ B. Amazon DynamoDB
 C. Amazon Aurora  
 D. Amazon Redshift  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
@@ -292,12 +354,12 @@ B. 데이터베이스 스키마 업데이트
 C. 데이터베이스 엔진 설치  
 D. 데이터베이스 레코드 삭제  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
