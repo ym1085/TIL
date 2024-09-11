@@ -53,7 +53,7 @@
 | [[AWS] 모듈3: 글로벌 인프라 및 신뢰성](./Certification/aws/practitional/module_03/README.md) | ✅ |
 | [[AWS] 모듈4: 네트워킹](./Certification/aws/practitional/module_04/README.md) | ✅ |
 
-## 📉 AWS basics explained in an easy to understand way
+## 📉 AWS Basic Learning
 
 | 키워드 | 완료 여부 |
 | --- | --- |
