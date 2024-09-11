@@ -25,7 +25,6 @@
 | [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md) | ✅ |
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
-| [[AWS] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./AWS/Prometheus/README.md) | ✅ |
 | [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md) | ✅ |
 | [[AWS] ECS Task Role vs Execution Role 차이 및 AWSServiceRoleForECS](./AWS/ecs_task_role/README.md) | ✅ |
 | [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 방법 정리](./AWS/create_vpc_etc/README.md) | ✅ |
@@ -34,11 +33,8 @@
 | [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md) | 🔥 |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md) | 🔥 |
 | [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
-| [[AWS] IAM란?](./AWS/IAM란/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
-| [[AWS] ECS(Elastic Container Service)란?](./AWS/ECS란/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
-| [[AWS] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 
 ## 🌫️ AWS Practitional 자격증
 
@@ -59,6 +55,12 @@
 | --- | --- |
 | [[AWS] 강의 소개](./AWS_Lecture/section_01/강의소개/README.md) | 🔥 |
 | [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./AWS_Lecture/section_01/AWS_공부_가이드_팁/README.md) | 🔥 |
+
+## 💻 Observability
+
+| [[Observability] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./Observability/Prometheus/README.md) | ✅ |
+| [[Observability] 프로메테우스 지표 rate, increase 차이 간략히 정리](./Observability/prometheus_increate_rate/README.md) | 🔥 |
+| [[Observability] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 
 ## ☕ Java
 
