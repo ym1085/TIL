@@ -155,7 +155,7 @@
 | [[Linux] curl 명령어 SSL 검증 없이 요청하는 방법?](./Linux/cure_명령어_SSL_없이_사용/README.md) | ✅ |
 | [[Linux] cat <<EOF 와 사용법](./Linux/linux_command/README.md) | ❌ |
 
-## ⭐️ Network & HW
+## ⭐️ Network & Server
 
 | 키워드 | 완료 여부 |
 | --- | --- |
