@@ -58,8 +58,10 @@
 
 ## 💻 Observability
 
+| 키워드 | 완료 여부 |
+| --- | --- |
 | [[Observability] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./Observability/Prometheus/README.md) | ✅ |
-| [[Observability] 프로메테우스 지표 rate, increase 차이 간략히 정리](./Observability/prometheus_increate_rate/README.md) | 🔥 |
+| [[Observability] 프로메테우스 지표 rate, increase 차이 간략히 정리](./Observability/prometheus_increate_rate/README.md) | ✅ |
 | [[Observability] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 
 ## ☕ Java
