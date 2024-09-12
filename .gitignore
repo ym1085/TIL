@@ -33,5 +33,5 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
-.merge.sh
+merge.sh
 # End of https://www.toptal.com/developers/gitignore/api/macos
