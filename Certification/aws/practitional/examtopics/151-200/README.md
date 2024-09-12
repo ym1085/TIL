@@ -127,7 +127,7 @@ C. Amazon CloudWatch 경고
 D. Amazon Simple Queue Service (Amazon SQS)  
 
 AWS SQS는 메시지 Queue 제공 서비스로, `비동기식`으로 `처리하는 메시징 서비스`이다.  
-텍스트, 이메일을 직접 보내는 기능은 없음. 
+텍스트, 이메일을 직접 보내는 기능은 없음.
 
 </div>  
 </details>
@@ -382,18 +382,19 @@ B. Amazon API Gateway
 C. Amazon CloudFront  
 D. AWS Cloud Map  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
 ## Question 163
 
-A company has a social media platform in which users upload and share photos with other users. The company wants to identify and remove inappropriate photos. The company has no machine learning (ML) scientists and must build this detection capability with no ML expertise.  
+A company has a social media platform in which users upload and share photos with other users.  
+The company wants to identify and remove inappropriate photos. The company has no machine learning (ML) scientists and must build this detection capability with no ML expertise.  
 Which AWS service should the company use to build this capability?  
 
 A. Amazon SageMaker  
@@ -402,7 +403,8 @@ C. Amazon Rekognition
 D. Amazon Comprehend  
 
 [번역]  
-회사는 사용자가 사진을 업로드하고 다른 사용자와 공유하는 소셜 미디어 플랫폼을 운영하고 있습니다. 부적절한 사진을 식별하고 제거하려고 하지만, 기계 학습(ML) 전문가가 없고 ML 전문 지식 없이 이 기능을 구축해야 합니다.  
+회사는 사용자가 사진을 업로드하고 다른 사용자와 공유하는 소셜 미디어 플랫폼을 운영하고 있습니다.  
+부적절한 사진을 식별하고 제거하려고 하지만, 기계 학습(ML) 전문가가 없고 ML 전문 지식 없이 이 기능을 구축해야 합니다.  
 이 기능을 구축하는 데 사용할 AWS 서비스는 무엇입니까?  
 
 A. Amazon SageMaker  
@@ -410,12 +412,38 @@ B. Amazon Textract
 C. Amazon Rekognition  
 D. Amazon Comprehend  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. Amazon SageMaker  
+
+`AWS SageMaker`는 `기계 학습 모델`을 `개발`하고 `배포`하는데 사용하는 도구.  
+하지만 회사에 ML 전문가가 없고, 전문 지식없이 부적절한 이미지를 식별해야 하기에,  
+SageMaker를 통해 직접 모델을 만드는 것은 적합하지 않음.
+
+B. Amazon Textract  
+
+`AWS Textract`은 `이미지 내`에서 `텍스트를 추출`하는 서비스.  
+이미지에서 텍스트를 뽑는 것으로, 식별을 불가능함.
+
+C. Amazon Rekognition  
+
+`AWS Rekognition`은 `이미지` + `비디오 분석`을 위한 AWS 서비스로,  
+기계 학습(ML) 없이도 `이미지` + `비디오` `분석`이 `가능`하다.  
+특히 `부적절한 컨텐츠`를 `자동`으로 `감지`, 이를 `제거하는 기능` 제공.  
+소셜 미디어 환경에서 사용자가 올린 부적절한 이미지 검증 가능.
+
+D. Amazon Comprehend  
+
+> 텍스트를 기반으로 사용자의 감정 분석
+
+`AWS Comprehend`는 `텍스트 분석 서비스`로, `감정 분석`, `주제 모델링` 등 지원  
+사진(이미지)이 아닌 `텍스트를 분석하는 서비스로`, 부적절한 사진 고르는 기능은 없음.
+
 </div>  
 </details>
 
@@ -436,18 +464,41 @@ B. 데이터베이스 소프트웨어 패치
 C. 운영 체제 패치  
 D. 운영 체제 설치  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+`AWS`와 `사용자`의 `책임 범위`는 `공유 책임 모델`에 따라 구분된다.  
+AWS EC2를 사용하는 경우, `운영체제`와 같은 `물리적 인프라`와 `가상화 계층`은 `AWS의 책임`.  
+하지만 그 이외의 작업은, 특히 DB 및 운영 체제의 관리와 관련된 부분은 `사용자 책임`
+
+A. 데이터베이스 백업  
+
+EC2 서버 상에서 DB를 호스팅하는 경우, DB 백업의 책임은 사용자에게 있음.
+
+B. 데이터베이스 소프트웨어 패치  
+
+EC2 서버 상에서 DB를 호스팅하는 경우, DB S/W 패치는 사용자에게 있음.
+
+C. 운영 체제 패치  
+
+EC2 서버 상에서 DB를 호스팅하는 경우, 운영체제 패치는 사용자에게 있음.
+
+D. 운영 체제 설치  
+
+EC2 서버상의 `운영체제 설치`는 `사용자가 아닌 AWS에게 있음`.
+
 </div>  
 </details>
 
 ## Question 165
 
-A company wants to use Amazon S3 to store its legacy data. The data is rarely accessed. However, the data is critical and cannot be recreated. The data needs to be available for retrieval within seconds.  
+A company wants to use Amazon S3 to store its legacy data.  
+The data is rarely accessed. However, the data is critical and cannot be recreated.  
+The data needs to be available for retrieval within seconds.  
 Which S3 storage class meets these requirements MOST cost-effectively?  
 
 A. S3 Standard  
@@ -456,7 +507,9 @@ C. S3 Standard-Infrequent Access (S3 Standard-IA)
 D. S3 Glacier  
 
 [번역]  
-회사는 레거시 데이터를 저장하기 위해 Amazon S3를 사용하려고 합니다. 데이터는 거의 액세스되지 않지만, 중요한 데이터이며 재생성할 수 없습니다. 데이터는 몇 초 이내에 검색할 수 있어야 합니다.  
+회사는 레거시 데이터를 저장하기 위해 Amazon S3를 사용하려고 합니다.  
+데이터는 거의 액세스되지 않지만, 중요한 데이터이며 재생성할 수 없습니다.  
+데이터는 몇 초 이내에 검색할 수 있어야 합니다.  
 이 요구 사항을 가장 비용 효율적으로 충족하는 S3 스토리지 클래스는 무엇입니까?  
 
 A. S3 표준  
@@ -464,18 +517,41 @@ B. S3 원존-비정기적 액세스(S3 One Zone-IA)
 C. S3 표준-비정기적 액세스(S3 Standard-IA)  
 D. S3 Glacier  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. S3 표준(S3 Standard)
+
+`AWS S3 Standard`는 자주 엑세스되는 데이터를 위한 스토리지 클래스로,  
+`데이터 검색 속도`가 `빠르지만` `비용`이 `상대적으로 높다`.  
+거의 엑세스 하지 않는 데이터의 경우 효율적인 선택이 아님.
+
+B. S3 원존-비정기적 액세스(S3 One Zone-IA)  
+
+`AWS S3 One Zone-IA`는 `비용`이 `저렴`하지만, `데이터`가 `하나의 가용 영역`에만 저장됨.  
+이로 인해 데이터 손실이 있을 수 있으며, 중요 데이터 저장에는 적합하지 않음.
+
+C. S3 표준-비정기적 액세스(S3 Standard-IA)  
+
+`AWS S3 Standard-IA`는 `드물게 엑세스`하는 `데이터`에 적합한 스토리지 클래스.  
+`높은 내구성`을 제공하며, `여러 가용 영역`에 `데이터`를 `복제`하며 몇 초안에 데이터 검색 가능.
+
+D. S3 Glacier  
+
+`AWS S3 Glacier`는 `아카이빙 용도`로 `사용`되며, `데이터 검색`에 `수분`에서 `수시간`까지 걸릴 수 있음,  
+`데이터`를 `몇 초 이내`에 `검색`해야 하는 경우는 적합하지 않음.
+
 </div>  
 </details>
 
 ## Question 166
 
-An online retail company wants to migrate its on-premises workload to AWS. The company needs to automatically handle a seasonal workload increase in a cost-effective manner.  
+An online retail company wants to migrate its on-premises workload to AWS.  
+The company needs to automatically handle a seasonal workload increase in a cost-effective manner.  
 Which AWS Cloud features will help the company meet this requirement? (Choose two.)  
 
 A. Cross-Region workload deployment  
@@ -485,7 +561,8 @@ D. Auto Scaling policies
 E. Centralized logging  
 
 [번역]  
-한 온라인 소매 회사는 온프레미스 워크로드를 AWS로 마이그레이션하려고 합니다. 회사는 계절적 워크로드 증가를 자동으로 처리하면서 비용 효율적으로 운영하려고 합니다.  
+한 온라인 소매 회사는 온프레미스 워크로드를 AWS로 마이그레이션하려고 합니다.  
+회사는 계절적 워크로드 증가를 자동으로 처리하면서 비용 효율적으로 운영하려고 합니다.  
 이 요구 사항을 충족하는 AWS 클라우드 기능은 무엇입니까? (두 개를 선택하세요.)  
 
 A. 크로스 리전 워크로드 배포  
@@ -494,12 +571,12 @@ C. AWS CloudTrail 내장 감사 기능
 D. Auto Scaling 정책  
 E. 중앙 집중식 로깅  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B, D
 </div>  
 </details>
 
@@ -520,18 +597,19 @@ B. Amazon Simple Notification Service (Amazon SNS)
 C. Amazon CloudFront  
 D. Amazon Simple Queue Service (Amazon SQS)  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D 
 </div>  
 </details>
 
 ## Question 168
 
-A company needs to build an application that uses AWS services. The application will be delivered to residents in European countries. The company must abide by regional regulatory requirements.  
+A company needs to build an application that uses AWS services. The application will be delivered to residents in European countries.  
+The company must abide by regional regulatory requirements.  
 Which AWS service or program should the company use to determine which AWS services meet the regional requirements?  
 
 A. AWS Audit Manager  
@@ -548,12 +626,32 @@ B. AWS Shield
 C. AWS 준수 프로그램(Compliance Program)  
 D. AWS Artifact  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. AWS Audit Manager  
+
+`AWS Audit Manager`는 `특정 감사 요건`을 `지속적`으로 `평가`하는 `관리 도구`로,  
+특정 지역의 규정 준수를 확인하거나 결정하는 기능은 아님.
+
+B. AWS Shield  
+
+`AWS Shield`는 `DDos 공격`을 막기위한 AWS 서비스이다.
+
+C. AWS Compliance Program  
+
+`AWS Compliance Program`은 `AWS`가 `전 세계적`으로 준수하는 `규정`, `표준`, `법적 요구사항`을 이해하고,  
+`특정 region별`로 특정 `AWS 서비스`가 `어떤 규제`를 따르는지 확인 가능.
+
+D. AWS Artifact  
+
+`AWS Artifact`는 `규정 준수 관련 보고서` 및 `문서`를 `다운`로드 할 수 있는 `도구`이다.  
+하지만 `Artifact 자체가 특정 지역의 규정 준수를 확인하거나 결정하는 기능은 아님`.
+
 </div>  
 </details>
 
@@ -576,12 +674,29 @@ B. AWS Security Hub
 C. AWS Shield  
 D. AWS WAF  
 
->  
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. Amazon Cognito  
+
+`AWS Cognito`는 `모바일` + `웹 애플리케이션`에 대한 `사용자 인증` 및 `ID를 관리`하는 `서비스`.
+
+B. AWS Security Hub  
+
+`AWS Security Hub`는 `AWS 환경의 전반적인 보안 상태를 관리`하고 `모니터링`하는 도구.
+
+C. AWS Shield  
+
+`AWS Shield`는 `DDos 공격`을 막기위한 AWS 서비스.
+
+D. AWS WAF
+
+`AWS WAF`는 `웹 애플리케이션 방화벽`으로, `SQL Injection`이나 `XSS`와 같은 공격을 막기위한 방화벽.
+
 </div>  
 </details>
 
@@ -604,12 +719,32 @@ B. 전환형 예약 인스턴스(Convertible Reserved Instance)
 C. 주문형 인스턴스(On-Demand Instance)  
 D. 스팟 인스턴스(Spot Instance)  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. 표준 예약 인스턴스(Standard Reserved Instance)  
+
+`표준 예약 인스턴스`는 기본적으로 1년 - 3년의 기간동안 EC2 인스턴스를 예약하는 서비스.  
+온디멘드 인스턴스보다 가격이 훨씬 저렴함.
+
+B. 전환형 예약 인스턴스(Convertible Reserved Instance)  
+
+`전환형 예약 인스턴스`는 `인스턴스 유연성`을 `변경`할 수 있는 `유연성`을 `제공`하지만,  
+`할인율`은 `표준 예약 인스턴스`에 비해서 낮은 편이다. 인스턴스 유형 타입 변경할 필요 없으면,  
+표준 예약 인스턴스가 비용이 더욱 저렴함.
+
+C. 주문형 인스턴스(On-Demand Instance)  
+
+온디멘드는 Spot, Reserved 인스턴스보다 비용이 비쌈.
+
+D. 스팟 인스턴스(Spot Instance)  
+
+Spot 인스턴스는 지속적인 워크로드에서 사용하기에는 떨어질 위험이 있음.
+
 </div>  
 </details>
 
@@ -632,12 +767,34 @@ B. AWS Shield
 C. AWS Global Accelerator  
 D. AWS Direct Connect 게이트웨이  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
+
+A. 보안 그룹(Security Groups)  
+
+보안 그룹은 인스턴스 수준에서의 네트워크 접근 제어 관리, `보안 원칙`인 `최소 권한을 적용`하여  
+애플리케이션 간의 네트워크 통신 제어 가능.
+
+B. AWS Shield  
+
+`AWS Shield`는 Ddos 공격으로부터 애플리케이션을 보호하기 위한 기능이다.  
+네트워크 트래픽의 보안 원칙인 최소 보안 원칙과는 관련이 없음
+
+
+C. AWS Global Accelerator  
+
+`AWS Global Accelerator`는 애플리케이션의 글로벌 접근성을 개선하고 네트워크 성능 최적화 지원,  
+네트워크 트래픽의 접근 제어나 최소 권한 원칙을 적용하는 기능은 없음.
+
+D. AWS Direct Connect 게이트웨이  
+
+`AWS Direct Connect`는 전용 광범위 전선을 사용하여 온프레미스와 AWS를 인터넷 연결없이  
+연결하는 기능을 의미함. 자체 네트워크망을 사용하여 AWS와 연결하고자 할 때 사용
+
 </div>  
 </details>
 
@@ -660,12 +817,12 @@ B. IAM 사용자
 C. IAM 그룹  
 D. IAM 다단계 인증(MFA)  
 
->  
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
@@ -690,12 +847,12 @@ C. AWS Fargate 작업
 D. Amazon RDS 인스턴스  
 E. Amazon Elastic Container Service (Amazon ECS) 인스턴스  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: 
 </div>  
 </details>
 
@@ -716,7 +873,7 @@ B. Amazon Route 53
 C. AWS Direct Connect  
 D. Amazon VPC  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -744,7 +901,7 @@ B. AWS 개발자 지원(Developer Support)
 C. AWS 비즈니스 지원(Business Support)  
 D. AWS 엔터프라이즈 지원(Enterprise Support)  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -772,7 +929,7 @@ B. Amazon Route 53
 C. Amazon CloudFront  
 D. AWS Direct Connect  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -800,7 +957,7 @@ B. AWS WAF
 C. AWS Trusted Advisor  
 D. AWS Service Catalog  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -826,7 +983,7 @@ B. AWS CodeStar
 C. AWS Cloud Map  
 D. AWS X-Ray  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -852,7 +1009,7 @@ B. 고가용성
 C. 글로벌 도달 범위  
 D. 규모의 경제  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -878,7 +1035,7 @@ B. AWS Firewall Manager
 C. Amazon GuardDuty  
 D. Amazon Inspector  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -904,7 +1061,7 @@ B. Amazon Kinesis Data Streams
 C. Amazon Elastic Container Registry (Amazon ECR)  
 D. Amazon Elastic File System (Amazon EFS)  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -932,7 +1089,7 @@ B. 보안 그룹(Security Groups)
 C. Amazon Macie  
 D. Amazon Inspector  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -960,7 +1117,7 @@ B. Amazon RDS 크로스 리전 복제 사용
 C. Amazon DynamoDB 글로벌 테이블 사용  
 D. AWS Database Migration Service (AWS DMS) 사용  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -988,7 +1145,7 @@ C. 수동 규정 준수 감사
 D. 간소화된 총 소유 비용(TCO) 회계  
 E. 더 빠른 제품 출시  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1014,7 +1171,7 @@ B. 인식 및 교육 제어
 C. 물리적 및 환경적 제어  
 D. 구성 관리 제어  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1040,7 +1197,7 @@ B. 인프라 장치 구성 유지 관리
 C. 호스트 운영 체제 및 가상화 관리  
 D. 가용 영역을 구동하는 소프트웨어 유지 관리  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1068,7 +1225,7 @@ B. 탄력성
 C. 민첩성  
 D. 고가용성  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1096,7 +1253,7 @@ B. 성능 효율성
 C. 신뢰성  
 D. 보안  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1122,7 +1279,7 @@ B. AWS Config
 C. Amazon CloudWatch  
 D. AWS CloudTrail  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1148,7 +1305,7 @@ B. AWS 예산
 C. Amazon CloudWatch  
 D. AWS 비용 이상 탐지  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1176,7 +1333,7 @@ B. AWS Global Accelerator
 C. Amazon Route 53  
 D. 탄력적 IP 주소(Elastic IP)  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1204,7 +1361,7 @@ B. AWS 지원 센터
 C. AWS 관리 콘솔  
 D. AWS 마켓플레이스  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1232,7 +1389,7 @@ B. AWS DataSync
 C. AWS Direct Connect  
 D. AWS Snowball  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1260,7 +1417,7 @@ B. AWS 개발자 지원
 C. AWS 비즈니스 지원  
 D. AWS 엔터프라이즈 지원  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1286,7 +1443,7 @@ B. AWS Glue
 C. Amazon S3  
 D. AWS Snowball Edge  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1314,7 +1471,7 @@ C. 다단계 인증(MFA)을 사용하여 AWS 환경 보호
 D. 사용자가 AWS 데이터 센터에 접근할 수 있도록 허용  
 E. 일반적인 웹 공격으로부터 애플리케이션을 보호하기 위한 방화벽 제공  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1342,7 +1499,7 @@ C. 직원 인식 및 교육
 D. 물리적 및 환경적 보안  
 E. 디스크 드라이브 교체 및 폐기  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1370,7 +1527,7 @@ C. 현재 로그인 중인 각 IAM 사용자의 사용자 에이전트 브라우
 D. IAM 사용자에 대해 다단계 인증(MFA)이 활성화되었는지 여부  
 E. 지난 30일 동안 각 IAM 사용자의 잘못된 로그인 시도 횟수  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1413,7 +1570,7 @@ B. Amazon Route 53
 C. Amazon CloudFront  
 D. Amazon API Gateway  
 
->  
+> 
 
 <details>  
 <summary>정답 보기</summary>  
