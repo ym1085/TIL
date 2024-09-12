@@ -829,7 +829,7 @@ D. IAM 다단계 인증(MFA)
 ## Question 173
 
 A company is creating a document that defines the operating system patch routine for all the company's systems.  
-Which AWS resources should the company include in this document? (Choose two.)  
+Which AWS resources should the company include in this document? (Choose two.)
 
 A. Amazon EC2 instances  
 B. AWS Lambda functions  
@@ -847,12 +847,36 @@ C. AWS Fargate 작업
 D. Amazon RDS 인스턴스  
 E. Amazon Elastic Container Service (Amazon ECS) 인스턴스  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은: 
+정답은: A, E
+
+A. Amazon EC2 인스턴스  
+
+`AWS EC2`는 사용자가 직접 운영체제 패치를 관리하는 가상 머신.  
+따라서 가상화된 EC2의 패치는사용자가 담당.
+
+B. AWS Lambda 함수  
+
+`AWS Lambda 함수`는 서버리스 서비스로, 운영 체제 관리는 AWS에서 처리한다. 
+
+C. AWS Fargate 작업  
+
+`AWS Fargate`는 `컨테이너 실행`을 위한 `서버리스 컴퓨팅 엔진`으로,  
+`운영체제 패치가 필요하지 않음`.
+
+D. Amazon RDS 인스턴스  
+
+`AWS RDS`는 `AWS`에서 `관리`하는 DB로 `AWS가 직접 운영체제 패치를 담당`.
+
+E. Amazon Elastic Container Service (Amazon ECS) 인스턴스
+
+`ECS 인스턴스`는 클러스터 내에서 컨테이너를 실행하는 `AWS EC2 인스턴스에서 동작`한다.  
+하여 인스턴스들도 OS 패치가 필요하다.
+
 </div>  
 </details>
 
@@ -873,18 +897,20 @@ B. Amazon Route 53
 C. AWS Direct Connect  
 D. Amazon VPC  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
 ## Question 175
 
-A company is starting to build its infrastructure in the AWS Cloud. The company wants access to technical support during business hours. The company also wants general architectural guidance as teams build and test new applications.  
+A company is starting to build its infrastructure in the AWS Cloud.  
+The company wants access to technical support during business hours.  
+The company also wants general architectural guidance as teams build and test new applications.  
 Which AWS Support plan will meet these requirements at the LOWEST cost?  
 
 A. AWS Basic Support  
@@ -893,7 +919,8 @@ C. AWS Business Support
 D. AWS Enterprise Support  
 
 [번역]  
-회사는 AWS 클라우드에서 인프라를 구축하기 시작하고 있습니다. 회사는 근무 시간 동안 기술 지원에 접근하고 싶어 하며, 팀이 새로운 애플리케이션을 구축하고 테스트할 때 일반적인 아키텍처 지침을 원합니다.  
+회사는 AWS 클라우드에서 인프라를 구축하기 시작하고 있습니다.  
+회사는 근무 시간 동안 기술 지원에 접근하고 싶어 하며, 팀이 새로운 애플리케이션을 구축하고 테스트할 때 일반적인 아키텍처 지침을 원합니다.  
 이 요구 사항을 가장 저렴한 비용으로 충족하는 AWS 지원 플랜은 무엇입니까?  
 
 A. AWS 기본 지원(Basic Support)  
@@ -901,12 +928,31 @@ B. AWS 개발자 지원(Developer Support)
 C. AWS 비즈니스 지원(Business Support)  
 D. AWS 엔터프라이즈 지원(Enterprise Support)  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+A. AWS 기본 지원(Basic Support)  
+
+`AWS Bastic Support`는 `기본적인 고객 지원만 제공`하며, `기술 지원`은,  
+오직 `헬프 데스크 문서`와 `리소스`에만 `의존 가능`하다.
+
+B. AWS 개발자 지원(Developer Support)  
+
+`AWS Developer Support`는 `근무 시간 동안의 기술 지원 제공`, AWS에 대한 일반적인 사용법 + 아키텍처 조언 받을 수 있음.
+
+C. AWS 비즈니스 지원(Business Support)  
+
+`AWS Business Support`는 `24/7 기술지원 제공`, `아키텍처`에 대한 `조언`을 받을 수 있지만 `비용이 높음`.
+
+D. AWS 엔터프라이즈 지원(Enterprise Support)  
+
+`AWS Enterprise Support`는 `최고 수준의 지원 제공`, `전담 기술 계정 관리자`(`TAM`)와 `24/7 지원`,  
+고급 아키텍처 리뷰 등을 포함한 가장 비싼 옵션.
+
 </div>  
 </details>
 
@@ -929,18 +975,19 @@ B. Amazon Route 53
 C. Amazon CloudFront  
 D. AWS Direct Connect  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 </div>  
 </details>
 
 ## Question 177
 
-A company needs to evaluate its AWS environment and provide best practice recommendations in five categories: cost, performance, service limits, fault tolerance, and security.  
+A company needs to evaluate its AWS environment and provide best practice recommendations,  
+in five categories: cost, performance, service limits, fault tolerance, and security.  
 Which AWS service can the company use to meet these requirements?  
 
 A. AWS Shield  
@@ -957,12 +1004,12 @@ B. AWS WAF
 C. AWS Trusted Advisor  
 D. AWS Service Catalog  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -983,12 +1030,12 @@ B. AWS CodeStar
 C. AWS Cloud Map  
 D. AWS X-Ray  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
@@ -1009,18 +1056,19 @@ B. 고가용성
 C. 글로벌 도달 범위  
 D. 규모의 경제  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
 ## Question 180
 
-Which AWS service provides threat detection by monitoring for malicious activities and unauthorized actions to protect AWS accounts, workloads, and data that is stored in Amazon S3?  
+Which AWS service provides threat detection by monitoring for malicious activities,  
+and unauthorized actions to protect AWS accounts, workloads, and data that is stored in Amazon S3?  
 
 A. AWS Shield  
 B. AWS Firewall Manager  
@@ -1035,12 +1083,12 @@ B. AWS Firewall Manager
 C. Amazon GuardDuty  
 D. Amazon Inspector  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -1061,18 +1109,19 @@ B. Amazon Kinesis Data Streams
 C. Amazon Elastic Container Registry (Amazon ECR)  
 D. Amazon Elastic File System (Amazon EFS)  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
 ## Question 182
 
-A company needs an automated security assessment report that will identify unintended network access to Amazon EC2 instances. The report also must identify operating system vulnerabilities on those instances.  
+A company needs an automated security assessment report that will identify unintended network access to Amazon EC2 instances.  
+The report also must identify operating system vulnerabilities on those instances.  
 Which AWS service or feature should the company use to meet this requirement?  
 
 A. AWS Trusted Advisor  
@@ -1081,7 +1130,8 @@ C. Amazon Macie
 D. Amazon Inspector  
 
 [번역]  
-회사는 Amazon EC2 인스턴스에 대한 의도하지 않은 네트워크 액세스를 식별하는 자동 보안 평가 보고서가 필요합니다. 보고서에는 해당 인스턴스의 운영 체제 취약성도 포함되어야 합니다.  
+회사는 Amazon EC2 인스턴스에 대한 의도하지 않은 네트워크 액세스를 식별하는 자동 보안 평가 보고서가 필요합니다.  
+보고서에는 해당 인스턴스의 운영 체제 취약성도 포함되어야 합니다.  
 이 요구 사항을 충족하는 AWS 서비스 또는 기능은 무엇입니까?  
 
 A. AWS Trusted Advisor  
@@ -1089,18 +1139,52 @@ B. 보안 그룹(Security Groups)
 C. Amazon Macie  
 D. Amazon Inspector  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+A. AWS Trusted Advisor  
+
+`AWS Trusted Advisor`는 애플리케이션의 성능, 비용 최적화 등에 대한 다양한 권장 사항을 제공해주는 서비스이다.  
+해당 서비스를 통해 어떤 부분에서 비용을 감소할 수 있고, 성능을 개선할 수 있는지 리스트 목록으로 보여준다.
+
+B. 보안 그룹(Security Groups)  
+
+보안그룹은 인스턴스 레벨에서 패킷의 엑세스를 제어하는 서비스 중 하나이다.  
+이러한 보안 그룹은 기본적으로 Stateful로써 상태를 기억하는것은 물론이며, 인바운드는 기본적으로 맨 처음에는 모두  
+허용되어 있지않고 아웃바운드는 기본적으로 0.0.0.0로 뚫려 있다. 최소 보안 권한
+
+C. Amazon Macie  
+
+`AWS Macie`는 `데이터 보호`와 `프라이버시`를 중점적으로 다루는 서비스이다.  
+주요 기능으로는 아래와 같은 기능이 존재한다.
+
+- 데이터 식별 및 분류
+  - Amazon `S3`에 `저장`된 `민감한 개인정보 관련 데이터`를 `자동`으로 `식별` + `분류` 한다
+- 데이터 보호
+  - 민감한 데이터가 보호되고 있는지 모니터링 진행
+- 위협 탐지
+  - `비정상`적인 데이터 접근 패턴(S3 접근, 대용량 다운로드) 감지
+- 리포트 및 경고
+  - 데이터 보호 상태 관련 리포트 제공은 물론, 위협을 탐지하면 경고(alert)도 제공
+
+D. Amazon Inspector  
+
+- `AWS Inspector`는 `자동화된 보안 평가 보고서`를 제공
+- `EC2 보안 상태 자동 평가`
+- `네트워크 접근 제어` 및 `운영체제 취약점` 식별
+
 </div>  
 </details>
 
 ## Question 183
 
-A global company is building a simple time-tracking mobile app. The app needs to operate globally and must store collected data in a database. Data must be accessible from the AWS Region that is closest to the user.  
+A global company is building a simple time-tracking mobile app.  
+The app needs to operate globally and must store collected data in a database.  
+Data must be accessible from the AWS Region that is closest to the user.  
 What should the company do to meet these data storage requirements with the LEAST amount of operational overhead?  
 
 A. Use Amazon EC2 in multiple Regions to host separate databases  
@@ -1109,7 +1193,9 @@ C. Use Amazon DynamoDB global tables
 D. Use AWS Database Migration Service (AWS DMS)  
 
 [번역]  
-글로벌 회사가 간단한 시간 추적 모바일 앱을 구축하고 있습니다. 앱은 전 세계적으로 작동해야 하며, 수집된 데이터를 데이터베이스에 저장해야 합니다. 데이터는 사용자와 가장 가까운 AWS 리전에서 액세스 가능해야 합니다.  
+글로벌 회사가 간단한 시간 추적 모바일 앱을 구축하고 있습니다.  
+앱은 전 세계적으로 작동해야 하며, 수집된 데이터를 데이터베이스에 저장해야 합니다.  
+데이터는 사용자와 가장 가까운 AWS 리전에서 액세스 가능해야 합니다.  
 이 데이터 저장 요구 사항을 가장 적은 운영 오버헤드로 충족하려면 어떻게 해야 합니까?  
 
 A. 여러 리전에 Amazon EC2를 사용하여 별도의 데이터베이스 호스팅  
@@ -1117,12 +1203,40 @@ B. Amazon RDS 크로스 리전 복제 사용
 C. Amazon DynamoDB 글로벌 테이블 사용  
 D. AWS Database Migration Service (AWS DMS) 사용  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
+
+A. 여러 리전에 Amazon EC2를 사용하여 별도의 데이터베이스 호스팅  
+
+- 이 방법은 DB를 각 리전(서울, 도쿄, 오하이오.. 등)에 수동으로 설정하고 관리 필요
+- 데이터 동기화 및 복제 작업도 사용자가 처리해주어야 함(운영 오버헤드 큼)
+
+B. Amazon RDS 크로스 리전 복제 사용  
+
+- RDS의 크로스 리전 복제는 DB의 `리전 간 복제를 지원`
+- `DynamoDB 글로벌 테이블`보다 `복잡`하고 `관리 어려움`
+- DynamoDB보다 운영 오버헤드 큼
+
+C. Amazon DynamoDB 글로벌 테이블 사용  
+
+`AWS DynamoDB 글로벌 테이블`은 `글로벌 애플리케이션 관리`를 위한 `완전 관리형`, `멀티-리전` `DB`이다.  
+DynamoDB 글로벌 테이블의 장점은 아래와 같다.
+
+- 낮은 지연 시간
+  - `DynamoDB 글로벌 테이블`은 `여러 리전`(region)에 걸쳐 `자동 복제` 됨
+  - 전 세계 사용자가 가까운 리전의 데이터를 사용 가능
+- 최소 운영 오버헤드
+  - `사용자`가 `복제` 및 `백업 작업` 직접 안해도 되기에 운영 오버헤드 거의 없음
+
+D. AWS Database Migration Service (AWS DMS) 사용  
+
+- AWS DMS는 `DB`를 다른 `DB`로 `마이그레이션`하거나 `복제`하는데 사용
+- 데이터가 사용자가 가까운 리전에 복제되는건 아님
+
 </div>  
 </details>
 
@@ -1145,12 +1259,32 @@ C. 수동 규정 준수 감사
 D. 간소화된 총 소유 비용(TCO) 회계  
 E. 더 빠른 제품 출시  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A, D
+
+A. 인력 생산성 향상  
+
+- 인력을 사용하지 않으면 그만큼 인력 비용이 줄어드는것임
+
+B. 사용자 데이터 암호화 필요성 감소  
+
+- 물론 AWS가 네트워크, 데이터 등의 암호화를 수행해주는 부분도 존재
+- 하지만 클라우드를 사용한다고 해서 암호화 필요성이 감소하는건 아니다
+
+C. 수동 규정 준수 감사  
+D. 간소화된 총 소유 비용(TCO) 회계  
+
+- 온디멘드로 사용한만큼만 비용 지불
+- 장비도 AWS 데이터센터에 있어서 소유 비용 감소
+
+E. 더 빠른 제품 출시  
+
+- 클라우드 환경에서 제품 출시 속도가 빨라질 수 있음
+
 </div>  
 </details>
 
@@ -1171,12 +1305,12 @@ B. 인식 및 교육 제어
 C. 물리적 및 환경적 제어  
 D. 구성 관리 제어  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -1197,12 +1331,12 @@ B. 인프라 장치 구성 유지 관리
 C. 호스트 운영 체제 및 가상화 관리  
 D. 가용 영역을 구동하는 소프트웨어 유지 관리  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
@@ -1225,12 +1359,12 @@ B. 탄력성
 C. 민첩성  
 D. 고가용성  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
@@ -1253,12 +1387,12 @@ B. 성능 효율성
 C. 신뢰성  
 D. 보안  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C 
 </div>  
 </details>
 
@@ -1279,12 +1413,12 @@ B. AWS Config
 C. Amazon CloudWatch  
 D. AWS CloudTrail  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
@@ -1305,12 +1439,12 @@ B. AWS 예산
 C. Amazon CloudWatch  
 D. AWS 비용 이상 탐지  
 
-> 
+> ✅ 
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
 </div>  
 </details>
 
