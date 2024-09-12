@@ -42,7 +42,7 @@
 | --- | --- |
 | [[AWS] examtopics 01 - 50](./Certification/aws/practitional/examtopics/01-50/README.md) | ✅ |
 | [[AWS] examtopics 51 - 100](./Certification/aws/practitional/examtopics/51-100/README.md) | ✅ |
-| [[AWS] examtopics 101 - 150](./Certification/aws/practitional/examtopics/101-150/README.md) | 🔥 |
+| [[AWS] examtopics 101 - 150](./Certification/aws/practitional/examtopics/101-150/README.md) | ✅ |
 | [[AWS] examtopics 151 - 200](./Certification/aws/practitional/examtopics/151-200/README.md) | 🔥 |
 | [[AWS] 모듈1: AMAZON WEB SERVICES 소개](./Certification/aws/practitional/module_01/README.md) | ✅ |
 | [[AWS] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | ✅ |
