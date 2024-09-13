@@ -1467,18 +1467,19 @@ B. AWS Global Accelerator
 C. Amazon Route 53  
 D. 탄력적 IP 주소(Elastic IP)  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A
 </div>  
 </details>
 
 ## Question 192
 
-A company wants to migrate to AWS and use the same security software it uses on premises. The security software vendor offers its security software as a service on AWS.  
+A company wants to migrate to AWS and use the same security software it uses on premises.  
+The security software vendor offers its security software as a service on AWS.  
 Where can the company purchase the security solution?  
 
 A. AWS Partner Solutions Finder  
@@ -1487,7 +1488,8 @@ C. AWS Management Console
 D. AWS Marketplace  
 
 [번역]  
-회사는 AWS로 마이그레이션하고 온프레미스에서 사용하는 동일한 보안 소프트웨어를 사용하고자 합니다. 보안 소프트웨어 공급업체는 AWS에서 서비스로 제공하는 보안 소프트웨어를 제공합니다.  
+회사는 AWS로 마이그레이션하고 온프레미스에서 사용하는 동일한 보안 소프트웨어를 사용하고자 합니다.  
+보안 소프트웨어 공급업체는 AWS에서 서비스로 제공하는 보안 소프트웨어를 제공합니다.  
 회사가 이 보안 솔루션을 구매할 수 있는 곳은 어디입니까?  
 
 A. AWS 파트너 솔루션 파인더  
@@ -1495,18 +1497,43 @@ B. AWS 지원 센터
 C. AWS 관리 콘솔  
 D. AWS 마켓플레이스  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: D
+
+A. AWS 파트너 솔루션 파인더  
+
+`AWS 파트너 솔루션 파인더`는 `AWS 파트너 네트워크`(APN)를 찾고 `검색`하는데 사용한다.  
+
+- `AWS`와 `협력`하는 `기업`들이 `제공하는 서비스`를 `검색`하는 데 초점을 맞춤
+- 제공하는 서비스에 대한 `기능` + `연락처`는 알 수 있으나 `구매` + `설치`는 AWS 마켓플레이스에서 이루어짐
+
+B. AWS 지원 센터  
+
+`AWS 지원 센터`는 기술 지원을 해주는 곳이지, S/W를 구매하는 공간이 아님
+
+C. AWS 관리 콘솔  
+
+`AWS 관리 콘솔`을 AWS 리소스를 관리하는데 사용하며, S/W를 구매하는 공간은 아님
+
+D. AWS 마켓플레이스  
+
+`AWS 마켓플레이스`는 `AWS 클라우드`에서 `사용`할 수 있는 `S/W를 구매하는 온라인 상점`이다.  
+`다양한 공급업체`가 제공하는 `S/W 솔루션`을 `찾고` `구매`할 수 있으며, 여기에 보안 S/W 같은 여러 범주의 솔루션이 포함됨.  
+
+- 보안 S/W 공급 업체가 AWS 마켓플레이스에 자신의 S/W를 등록 및 제공
+- 고객이 AWS 마켓 플레이스를 통해 보안 S/W 구매
+
 </div>  
 </details>
 
 ## Question 193
 
-A company is generating large sets of critical data in its on-premises data center. The company needs to securely transfer the data to AWS for processing. These transfers must occur daily over a dedicated connection.  
+A company is generating large sets of critical data in its on-premises data center.  
+The company needs to securely transfer the data to AWS for processing. These transfers must occur daily over a dedicated connection.  
 Which AWS service should the company use to meet these requirements?  
 
 A. AWS Backup  
@@ -1515,7 +1542,8 @@ C. AWS Direct Connect
 D. AWS Snowball  
 
 [번역]  
-회사는 온프레미스 데이터 센터에서 대량의 중요한 데이터를 생성하고 있습니다. 회사는 이 데이터를 처리하기 위해 AWS로 안전하게 전송해야 합니다. 이러한 전송은 전용 연결을 통해 매일 이루어져야 합니다.  
+회사는 온프레미스 데이터 센터에서 대량의 중요한 데이터를 생성하고 있습니다.  
+회사는 이 데이터를 처리하기 위해 AWS로 안전하게 전송해야 합니다. 이러한 전송은 전용 연결을 통해 매일 이루어져야 합니다.  
 이 요구 사항을 충족하기 위해 회사가 사용해야 하는 AWS 서비스는 무엇입니까?  
 
 A. AWS Backup  
@@ -1523,18 +1551,43 @@ B. AWS DataSync
 C. AWS Direct Connect  
 D. AWS Snowball  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
 정답은:  
+
+A. AWS Backup  
+
+`AWS Backup`은 AWS `리소스` 혹은 `데이터`를 `백업`을 관리하는 서비스이지 온프레미스 데이터를 전송하는 서비스는 아님
+
+B. AWS DataSync  
+
+`AWS DataSync`는 `데이터`를 `온프레미스`에서 `AWS`로 `자동`으로 `전송`하는 `서비스`이다.  
+
+- 대량 데이터를 전송하는데 유용
+- `전용 연결`을 `제공하지 않기에` 위 조건에 맞지 않음
+
+C. AWS Direct Connect  
+
+`AWS Direct Connect`는 온프레미스와 AWS 간의 전용 광섬유 망을 통해 통신을 가능하게 하는 서비스이다.  
+
+- `AWS Direct Connect`는 `공용 네트워크 대역`을 사용하지 않음
+- `전용 회선`을 통해 `안정적`이고 `일관된 성능` 제공
+
+D. AWS Snowball  
+
+- `AWS Snowball`은 `물리적 장치`를 사용해 `데이터`를 `전송`하는 서비스
+- `한 번에 대규모 데이터 오프라인으로 전송할때는 유용`하지만, `매일 전송은 부적합`
+
 </div>  
 </details>
 
 ## Question 194
 
-A company wants to run production workloads on AWS. The company wants access to technical support from engineers 24 hours a day, 7 days a week. The company also wants access to the AWS Health API and contextual architectural guidance for business use cases. The company has a strong IT support team and does not need concierge support.  
+A company wants to run production workloads on AWS. The company wants access to technical support from engineers 24 hours a day, 7 days a week.  
+The company also wants access to the AWS Health API and contextual architectural guidance for business use cases. The company has a strong IT support team and does not need concierge support.  
 Which AWS Support plan will meet these requirements at the LOWEST cost?  
 
 A. AWS Basic Support  
@@ -1543,7 +1596,8 @@ C. AWS Business Support
 D. AWS Enterprise Support  
 
 [번역]  
-회사는 AWS에서 프로덕션 워크로드를 실행하고자 합니다. 회사는 연중무휴로 엔지니어의 기술 지원에 접근하고 싶어하며, AWS Health API와 비즈니스 사례에 대한 맥락적 아키텍처 지침도 필요합니다. 회사는 강력한 IT 지원 팀을 보유하고 있으며, 컨시어지 지원은 필요하지 않습니다.  
+회사는 AWS에서 프로덕션 워크로드를 실행하고자 합니다. 회사는 연중무휴로 엔지니어의 기술 지원에 접근하고 싶어하며, AWS Health API와 비즈니스 사례에 대한 맥락적 아키텍처 지침도 필요합니다.  
+회사는 강력한 IT 지원 팀을 보유하고 있으며, 컨시어지 지원은 필요하지 않습니다.  
 이 요구 사항을 가장 저렴한 비용으로 충족하는 AWS 지원 플랜은 무엇입니까?  
 
 A. AWS 기본 지원  
@@ -1551,12 +1605,12 @@ B. AWS 개발자 지원
 C. AWS 비즈니스 지원  
 D. AWS 엔터프라이즈 지원  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 </div>  
 </details>
 
