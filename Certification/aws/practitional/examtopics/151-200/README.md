@@ -1556,7 +1556,7 @@ D. AWS Snowball
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: C
 
 A. AWS Backup  
 
@@ -1631,12 +1631,35 @@ B. AWS Glue
 C. Amazon S3  
 D. AWS Snowball Edge  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
+
+A. Amazon Athena  
+
+`AWS Athena`는 `S3`에 저장된 데이터를 `쿼리`할 수 있는 서비스로, ETL 작업은 안함.  
+주로 `SQL`을 `사용`하여 데이터 조회.
+
+B. AWS Glue  
+
+`AWS Glue`는 `ETL`(`Extract`, `Transform`, `Load`) 작업을 `자동화`하고 `관리`하기 위한 AWS 서비스이다.  
+`AWS Glue`는 `데이터`를 `추출`하고 `변환`하고 `다양한 데이터 저장소에 로드`하는 ETL 서비스.
+
+C. Amazon S3  
+
+`AWS S3`는 `객체 스토리지 서비스`로 데이터 저장 및 관리.
+
+D. AWS Snowball Edge  
+
+`AWS Snowball Edge`는 `대용량 데이터`를 `물리적`으로 `이동`하는데 사용하는 `장비`.  
+주로 온프레미스에서 AWS로 데이터를 전송하기 위해 사용하며 ETL 작업을 수행하는 서비스는 아니다.
+
+- 온프레미스 -> 클라우드로 -> 대용량 데이터 전송하기 위한 -> `물리 장비`
+- `인터넷 연결`이 `제한`된 환경에서 작업 수행을 위한 -> `물리 장비`
+
 </div>  
 </details>
 
@@ -1659,18 +1682,19 @@ C. 다단계 인증(MFA)을 사용하여 AWS 환경 보호
 D. 사용자가 AWS 데이터 센터에 접근할 수 있도록 허용  
 E. 일반적인 웹 공격으로부터 애플리케이션을 보호하기 위한 방화벽 제공  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A, C
 </div>  
 </details>
 
 ## Question 197
 
-Which of the following are shared controls that apply to both AWS and the customer, according to the AWS shared responsibility model? (Choose two.)  
+Which of the following are shared controls that apply to both AWS and the customer,  
+according to the AWS shared responsibility model? (Choose two.)  
 
 A. Resource configuration management  
 B. Network data integrity  
@@ -1687,12 +1711,12 @@ C. 직원 인식 및 교육
 D. 물리적 및 환경적 보안  
 E. 디스크 드라이브 교체 및 폐기  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A, C
 </div>  
 </details>
 
@@ -1715,12 +1739,18 @@ C. 현재 로그인 중인 각 IAM 사용자의 사용자 에이전트 브라우
 D. IAM 사용자에 대해 다단계 인증(MFA)이 활성화되었는지 여부  
 E. 지난 30일 동안 각 IAM 사용자의 잘못된 로그인 시도 횟수  
 
-> 
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: A, D
+
+IAM Credential report에는 아래 정보가 나온다.
+
+- IAM 사용자가 마지막으로 콘솔에 로그인할때 사용한 비밀번호의 날짜 및 시간
+- IAM 다단계 인증 MFA이 활성화 되었는지 여부
+
 </div>  
 </details>
 
@@ -1741,6 +1771,34 @@ B. AWS 비즈니스 지원
 C. AWS 개발자 지원  
 D. AWS 기본 지원  
 
+> ❌
+
+<details>  
+<summary>정답 보기</summary>  
+<div markdown="1">  
+정답은: B
+
+A. AWS 엔터프라이즈 지원  
+
+- 가장 포괄적인 지원 제공
+- Trusted Advisor의 모든 검사를 포함하지만 비용이 더 높음
+
+B. AWS 비즈니스 지원  
+
+- 모범 사례 검사를 전체적으로 제공하는 가장 저렴한 플랜
+- `비용 최적화`, `보안`, `성능`, `서비스 제한`, `내결함성` 관련 `모범사례 검사` 제공
+
+C. AWS 개발자 지원  
+
+- `Trusted Advisor`의 일부 검사만 지원, 모든 모범 사례 지원 안함
+
+D. AWS 기본 지원  
+
+- `Trusted Advisor`의 주요 기능 및 검사에 대한 접근권한 제한
+
+</div>  
+</details>
+
 ## Question 200
 
 Which AWS service provides domain registration, DNS routing, and service health checks?  
@@ -1758,12 +1816,12 @@ B. Amazon Route 53
 C. Amazon CloudFront  
 D. Amazon API Gateway  
 
-> 
+> ✅
 
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B 
 </div>  
 </details>
 
