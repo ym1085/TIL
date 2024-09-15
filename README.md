@@ -55,8 +55,15 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[AWS] 강의 소개](./AWS_Lecture/section_01/강의소개/README.md) | 🔥 |
-| [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./AWS_Lecture/section_01/AWS_공부_가이드_팁/README.md) | 🔥 |
+| [[AWS] 강의 소개](./Lecture/aws_basic/section_01/강의소개/README.md) | 🔥 |
+| [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./Lecture/aws_basic/section_01/AWS_공부_가이드_팁/README.md) | 🔥 |
+
+## 🌩️ IaC(Infrastructure as Code)
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[IaC] DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
+| [[IaC] DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
 
 ## 💻 Observability
 
