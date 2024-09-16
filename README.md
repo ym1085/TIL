@@ -50,7 +50,8 @@
 | [[AWS] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | ✅ |
 | [[AWS] 모듈3: 글로벌 인프라 및 신뢰성](./Certification/aws/practitional/module_03/README.md) | ✅ |
 | [[AWS] 모듈4: 네트워킹](./Certification/aws/practitional/module_04/README.md) | ✅ |
-| [[AWS] 모듈5: 스토리지 및 데이터베이스](./Certification/aws/practitional/module_05/README.md) | 🔥 |
+| [[AWS] 모듈5: 스토리지 및 데이터베이스](./Certification/aws/practitional/module_05/README.md) | ✅ |
+| [[AWS] 모듈6: 보안](./Certification/aws/practitional/module_06/README.md) | 🔥 |
 
 ## 📉 AWS Basic Learning
 
