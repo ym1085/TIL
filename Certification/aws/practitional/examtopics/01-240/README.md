@@ -3257,3 +3257,178 @@ D. AWS 비용 카테고리(AWS Cost Categories)
 </details>
 
 [맨위로](#examtopics-01---240-오답노트)
+
+## Question AWS Skill Builder 문제 001
+
+프리 티어를 초과한 경우 AWS는 AWS Lambda 사용량에 대한 요금을 어떻게 청구하는가? (2개 선택.)
+
+A: Lambda 함수를 실행하는 데 걸리는 시간 기준  
+B: 특정 Lambda 함수의 버전 수 기준  
+C: 지정된 Lambda 함수에 대한 요청 수 기준  
+D: Lambda 함수에 사용되는 프로그래밍 언어 기준  
+E: AWS 계정의 총 Lambda 함수 수 기준
+
+> ❌
+
+<details>  
+<summary>정답 보기</summary>  
+<div markdown="1">  
+정답은: A, C
+
+A: Lambda 함수를 실행하는 데 걸리는 시간 기준  
+
+- 정답) Lambda 요금은 코드를 실행하는데 걸리는 시간에 따라 달라짐
+
+B: 특정 Lambda 함수의 버전 수 기준  
+
+- 오답) Lambda 버전 수는 비용에 영햐잉 없음
+- Lambda `요청 수`와 `실행 시간`에 따라 요금 달라짐
+
+C: 지정된 Lambda 함수에 대한 요청 수 기준  
+
+- 정답) Lambda 함수 요청 수에 따라 요금 달라짐
+
+D: Lambda 함수에 사용되는 프로그래밍 언어 기준  
+
+- 오답) Lambda 함수 프로그래밍 언어는 비용과 무관함
+
+E: AWS 계정의 총 Lambda 함수 수 기준
+
+- 오답) AWS 계정의 함수 수는 요그엠 영향 주지 않음
+
+</div>  
+</details>
+
+## Question AWS Skill Builder 문제 002
+
+한 회사에 Oracle 데이터베이스가 실행되는 온프레미스 Linux 기반 서버가 있다.  
+회사는 AWS의 Amazon EC2 인스턴스에서 실행되도록 데이터베이스 서버를 마이그레이션하고자 한다.  
+회사에서 마이그레이션을 완료하려면 어떤 서비스를 사용해야 하는가?
+
+A: AWS Database Migration Service(AWS DMS)  
+B: AWS Migration Hub  
+C: AWS Application Migration Service(AWS MGN)  
+D: AWS Application Discovery Service
+
+> ❌
+
+<details>  
+<summary>정답 보기</summary>  
+<div markdown="1">  
+정답은: C
+
+A: AWS Database Migration Service(AWS DMS)  
+
+- 오답) `AWS DMS`는 Database migration service로 DB to DB는 맞으나 서버 자체를 옮기는 효과는 없음
+
+B: AWS Migration Hub  
+
+- 오답) `AWS Migration Hub`는 애플리케이션 `마이그레이션`을 `계획`하고 `추적`하는데 도움주는 서비스
+- `AWS Migration Hub`가 마이그레이션을 진행하지는 않음
+
+C: AWS Application Migration Service(AWS MGN)  
+
+- 자동화된 리프트 앤 시프트 솔루션
+- `서버`에서 `실행되는 모든 APP` -> `AWS EC2`로 `마이그레이션 가능`
+
+D: AWS Application Discovery Service
+
+- 오답) `Application Discovery Service`는 `IDC 서버 정보 수집` -> `마이그레이션 계획`
+
+</div>  
+</details>
+
+## Question AWS Skill Builder 문제 003
+
+Amazon S3의 특징적인 기능은 다음 중 무엇인가? (2개 선택.)
+
+A: 글로벌 파일 시스템  
+B: 객체 스토어  
+C: 로컬 파일 스토어  
+D: 네트워크 파일 시스템  
+E: 내구성이 뛰어난 스토리지 시스템
+
+> ❌
+
+<details>  
+<summary>정답 보기</summary>  
+<div markdown="1">  
+정답은: B, E
+
+A: 글로벌 파일 시스템  
+
+- 오답) `S3`는 `글로벌 파일 시스템`이 아니다, `S3는 객체 스토리지 서비스`
+
+B: 객체 스토어  
+
+- 정답) `S3`는 객체를 저장하고, 이러한 객체를 버킷에 저장한다
+
+C: 로컬 파일 스토어  
+
+- 오답) 로컬 아님
+
+D: 네트워크 파일 시스템  
+
+- 오답) 네트워크 파일 시스템 아님, EBS 말하는듯
+
+E: 내구성이 뛰어난 스토리지 시스템
+
+- 정답) 99.999999999 내구성 뛰어남
+
+</div>  
+</details>
+
+## Question AWS Skill Builder 문제 004
+
+전 세계 여러 국가에서 고객을 보유한 기업이 AWS 클라우드를 사용하면 어떤 이점이 있는가? (2개 선택.)
+
+A: 기업은 여러 AWS 리전에 애플리케이션을 배포하여 지연 시간을 줄일 수 있다.  
+B: Amazon Translate는 서드 파티 웹 사이트 인터페이스를 여러 언어로 자동 번역한다.  
+C: Amazon CloudFront는 지연 시간을 줄이기 위해 전 세계에 여러 엣지 로케이션을 보유하고 있다.  
+D: Amazon Comprehend를 사용하면 여러 언어로 사용자 요청에 응답할 수 있는 애플리케이션을 구축할 수 있다.  
+E: Elastic Load Balancing은 애플리케이션 웹 트래픽을 전 세계 여러 AWS 리전에 분산하여 지연 시간을 줄일 수 있다.
+
+> ❌
+
+<details>  
+<summary>정답 보기</summary>  
+<div markdown="1">  
+정답은: A, C
+</div>  
+</details>
+
+## Question AWS Skill Builder 문제 005
+
+전화 통화를 통해 기술 지원을 제공하는 최소의 AWS Support 플랜은 무엇인가?
+
+A: Enterprise
+B: Business
+C: Developer
+D: Basic
+
+> ❌
+
+<details>  
+<summary>정답 보기</summary>  
+<div markdown="1">  
+정답은: B
+
+A: Enterprise
+
+- 오답) Enterprise는 전화 지원을 제공하지만, 이를 위한 최소 플랜이 아님
+
+B: Business
+
+- 정답) Business는 기술 지원에 전화 + 채팅 가능
+- Business가 전화를 제공하는 최소 플랜
+
+C: Developer
+
+- 오답) 지원 티켓 이메일 생성만 허용, 전화 허용 안함
+
+D: Basic
+
+- 오답) 기술 지원 안함
+
+</div>  
+</details>
