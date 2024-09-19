@@ -172,7 +172,9 @@
 > 소스코드의 일부로 빌드 사양을 포함 가능하며, 빌드 프로젝트를 생성할때 빌드 사양 정의도 가능함.  
 >
 > 🚀 Build Spec 옵션이 CodeBuild에서 가장 중요한 옵션이라고 봐도 된다.  
-> 기본적으로 프로젝트 루트(/) 경로에서 파일을 읽어온다.
+> 기본적으로 프로젝트 루트(/) 경로에서 파일을 읽어온다.  
+>
+> 💡 아래 3개의 파일을 프로젝트 루트 경로에 넣어준다
 
 ```yml
 # 참고 : https://github.com/ym1085/aws-cicde-code-series?tab=readme-ov-file
@@ -202,17 +204,127 @@ phases:
       - echo Pushing the Docker image...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       - echo "updated line for codebuild ci"
+      #- printf '[{"name":"aws-cicd-test","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+      #- printf '{"ImageURI":"%s"}' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imageDetail.json
 
 artifacts:
   files:
-    - build/libs/*.jar # 빌드된 JAR 파일 경로를 지정
-  discard-paths: no
+    - appspec.yml
+    - taskdef.json
+    #- imagedefinitions.json
+    #- imageDetail.json
+  discard-paths: yes
 
 cache:
   paths:
     - ~/.gradle/caches/**/* # Gradle 캐시를 사용하여 빌드 시간을 단축
     - ~/.gradle/wrapper/dists/**/* # Gradle 래퍼를 캐시
 ```
+
+```yml
+# appSpec.yml
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-northeast-2:65xxxxxxxxxx:task-definition/test-api-td-prod:1"
+        LoadBalancerInfo:
+          ContainerName: "test-api-server"
+          ContainerPort: 8080
+        PlatformVersion: "1.4.0"
+        NetworkConfiguration:
+          AwsvpcConfiguration:
+            Subnets: ["subnet-0xxxxxxxxxx", "subnet-0xxxxxxxxxx"]
+            SecurityGroups: ["sg-0xxxxxxxxxx"]
+            AssignPublicIp: "DISABLED"
+```
+
+```json
+{
+  "family": "test-api-td-prod",
+  "containerDefinitions": [
+    {
+      "name": "aws-cicd-test-api",
+      "image": "6xxxxxxxxxxxx.dkr.ecr.ap-northeast-2.amazonaws.com/aws-cicd-test:latest",
+      "cpu": 256,
+      "memory": 512,
+      "memoryReservation": 512,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "TZ",
+          "value": "Asia/Seoul"
+        },
+        {
+          "name": "SPRING_PROFILES_ACTIVE",
+          "value": "production"
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "test-shared-volume",
+          "containerPath": "/data/",
+          "readOnly": false
+        }
+      ],
+      "volumesFrom": [],
+      "linuxParameters": {
+        "capabilities": {
+          "add": [],
+          "drop": []
+        }
+      },
+      "privileged": false,
+      "readonlyRootFilesystem": false,
+      "pseudoTerminal": false,
+      "dockerLabels": {
+        "env": "prod",
+        "Name": "test-api-server"
+      },
+      "healthCheck": {
+        "command": [
+          "CMD-SHELL",
+          "curl --location --request GET 'http://127.0.0.1:8080/api/v1/health-check' || exit 1"
+        ],
+        "interval": 10,
+        "timeout": 10,
+        "retries": 10
+      },
+      "systemControls": []
+    }
+  ],
+  "taskRoleArn": "arn:aws:iam::6xxxxxxxxxxxx:role/ecs-task-role",
+  "executionRoleArn": "arn:aws:iam::6xxxxxxxxxxxx:role/ecs-task-exc-role",
+  "networkMode": "awsvpc",
+  "volumes": [
+    {
+      "name": "test-shared-volume",
+      "host": {}
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512",
+  "ephemeralStorage": {
+    "sizeInGiB": 21
+  },
+  "runtimePlatform": {
+    "operatingSystemFamily": "LINUX"
+  }
+}
+```
+
+> buildspec.yml 파일에서 -> printf '[{"name":"ECR_리포지토리명","imageUri":"%s"}]'... -> 이 부분 반드시 ECR_리포지토리명으로 지정
 
 - 기본적으로 `buildspec.yml` 파일 생성 후 관리
 - buildspec.yml 파일은 아래 내용 관리
@@ -566,30 +678,7 @@ cache:
 }
 ```
 
-## Stage 04 - Code Deploy 구성
-
-![code_deloy.png](./img/code_deploy.png)
-
-```yml
-# appSpec.yml
-version: 0.0
-Resources:
-  - TargetService:
-      Type: AWS::ECS::Service
-      Properties:
-        TaskDefinition: "arn:aws:ecs:ap-northeast-2:65xxxxxxxxxx:task-definition/test-api-td-prod:1"
-        LoadBalancerInfo:
-          ContainerName: "test-api-server"
-          ContainerPort: 8080
-        PlatformVersion: "1.4.0"
-        NetworkConfiguration:
-          AwsvpcConfiguration:
-            Subnets: ["subnet-0xxxxxxxxxx", "subnet-0xxxxxxxxxx"]
-            SecurityGroups: ["sg-0xxxxxxxxxx"]
-            AssignPublicIp: "DISABLED"
-```
-
-## Stage 05 - ECS 클러스터 구성
+## Stage 04 - ECS 클러스터 구성
 
 ### 클러스터 생성
 
@@ -821,6 +910,38 @@ Resources:
       - /health-check
       - HTTP
     - Create 버튼 클릭
+
+## Stage 05 - Code Deploy 구성
+
+![code_deloy.png](./img/code_deploy.png)
+
+- AWS Console > CodePipeline > 파이프라인 > 파이프라인명 > 파이프라인 편집 > Add Stage
+- 작업 그룹 추가
+  - 작업 이름
+    - ECS-FARGATE-BLUE-GREEN-DEPLOY-TASK
+  - 작업 공급자
+    - Amazon ECS(Blue/Green)
+  - 리전
+    - 아시아 태평양 (서울)
+  - 입력 아티펙트
+    - BuildArtifact
+  - AWS CodeDeploy 애플리케이션 이름
+    - AppECS-test-cluster-aws-cicd-test-api(ECS 생성 시 자동으로 만들어지는 리소스)
+  - AWS CodeDeploy 배포 그룹
+    - DgpECS-test-cluster-aws-cicd-test-api(ECS 생성 시 자동으로 만들어지는 리소스)
+  - Amazon ECS 작업 정의
+    - BuildArtifact / taskdef.json(CodeBuild에 의한 작업물)
+  - AWS CodeDeploy AppSpec 파일
+    - BuildArtifact / appspec.yaml(CodeBuild에 의한 작업물)
+  - 이미지 세부 정보가 있는 입력 아티팩트
+    - imagedefinitions.json(CodeBuild에 의한 작업물)
+- AWSCodeDeployDeployerAccess IAM 정책 추가
+
+> ❌ Exception while trying to read the task definition artifact file from: BuildArtifact. 오류 발생  
+> Artifact는 3MB를 넘기면 안된다는 이슈가 있음  
+>
+> 참고 1 : https://stackoverflow.com/questions/57216053/invalid-action-configuration-exception-while-trying-to-read-the-task-definition  
+> 참고 2 : https://happyengine.tistory.com/m/140
 
 ### ECS 배포 및 부가 설정 관련 AWS TAM 답변 정리
 
