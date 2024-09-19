@@ -31,8 +31,8 @@
 | [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ✅ |
 | [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md) | ✅ |
 | [[AWS] IAM User 생성 후 역할 전환](./AWS/iam_user_role_assume/README.md) | ✅ |
+| [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md) | ✅ |
 | [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md) | 🔥 |
-| [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md) | 🔥 |
 | [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
