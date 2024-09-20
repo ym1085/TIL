@@ -577,7 +577,7 @@ D. AWS 예산
 <details>
 <summary>정답 보기</summary>
 <div markdown="1">
-정답은: C
+정답은: B
 
 A. AWS 청구서(AWS Bills)  
 
