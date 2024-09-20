@@ -72,7 +72,7 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Observability] Prometheus와 Spring Actuator을 활용한 대시보드 구성](./Observability/Prometheus/README.md) | ✅ |
+| [[Observability] Prometheus & Spring Actuator 활용 대시보드 구성](./Observability/Prometheus/README.md) | ✅ |
 | [[Observability] 프로메테우스 지표 rate, increase 차이 간략히 정리](./Observability/prometheus_increate_rate/README.md) | ✅ |
 | [[Observability] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 
@@ -158,7 +158,7 @@
 | [[ES] ES 클러스터 운영 중 노드 순차적 재시작(Rolling Restart)](./ELK/무중단_재기동/README.md) | ✅ |
 | [[ES] ES 운영중인 Live 서비스의 alias 교체 방법](./ELK/alias_change/README.md) | ✅ |
 | [[ES] Elastciearch 클러스터에서 특정 Node 제외 시키기](./ELK/exclude_node/README.md) | ✅ |
-| [[ES] ES 색인 속도 증대를 위한 EC2 인스턴스 타입 변경, 그리고 iostat 명령어로 디스크 I/O 확인하기](./ELK/iostat/README.md) | ✅ |
+| [[ES] 검색엔진 EC2 인스턴스 타입 변경, iostat 명령어 디스크 I/O 확인](./ELK/iostat/README.md) | ✅ |
 
 ## 📒 Linux
 
