@@ -73,7 +73,7 @@
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[Observability] Prometheus & Spring Actuator 활용 대시보드 구성](./Observability/Prometheus/README.md) | ✅ |
-| [[Observability] 프로메테우스 지표 rate, increase 차이 간략히 정리](./Observability/prometheus_increate_rate/README.md) | ✅ |
+| [[Observability] 프로메테우스 지표 rate, increase 차이 정리](./Observability/prometheus_increate_rate/README.md) | ✅ |
 | [[Observability] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 
 ## ☕ Java
@@ -121,7 +121,7 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY, ENV, ARG, ENTRYPOINT, FROM)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
+| [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY...)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소 관련 참고 링크](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
 | [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
