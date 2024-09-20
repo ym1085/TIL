@@ -26,8 +26,8 @@
 | [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md) | ✅ |
 | [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅ |
 | [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md) | ✅ |
-| [[AWS] ECS Task Role vs Execution Role 차이 및 AWSServiceRoleForECS](./AWS/ecs_task_role/README.md) | ✅ |
-| [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 방법 정리](./AWS/create_vpc_etc/README.md) | ✅ |
+| [[AWS] ECS Task Role vs Execution Role 차이](./AWS/ecs_task_role/README.md) | ✅ |
+| [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 정리](./AWS/create_vpc_etc/README.md) | ✅ |
 | [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ✅ |
 | [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md) | ✅ |
 | [[AWS] IAM User 생성 후 역할 전환](./AWS/iam_user_role_assume/README.md) | ✅ |
