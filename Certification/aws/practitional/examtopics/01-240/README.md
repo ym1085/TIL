@@ -770,7 +770,7 @@ B. AWS 로컬 영역
 C. AWS 파장  
 D. AWS 전초기지  
 
-> ❌
+> ❌❌
 
 <details>
 <summary>정답 보기</summary>
@@ -871,7 +871,7 @@ B. AWS IAM Access Analyzer
 C. AWS Trusted Advisor  
 D. Amazon GuardDuty  
 
-> ❌
+> ❌❌
 
 <details>
 <summary>정답 보기</summary>
@@ -2753,7 +2753,7 @@ D. Amazon QuickSight
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 
 A. Amazon Transcribe  
 
@@ -3218,7 +3218,7 @@ D. AWS Cost Categories
 
 [번역]  
 회사는 Amazon EC2 인스턴스를 사용하여 웹 애플리케이션을 실행합니다. 회사는 주문형 인스턴스와 스팟 인스턴스를 사용하고 있습니다.  
-회사는 두 가지 유형의 인스턴스에 대한 월별 지출을 시각화해야 합니다.  
+회사는 `두 가지 유형의 인스턴스`에 대한 `월별 지출을 시각화`해야 합니다.  
 이 요구 사항을 충족하는 AWS 서비스 또는 기능은 무엇입니까?  
 
 A. AWS 비용 탐색기  
@@ -3294,7 +3294,7 @@ D: Lambda 함수에 사용되는 프로그래밍 언어 기준
 
 E: AWS 계정의 총 Lambda 함수 수 기준
 
-- 오답) AWS 계정의 함수 수는 요그엠 영향 주지 않음
+- 오답) AWS 계정의 함수 수는 요금에 영향 주지 않음
 
 </div>  
 </details>
