@@ -62,14 +62,18 @@
 | [[AWS] 강의 소개](./Lecture/aws_basic/section_01/강의소개/README.md) | 🔥 |
 | [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./Lecture/aws_basic/section_01/AWS_공부_가이드_팁/README.md) | 🔥 |
 
-## 🌩️ IaC(Infrastructure as Code)
+## 🌩️ IaC(Infrastructure as Code: AWS & 테라폼)
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Terraform] DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
-| [[Terraform] DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
-| [[Terraform] Terraform 기본](./Lecture/terraform_basic/section_02/terraform_기본/README.md) | 🔥 |
-| [[Terraform] AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md) | 🔥 |
+| [[Terraform] 01. DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
+| [[Terraform] 02. DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
+| [[Terraform] 02-1. Terraform 기본](./Lecture/terraform_basic/section_02/terraform_기본/README.md) | 🔥 |
+| [[Terraform] 03. AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md) | 🔥 |
+| [[Terraform] 04. ZSH 및 Oh-my-zsh 설치](./Lecture/terraform_basic/section_02/zsh_oh_my_zsh/README.md) | 🔥 |
+| [[Terraform] 04-1. AWS CLI 및 Terraform 설치](./Lecture/terraform_basic/section_02/aws_cli_terraform_install/README.md) | 🔥 |
+| [[Terraform] 05-1. AWS Configure 설정](./Lecture/terraform_basic/section_02/aws_configure_설정/README.md) | 🔥 |
+| [[Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | 🔥 |
 
 ## 💻 Observability
 
