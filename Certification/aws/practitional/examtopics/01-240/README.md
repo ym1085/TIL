@@ -395,7 +395,7 @@ B. AWS 소프트웨어 개발 키트(SDK)
 C. AWS 서비스 카탈로그  
 D. AWS 앱싱크
 
-> ❌
+> ❌❌
 
 <details>
 <summary>정답 보기</summary>
@@ -823,7 +823,7 @@ B. Amazon AppStream 2.0
 C. AWS AppSync  
 D. AWS Outposts  
 
-> ❌
+> ❌❌
 
 <details>
 <summary>정답 보기</summary>
