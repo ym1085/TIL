@@ -65,8 +65,8 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[IaC] DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
-| [[IaC] DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
+| [[Terraform] DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
+| [[Terraform] DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
 
 ## 💻 Observability
 
