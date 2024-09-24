@@ -67,6 +67,8 @@
 | --- | --- |
 | [[Terraform] DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
 | [[Terraform] DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
+| [[Terraform] Terraform 기본](./Lecture/terraform_basic/section_02/terraform_기본/README.md) | 🔥 |
+| [[Terraform] AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md) | 🔥 |
 
 ## 💻 Observability
 
