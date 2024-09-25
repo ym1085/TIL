@@ -924,7 +924,7 @@ B. Amazon Lightsail
 C. AWS Storage Gateway  
 D. AWS Snowball Edge  
 
-> ❌
+> ❌❌
 
 <details>
 <summary>정답 보기</summary>
