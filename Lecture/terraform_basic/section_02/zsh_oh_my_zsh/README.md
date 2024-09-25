@@ -27,6 +27,11 @@ sudo yum install -y zsh
 ```
 
 ```shell
+# chsh 사용을 위해 아래 패키지 설치
+sudo yum install util-linux-user
+```
+
+```shell
 # 기본 쉘을 zsh로 변경
 # chsh: change shell의 약자
 chsh -s /bin/zsh
