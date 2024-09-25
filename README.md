@@ -72,7 +72,7 @@
 | [[Terraform] 03. AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md) | 🔥 |
 | [[Terraform] 04. ZSH 및 Oh-my-zsh 설치](./Lecture/terraform_basic/section_02/zsh_oh_my_zsh/README.md) | ✅ |
 | [[Terraform] 04-1. AWS CLI 및 Terraform 설치](./Lecture/terraform_basic/section_02/aws_cli_terraform_install/README.md) | ✅ |
-| [[Terraform] 05-1. AWS Configure 설정](./Lecture/terraform_basic/section_02/aws_configure_설정/README.md) | 🔥 |
+| [[Terraform] 05-1. AWS Configure 설정](./Lecture/terraform_basic/section_02/aws_configure_설정/README.md) | ✅ |
 | [[Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | 🔥 |
 
 ## 💻 Observability
