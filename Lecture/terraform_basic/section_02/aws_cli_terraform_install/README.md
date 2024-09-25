@@ -44,13 +44,10 @@ sudo ./aws/install
 
 > ✅ Terraform 설치 방법 정리
 
-- Terraform은 Infrastructure as Code를 구현할 수 있는 대표적으로 오픈소스 툴
-- 최신 테라폼 버전을 다운 받는 것을 권장
+- Terraform은 `Infrastructure as Code`를 구현할 수 있는 대표적으로 `오픈소스 툴`
+- `최신 테라폼 버전`을 `다운` 받는 것을 `권장`
 
 ### URL로 특정 버전 설치
-
-- 최신 버전 테라폼 설치 URL : [https://developer.hashicorp.com/terraform/install](https://developer.hashicorp.com/terraform/install)
-- 이전 버전 테라폼 설치 URL : [https://releases.hashicorp.com/terraform/](https://releases.hashicorp.com/terraform/)
 
 ```shell
 # tap
@@ -68,4 +65,59 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 ```
 
-### TODO
+> Mac OS쓰는 경우 brew로 설치
+
+- 최신 버전 테라폼 설치 URL : [https://developer.hashicorp.com/terraform/install](https://developer.hashicorp.com/terraform/install)
+- 이전 버전 테라폼 설치 URL : [https://releases.hashicorp.com/terraform/](https://releases.hashicorp.com/terraform/)
+
+이번에는 Terraform 이전 버전을 AWS EC2에 설치하여 실습을 진행한다.  
+`Terraform`은 [Hashicorp](https://www.hashicorp.com)에서 제공이 되는 오픈소스로, 툴들은 대부분 `Go 언어`를 기반으로 만들어졌다.  
+Go 언어 기반으로 만들어졌기에 실행 파일 1개만 생기게 된다.
+
+```shell
+# wget을 통해 terraform 설치
+[ec2-user@ip-172-xx-xx-xx ~]$ wget https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip
+--2024-09-25 03:39:57--  https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip
+Resolving releases.hashicorp.com (releases.hashicorp.com)... 54.230.61.31, 54.230.61.88, 54.230.61.113, ...
+Connecting to releases.hashicorp.com (releases.hashicorp.com)|54.230.61.31|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 28424050 (27M) [application/zip]
+Saving to: ‘terraform_0.12.29_linux_amd64.zip’
+
+terraform_0.12.29_linux_amd64.zip  100%[===============================================================>]  27.11M  15.1MB/s    in 1.8s
+
+2024-09-25 03:40:00 (15.1 MB/s) - ‘terraform_0.12.29_linux_amd64.zip’ saved [28424050/28424050]
+```
+
+```shell
+# 압축 해제
+unzip terraform_0.12.29_linux_amd64.zip
+```
+
+```shell
+# 압축 파일 삭제
+rm terraform_0.12.29_linux_amd64.zip
+```
+
+```shell
+echo $PATH
+/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+```
+
+```shell
+# 시스템 전역에서 사용하기 위해 /usr/local/bin 경로로 이동
+sudo mv terraform /usr/local/bin
+```
+
+```shell
+# terraform 버전 확인
+terraform --version
+Terraform v0.12.29
+
+Your version of Terraform is out of date! The latest version
+is 1.9.5. You can update by downloading from https://www.terraform.io/downloads.html
+```
+
+## 99. 참고 자료
+
+- [[Terraform] AWS CLI 및 Terraform 설치](https://terraform101.inflearn.devopsart.dev/preparation/install-terraform-aws)
