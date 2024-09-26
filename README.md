@@ -33,7 +33,7 @@
 | [[AWS] IAM User 생성 후 역할 전환](./AWS/iam_user_role_assume/README.md) | ✅ |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md) | ✅ |
 | [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md) | 🔥 |
-| [[AWS] VPC 그리고 Subnet이란?](./AWS/VPC_Subnet/README.md) | ❌ |
+| [[AWS] VPC 총정리](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 
@@ -53,7 +53,8 @@
 | [[AWS] 모듈4: 네트워킹](./Certification/aws/practitional/module_04/README.md) | ✅ |
 | [[AWS] 모듈5: 스토리지 및 데이터베이스](./Certification/aws/practitional/module_05/README.md) | ✅ |
 | [[AWS] 모듈6: 보안](./Certification/aws/practitional/module_06/README.md) | ✅ |
-| [[AWS] 모듈7: 모니터링 및 분석](./Certification/aws/practitional/module_07/README.md) | 🔥 |
+| [[AWS] 모듈7: 모니터링 및 분석](./Certification/aws/practitional/module_07/README.md) | ✅ |
+| [[AWS] 모듈8: 요금 및 지원](./Certification/aws/practitional/module_08/README.md) | 🔥 |
 
 ## 📉 AWS Basic Learning
 
@@ -74,6 +75,8 @@
 | [[Terraform] 04-1. AWS CLI 및 Terraform 설치](./Lecture/terraform_basic/section_02/aws_cli_terraform_install/README.md) | ✅ |
 | [[Terraform] 05-1. AWS Configure 설정](./Lecture/terraform_basic/section_02/aws_configure_설정/README.md) | ✅ |
 | [[Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | 🔥 |
+| [[Terraform] 07. VPC 소개](./Lecture/terraform_basic/section_03/vpc_소개/README.md) | 🔥 |
+| [[Terraform] 08. VPC와 subnet 생성](./Lecture/terraform_basic/section_03/vpc_subnet_생성/README.md) | 🔥 |
 
 ## 💻 Observability
 
