@@ -26,8 +26,9 @@ resource "aws_instance" "example" {
 }
 ```
 
-`resource`는 `terraform 내`에서 `실제로 사용할 인프라 자원`을 의미한다.  
-예시로 `aws_security`, `aws_lb`, `aws_instance`와 같은 내용이 존재한다.
+- `resource`는 terraform 내에서 실제 사용하는 리소스 자원(Security Group, ELB..) 의미
+  - aws_security_group, aws_lb, aws_instance와 같은 리소스 존재
+- 즉, 콘솔에서 어떠한 리소스를 만드는것처럼 해당 리소스(EC2, SG, Routing Table)을 지정하면 된다
 
 ### ✅ provider
 
@@ -41,8 +42,9 @@ provider "aws" {
 }
 ```
 
-Terraform으로 정의할 infrastructure provider 명시한다.  
-즉 `provider`란 `Terraform`이 특정 `클라우드 서비스`나 `플랫폼`과 `상호작용`하기 위한 `플러그인`을 의미한다.  
+- `provider`는 terraform으로 정의할 Infrastructure provider를 명시
+- `provider`는 `특정 클라우드 서비스` or `플랫폼`과 `상호작용` 하기 위한 `플러그인` 의미
+  - AWS, NCP, GCP.. 등등
 
 ### ✅ output
 
@@ -52,8 +54,8 @@ output "instance_ip_addr" {
 }
 ```
 
-- `인프라를 프로비저닝 후`에 `생성된 자원`을 `output`로 뽑을 수 있음
-- `OutPut`로 `추출한 부분`은 이후에 `remote state` 에서 활용 가능
+- `인프라`를 `프로비저닝`하고 `terraform` `결과물`을 `저장`하는 파일
+- output로 추출한 부분은 추후 remote state에서 활용 가능
 
 ### ✅ backend
 
@@ -118,50 +120,194 @@ resource "aws_instance" "example" {
 
 ### Terraform 작동 원리
 
-> Local Code, AWS Real Infra, Backend State
+> Terraform을 활용하기 위해서는 아래 3가지 형상의 작동원리를 이해하는게 중요하다  
+> Local Code(로컬 코드 작성) -> AWS 실제 인프라(실제 인프라 배포) -> Backend에 저장된 상태(가장 최근 배포된 테라폼 형상)
 
-테라폼을 활용하기 위해서는 테라폼의 작동 원리를 이해하는 것이 중요하다.  
-`테라폼`에는 기본적으로 `3가지 형상`이 `존재`한다.
-
-1. Local 코드: `현재 개발자가 작성/수정하고 있는 코드`
+1. Local 코드: `현재 개발자가 작성하고 있는 코드`
 2. AWS 실제 인프라: `실제로 AWS에 배포되어 있는 인프라`
 3. Backend에 저장된 상태: `가장 최근에 배포한 테라폼 코드 형상`
 
-여기서 가장 중요한 부분은 `AWS 실제 인프라`와 `Backend에 저장된 상태`가 `100%[🔥] 일치` 하도록 만드는 것이다.  
-위 2가지가 100% 일치하도록 유지하는것이 중요한데, `Terraform`은 `import`, `state` 명령어를 제공한다.
+- 여기서 `가장 중요한 부분`은 `AWS 실제 인프라`와 `Backend에 저장된 상태`가 `100% 일치`하도록 만드는 부분
+- 위 2가지가 일치하는 것이 중요하며, terraform은 `import` 와 `state` 명령어를 제공한다
+- 먼저 인프라 정의는 Local 코드로 시작
+  - 1: `로컬`에서 개발자가 `코드 작성`
+  - 2: 해당 코드를 `실제 인프라`에 `프로비저닝`
+  - 3: backend 구성 + 최신 테라폼 코드 저장
 
-먼저 인프라 정의는 `Local 코드`로 시작한다.  
-
-1. `개발자`는 `로컬`에서 `테라폼 코드 정의` (로컬 개발 느낌?)
-2. `코드 정의 후` `실제 인프라로 프로비저닝` (PROD 서버 배포?)
-3. 이 때 `backend를 구성`하여 `최신 코드를 저장`한다, 흐름은 아래와 같다
+> 1 - 3번에 대한 흐름은 아래와 같다
 
 ### Terraform init
 
-> git fetch 같은 느낌인데?
+```terraform
+# provider.tf
+provider "aws" {
+  region = "ap-northeast-2"
+}
+```
 
-- 지정한 backend(S3 등등)에 상태(state) 저장을 위해 `.tfstate 파일 생성`, 여기에는 가장 마지막에 적용한 테라폼 내역 저장
-- `init 작업 완료 후` `local`에는 `.tfstate`에 정의된 내용을 담은 `.terraform` 파일 생성됨
-- 기존 다른 개발자가 이미 `.tfstate`를 정의한게 있으면, 다른 개발자는 init 작업을 통해 local에 sync 맞출 수 있음
+- init 전에 우선 provider 부터 생성
+
+```shell
+# terraform init
+$ terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Checking for available provider plugins...
+- Downloading plugin for provider "aws" (hashicorp/aws) 3.37.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 3.37"
+
+...중략
+```
+
+```shell
+# .terraform 파일 생성되어 있음
+$ ls -al
+total 20
+drwxr-xr-x. 3 ec2-user ec2-user    43 Sep 26 14:49 .
+drwx------. 8 ec2-user ec2-user 16384 Sep 26 14:50 ..
+drwxr-xr-x. 3 ec2-user ec2-user    21 Sep 26 14:48 .terraform
+-rw-r--r--. 1 ec2-user ec2-user    47 Sep 26 14:48 provider.tf
+```
+
+- `지정한 backend`(s3)에 `상태 저장`을 위해 `terraform.tfstate` 파일 생성
+  - `가장 최신 테라폼 내역 저장`
+- `terraform init` 작업이 완료되면, 로컬에는 .terraform 디렉토리가 생성됨
+  - 플러그인, 모듈, 백엔드 설정 등 저장
+- 다른 개발자가 .tfstate 정의한게 있으면, `init` 통해 local에서 싱크(sync) 맞출수 있음
 
 ### Terraform plan
 
-- 정의한 코드가 `어떤 인프라`를 만들지 `미리 예측 결과를 보여준다`
-- 단, plan에 에러가 없어도 실제 배포 시 에러 있을 수 있음
+```terraform
+resource "aws_s3_bucket" "test" {
+  bucket = "terraform"
+}
+```
+
+- s3 버킷 생성
+
+```shell
+# ec2-user @ terraform-ec2-test in ~/terraform [14:52:41]
+# terraform plan 실행
+$ terraform plan
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_s3_bucket.test will be created
+  + resource "aws_s3_bucket" "test" {
+      + acceleration_status         = (known after apply)
+      + acl                         = "private"
+      + arn                         = (known after apply)
+      + bucket                      = "terraform"
+      + bucket_domain_name          = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = false
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + region                      = (known after apply)
+      + request_payer               = (known after apply)
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + versioning {
+          + enabled    = (known after apply)
+          + mfa_delete = (known after apply)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+```
+
+- `정의한 코드`가 `어떤 인프라`를 만들지 `예측 결과 확인`
+- plan에 에러가 없어도 실제 배포 시 에러 있을 수 있음
 - `Plan 명령어는 어떠한 형상에도 변화 주지 않음`
 
 ### Terraform apply
 
-- 실제 인프라 배포를 위한 명령어
-- `apply`시 `실제 인프라 생성` + `작업 결과`는 `backend`의 `.tfstate 파일에 저장`됨
-- `apply`시 `해당 결과`는 `local`의 `.terraform 파일에도 저장`됨
+```shell
+# ec2-user @ terraform-ec2-test in ~/terraform [14:54:25]
+$ terraform apply
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_s3_bucket.test will be created
+  + resource "aws_s3_bucket" "test" {
+      + acceleration_status         = (known after apply)
+      + acl                         = "private"
+      + arn                         = (known after apply)
+      + bucket                      = "terraform101-ymkim"
+      + bucket_domain_name          = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = false
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + region                      = (known after apply)
+      + request_payer               = (known after apply)
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + versioning {
+          + enabled    = (known after apply)
+          + mfa_delete = (known after apply)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_s3_bucket.test: Creating...
+aws_s3_bucket.test: Creation complete after 1s [id=terraform101-ymkim]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
+
+```shell
+# 버킷 생성시 버킷 이름은 전 세계적으로 고유해야 하기 때문에
+# 다른 사용자가 사용중인 경우 사용을 못한다, uniq한 이름으로 변경
+Error: Error creating S3 bucket: BucketAlreadyExists: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
+	status code: 409, request id: R5D4G7RGQVMR77M0, host id: 9OS1h9ooo79u2cjX05r6klEBDtmxZgaF91dgTrvjxx+WzEDmeP0EQKZUpW5pUhz1FglRBg3hhg/WlnOkOANqpg==
+```
+
+- `실제 인프라 배포` 명령어
+  - apply시 실제 인프라 생성
+  - apply시 작업 결과는 .tfstate 파일에 저장
+  - apply시 해당 결과는 local의 .terraform 파일에도 저장
 
 ### Terraform import
 
-- `AWS 인프라에 배포된 리소스` -> `terraform state`로 `옮기는 작업`
-- local의 .terraform에 해당 리소스의 상태 정보를 저장하는 역할
-  - apply 전까지는 backend에 저장 안됨
-  - import 이후에 plan을 하면 로컬에 코드가 없기에 리소스가 삭제 및 변경된다는 결과를 보여준다
+- aws 인프라에 `배포된 리소스`를 `terraform state로 옮기는 작업`
+- `local`의 `.terraform` 파일에 해당 리소스 상태 정보 저장
+  - apply 전까지 backend에 저장 안함
+  - import 이후 plan 하면 로컬 코드 없어짐
+    - 리소스 삭제 및 변경된다는 결과 출력
 
 ## 99. 참고 자료
 
