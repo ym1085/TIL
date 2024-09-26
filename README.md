@@ -10,7 +10,7 @@
 > 정리 필요 : ❌  
 > 정리 진행 : 🔥
 
-## ☁️ AWS(Amzon Web Service)
+## ☁️ AWS(Amazon Web Services)
 
 | 키워드 | 완료 여부 |
 | --- | --- |
@@ -37,46 +37,46 @@
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
 
-## 🌫️ AWS Practitional 자격증
+## 🌫️ AWS Certificate
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[AWS] examtopics 01 - 50](./Certification/aws/practitional/examtopics/01-50/README.md) | ✅ |
-| [[AWS] examtopics 51 - 100](./Certification/aws/practitional/examtopics/51-100/README.md) | ✅ |
-| [[AWS] examtopics 101 - 150](./Certification/aws/practitional/examtopics/101-150/README.md) | ✅ |
-| [[AWS] examtopics 151 - 200](./Certification/aws/practitional/examtopics/151-200/README.md) | ✅ |
-| [[AWS] examtopics 201 - 240](./Certification/aws/practitional/examtopics/201-240/README.md) | ✅ |
-| [[AWS] examtopics 01 - 240 오답노트](./Certification/aws/practitional/examtopics/01-240/README.md) | 🔥 |
-| [[AWS] 모듈1: AMAZON WEB SERVICES 소개](./Certification/aws/practitional/module_01/README.md) | ✅ |
-| [[AWS] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | ✅ |
-| [[AWS] 모듈3: 글로벌 인프라 및 신뢰성](./Certification/aws/practitional/module_03/README.md) | ✅ |
-| [[AWS] 모듈4: 네트워킹](./Certification/aws/practitional/module_04/README.md) | ✅ |
-| [[AWS] 모듈5: 스토리지 및 데이터베이스](./Certification/aws/practitional/module_05/README.md) | ✅ |
-| [[AWS] 모듈6: 보안](./Certification/aws/practitional/module_06/README.md) | ✅ |
-| [[AWS] 모듈7: 모니터링 및 분석](./Certification/aws/practitional/module_07/README.md) | ✅ |
-| [[AWS] 모듈8: 요금 및 지원](./Certification/aws/practitional/module_08/README.md) | 🔥 |
+| [[AWS Practitioner] examtopics 01 - 50](./Certification/aws/practitional/examtopics/01-50/README.md) | ✅ |
+| [[AWS Practitioner] examtopics 51 - 100](./Certification/aws/practitional/examtopics/51-100/README.md) | ✅ |
+| [[AWS Practitioner] examtopics 101 - 150](./Certification/aws/practitional/examtopics/101-150/README.md) | ✅ |
+| [[AWS Practitioner] examtopics 151 - 200](./Certification/aws/practitional/examtopics/151-200/README.md) | ✅ |
+| [[AWS Practitioner] examtopics 201 - 240](./Certification/aws/practitional/examtopics/201-240/README.md) | ✅ |
+| [[AWS Practitioner] examtopics 01 - 240 오답노트](./Certification/aws/practitional/examtopics/01-240/README.md) | ✅ |
+| [[AWS Practitioner] 모듈1: AMAZON WEB SERVICES 소개](./Certification/aws/practitional/module_01/README.md) | ✅ |
+| [[AWS Practitioner] 모듈2: 클라우드 컴퓨팅](./Certification/aws/practitional/module_02/README.md) | ✅ |
+| [[AWS Practitioner] 모듈3: 글로벌 인프라 및 신뢰성](./Certification/aws/practitional/module_03/README.md) | ✅ |
+| [[AWS Practitioner] 모듈4: 네트워킹](./Certification/aws/practitional/module_04/README.md) | ✅ |
+| [[AWS Practitioner] 모듈5: 스토리지 및 데이터베이스](./Certification/aws/practitional/module_05/README.md) | ✅ |
+| [[AWS Practitioner] 모듈6: 보안](./Certification/aws/practitional/module_06/README.md) | ✅ |
+| [[AWS Practitioner] 모듈7: 모니터링 및 분석](./Certification/aws/practitional/module_07/README.md) | ✅ |
+| [[AWS Practitioner] 모듈8: 요금 및 지원](./Certification/aws/practitional/module_08/README.md) | 🔥 |
 
-## 📉 AWS Basic Learning
+## 📉 AWS Basic Study
 
 | 키워드 | 완료 여부 |
 | --- | --- |
 | [[AWS] 강의 소개](./Lecture/aws_basic/section_01/강의소개/README.md) | 🔥 |
 | [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./Lecture/aws_basic/section_01/AWS_공부_가이드_팁/README.md) | 🔥 |
 
-## 🌩️ IaC(Infrastructure as Code: AWS & 테라폼)
+## 🌩️ IaC(Infrastructure as Code)
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Terraform] 01. DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
-| [[Terraform] 02. DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
-| [[Terraform] 02-1. Terraform 기본](./Lecture/terraform_basic/section_02/terraform_기본/README.md) | 🔥 |
-| [[Terraform] 03. AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md) | 🔥 |
-| [[Terraform] 04. ZSH 및 Oh-my-zsh 설치](./Lecture/terraform_basic/section_02/zsh_oh_my_zsh/README.md) | ✅ |
-| [[Terraform] 04-1. AWS CLI 및 Terraform 설치](./Lecture/terraform_basic/section_02/aws_cli_terraform_install/README.md) | ✅ |
-| [[Terraform] 05-1. AWS Configure 설정](./Lecture/terraform_basic/section_02/aws_configure_설정/README.md) | ✅ |
-| [[Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | 🔥 |
-| [[Terraform] 07. VPC 소개](./Lecture/terraform_basic/section_03/vpc_소개/README.md) | 🔥 |
-| [[Terraform] 08. VPC와 subnet 생성](./Lecture/terraform_basic/section_03/vpc_subnet_생성/README.md) | 🔥 |
+| [[IaC & Terraform] 01. DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md) | 🔥 |
+| [[IaC & Terraform] 02. DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md) | 🔥 |
+| [[IaC & Terraform] 02-1. Terraform 기본](./Lecture/terraform_basic/section_02/terraform_기본/README.md) | 🔥 |
+| [[IaC & Terraform] 03. AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md) | 🔥 |
+| [[IaC & Terraform] 04. ZSH 및 Oh-my-zsh 설치](./Lecture/terraform_basic/section_02/zsh_oh_my_zsh/README.md) | ✅ |
+| [[IaC & Terraform] 04-1. AWS CLI 및 Terraform 설치](./Lecture/terraform_basic/section_02/aws_cli_terraform_install/README.md) | ✅ |
+| [[IaC & Terraform] 05-1. AWS Configure 설정](./Lecture/terraform_basic/section_02/aws_configure_설정/README.md) | ✅ |
+| [[IaC & Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | 🔥 |
+| [[IaC & Terraform] 07. VPC 소개](./Lecture/terraform_basic/section_03/vpc_소개/README.md) | 🔥 |
+| [[IaC & Terraform] 08. VPC와 subnet 생성](./Lecture/terraform_basic/section_03/vpc_subnet_생성/README.md) | 🔥 |
 
 ## 💻 Observability
 
