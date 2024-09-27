@@ -63,6 +63,36 @@
 | [[AWS] 강의 소개](./Lecture/aws_basic/section_01/강의소개/README.md) | 🔥 |
 | [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./Lecture/aws_basic/section_01/AWS_공부_가이드_팁/README.md) | 🔥 |
 
+## 🐳 Docker
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY...)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
+| [[Docker] Docker MySQL 포트가 중복되는 이슈 해소 관련 참고 링크](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
+| [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
+| [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
+| [[Docker] Docker commit, save, load 차이점 정리](./Docker/commit_save_load/README.md) | ❌ |
+| [[Docker] Docker namespace, cgroup 정리](./Docker/cgroup_namespace/README.md) | ❌ |
+
+## ☸ Kubernetes
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Kubernetes & Trending] Introduction](./Kubernetes/section_01/introduction/README.md) | 🔥 |
+| [[Kubernetes & Trending] Why Kubernetes?](./Kubernetes/section_02/why_kubernetes/README.md) | ❌ |
+| [[Kubernetes & Trending] VM vs Container](./Kubernetes/section_02/vm_container/README.md) | ❌ |
+| [[Kubernetes & Trending] Getting started - Kubernetes(1/2)](./Kubernetes/section_02/start_kube_01/README.md) | ❌ |
+| [[Kubernetes & Trending] Getting started - Kubernetes(2/2)](./Kubernetes/section_02/start_kube_02/README.md) | ❌ |
+| [[Kubernetes & Trending] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md) | ❌ |
+
+## 💻 Observability
+
+| 키워드 | 완료 여부 |
+| --- | --- |
+| [[Observability] Prometheus & Spring Actuator 활용 대시보드 구성](./Observability/Prometheus/README.md) | ✅ |
+| [[Observability] 프로메테우스 지표 rate, increase 차이 정리](./Observability/prometheus_increate_rate/README.md) | ✅ |
+| [[Observability] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
+
 ## 🌩️ IaC(Infrastructure as Code)
 
 | 키워드 | 완료 여부 |
@@ -77,14 +107,6 @@
 | [[IaC & Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | 🔥 |
 | [[IaC & Terraform] 07. VPC 소개](./Lecture/terraform_basic/section_03/vpc_소개/README.md) | 🔥 |
 | [[IaC & Terraform] 08. VPC와 subnet 생성](./Lecture/terraform_basic/section_03/vpc_subnet_생성/README.md) | 🔥 |
-
-## 💻 Observability
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[Observability] Prometheus & Spring Actuator 활용 대시보드 구성](./Observability/Prometheus/README.md) | ✅ |
-| [[Observability] 프로메테우스 지표 rate, increase 차이 정리](./Observability/prometheus_increate_rate/README.md) | ✅ |
-| [[Observability] Grafana란?](./AWS/Grafana란/README.md) | ❌ |
 
 ## ☕ Java
 
@@ -126,23 +148,6 @@
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC/README.md) | ❌ |
 | [[Spring] DI(Dependency Injection)란?](./Spring/DI/README.md) | ❌ |
 | [[Spring] AOP(Aspect Oriented Programming)란?](./Spring/AOP란/README.md) | ❌ |
-
-## 🐳 Docker
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY...)](./Docker/Dockerfile_옵션_관련_정리/README.md) | ✅ |
-| [[Docker] Docker MySQL 포트가 중복되는 이슈 해소 관련 참고 링크](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅ |
-| [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md) | ✅ |
-| [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md) | ❌ |
-| [[Docker] Docker commit, save, load 차이점 정리](./Docker/commit_save_load/README.md) | ❌ |
-| [[Docker] Docker namespace, cgroup 정리](./Docker/cgroup_namespace/README.md) | ❌ |
-
-## ☸ Kubernetes
-
-| 키워드 | 완료 여부 |
-| --- | --- |
-| [[Kubernetes] Continue.. 👍](./Kubernetes/) | ❌ |
 
 ## ⛁ DB(DataBase)
 
