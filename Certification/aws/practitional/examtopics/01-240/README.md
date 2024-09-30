@@ -1377,7 +1377,7 @@ B. AWS Personal Health Dashboard
 C. AWS Trusted Advisor  
 D. Amazon CloudWatch  
 
-> ❌
+> ❌❌
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1571,7 +1571,7 @@ B. 절약 플랜 사용 보고서
 C. AWS 예산 보고서  
 D. AWS 비용 및 사용 보고서  
 
-> ❌
+> ❌❌
 
 <details>  
 <summary>정답 보기</summary>  
@@ -1665,7 +1665,7 @@ B. Amazon EC2 인스턴스를 패치합니다.
 C. 사용자 네트워크 트래픽을 암호화합니다.  
 D. 사용자의 웹사이트에 대한 TLS 인증서를 생성합니다.  
 
-> ❌
+> ❌❌
 
 <details>  
 <summary>정답 보기</summary>  
@@ -2395,7 +2395,7 @@ C. 수동 규정 준수 감사
 D. 간소화된 총 소유 비용(TCO) 회계  
 E. 더 빠른 제품 출시  
 
-> ❌
+> ❌❌
 
 <details>  
 <summary>정답 보기</summary>  
@@ -2798,7 +2798,7 @@ B. AWS Trusted Advisor
 C. AWS CloudTrail  
 D. AWS Support  
 
-> ❌
+> ❌❌
 
 <details>  
 <summary>정답 보기</summary>  
@@ -3011,7 +3011,7 @@ B. Amazon Forecast
 C. AWS 가격 계산기  
 D. 비용 탐색기  
 
-> ❌
+> ❌❌
 
 <details>  
 <summary>정답 보기</summary>  
@@ -3226,7 +3226,7 @@ B. AWS 예산
 C. Amazon CloudWatch  
 D. AWS 비용 카테고리  
 
-> ❌
+> ❌❌
 
 <details>  
 <summary>정답 보기</summary>  
