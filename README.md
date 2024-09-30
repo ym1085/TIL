@@ -78,12 +78,12 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Kubernetes & Trending] Introduction](./Kubernetes/section_01/introduction/README.md) | 🔥 |
-| [[Kubernetes & Trending] Why Kubernetes?](./Kubernetes/section_02/why_kubernetes/README.md) | ❌ |
-| [[Kubernetes & Trending] VM vs Container](./Kubernetes/section_02/vm_container/README.md) | ❌ |
-| [[Kubernetes & Trending] Getting started - Kubernetes(1/2)](./Kubernetes/section_02/start_kube_01/README.md) | ❌ |
-| [[Kubernetes & Trending] Getting started - Kubernetes(2/2)](./Kubernetes/section_02/start_kube_02/README.md) | ❌ |
-| [[Kubernetes & Trending] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md) | ❌ |
+| [[Kubernetes & Trending] Introduction](./Kubernetes/section_01/introduction/README.md) | ✅ |
+| [[Kubernetes & Trending] Why Kubernetes?](./Kubernetes/section_02/why_kubernetes/README.md) | ✅ |
+| [[Kubernetes & Trending] VM vs Container](./Kubernetes/section_02/vm_container/README.md) | ✅ |
+| [[Kubernetes & Trending] Getting started - Kubernetes(1/2)](./Kubernetes/section_02/start_kube_01/README.md) | ✅ |
+| [[Kubernetes & Trending] Getting started - Kubernetes(2/2)](./Kubernetes/section_02/start_kube_02/README.md) | ✅ |
+| [[Kubernetes & Trending] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md) | ✅ |
 
 ## 💻 Observability
 
