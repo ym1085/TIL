@@ -1,0 +1,36 @@
+Vagrant.configure("2") do |config|
+    # 공통 설정: VM의 기본 메모리 및 CPU 리소스를 증가시켜 성능 향상
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048"   # 2GB 메모리 할당
+      vb.cpus = 2          # CPU 2개 할당
+    end
+  
+    # A 서버 (Node.js 설치 및 구동)
+    config.vm.define "A_server" do |node|
+      node.vm.box = "ubuntu/bionic64"  # Ubuntu 18.04 (bionic) 사용
+      node.vm.hostname = "A-server"    # 호스트네임 설정
+      node.vm.network "forwarded_port", guest: 3000, host: 3000  # 포트 포워딩 (3000번 포트)
+  
+      # A 서버 Node.js와 npm 설치 (APT 캐시 업데이트, 설치 병렬화)
+      node.vm.provision "shell", inline: <<-SHELL
+        sudo apt-get update -y && sudo apt-get install -y --no-install-recommends nodejs npm
+        node -v && npm -v  # Node.js 및 npm 버전 확인
+      SHELL
+    end
+  
+    # B 서버 (Docker 및 Kubernetes 설치)
+    config.vm.define "B_server" do |kube|
+      kube.vm.box = "ubuntu/bionic64"  # Ubuntu 18.04 (bionic) 사용
+      kube.vm.hostname = "B-server"    # 호스트네임 설정
+      #kube.vm.network "private_network", type: "dhcp"  # DHCP로 IP 자동 할당
+      kube.vm.network "forwarded_port", guest: 3000, host: 3001  # 포트 포워딩 (3000번 포트)
+  
+      # B 서버 Docker와 Kubernetes 설치 (APT 캐시 업데이트, 설치 병렬화)
+      kube.vm.provision "shell", inline: <<-SHELL
+        sudo apt-get update -y
+        sudo apt-get install -y --no-install-recommends docker.io kubeadm kubectl kubelet
+        sudo systemctl enable --now docker  # Docker 서비스 시작 및 부팅 시 자동 시작
+      SHELL
+    end
+  end
+  
