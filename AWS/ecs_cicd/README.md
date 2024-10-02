@@ -5,11 +5,11 @@
 > VPC 설정은 따로 하지 않는다, VPC 생성의 경우 [해당 링크](https://github.com/ym1085/TIL-Category/blob/master/AWS/create_vpc_etc/README.md)를 참고  
 > 구성 순서의 경우 아래와 같은 순서로 진행한다.  
 >
-> 1th) Code Commit
-> 2th) CodeBuild
-> 3th) CodePipeline
-> 4th) CodeDeploy
-> 5th) ECS Clustering
+> 1th) Code Commit  
+> 2th) CodeBuild  
+> 3th) CodePipeline  
+> 4th) CodeDeploy  
+> 5th) ECS Clustering  
 > 6th) Configure Deploy State to Code Pipeline
 
 | 항목 | Jenkins + CodeDeploy<br>(AWS EC2에서 Jenkins 운영) | AWS CodePipeline + CodeBuild + CodeDeploy |
