@@ -31,10 +31,11 @@
 | [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md) | ✅ |
 | [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md) | ✅ |
 | [[AWS] IAM User 생성 후 역할 전환](./AWS/iam_user_role_assume/README.md) | ✅ |
-| [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md) | ✅ |
 | [[AWS] Log Insights에서 주로 사용하는 쿼리 정리](./AWS/log_insight_query/README.md) | ✅ |
+| [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md) | ✅ |
+| [[AWS] ECS CI/CD 파이프라인 구성기 - Jenkins pipeline을 이용한 ECS 배포](./AWS/ecs_cicd_jenkins/README.md) | 🔥 |
 | [[AWS] EKS Introduce & hands on EKS in 30 minutes](./AWS/eks_sec_01/README.md) | 🔥 |
-| [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md) | 🔥 |
+| [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md) | ❌ |
 | [[AWS] VPC 총정리](./AWS/VPC_Subnet/README.md) | ❌ |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md) | ❌ |
 | [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md) | ❌ |
@@ -80,12 +81,12 @@
 
 | 키워드 | 완료 여부 |
 | --- | --- |
-| [[Kubernetes & Trending] Introduction](./Kubernetes/section_01/introduction/README.md) | ✅ |
-| [[Kubernetes & Trending] Why Kubernetes?](./Kubernetes/section_02/why_kubernetes/README.md) | ✅ |
-| [[Kubernetes & Trending] VM vs Container](./Kubernetes/section_02/vm_container/README.md) | ✅ |
-| [[Kubernetes & Trending] Getting started - Kubernetes(1/2)](./Kubernetes/section_02/start_kube_01/README.md) | ✅ |
-| [[Kubernetes & Trending] Getting started - Kubernetes(2/2)](./Kubernetes/section_02/start_kube_02/README.md) | ✅ |
-| [[Kubernetes & Trending] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md) | ✅ |
+| [[Kubernetes & Trending] Introduction](./Kubernetes/section_01/introduction/README.md) | 🔥 |
+| [[Kubernetes & Trending] Why Kubernetes?](./Kubernetes/section_02/why_kubernetes/README.md) | 🔥 |
+| [[Kubernetes & Trending] VM vs Container](./Kubernetes/section_02/vm_container/README.md) | 🔥 |
+| [[Kubernetes & Trending] Getting started - Kubernetes(1/2)](./Kubernetes/section_02/start_kube_01/README.md) | 🔥 |
+| [[Kubernetes & Trending] Getting started - Kubernetes(2/2)](./Kubernetes/section_02/start_kube_02/README.md) | 🔥 |
+| [[Kubernetes & Trending] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md) | 🔥 |
 
 ## 💻 Observability
 
