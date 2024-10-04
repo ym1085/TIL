@@ -87,7 +87,6 @@
 | [[대세는 쿠버네티스] Getting started - Kubernetes(1/2)](./Kubernetes/section_02/start_kube_01/README.md) | ✅ |
 | [[대세는 쿠버네티스] Getting started - Kubernetes(2/2)](./Kubernetes/section_02/start_kube_02/README.md) | ✅ |
 | [[대세는 쿠버네티스] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md) | ✅ |
-| [[대세는 쿠버네티스] Kubernetes Cluster 설치(v1.27)](./Kubernetes/section_03/k8s_cluster_install/README.md) | 🔥 |
 
 ## 💻 Observability
 
