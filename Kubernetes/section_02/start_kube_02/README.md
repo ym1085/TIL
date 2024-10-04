@@ -22,11 +22,8 @@ brew install vagrant
 vagrant -v
 ```
 
-```shell
-# VirtualBox 설치
-# 아래 링크에서 VirtualBox 설치
-- [[VM] VirtualBox Install from Oracle](https://www.virtualbox.org/wiki/Download_Old_Builds_7_0)
-```
+> 아래 링크에서 VirtualBox 설치  
+> [[VM] VirtualBox Install from Oracle](https://www.virtualbox.org/wiki/Download_Old_Builds_7_0)
 
 ```shell
 # Vagrantfile 생성
@@ -76,7 +73,7 @@ vagrant ssh A_server
 vagrant ssh B_server
 ```
 
-## Linux 서버에서 node.js APP 실행
+## Linux A 서버에서 node.js 실행
 
 ```js
 var http = require('http');
@@ -101,9 +98,20 @@ node hello.js
 curl http://localhost:3000
 ```
 
-## Docker & Kubernetes가 설치된 B 서버에서 실행
+## Linux B 서버 - Docker 기반 node.js 실행
+
+```shell
+# B 서버 접속
+vagrant ssh B_server
+```
+
+```shell
+# hello.js 파일 생성
+vi hello.js
+```
 
 ```js
+// hello.js 파일 내용
 var http = require('http');
 var content = function(req, resp) {
  resp.end("Hello Kubernetes!" + "\n");
@@ -118,6 +126,11 @@ w.listen(3001);
 
 이번에는 Dockerfile을 만들고 해당 Dockerfile을 기반으로 node.js 컨테이너를 실행 해본다.
 
+```shell
+# Dockerfile 파일 생성
+vi Dockerfile
+```
+
 ```Dockerfile
 # https://hub.docker.com/_/node
 # 베이스 이미지
@@ -130,7 +143,7 @@ EXPOSE 3001
 COPY hello.js .
 
 # 컨테이너 구동 후 실행할 명령어
-CMD node hello.js
+CMD ["node", "hello.js"]
 ```
 
 ```shell
@@ -189,25 +202,52 @@ docker tag node-test youngmin1085/node-test:1.0
 docker push youngmin1085/node-test:1.0
 ```
 
-## Kubernetes 클러스터 생성
+## Linux B 서버 - Kubernetes 클러스터 생성
+
+### Kubernetes 대시보드 구성
+
+> ⁉️ 실제 운영 환경에서는 k8s 보안을 위해 대시보드 사용은 안하는 것이 좋다.  
+> 대시보드 관련 내용은 다음 [링크](https://curiousjinan.tistory.com/entry/mac-kubernetes-setup/)를 참고하자.
+
+### hello-pod.yaml 생성
 
 ```yaml
 # hello-pod.yaml
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
   name: hello-pod
   labels:
     app: hello
 spec:
   containers:
-    - name: hello
-      image: kubetm/hello
-      ports:
-        - containerPort: 8000
+  - name: hello
+    image: youngmin1085/node-test:1.0
+    ports:
+    - containerPort: 3001
+```
+
+우선 Docker Hub에 업로드한 이미지를 기반으로 node.js Pod를 생성한다.  
+후에 외부 통신을 위해 hello-service.yaml 파일을 생성한다.
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+spec:
+  selector:
+    app: hello
+  ports:
+  - port: 3001
+    targetPort: 3001
+  externalIPs:
+  - 192.168.0.30
 ```
 
 ## 99. 참고 자료
 
 - [[Kubernetes] KUBETM BLOG](https://kubetm.github.io/k8s/03-beginner-basic-resource/service/)
+- [[Kubernetes] Kubernetes Official Document](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
+- [[Kubernetes] Kubernetes 대시보드 구성](https://curiousjinan.tistory.com/entry/mac-kubernetes-setup/)
 - [[VM] VirtualBox Install from Oracle](https://www.virtualbox.org/wiki/Download_Old_Builds_7_0)
