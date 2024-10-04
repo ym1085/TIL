@@ -5,7 +5,7 @@
 ## namespace(자원 격리)
 
 `VM`(Virtual Machine)에서는 `각 Guest 머신`(Guest OS)별로 `독립적인 공간`이 `제공`된다.  
-이로 인해 `Guest 머신 끼리` `서로 충돌하지 않는 기능`을 `제공`된다.
+이로 인해 `Guest 머신 끼리` 서로 충돌하지 않는다.
 
 <img src="./img/namespace_01.png" width="500px">
 
