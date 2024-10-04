@@ -25,8 +25,8 @@ git tag -l v1.0.*
 # 03. **tag 생성하기**
 
 - tag 에는 두가지 종류가 있습니다.
-    - 일반 태그 (Lightweight Tag) : 단순 버전같은 태그 이름만을 남기는 태그
-    - 주석 태그 ( Annotated Tag) : 만든 사람의 이름, 이메일, 태깅 날짜, 태그 메시지 까지 저장하며, GPG(GNU Privacy Guard) 로 서명까지 가능.
+  - 일반 태그 (Lightweight Tag) : 단순 버전같은 태그 이름만을 남기는 태그
+  - 주석 태그 ( Annotated Tag) : 만든 사람의 이름, 이메일, 태깅 날짜, 태그 메시지 까지 저장하며, GPG(GNU Privacy Guard) 로 서명까지 가능.
 
 ### Lightweight 태그 생성하기
 
