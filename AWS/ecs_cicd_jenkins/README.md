@@ -40,3 +40,4 @@
 ## 99. 참고 자료
 
 - [[CI/CD] [Hands On] CI/CD – Jenkins pipeline을 이용한 ECS 배포](https://tech.cloud.nongshim.co.kr/2021/08/30/hands-on-ci-cd-jenkins-pipeline%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-ecs-%EB%B0%B0%ED%8F%AC/)
+- [[CI/CD] ECS CICD Automation - 1. Intro](https://aws-diary.tistory.com/34)
