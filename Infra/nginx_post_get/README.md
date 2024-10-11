@@ -4,7 +4,7 @@
 
 ## nginx.conf
 
-```json
+```shell
 location / {
      default_type application/json; # 기본 반환 타입 지정
      root /etc/nginx;  # '/' -> '/etc/nginx' 경로 포워딩
