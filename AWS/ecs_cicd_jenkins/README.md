@@ -72,7 +72,7 @@ CMD npm run start
 ### ✅ 3. Jenkins 서버 환경 구성
 
 > Jenkins 설치의 경우 [공식 문서](https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/)를 통해 AWS EC2 t2.micro 인스턴스를 통해 설치 진행  
-> t2.micro 인스턴스의 경우 무료 인스턴스이므로 비용 없이 사용 가능하며, swap mem 사용  
+> t2.micro 인스턴스의 경우 무료 인스턴스이므로 비용 없이 사용 가능하며, swap mem 사용
 
 ### ✅ 4. Jenkins 환경변수(ENV) 등록
 
@@ -85,7 +85,7 @@ CMD npm run start
 > 외부 시스템 -> AWS 리소스 사용하려면 어떻게 해야 하는가?  
 > 기본적으로는 AWS IAM(Identity and Access Management)을 통해 접근 권한을 관리한다.
 
-외부 시스템에서 AWS 리소스에 접근하려면 `장기 보안 자격증명`, `임시 보안 자격증명`을 사용해야 한다.  
+외부 시스템에서 AWS 리소스에 접근하려면 `장기 보안 자격증명`, `임시 보안 자격증명`을 사용해야 한다.
 
 ### 장기 보안 자격증명
 
@@ -103,16 +103,16 @@ CMD npm run start
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "ec2.amazonaws.com"
-            },
-            "Action": "sts:AssumeRole"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
 }
 ```
 
@@ -120,35 +120,35 @@ CMD npm run start
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "application-autoscaling:Describe*",
-                "application-autoscaling:PutScalingPolicy",
-                "application-autoscaling:DeleteScalingPolicy",
-                "application-autoscaling:RegisterScalableTarget",
-                "cloudwatch:DescribeAlarms",
-                "cloudwatch:PutMetricAlarm",
-                "ecs:List*",
-                "ecs:ExecuteCommand",
-                "ecs:Describe*",
-                "ecs:UpdateService",
-                "iam:PassRole",
-                "iam:AttachRolePolicy",
-                "iam:CreateRole",
-                "iam:GetPolicy",
-                "iam:GetPolicyVersion",
-                "iam:GetRole",
-                "iam:ListAttachedRolePolicies",
-                "iam:ListRoles",
-                "iam:ListGroups",
-                "iam:ListUsers"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "application-autoscaling:Describe*",
+        "application-autoscaling:PutScalingPolicy",
+        "application-autoscaling:DeleteScalingPolicy",
+        "application-autoscaling:RegisterScalableTarget",
+        "cloudwatch:DescribeAlarms",
+        "cloudwatch:PutMetricAlarm",
+        "ecs:List*",
+        "ecs:ExecuteCommand",
+        "ecs:Describe*",
+        "ecs:UpdateService",
+        "iam:PassRole",
+        "iam:AttachRolePolicy",
+        "iam:CreateRole",
+        "iam:GetPolicy",
+        "iam:GetPolicyVersion",
+        "iam:GetRole",
+        "iam:ListAttachedRolePolicies",
+        "iam:ListRoles",
+        "iam:ListGroups",
+        "iam:ListUsers"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -158,15 +158,15 @@ CMD npm run start
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": "sts:AssumeRole",
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -176,20 +176,20 @@ CMD npm run start
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ecr:GetAuthorizationToken",
-                "ecr:BatchCheckLayerAvailability",
-                "ecr:PutImage",
-                "logs:CreateLogStream",
-                "logs:PutLogEvents"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecr:GetAuthorizationToken",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:PutImage",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -236,7 +236,7 @@ pipeline {
         stage('ECR Upload') {
             steps {
                 script{
-                    try {                       
+                    try {
                         withAWS(role: '{Jenkins용 IAM Role 이름}', roleAccount: '{AWS 계정 번호}', externalId:'externalId') {
                             sh 'aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin {ECR 리포지토리 URI}'
                             sh 'docker build -t nodejs .'
@@ -269,7 +269,7 @@ pipeline {
                                 aws ecs update-service --region ap-northeast-2 --cluster {ECS 클러스터 이름} --service {ECS 서비스 이름} --force-new-deployment
                             """
                         }
-                        
+
                     } catch (error) {
                         print(error)
                         echo 'Remove Deploy Files'
