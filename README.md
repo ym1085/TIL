@@ -8,33 +8,33 @@
 
 ## ☁️ AWS
 
-| 키워드                                                                                                     | 완료 여부 |
-| ---------------------------------------------------------------------------------------------------------- | --------- |
-| [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md)                                                  | ✅        |
-| [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md)                                        | ✅        |
-| [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md)                         | ✅        |
-| [[AWS] IAM 기초](./AWS/iam_basic/README.md)                                                                | ✅        |
-| [[AWS] 가상화란?](./AWS/virtualization/README.md)                                                          | ✅        |
-| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md)                                                           | ✅        |
-| [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md)                                 | ✅        |
-| [[AWS] EC2에 Attatched 된 보안 그룹 확인 시 사용하는 명령어](./AWS/ec2_security_group/README.md)           | ✅        |
-| [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md)                                  | ✅        |
-| [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md)                     | ✅        |
-| [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md)           | ✅        |
-| [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md)                      | ✅        |
-| [[AWS] ECS Task Role vs Execution Role 차이](./AWS/ecs_task_role/README.md)                                | ✅        |
-| [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 정리](./AWS/create_vpc_etc/README.md)                       | ✅        |
-| [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md)                                               | ✅        |
-| [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md)                                                            | ✅        |
-| [[AWS] IAM User 생성 후 역할 전환](./AWS/iam_user_role_assume/README.md)                                   | ✅        |
-| [[AWS] Log Insights에서 주로 사용하는 쿼리 정리](./AWS/log_insight_query/README.md)                        | ✅        |
-| [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md)                                | ✅        |
-| [[AWS] ECS CI/CD 파이프라인 구성기 - Jenkins pipeline을 이용한 ECS 배포](./AWS/ecs_cicd_jenkins/README.md) | 🔥        |
-| [[AWS] EKS Introduce & hands on EKS in 30 minutes](./AWS/eks_sec_01/README.md)                             | ❌        |
-| [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md)                                    | ❌        |
-| [[AWS] VPC 총정리](./AWS/VPC_Subnet/README.md)                                                             | ❌        |
-| [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md)                                              | ❌        |
-| [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md)                                          | ❌        |
+| 키워드                                                                                           | 완료 여부 |
+| ------------------------------------------------------------------------------------------------ | --------- |
+| [[AWS] 클라우드 컴퓨팅?](./AWS/cloud_computing/README.md)                                        | ✅        |
+| [[AWS] 클라우드 컴퓨팅 종류?](./AWS/cloud_computing_type/README.md)                              | ✅        |
+| [[AWS] AWS 구조, region, 가용영역, 엣지로케이션?](./AWS/cloud_structure/README.md)               | ✅        |
+| [[AWS] IAM 기초](./AWS/iam_basic/README.md)                                                      | ✅        |
+| [[AWS] 가상화란?](./AWS/virtualization/README.md)                                                | ✅        |
+| [[AWS] EBS 그리고 Mount?](./AWS/EBS란/README.md)                                                 | ✅        |
+| [[AWS] 사설 IP, 공인 IP, NAT 정리](./AWS/사설IP_공인IP_NAT_정리/README.md)                       | ✅        |
+| [[AWS] EC2에 Attatched 된 보안 그룹 확인 시 사용하는 명령어](./AWS/ec2_security_group/README.md) | ✅        |
+| [[AWS] EC2 스토리지 재부팅 없이 늘리기](./AWS/ec2_ebs_scale_up/README.md)                        | ✅        |
+| [[AWS] NLB vs ALB 그리고 ELB 알고리즘 정리](./AWS/NLB_ALB_ELB_알고리즘_정리/README.md)           | ✅        |
+| [[AWS] ECS 용량 공급자(Capacity Provider) 사용해보기](./AWS/ECS_용량공급자_사용해보기/README.md) | ✅        |
+| [[AWS] ECS ALB와 NLB 멀티타겟 구성을 위한 스크립트](./AWS/ecs_multi_target/README.md)            | ✅        |
+| [[AWS] ECS Task Role vs Execution Role 차이](./AWS/ecs_task_role/README.md)                      | ✅        |
+| [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 정리](./AWS/create_vpc_etc/README.md)             | ✅        |
+| [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md)                                     | ✅        |
+| [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md)                                                  | ✅        |
+| [[AWS] IAM User 생성 후 역할 전환](./AWS/iam_user_role_assume/README.md)                         | ✅        |
+| [[AWS] Log Insights에서 주로 사용하는 쿼리 정리](./AWS/log_insight_query/README.md)              | ✅        |
+| [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md)                      | ✅        |
+| [[AWS] ECS CI/CD 파이프라인 구성기 - Jenkins & ECS 배포](./AWS/ecs_cicd_jenkins/README.md)       | 🔥        |
+| [[AWS] EKS Introduce & hands on EKS in 30 minutes](./AWS/eks_sec_01/README.md)                   | ❌        |
+| [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md)                          | ❌        |
+| [[AWS] VPC 총정리](./AWS/VPC_Subnet/README.md)                                                   | ❌        |
+| [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md)                                    | ❌        |
+| [[AWS] IAM(Identity Access Management)란?](./AWS/IAM란/README.md)                                | ❌        |
 
 ## 🌫️ AWS Certificate
 
