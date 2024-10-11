@@ -1,16 +1,12 @@
-# TIL(Today I Learned)
+# TIL
 
-> ⭐️ 업무 진행 or 평소에 정리해야 하는 개념을 정리하기 위한 리포지토리 입니다.  
-> 🔥 공부 및 기록을 위한 목적으로 잘못 된 내용이 존재할 수 있으니 참고 부탁드립니다.
+> 🔥 : In Progress  
+> ✅ : Done  
+> ❌ : Need to Organiz
+>
+> For additional questions, please contact <youngmin1085@gmail.com>
 
-😃 해당 리포지토리의 내용 중 오타 혹은 잘못된 내용이 존재할 수 있습니다.  
-잘못된 내용 or 추가적인 질문 관련 연락은 <youngmin1085@gmail.com>로 연락 부탁드립니다.
-
-> 정리 완료 : ✅  
-> 정리 필요 : ❌  
-> 정리 진행 : 🔥
-
-## ☁️ AWS(Amazon Web Services)
+## ☁️ AWS
 
 | 키워드                                                                                                     | 완료 여부 |
 | ---------------------------------------------------------------------------------------------------------- | --------- |
@@ -34,7 +30,7 @@
 | [[AWS] Log Insights에서 주로 사용하는 쿼리 정리](./AWS/log_insight_query/README.md)                        | ✅        |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md)                                | ✅        |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Jenkins pipeline을 이용한 ECS 배포](./AWS/ecs_cicd_jenkins/README.md) | 🔥        |
-| [[AWS] EKS Introduce & hands on EKS in 30 minutes](./AWS/eks_sec_01/README.md)                             | 🔥        |
+| [[AWS] EKS Introduce & hands on EKS in 30 minutes](./AWS/eks_sec_01/README.md)                             | ❌        |
 | [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md)                                    | ❌        |
 | [[AWS] VPC 총정리](./AWS/VPC_Subnet/README.md)                                                             | ❌        |
 | [[AWS] 보안그룹과 NACL?](./AWS/security_group_nacl/README.md)                                              | ❌        |
@@ -58,15 +54,15 @@
 | [[AWS Practitioner] 모듈6: 보안](./Certification/aws/practitional/module_06/README.md)                          | ✅        |
 | [[AWS Practitioner] 모듈7: 모니터링 및 분석](./Certification/aws/practitional/module_07/README.md)              | ✅        |
 | [[AWS Practitioner] 모듈8: 요금 및 지원](./Certification/aws/practitional/module_08/README.md)                  | 🔥        |
-| [[AWS Practitioner] 모듈9: 마이그레이션 및 혁신](./Certification/aws/practitional/module_09/README.md)          | 🔥        |
-| [[AWS Practitioner] 모듈10: 클라우드 여정](./Certification/aws/practitional/module_10/README.md)                | 🔥        |
+| [[AWS Practitioner] 모듈9: 마이그레이션 및 혁신](./Certification/aws/practitional/module_09/README.md)          | ❌        |
+| [[AWS Practitioner] 모듈10: 클라우드 여정](./Certification/aws/practitional/module_10/README.md)                | ❌        |
 
-## 📉 AWS Basic Study
+## 💻 AWS Basic Study
 
 | 키워드                                                                                               | 완료 여부 |
 | ---------------------------------------------------------------------------------------------------- | --------- |
-| [[AWS] 강의 소개](./Lecture/aws_basic/section_01/강의소개/README.md)                                 | 🔥        |
-| [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./Lecture/aws_basic/section_01/AWS_공부_가이드_팁/README.md) | 🔥        |
+| [[AWS] 강의 소개](./Lecture/aws_basic/section_01/강의소개/README.md)                                 | ❌        |
+| [[AWS] AWS 소개 / AWS 공부 가이드 & 팁](./Lecture/aws_basic/section_01/AWS_공부_가이드_팁/README.md) | ❌        |
 
 ## 🐳 Docker
 
@@ -75,7 +71,7 @@
 | [[Docker] Dockerfile 옵션 관련 정리(ADD, COPY...)](./Docker/Dockerfile_옵션_관련_정리/README.md)                                | ✅        |
 | [[Docker] Docker MySQL 포트가 중복되는 이슈 해소 관련 참고 링크](./Docker/Docker_MySQL_포트가_중복되는_이슈_참고링크/README.md) | ✅        |
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md)                                                            | ✅        |
-| [[Docker] Docker namespace, cgroup 정리](./Docker/Linux_namespace_cgroup/README.md)                                             | 🔥        |
+| [[Docker] Docker namespace, cgroup 정리](./Docker/Linux_namespace_cgroup/README.md)                                             | ✅        |
 | [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md)                                                 | ❌        |
 | [[Docker] Docker commit, save, load 차이점 정리](./Docker/commit_save_load/README.md)                                           | ❌        |
 
@@ -98,20 +94,20 @@
 | [[Observability] 프로메테우스 지표 rate, increase 차이 정리](./Observability/prometheus_increate_rate/README.md) | ✅        |
 | [[Observability] Grafana란?](./AWS/Grafana란/README.md)                                                          | ❌        |
 
-## 🌩️ IaC(Infrastructure as Code)
+## 📦 IaC(Infrastructure as Code)
 
 | 키워드                                                                                                                        | 완료 여부 |
 | ----------------------------------------------------------------------------------------------------------------------------- | --------- |
-| [[IaC & Terraform] 01. DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md)             | 🔥        |
-| [[IaC & Terraform] 02. DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md)         | 🔥        |
-| [[IaC & Terraform] 02-1. Terraform 기본](./Lecture/terraform_basic/section_02/terraform_기본/README.md)                       | 🔥        |
-| [[IaC & Terraform] 03. AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md)                       | 🔥        |
+| [[IaC & Terraform] 01. DevOps의 기본적 이해](./Lecture/terraform_basic/section_01/DevOps의_기본적_이해/README.md)             | ❌        |
+| [[IaC & Terraform] 02. DevOps 엔지니어의 역할](./Lecture/terraform_basic/section_01/DevOps_엔지니어의_역할/README.md)         | ❌        |
+| [[IaC & Terraform] 02-1. Terraform 기본](./Lecture/terraform_basic/section_02/terraform_기본/README.md)                       | ❌        |
+| [[IaC & Terraform] 03. AWS EC2 and SSH](./Lecture/terraform_basic/section_02/aws_ecs_and_ssh/README.md)                       | ❌        |
 | [[IaC & Terraform] 04. ZSH 및 Oh-my-zsh 설치](./Lecture/terraform_basic/section_02/zsh_oh_my_zsh/README.md)                   | ✅        |
 | [[IaC & Terraform] 04-1. AWS CLI 및 Terraform 설치](./Lecture/terraform_basic/section_02/aws_cli_terraform_install/README.md) | ✅        |
 | [[IaC & Terraform] 05-1. AWS Configure 설정](./Lecture/terraform_basic/section_02/aws_configure_설정/README.md)               | ✅        |
-| [[IaC & Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | 🔥        |
-| [[IaC & Terraform] 07. VPC 소개](./Lecture/terraform_basic/section_03/vpc_소개/README.md)                                     | 🔥        |
-| [[IaC & Terraform] 08. VPC와 subnet 생성](./Lecture/terraform_basic/section_03/vpc_subnet_생성/README.md)                     | 🔥        |
+| [[IaC & Terraform] 06. 테라폼 작동원리와 CLI 실습](./Lecture/terraform_basic/section_02/테라폼_작동원리와_cli_실습/README.md) | ❌        |
+| [[IaC & Terraform] 07. VPC 소개](./Lecture/terraform_basic/section_03/vpc_소개/README.md)                                     | ❌        |
+| [[IaC & Terraform] 08. VPC와 subnet 생성](./Lecture/terraform_basic/section_03/vpc_subnet_생성/README.md)                     | ❌        |
 
 ## ☕ Java
 
@@ -167,12 +163,12 @@
 | [[DB] Mac에서 MySQL 비밀번호 초기화 방법](./DB/Mac에서_MySQL_비밀번호_초기화_방법/README.md)                                  | ✅        |
 | [[DB] 페이징 시 쿼리 LIMIT, OFFSET 그리고 페이징 성능 개선](./DB/페이징시_쿼리_LIMIT_OFFSET_그리고_페이징_성능개선/README.md) | ❌        |
 
-## 📕 ELK Stack
+## 🔍 ELK
 
 | 키워드                                                                                                              | 완료 여부 |
 | ------------------------------------------------------------------------------------------------------------------- | --------- |
 | [[Logstash] Linux 파일 삭제 후 용량 확보 안되는 경우 (feat. Logstash)](./ELK/Logstash_file_deleted_issue/README.md) | ✅        |
-| [[ES] Elasticsearch 자주 사용하는 명령어 정리](./ELK/elk_command/README.md)                                         | 🔥        |
+| [[ES] Elasticsearch 자주 사용하는 명령어 정리](./ELK/elk_command/README.md)                                         | ❌        |
 | [[ES] Elasticsearch에서 reindex 방법](./ELK/Elasticsearch에서_reindex_방법/README.md)                               | ✅        |
 | [[ES] 인덱스와 샤드 Index & Shards](./ELK/인덱스와_샤드/README.md)                                                  | ✅        |
 | [[ES] ES 클러스터 운영 중 노드 순차적 재시작(Rolling Restart)](./ELK/무중단_재기동/README.md)                       | ✅        |
@@ -180,7 +176,7 @@
 | [[ES] Elastciearch 클러스터에서 특정 Node 제외 시키기](./ELK/exclude_node/README.md)                                | ✅        |
 | [[ES] 검색엔진 EC2 인스턴스 타입 변경, iostat 명령어 디스크 I/O 확인](./ELK/iostat/README.md)                       | ✅        |
 
-## 📒 Linux
+## 🐧Linux
 
 | 키워드                                                                                          | 완료 여부 |
 | ----------------------------------------------------------------------------------------------- | --------- |
@@ -188,14 +184,14 @@
 | [[Linux] cat <<EOF 와 사용법](./Linux/eof/README.md)                                            | ✅        |
 | [[Linux] parallel-ssh(PSSH) 사용법](./Linux/pssh/README.md)                                     | ✅        |
 
-## ⭐️ Network & Server
+## 🖥 Network & Server
 
 | 키워드                                                                                                | 완료 여부 |
 | ----------------------------------------------------------------------------------------------------- | --------- |
 | [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md)          | ✅        |
 | [[Nginx] Nginx 서비스 중단 페이지 반환 POST/GET 허용](./Infra/nginx_post_get/README.md)               | ✅        |
-| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md)                                             | ❌        |
 | [[Nginx] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌        |
+| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md)                                             | ❌        |
 
 ## 😺 Git
 
