@@ -197,7 +197,7 @@ CMD npm run start
 
 ### ✅ 6. Jenkins Pipeline 설정
 
-<img src="./img/jenkins_pip.png" width="700px" height="400px">
+<img src="./img/jenkins_pip.png">
 
 > Assume Role을 통해 Jenkins 파이프라인을 구성하려면 아래 2개의 플러그인 설치 필요
 
