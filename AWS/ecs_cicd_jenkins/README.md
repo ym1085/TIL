@@ -1,7 +1,7 @@
 # ECS CI/CD 파이프라인 구성기 - Jenkins pipeline을 이용한 ECS 배포
 
 > 이전에 ECS CI/CD Code Series를 통한 Hands on은 진행한 경험이 있다  
-> 이번에는 ECS Fargate + Code Commit + Code Deploy + Jenkins를 통한 파이프라인을 구성해보자
+> 이번에는 ECS Fargate + Code Commit + Jenkins를 통한 파이프라인을 구성해보자
 
 ## Hands on 실습 환경 구성 및 동작 과정
 
