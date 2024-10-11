@@ -5,7 +5,7 @@
 
 ## Hands on 실습 환경 구성 및 동작 과정
 
-<img src="./img/jenkins_cicd.png" width="700px" height="300px">
+<img src="./img/jenkins_cicd.png">
 
 > Hands On 동작 과정은 아래와 같음
 
