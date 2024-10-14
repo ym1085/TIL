@@ -126,17 +126,11 @@ spec:
 > 여기서는 간단히 정리하고 넘어간다.  
 > 뒷편에서 자세히 정리한다.
 
-1. Replication Controller, ReplicaSet이 가장 기본이 되는 컨트롤러이다
-2. `ReplicaSet`은 `ReplicationController`의 향상된 버전
-   1. `지정된 Pod 복제본 수`를 항상 `유지`하고, `실패한 Pod`는 `자동 복구`
-   2. 레이블 셀렉터 지원
-   3. k8s의 Deployment의 핵심 구성 요소로 사용(ReplicasSet)
-
-- ReplicationController와 ReplicaSet은 가장 기본이 되는 컨트롤러이다
+- ReplicationController와 ReplicaSet은 `가장 기본이 되는 컨트롤러`이다
 - ReplicationController은 ReplicaSet의 이전 버전으로, 요새는 사용 안하고 ReplicaSet을 주로 사용
 - ReplicaSet은 k8s의 핵심 기능인 Deployment와의 통합 지원, ReplicationController는 지원 안함
 - 2개다 레이블 셀렉터를 지원하지만, ReplicaSet이 더 많이 지원
-- 결론: Pod의 복제본을 관리하기 위한 오브젝트(Object)이다
+- `지정된 Pod의 복제본 수는 반드시 유지하고, 실패한 Pod는 자동으로 복구`
 
 ### Deployment
 
@@ -164,11 +158,11 @@ spec:
         - containerPort: 80
 ```
 
-- `자동 복구`(Self-healing): 문제 생긴 파드 있는 경우 새로운 파드 자동 생성 후 교체
-- `자동 롤링 업데이트`: 애플리케이션의 새로운 버전 배포 시, 트래픽 중단 없이 점진적 업데이트
-- `스케일링`: 오토스케일링 규칙에 따라 파드 개수 자동 조절
-- `롤백`: 문제가 있는 업데이트를 원래 상태 롤백
-- `ReplicaSet 관리`: 파드 복제를 통해 APP이 항상 실행중인 상태 유지
+- `Rolling Update`를 통해 새로운 버전 배포 시, 트래픽 중단 없이 `점진적 업데이트` 진행
+- `배포된 버전`의 문제 발생 시 이전 버전으로 `자동 롤백`
+  - 파드에 문제 생긴 경우 새로운 파드 생성 후 교체
+- `AG 규칙`에 따라 `파드 개수 자동 조절`
+- ReplicaSet 자동 관리
 
 ### DaemonSet
 
@@ -221,6 +215,10 @@ spec:
 
 - k8s에서 정해진 일정에 따라 주기적 작업을 실행하는 리소스
 - Linux의 cron과 비슷한 개념으로, 특정 시간에 작업 실행 후 종료 되는 리소스
+
+### 정리
+
+<img src="./img/정리.png">
 
 ## 99. 참고 자료
 
