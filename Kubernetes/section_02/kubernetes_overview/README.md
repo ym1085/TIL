@@ -123,21 +123,104 @@ spec:
 
 <img src="./img/controller_01.png" width="400px">
 
-1. Replication Controller, ReplicaSet이 가장 기본 컨트롤러
-2. `Pod`가 `죽으면` `자동 복구` + Pod의 개수를 자동으로 Scale-in/out 수행
+> 여기서는 간단히 정리하고 넘어간다.  
+> 뒷편에서 자세히 정리한다.
+
+1. Replication Controller, ReplicaSet이 가장 기본이 되는 컨트롤러이다
+2. `ReplicaSet`은 `ReplicationController`의 향상된 버전
+   1. `지정된 Pod 복제본 수`를 항상 `유지`하고, `실패한 Pod`는 `자동 복구`
+   2. 레이블 셀렉터 지원
+   3. k8s의 Deployment의 핵심 구성 요소로 사용(ReplicasSet)
+
+- ReplicationController와 ReplicaSet은 가장 기본이 되는 컨트롤러이다
+- ReplicationController은 ReplicaSet의 이전 버전으로, 요새는 사용 안하고 ReplicaSet을 주로 사용
+- ReplicaSet은 k8s의 핵심 기능인 Deployment와의 통합 지원, ReplicationController는 지원 안함
+- 2개다 레이블 셀렉터를 지원하지만, ReplicaSet이 더 많이 지원
+- 결론: Pod의 복제본을 관리하기 위한 오브젝트(Object)이다
 
 ### Deployment
 
-1. 배포 후 Pod를 새로운 버전으로 업그레이드
-2. 업그레이드 도중 문제 발생 시 롤백 지원
+> ReplicaSet을 관리, Rolling Update, 롤백 등등 제공
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: my-app-image:1.0
+        ports:
+        - containerPort: 80
+```
+
+- `자동 복구`(Self-healing): 문제 생긴 파드 있는 경우 새로운 파드 자동 생성 후 교체
+- `자동 롤링 업데이트`: 애플리케이션의 새로운 버전 배포 시, 트래픽 중단 없이 점진적 업데이트
+- `스케일링`: 오토스케일링 규칙에 따라 파드 개수 자동 조절
+- `롤백`: 문제가 있는 업데이트를 원래 상태 롤백
+- `ReplicaSet 관리`: 파드 복제를 통해 APP이 항상 실행중인 상태 유지
 
 ### DaemonSet
 
-1. 1개의 노드에 1개의 Pod가 유지되도록 지원
+> 특정 데이터 노드에 특정 Pod가 1:1로 반드시 구동
+
+```yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-daemonset
+spec:
+  selector:
+    matchLabels:
+      app: my-daemon
+  template:
+    metadata:
+      labels:
+        app: my-daemon
+    spec:
+      containers:
+      - name: my-daemon-container
+        image: my-daemon-image:1.0
+        ports:
+        - containerPort: 8080
+```
+
+- 특정 노드마다 동일한 1개의 파드(ex: Filebeat Pod)가 실행되도록 보장하는 리소스
+- ex) Fluentd, Filebeat와 같은 로그 수집기는 각 노드에 무조건 1개씩 구동되어야 함
 
 ### CronJob
 
-1. 특정 작업 진행 후 종료되어야 하는 Pod 실행 시 사용
+> Linux crontab과 비슷함
+
+```yaml
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: my-cronjob
+spec:
+  schedule: "0 3 * * *"  # 매일 오전 3시에 실행
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: my-job
+            image: my-job-image:latest
+          restartPolicy: OnFailure
+```
+
+- k8s에서 정해진 일정에 따라 주기적 작업을 실행하는 리소스
+- Linux의 cron과 비슷한 개념으로, 특정 시간에 작업 실행 후 종료 되는 리소스
 
 ## 99. 참고 자료
 
