@@ -85,8 +85,8 @@
 | [[대세는 쿠버네티스] Getting started - Kubernetes(1/2)](./Kubernetes/section_02/start_kube_01/README.md)     | ✅        |
 | [[대세는 쿠버네티스] Getting started - Kubernetes(2/2)](./Kubernetes/section_02/start_kube_02/README.md)     | ✅        |
 | [[대세는 쿠버네티스] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md)             | ✅        |
-| [[대세는 쿠버네티스] Pod - Container, Lable, NodeSchedule](./Kubernetes/section_04/pod/README.md)            | ❌        |
-| [[대세는 쿠버네티스] Pod - practice](./Kubernetes/section_04/pod_practice/README.md)                         | ❌        |
+| [[대세는 쿠버네티스] Pod - Container, Lable, NodeSchedule](./Kubernetes/section_04/pod/README.md)            | ✅        |
+| [[대세는 쿠버네티스] Pod - practice](./Kubernetes/section_04/pod_practice/README.md)                         | ✅        |
 | [[대세는 쿠버네티스] Service - ClusterIP, NodePort, LoadBalancer](./Kubernetes/section_04/service/README.md) | ❌        |
 | [[대세는 쿠버네티스] Service - practice](./Kubernetes/section_04/service_practice/README.md)                 | ❌        |
 
