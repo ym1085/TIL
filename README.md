@@ -73,7 +73,7 @@
 | [[Docker] Docker 명령어 정리](./Docker/Docker_명령어_정리/README.md)                                                            | ✅         |
 | [[Docker] Docker namespace, cgroup 정리](./Docker/Linux_namespace_cgroup/README.md)                                             | ✅         |
 | [[Docker] Docker commit, save, load 차이점 정리](./Docker/commit_save_load/README.md)                                           | ✅         |
-| [[Docker] Docker 네트워크 정리](./Docker/docker_network/README.md)                                                              | ✅         |
+| [[Docker] Docker 네트워크 정리](./Docker/docker_network/README.md)                                                              | ❌         |
 | [[Docker] Docker의 원리 그리고 가상화 격리 기술](./Docker/why_docker/README.md)                                                 | ❌         |
 
 ## ☸ Kubernetes
@@ -196,7 +196,7 @@
 | [[Window] Powershell 사내 공인 IP 주소 확인](./Infra/powershell_public_ip/README.md)         | ✅         |
 | [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅         |
 | [[Nginx] Nginx 서비스 중단 페이지 반환 POST/GET 허용](./Infra/nginx_post_get/README.md)      | ✅         |
-| [[Network] VM Bridge, Host-Only, NAT 차이](./Infra/vm_network/README.md)                     | ❌         |
+| [[Network] VM Bridge, Host-Only, NAT 차이](./Infra/vm_network/README.md)                     | ✅         |
 | [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md)                                    | ❌         |
 
 ## 😺 Git
