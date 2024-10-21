@@ -5,7 +5,7 @@ k8s의 `Service 종류`로는 `ClusterIP`, `NodePort`, `LoadBalancer`가 존재�
 `LoadBalancer`의 경우 벤더사(AWS, GCP, Azure)의 `LB`를 사용하여 `외부 통신`을 수행한다.
 
 또한 `Service`는 `k8s`의 `기본 오브젝트`로써 `수신한 트래픽`을 `여러 파드`로 `로드밸런싱`(부하 분산) 하는 `기능`을 `제공`한다.  
-`ClusterIP`는 `클러스터 내부`에서만 사용 가능한 `가상 IP`를 가진 `엔드포인트`를 `제공`하는 `LB`를 구성(L4).  
+`ClusterIP`는 `클래스터 내부`에서만 사용 가능한 `가상 엔드포인트 IP`를 제공하는 LB(L4)를 구성한다.  
 NodePort는 외부 클라이언트가 서비스를 통해서 클러스터 내부의 파드로 접속할 때 사용 가능하다(L7)
 
 ## k8s Service - ClusterIP?
@@ -15,7 +15,7 @@ NodePort는 외부 클라이언트가 서비스를 통해서 클러스터 내부
 > ClusterIP가 default type
 
 - `Service`는 기본적으로 `자기 자신`만의 `ClusterIP`를 가지고 있다
-- `Service`를 `Pod`에 `연결`해두면, `Service`를 통해 `Pod에 접근`이 `가능`해진다
+- `Service`를 `Pod`에 `연결`해두면, `Service의 IP`를 통해 `Pod에 접근`이 `가능`해진다
   - 1개의 Service에 여러개의 Pod 연결 가능
 - Pod도 IP가 존재하는데, 왜 Service를 달아서 접근 해야하지?
   - Pod는 시스템 장애로 인해 언제든 죽을 수 있음

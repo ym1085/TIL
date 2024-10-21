@@ -88,8 +88,10 @@
 | [[대세는 쿠버네티스] Kubernetes Overview](./Kubernetes/section_02/kubernetes_overview/README.md)             | ✅         |
 | [[대세는 쿠버네티스] Pod - Container, Lable, NodeSchedule](./Kubernetes/section_04/pod/README.md)            | ✅         |
 | [[대세는 쿠버네티스] Pod - practice](./Kubernetes/section_04/pod_practice/README.md)                         | ✅         |
-| [[대세는 쿠버네티스] Service - ClusterIP, NodePort, LoadBalancer](./Kubernetes/section_04/service/README.md) | ❌         |
-| [[대세는 쿠버네티스] Service - practice](./Kubernetes/section_04/service_practice/README.md)                 | ❌         |
+| [[대세는 쿠버네티스] Service - ClusterIP, NodePort, LoadBalancer](./Kubernetes/section_04/service/README.md) | ✅         |
+| [[대세는 쿠버네티스] Service - practice](./Kubernetes/section_04/service_practice/README.md)                 | ✅         |
+| [[대세는 쿠버네티스] Volume - emptyDir, hostPath, PV/PVC](./Kubernetes/section_04/volume/README.md)          | ❌         |
+| [[대세는 쿠버네티스] Volume - practice](./Kubernetes/section_04/volume_practice/README.md)                   | ❌         |
 
 ## 💻 Observability
 
