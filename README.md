@@ -191,13 +191,13 @@
 
 ## 🖥 Network & Server
 
-| 키워드                                                                                                | 완료 여부 |
-| ----------------------------------------------------------------------------------------------------- | --------- |
-| [[Window] Powershell 사내 공인 IP 주소 확인](./Infra/powershell_public_ip/README.md)                  | ✅         |
-| [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md)          | ✅         |
-| [[Nginx] Nginx 서비스 중단 페이지 반환 POST/GET 허용](./Infra/nginx_post_get/README.md)               | ✅         |
-| [[Nginx] Nginx vs Apache 비교, 어떤 웹 서버를 사용해야 할까?](./Infra/nginx_apache_compare/README.md) | ❌         |
-| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md)                                             | ❌         |
+| 키워드                                                                                       | 완료 여부 |
+| -------------------------------------------------------------------------------------------- | --------- |
+| [[Window] Powershell 사내 공인 IP 주소 확인](./Infra/powershell_public_ip/README.md)         | ✅         |
+| [[Nginx] Nginx logrotate 파일 권한 문제로 인한 실패](./Infra/nginx_logrotate_fail/README.md) | ✅         |
+| [[Nginx] Nginx 서비스 중단 페이지 반환 POST/GET 허용](./Infra/nginx_post_get/README.md)      | ✅         |
+| [[Network] VM Bridge, Host-Only, NAT 차이](./Infra/vm_network/README.md)                     | ❌         |
+| [[Network] HTTP vs TCP/IP](./Infra/http_tcp_ip/README.md)                                    | ❌         |
 
 ## 😺 Git
 
