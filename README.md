@@ -92,6 +92,8 @@
 | [[대세는 쿠버네티스] Service - practice](./Kubernetes/section_04/service_practice/README.md)                 | ✅         |
 | [[대세는 쿠버네티스] Volume - emptyDir, hostPath, PV/PVC](./Kubernetes/section_04/volume/README.md)          | ❌         |
 | [[대세는 쿠버네티스] Volume - practice](./Kubernetes/section_04/volume_practice/README.md)                   | ❌         |
+| [[대세는 쿠버네티스] ConfigMap, Secret - Env, Mount](./Kubernetes/section_04/configmap/README.md)            | ❌         |
+| [[대세는 쿠버네티스] ConfigMap, Secret - pratice](./Kubernetes/section_04/configmap_practice/README.md)      | ❌         |
 
 ## 💻 Observability
 
