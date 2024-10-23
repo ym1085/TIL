@@ -53,8 +53,8 @@
 | [[AWS Practitioner] 모듈5: 스토리지 및 데이터베이스](./Certification/aws/practitional/module_05/README.md)      | ✅         |
 | [[AWS Practitioner] 모듈6: 보안](./Certification/aws/practitional/module_06/README.md)                          | ✅         |
 | [[AWS Practitioner] 모듈7: 모니터링 및 분석](./Certification/aws/practitional/module_07/README.md)              | ✅         |
-| [[AWS Practitioner] 모듈8: 요금 및 지원](./Certification/aws/practitional/module_08/README.md)                  | 🔥         |
-| [[AWS Practitioner] 모듈9: 마이그레이션 및 혁신](./Certification/aws/practitional/module_09/README.md)          | ❌         |
+| [[AWS Practitioner] 모듈8: 요금 및 지원](./Certification/aws/practitional/module_08/README.md)                  | ✅         |
+| [[AWS Practitioner] 모듈9: 마이그레이션 및 혁신](./Certification/aws/practitional/module_09/README.md)          | 🔥         |
 | [[AWS Practitioner] 모듈10: 클라우드 여정](./Certification/aws/practitional/module_10/README.md)                | ❌         |
 
 ## 💻 AWS Basic Study
