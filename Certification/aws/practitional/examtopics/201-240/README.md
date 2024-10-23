@@ -405,7 +405,7 @@ D. Amazon QuickSight
 <details>  
 <summary>정답 보기</summary>  
 <div markdown="1">  
-정답은:  
+정답은: B
 
 A. Amazon Transcribe  
 
