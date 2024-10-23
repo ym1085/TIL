@@ -1439,7 +1439,7 @@ B. AWS 예산
 C. Amazon CloudWatch  
 D. AWS 비용 이상 탐지
 
-> ✅
+> ❌
 
 <details>  
 <summary>정답 보기</summary>  
