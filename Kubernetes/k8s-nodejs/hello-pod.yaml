@@ -6,7 +6,7 @@ metadata:
     app: hello
 spec:
   containers:
-  - name: hello
-    image: youngmin1085/node-test:1.0
-    ports:
-    - containerPort: 3001
+    - name: hello
+      image: youngmin1085/node-test:1.0
+      ports:
+        - containerPort: 3001
