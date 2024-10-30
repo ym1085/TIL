@@ -7,13 +7,13 @@ spec:
   - name: container1
     image: tmkube/init
     volumeMounts:
-    - name: emptyDir
+    - name: empty-dir
       mountPath: /mount1
   - name: container2
     image: tmkube/init
     volumeMounts:
-    - name: emptyDir
+    - name: empty-dir
       mountPath: /mount2
   volumes:
-  - name: emptyDir
+  - name: empty-dir
     emptyDir: {}
