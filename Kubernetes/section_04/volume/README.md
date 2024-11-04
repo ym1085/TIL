@@ -89,6 +89,7 @@ PV/PVC는 파드의 지속적인 스토리지를 제공하는 역할을 한다.
 ### PV(PersistentVolume)
 
 ```yaml
+# 관리자가 NFS, 벤더사의 물리적 HDD를 정의하는 파일을 PV라 지칭
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -98,9 +99,29 @@ spec:
     storage: 1Gi # 1GB
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
+  persistentVolumeReclaimPolicy: Retain # PV의 재사용 정책, Retain은 삭제된 후에도 데이터를 쥬ㅣ
   hostPath:
-    path: "/data/pv-example"
+    path: /node-v # 노드의 로컬 파일 시스템 경로, 이 경로를 Pod가 마운트하여 사용
+```
+
+```yaml
+# 2번째 예시
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-01
+spec:
+  capacity:
+    storage: 1G
+  accessModes:
+  - ReadWriteOnce
+  local:
+    path: /node-v
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - {key: kubernetes.io/hostname, operator: In, values: [k8s-node1]}
 ```
 
 `PV`(PersistentVolume)란 `관리자가 미리 만들어둔` `물리적인 스토리지 자원`을 의미한다.  

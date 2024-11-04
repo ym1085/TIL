@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volume-5
+spec:
+  containers:
+  - name: containers
+    image: tmkube/init
+    volumeMounts:
+    - mountPath: /mount3
+      name: pvc-pv
+  volumes:
+  - name: pvc-pv
+    persistentVolumeClaim:
+      claimName: pvc-01

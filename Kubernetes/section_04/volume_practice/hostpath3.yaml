@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volume-4
+spec:
+  containers:
+  - name: container
+    image: tmkube/init
+    volumeMounts:
+    - mountPath: /mount1
+      name: host-path
+  volumes:
+  - name: host-path
+    hostPath:
+      path: /node-v
+      type: DirectoryOrCreate

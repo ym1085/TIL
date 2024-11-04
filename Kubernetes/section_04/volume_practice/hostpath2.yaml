@@ -1,18 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-volume-2
+  name: pod-volume-3
 spec:
+  nodeSelector:
+    kubernetes.io/hostname: k8s-node1
   containers:
-  - name: container1
+  - name: container
     image: tmkube/init
     volumeMounts:
     - mountPath: /mount1
-      name: host-path
-  - name: container2
-    image: tmkube/init
-    volumeMounts:
-    - mountPath: /mount2
       name: host-path
   volumes:
   - name: host-path
