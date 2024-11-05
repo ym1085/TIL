@@ -3,13 +3,15 @@ kind: Pod
 metadata:
   name: pod-volume-2
 spec:
+  nodeSelector:
+    kubernetes.io/hostname: k8s-node1
   containers:
   - name: container
     image: tmkube/init
     volumeMounts:
     - name: host-path
-      mountPath: /mount1
+      mountPath: /mount1 # container
   volumes:
-  - name: host-path
+  - name: host-path # node dir path
     hostPath:
       path: /node-v
