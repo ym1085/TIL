@@ -13,7 +13,7 @@ spec:
     image: tmkube/init
     volumeMounts:
     - name: empty-dir
-      mountPath: /mount2
+      mountPath: /mount1
   volumes:
   - name: empty-dir
     emptyDir: {}
