@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-mount
+spec:
+  containers:
+  - name: container
+    image: tmkube/init
+    volumeMounts:
+    - mountPath: /mount
+      name: file-volume
+  volumes:
+  - name: file-volume
+    configMap:
+      name: cm-file

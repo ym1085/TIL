@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-file
+spec:
+  containers:
+  - name: container
+    image: tmkube/init
+    env:
+    - name: file-c
+      valueFrom:
+        configMapKeyRef:
+          name: cm-file
+          key: file-c.txt
+    - name: file-s
+      valueFrom:
+        secretKeyRef:
+          name: sec-file
+          key: file-s.txt
