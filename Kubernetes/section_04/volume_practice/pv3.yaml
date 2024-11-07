@@ -6,11 +6,11 @@ spec:
   capacity:
     storage: 2G
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   local:
     path: /node-v
   nodeAffinity:
     required:
       nodeSelectorTerms:
-      - matchExpressions:
-        - {key: kubernetes.io/hostname, operator: In, values: [k8s-node1]}
+        - matchExpressions:
+            - { key: kubernetes.io/hostname, operator: In, values: [k8s-node1] }

@@ -142,7 +142,6 @@ echo '======== [8-3] Pod Network 설치 (calico) ========'
 kubectl create -f https://raw.githubusercontent.com/k8s-1pro/install/main/ground/k8s-1.27/calico-3.26.4/calico.yaml
 kubectl create -f https://raw.githubusercontent.com/k8s-1pro/install/main/ground/k8s-1.27/calico-3.26.4/calico-custom.yaml
 
-
 echo '======== [9] 쿠버네티스 편의기능 설치 ========'
 echo '======== [9-1] kubectl 자동완성 기능 ========'
 echo "source <(kubectl completion bash)" >> ~/.bashrc
