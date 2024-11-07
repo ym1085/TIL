@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: cm-dev
 data:
-  SSH: 'false'
+  SSH: "false"
   User: dev
 ---
 apiVersion: v1
@@ -19,10 +19,10 @@ metadata:
   name: pod-1
 spec:
   containers:
-  - name: container
-    image: tmkube/init
-    envFrom:
-    - configMapRef:
-        name: cm-dev
-    - secretRef:
-        name: sec-dev
+    - name: container
+      image: tmkube/init
+      envFrom:
+        - configMapRef:
+            name: cm-dev
+        - secretRef:
+            name: sec-dev

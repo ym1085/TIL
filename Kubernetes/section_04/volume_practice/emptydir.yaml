@@ -4,16 +4,16 @@ metadata:
   name: pod-volume-1
 spec:
   containers:
-  - name: container1
-    image: tmkube/init
-    volumeMounts:
-    - mountPath: /mount1
-      name: empty-dir
-  - name: container2
-    image: tmkube/init
-    volumeMounts:
-    - mountPath: /mount2
-      name: empty-dir
+    - name: container1
+      image: tmkube/init
+      volumeMounts:
+        - mountPath: /mount1
+          name: empty-dir
+    - name: container2
+      image: tmkube/init
+      volumeMounts:
+        - mountPath: /mount2
+          name: empty-dir
   volumes:
-  - name: empty-dir
-    emptyDir:
+    - name: empty-dir
+      emptyDir:
