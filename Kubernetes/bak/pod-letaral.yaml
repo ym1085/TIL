@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-dev
+data:
+  SSH: 'true'
+  User: Dev
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sec-dev
+data:
+  Key: 44WB44WB44WB
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-letaral
+spec:
+  containers:
+  - name: container-letaral
+    image: tmkube/init
+    envFrom:
+    - configMapRef:
+        name: cm-dev
+    - secretRef:
+        name: sec-dev
