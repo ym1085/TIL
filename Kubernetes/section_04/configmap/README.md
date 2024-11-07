@@ -63,13 +63,13 @@ metadata:
   name: pod-1
 spec:
   containers:
-  - name: container
-    image: tmkube/init
-    envFrom: # Env 환경 변수 읽기
-    - configMapRef:
-      name: cm-dev
-    - secretRef:
-      name: sec-dev
+    - name: container
+      image: tmkube/init
+      envFrom: # Env 환경 변수 읽기
+        - configMapRef:
+          name: cm-dev
+        - secretRef:
+          name: sec-dev
 ```
 
 ConfigMap은 Key와 Value로 구성이 되어 있다. 그렇기에 ConfigMap에 필요한 상수들을 정의한 후  
@@ -78,14 +78,14 @@ Pod가 구동될 때 해당 ConfigMap을 사용하면, 환경 변수(ENV)가 자
 Secret도 마찬가지로 Key와 Value로 구성이 되어 있다.  
 ConfigMap과 다른점은 Value 값을 넣을 때 Base64 Encoding을 해서 값을 만들어야 한다는 차이가 존재하며,  
 Pod로 Secret 값이 주입될 때는 자동으로 Decoding이 되어서 환경변수(ENV)에서는 평문 값이 보이게 된다.  
-또한 `일반적인 오브젝트`들의 값들은 `k8s`의 `DB`에 저장이 되는데, `Secret`은 `Mem`(메모리)에 저장이 된다.  
+또한 `일반적인 오브젝트`들의 값들은 `k8s`의 `DB`에 저장이 되는데, `Secret`은 `Mem`(메모리)에 저장이 된다.
 
 ### Env(File : 파일 주입)
 
 <img src="./img/config_secret_03.png" width="500px">
 
 ```shell
-# configMap 생성 
+# configMap 생성
 k create configMap cm-file --from-file=./file.txt
 
 # secret 생성
@@ -125,7 +125,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: sec-file # 생성한 Secret 이름
-              key: file.txt  # Secret의 키 이름 (파일명)
+              key: file.txt # Secret의 키 이름 (파일명)
 ```
 
 위 이미지와 같이 특정 파일(File)을 통으로 ConfigMap에 담을 수 있다.  
@@ -150,18 +150,18 @@ spec:
     - name: container
       image: tmkube/init
       volumeMounts:
-      - name: file-volume
-        mountPath: /mount
+        - name: file-volume
+          mountPath: /mount
   volumes:
-  - name: file-volume
-    configMap:
-      name: cm-file
+    - name: file-volume
+      configMap:
+        name: cm-file
 ```
 
 파일 마운트 역시, 위에서 파일을 주입하는 방식과 모든 부분이 동일하다.  
 하지만 Pod를 만들 때 Container 안에 Mount Path를 정의하고 해당 Path에 파일을 마운트하면 된다.
 
-> 😃 중요한 부분!  
+> 😃 중요한 부분!
 >
 > 여기서 중요한 부분은 파일 주입의 경우 ConfigMap에 수정이 있어도 이미 할당된 환경변수(ENV)에는 영향을 주지 않는다.  
 > 이에 반해 환경변수(ENV)를 파일 마운트 한 경우에는 ConfigMap을 수정하게 되면 기존 Container의 ENV에도 영향을 미친다.
