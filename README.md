@@ -93,8 +93,8 @@
 | [[대세는 쿠버네티스] Service - practice](./Kubernetes/section_04/service_practice/README.md)                        | ✅         |
 | [[대세는 쿠버네티스] Volume - emptyDir, hostPath, PV/PVC](./Kubernetes/section_04/volume/README.md)                 | ✅         |
 | [[대세는 쿠버네티스] ConfigMap, Secret - Env, Mount](./Kubernetes/section_04/configmap/README.md)                   | ✅         |
-| [[대세는 쿠버네티스] Namespace, ResourceQuota, LimitRange](./Kubernetes/section_04/namespace/README.md)             | ❌         |
-| [[대세는 쿠버네티스] Replication Controller, ReplicaSet, Replicas..](./Kubernetes/section_05/replication/README.md) | ❌         |
+| [[대세는 쿠버네티스] Namespace, ResourceQuota, LimitRange](./Kubernetes/section_04/namespace/README.md)             | ✅         |
+| [[대세는 쿠버네티스] Replication Controller, ReplicaSet, Replicas..](./Kubernetes/section_05/replication/README.md) | ✅         |
 | [[대세는 쿠버네티스] Deployment - Recreate, Rolling Update](./Kubernetes/section_05/deployment/README.md)           | ❌         |
 
 ## 💻 Observability
