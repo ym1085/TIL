@@ -56,6 +56,8 @@
 | [[AWS Practitioner] 모듈7: 모니터링 및 분석](./Certification/aws/practitional/module_07/README.md)              | ✅         |
 | [[AWS Practitioner] 모듈8: 요금 및 지원](./Certification/aws/practitional/module_08/README.md)                  | ✅         |
 | [[AWS Practitioner] 모듈9: 마이그레이션 및 혁신](./Certification/aws/practitional/module_09/README.md)          | ✅         |
+| [[AWS Solution Architect Associate] examtopics 01 - 50](./Certification/aws/sa/examtopics/01-50/README.md)      | ❌         |
+| [[AWS Solution Architect Associate] examtopics 51 - 100](./Certification/aws/sa/examtopics/51-100/README.md)    | ❌         |
 
 ## 💻 AWS Basic Study
 
