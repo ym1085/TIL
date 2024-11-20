@@ -5,7 +5,7 @@
 ## rate
 
 ```shell
-increase(http_server_requests_seconds_count[1m]) 1
+rate(http_server_requests_seconds_count[1m]) 1
 ```
 
 > rate() 연산은 '지정한 시간 범위 내에' 메트릭이 '변화한 정도'를 보기 위한 연산  
