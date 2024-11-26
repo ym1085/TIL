@@ -180,14 +180,15 @@
 
 | 키워드                                                                                                              | 완료 여부 |
 | ------------------------------------------------------------------------------------------------------------------- | --------- |
-| [[Logstash] Linux 파일 삭제 후 용량 확보 안되는 경우 (feat. Logstash)](./ELK/Logstash_file_deleted_issue/README.md) | ✅         |
 | [[ES] Elasticsearch 자주 사용하는 명령어 정리](./ELK/elk_command/README.md)                                         | ❌         |
+| [[Logstash] Linux 파일 삭제 후 용량 확보 안되는 경우 (feat. Logstash)](./ELK/Logstash_file_deleted_issue/README.md) | ✅         |
 | [[ES] Elasticsearch에서 reindex 방법](./ELK/Elasticsearch에서_reindex_방법/README.md)                               | ✅         |
 | [[ES] 인덱스와 샤드 Index & Shards](./ELK/인덱스와_샤드/README.md)                                                  | ✅         |
 | [[ES] ES 클러스터 운영 중 노드 순차적 재시작(Rolling Restart)](./ELK/무중단_재기동/README.md)                       | ✅         |
 | [[ES] ES 운영중인 Live 서비스의 alias 교체 방법](./ELK/alias_change/README.md)                                      | ✅         |
 | [[ES] Elastciearch 클러스터에서 특정 Node 제외 시키기](./ELK/exclude_node/README.md)                                | ✅         |
 | [[ES] 검색엔진 EC2 인스턴스 타입 변경, iostat 명령어 디스크 I/O 확인](./ELK/iostat/README.md)                       | ✅         |
+| [[ES] 검색엔진 Elasticsearch.yaml 파일 옵션 정리](./ELK/option/README.md)                                           | ✅         |
 
 ## 🐧Linux
 
