@@ -1,0 +1,56 @@
+# elasticsearch 옵션 관련 정리
+
+## elasticsearch.yaml
+
+- `cluster.name`
+  - 같은 Network에서 여러 클러스터가 존재할 경우, 클러스터 이름으로 클러스터 구분
+  - 동일한 이름을 가진 노드는 자동으로 같은 클러스터에 속한다
+- `node`
+  - node.name : 같은 클러스터 내에서, 각 노드를 식별하는 고유 이름
+  - node.master
+    - master 노드 역할 지정 여부
+    - 데이터 노드 관제
+  - node.data
+    - 데이터 노드 역할 지정 여부
+    - 샤드 및 리플리카 저장
+    - 쿼리 밎 인덱싱 작업 수행
+  - node.ingest
+    - 인제스트 노드 역할 지정 여부
+    - 색인하기 전에 데이터 전처리(파이프라인 적용)
+  - node.ml
+    - ML 노드 역할 지정 여부
+    - 머신러닝 작업 수행(로그 분석, 이상 탐지 등에 사용)
+  - node.attr.box_type: live
+    - box_type이 live인 노드에만 샤드를 할당하도록 제한
+- `path`
+  - path.data
+    - 실제 데이터(샤드, 리플리카)가 저장될 데이터 경로
+  - path.logs
+    - ES 로그 파일이 저장될 경로
+- `network`
+  - network.host
+    - Elasticsearch가 바인딩할 네트워크 인터페이스 지정
+    - 0.0.0.0은 모든 네트워크 인터페이스 접근 가능
+- `discovery`
+  - discovery.seed_hosts
+    - 클러스터를 초기화할 때 사용할 노드의 호스트 리스트
+    - 마스터 후보 노드의 IP 또는 호스트 이름을 지정
+    - node.master: true 인 노드를 넣으면 된다
+    - 실무에서는 데이터, 코디, 마스터 전부 넣어둔 상태
+- `cluster`
+  - cluster.initial_master_nodes
+    - 클러스터 초기화를 위한 초기 마스터 후보 리스트
+    - 최초 클러스터 설정 시 한번만 사용
+- `xpack`
+  - xpack.security.enabled
+    - xpack 보안 기능 활성화 지정 여부
+    - 인증, 권한, TLS 활성화 지정
+  - xpack.ml.enabled
+    - 머신러닝 기능 활성화 지정 여부
+    - 머신러닝 기능
+- `http.port`
+  - 외부 통신(Kibana, REST API, curl)와 Elasticsearch 간의 HTTP 통신을 위해 사용
+  - RESTful API 호출 관리
+- `transport.tcp.port`
+  - Elasticsearch 간 내부 통신에 사용
+  - 클러스터 관리, 데이터 복제, 샤드 이동 등에 사용
