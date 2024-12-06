@@ -5,6 +5,70 @@
 Elastic Cache는 클라우드에서 ValKey, Memcached, Redis OSS 프로토콜 준수 캐시의 배포 및 실행을 간소화하는 웹 서비스이다.  
 주로 속도가 느린 디스크 기반 시스템에 의존하기보다, 메모리 시스템에서 정보를 검색할 수 있도록하여 애플리케이션 성능을 향상시킨다.
 
+> AWS ElastiCache primary node 다운!  
+> secondary node 중 새로운 primary node를 선출
+
+`Amazon ElastiCache`는 기존 `primary 노드`가 `다운`되면 이를 자동으로 감지(monitoring)한 후  
+복제 작업을 하던 secondary 노드에서 새로운 primary 노드를 선출한다고 한다.
+
+이러한 `auto failover` 기능을 바탕으로, `복원`력이 뛰어난 환경을 제공하는 것은 물론이며  
+앱 서비스 로드 시간이 길어지게 하는 `DB 오버로드의 위험을 완화`할 수 있다.
+
+## Redis 클러스터 구성 종류
+
+> AWS ElastiCache  
+> ✅ 기본 엔드포인트  
+> -> Cluster의 Primary Node(마스터 노드)에 연결  
+> -> 읽기(Read), 쓰기(Write) 작업을 모두 처리  
+> -> Primary Node에 장애 발생하는 경우, 클러스가 자동으로 새로운 Primary Node를 선택  
+> 기본 엔드포인트는 이를 반영하여 새로운 Primary Node로 자동 라우팅을 수행한다  
+> -> 읽기/쓰기 작업을 동일한 노드에서 처리하는 경우 사용
+>
+> ✅ 리더 엔드포인트  
+> -> Cluster의 Replica Node(복제본 노드)에 연결  
+> -> 읽기(Read) 작업만 지원, 쓰기(Write) 작업은 지원 안함  
+> -> Replica Node가 여러개인 경우, 읽기 요청을 노드 간에 로드 밸런싱하여 처리  
+> -> 읽기 부하(Read Load)가 많은 애플리케이션의 성능 최적화를 위해 사용  
+> -> Primary Node의 부하를 줄이고, Read의 경우 Replica Node를 사용하려는 경우
+
+![redis.png](./img/redis.png)
+
+| **구분**          | **① 싱글 클러스터 노드**       | **② 클러스터 모드 X (Replication만 지원)** | **③ 클러스터 모드 O**                         |
+| ----------------- | ------------------------------ | ------------------------------------------ | --------------------------------------------- |
+| **데이터 복제**   | X                              | O (노드 당 최대 5 replicas)                | O (노드 당 최대 5 replicas)                   |
+| **데이터 분할**   | O                              | X (싱글 샤드)                              | O (최대 90 샤드)                              |
+| **확장성**        | 노드 타입을 변경하는 수직 확장 | 노드 타입을 변경하는 수직 확장             | 샤드의 추가/삭제 및 밸런싱을 통한 수평적 확장 |
+| **Multi-AZ 지원** | X                              | 최소 1 replica 이상의 옵션 필요            | 최소 1 replica 이상의 옵션 필요               |
+
+- `싱글 클러스터 노드`
+  - `단일 노드`만 존재
+  - `Primary Node 1개`만 있고, `Replica`(복제 노드)는 `없음`
+  - `Replication` or `클러스터 모드` `사용 안함`
+  - `데이터`는 `단일 노드`에서 `처리`, `장애 복구 or 확장성 제공 안함`
+  - 간단한 애플리케이션 or 테스트 시 사용
+  - `Replication 지원 여부`
+    - 지원 안함
+  - `확장성`
+    - 지원 안함
+- 클러스터 모드 없이 Replication만 지원 (클러스터 모드 X)
+  - `Primary Node 1개`, `최대 5개`의 `Replica Node`(복제본 노드)로 구성
+  - 데이터를 1개의 샤드(Shard)에만 저장
+  - 1개의 샤드(Shard) 안에는 1개의 Primary Node + 최대 5개의 Replica Node가 존재
+  - `Replication 지원 여부`
+    - Primary Node에 데이터 저장 + Replica Node로 복제
+    - 장애 복구 지원 -> Primary Node 다운 시 Replica Node 승격
+  - `확장성`
+    - `노드 타입 수직 증가`, 수평 확장 아님
+- 클러스터 모드와 Replication 모두 지원 (클러스터 모드 O)
+  - `Primary Node 1`개, `최대 5개`의 `Replica Node`가 `N개의 샤드로 구성`
+  - 데이터를 1개의 샤드(Shard)가 아닌, 여러개의 샤드(Shard)에 저장
+  - Replication 지원 여부
+    - Primary Node에 데이터 저장 + Replica Node로 복제
+    - 장애 복구 지원 -> Primary Node 다운 시 Replica Node 승격
+  - `확장성`
+    - `샤드의 추가/삭제 및 밸런싱을 위한 수평 확장`, 수직 증가 아님
+    - `최대 100개의 샤드까지 수평 확장 가능`
+
 ## 사용 목적
 
 1. 캐시 서버를 사용하여, 검색엔진(ES)의 부하를 줄이기 위한 목적으로 사용
@@ -154,3 +218,5 @@ redis-cli -h <엔드포인트>
 
 - [EC2에 Redis CLI 설치하기](https://jojoldu.tistory.com/348)
 - [[Spring/ Redis] Spring으로 ElasticCache for Redis 사용해보기](https://loosie.tistory.com/814)
+- [Amazon ElastiCache for Redis에서 클러스터 모드를 사용하는 방법](https://aws.amazon.com/ko/blogs/database/work-with-cluster-mode-on-amazon-elasticache-for-redis/)
+- [[AWS] ElastiCache for Redis 클러스터 모드(cluster mode) 실습](https://m.blog.naver.com/techtrip/222114663016)
