@@ -30,6 +30,7 @@
 | [[AWS] Log Insights에서 주로 사용하는 쿼리 정리](./AWS/log_insight_query/README.md)              | ✅         |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md)                      | ✅         |
 | [[AWS] ElasticCache 정리](./AWS/elastic_cache/README.md)                                         | ✅         |
+| [[AWS] IAM Codebuild 관련 Policy](./AWS/iam_codebuild/README.md)                                 | ✅         |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Jenkins & ECS 배포](./AWS/ecs_cicd_jenkins/README.md)       | 🔥         |
 | [[AWS] EKS Introduce & hands on EKS in 30 minutes](./AWS/eks_sec_01/README.md)                   | ❌         |
 | [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md)                          | ❌         |
