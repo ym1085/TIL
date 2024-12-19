@@ -160,6 +160,7 @@
 | [[Spring] Gradle bootJar vs Jar](./Spring/boot_jar/README.md)                                                                   | ✅         |
 | [[Spring] @Scheduled 스케줄러 간단히 사용 해보기](./Spring/scheduled/README.md)                                                 | ✅         |
 | [[Spring] Spring Boot JUnit5 자주 사용되는 어노테이션 정리](./Spring/junit_annotation/README.md)                                | ✅         |
+| [[Spring] Spring Querydsl Projection DTO 조회](./Spring/projection/README.md)                                                   | ✅         |
 | [[Spring] Filter vs Interceptor 차이점?](./Spring/Filter_Interceptor_차이점/README.md)                                          | ❌         |
 | [[Spring] IoC(Inversion of Control)란?](./Spring/IoC/README.md)                                                                 | ❌         |
 | [[Spring] DI(Dependency Injection)란?](./Spring/DI/README.md)                                                                   | ❌         |
