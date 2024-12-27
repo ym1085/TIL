@@ -33,6 +33,7 @@
 | [[AWS] IAM Codebuild 관련 Policy](./AWS/iam_codebuild/README.md)                                 | ✅         |
 | [[AWS] Cloudwatch Agent를 통한 EC2 로그 수집](./AWS/cloudwatch_log/README.md)                    | ✅         |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Jenkins & ECS 배포](./AWS/ecs_cicd_jenkins/README.md)       | 🔥         |
+| [[AWS] EKS 클러스터 콘솔 상에서 구축 해보기](./AWS/eks_console/README.md)                        | ❌         |
 | [[AWS] EKS Introduce & hands on EKS in 30 minutes](./AWS/eks_sec_01/README.md)                   | ❌         |
 | [[AWS] ECS 배포 형식 및 타입 정리](./AWS/ecs_ec2_deploy_type/README.md)                          | ❌         |
 | [[AWS] VPC 총정리](./AWS/VPC_Subnet/README.md)                                                   | ❌         |
