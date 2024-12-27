@@ -44,17 +44,17 @@
 
 ## 04-1. Fargate 시간별 요금
 
-| Resource | Price (USD) |
-| --- | --- |
-| vCPU (per hour) | 0.04656 |
-| Memory (per hour) | 0.00511 |
+| Resource          | Price (USD) |
+| ----------------- | ----------- |
+| vCPU (per hour)   | 0.04656     |
+| Memory (per hour) | 0.00511     |
 
 ## 04-2. Fargate Spot 시간별 요금
 
-| Resource | Price (USD) |
-| --- | --- |
-| vCPU (per hour) | 0.013968 |
-| Memory (per hour) | 0.001533 |
+| Resource          | Price (USD) |
+| ----------------- | ----------- |
+| vCPU (per hour)   | 0.013968    |
+| Memory (per hour) | 0.001533    |
 
 # 05. AWS ECS Fargate Spot 구성
 
