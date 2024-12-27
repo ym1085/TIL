@@ -29,7 +29,7 @@
   - 클러스터명 지정
 - 클러스터 IAM 역할
   - 클러스터 IAM 역할을 지정하여, Control Plan이 사용자를 대신하여 AWS 리소스 관리하도록 제어
-  - 클러스터 생성 이후에는 IAM Role 변경 불가능하다고 함
+  - 클러스터 생성 이후에는 IAM Role 변경` 불가능하다고 함
   - 즉, EKS Control Plan이 EC2, LB 생성 등등의 대한 제어를 할때 필요한 권한
   - 해당 Role은 아래 2개의 Policy를 가지고 있어야 한다고 함
     - AmazonEKSClusterPolicy: 클러스터 생성 및 관리에 필요한 권한 제공
