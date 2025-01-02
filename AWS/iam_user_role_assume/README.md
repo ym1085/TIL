@@ -11,9 +11,11 @@
 
 <img src="./img/user-group.png" width="650px">
 
+<img src="./img/user_group_policy.png" width="650px">
+
 - 위에서 생성한 사용자를, 사용자 권한을 묶기 위해 `test-group` 생성 후 해당 그룹에 넣는다
 - 그룹에 넣는 이유는, 그룹별로 권한을 관리하기 위함
-- (중요) IAM > 사용자 그룹 > test-group > 권한 Tab 클릭 > 권한 추가 > 인라인 정책 생성
+- (중요) IAM > 사용자 그룹 > test-group > 권한 Tab 클릭 > 정책(Policy) 추가 > 인라인 정책 생성
 
 ```shell
 # 사용자 그룹에 인라인 정책을 추가한다
@@ -91,3 +93,129 @@
   - Display Color: 이것도 상관 없음
   - Switch Role 클릭
   - 로그인 성공
+
+> ✅ 아래 내용에서는 Multi Account 사용 이유와 방법에 대해 다시 한번 복기한다
+
+## Multi Account 사용 이유
+
+> A 프로젝트 : AWS A Account  
+> B 프로젝트 : AWS B Account  
+> C 프로젝트 : AWS C Account  
+> ...중략
+
+회사 내에서 운영하는 `프로젝트` 혹은 `사업` 건이 `여러개`인 경우 `Multi Account`를 사용하지 않으면,  
+특정 프로젝트의 AWS 리소스를 관리 해야할때마다 `프로젝트에 해당하는 계정에 로그인`을 해야 한다.
+
+만약 프로젝트가 `10개`고, 각 프로젝트별로 `AWS 계정이 따로 존재`한다면,  
+해당 프로젝트의 AWS 리소스 관리를 위해 `10번`의 `재 로그인`을 `수행`해야 한다.
+
+<img src="./img/aws_multi_account.png" width="450px">
+
+위와 같은 부분을 방지 하기 위해, 1개의 로그인 IAM 계정을 생성 한다.  
+후에는 다른 AWS Account(B, C, D..)별로 AWS Account를 생성한 후, 해당 계정 내에 Role(역할)을 생성 한다.  
+이렇게 구성 된 경우 1개의 로그인 IAM 계정에 로그인 후, 필요에 따라 다른 Account의 Role로 역할을 Assume하면 된다.
+
+## 작업 진행 순서
+
+### 01. 로그인 계정 준비
+
+```shell
+# AWS root 계정의 IAM 콘솔
+
+## A User Group
+
+- User Group A
+  - A User (Email: aaa@example.com)
+  - B User (Email: bbb@example.com)
+  - C User (Email: ccc@example.com)
+
+## B User Group
+
+- User Group B
+  - A User (Email: user4@example.com)
+  - B User (Email: user5@example.com)
+  - C User (Email: user6@example.com)
+  - D User (Email: user6@example.com)
+```
+
+최초로 가입한 AWS root 계정에서 로그인 계정으로 사용할 IAM user를 생성한다.  
+여기서 로그인 계정으로 사용할 IAM user는 `해당 팀에 속한 사용자 인원별로 생성`한다.  
+
+사용자를 모두 만들었으면 사용자가 포함되어 있는 `User Group`에 `Role Assume`하기 위한 신규 정책(Policy)를 추가한다.  
+아래와 같이 해당 정책(Policy)의 내용을 정해주면 된다. 또한 A-Role, B-Role의 신뢰 관계도 수정을 해준다.
+
+> ✅ 로그인 계정의 User Group에 아래 내용을 가진 신규 정책(xxx-xxx-assume-policy) 추가
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "xxxxxxxxxxxx",
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Resource": "arn:aws:iam::프로젝트별_AWS_ACCOUNT_ID:role/A-Role"
+        },
+        {
+            "Sid": "xxxxxxxxxxxx",
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Resource": "arn:aws:iam::프로젝트별_AWS_ACCOUNT_ID:role/B-Role"
+        }
+    ]
+}
+```
+
+> ✅ Assume Role한 계정의 Role에 아래 신뢰 관계를 추가  
+> 7xxxxxxxxxxx:root -> 해당 AWS Account의 root + 모든 IAM 유저가 해당 Role Assume 가능
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::7xxxxxxxxxxx:root", 
+                    "arn:aws:iam::5xxxxxxxxxxx:root"
+                ]
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "Bool": {
+                    "aws:MultiFactorAuthPresent": "true"
+                }
+            }
+        }
+    ]
+}
+```
+
+여기서 `arn:aws:iam::7xxxxxxxxxxx:root`로 지정한 부분은, AWS 루트(root) 사용자 뿐만 아니라 모든 IAM 사용자 및 역할을 포함하는 경우 저렇게 사용한다.  
+
+### 02. 프로젝트별 계정(A, B, C)에서 Role 생성
+
+1. A 계정 로그인 후 IAM 콘솔 창에서 역할 생성 클릭
+2. 다른 AWS 계정 선택하고, 로그인 계정의 AWS Account ID를 적고 + MFA 필요도 클릭 한다
+3. 해당 역할에서 사용할 정책(Policy) 지정
+4. 마지막으로 역할 명을 지정하고 역할 만들기 클릭
+
+### 03. 콘솔 접속 플로우
+
+<img src="./img/role_assume.png" width="400px">
+
+1. 로그인 계정으로 AWS 콘솔 접속 시도 (user별 ID + Password 지급)
+2. 접속 성공 > 우측 상단의 계정명 클릭 > 역할 전환 클릭
+   1. Account ID: 전환하고자 하는 특정 AWS Account의 ID or alias 입력
+   2. IAM role name: 전화하고자 하는 특정 AWS Account의 role name 입력
+   3. Display name - optional: 역할 전환 후 콘솔에 출력되는 이름
+   4. Display color - optional: 이름 색상
+   5. Switch Role 클릭
+3. 역할 전환 성공
+
+## 참고 자료
+
+- [[AWS] 사용자에서 IAM 역할로 전환(콘솔)](https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/id_roles_use_switch-role-console.html)
+- [[AWS] 관리해야하는 AWS 계정이 여러개일때? 어떻게 접속할까?](https://1mini2.tistory.com/141)

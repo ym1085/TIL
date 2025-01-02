@@ -26,7 +26,7 @@
 | [[AWS] VPC, Subnet, Routing Table, NAT 등 생성 정리](./AWS/create_vpc_etc/README.md)             | ✅         |
 | [[AWS] ECS의 Network 모드 정리](./AWS/ecs_network/README.md)                                     | ✅         |
 | [[AWS] ECS란?](./AWS/ecs_ec2_fargate/README.md)                                                  | ✅         |
-| [[AWS] IAM User 생성 후 역할 전환](./AWS/iam_user_role_assume/README.md)                         | ✅         |
+| [[AWS] AWS Multi Account 관련 역할 전환](./AWS/iam_user_role_assume/README.md)                   | ✅         |
 | [[AWS] Log Insights에서 주로 사용하는 쿼리 정리](./AWS/log_insight_query/README.md)              | ✅         |
 | [[AWS] ECS CI/CD 파이프라인 구성기 - Code 시리즈](./AWS/ecs_cicd/README.md)                      | ✅         |
 | [[AWS] ElasticCache 정리](./AWS/elastic_cache/README.md)                                         | ✅         |
